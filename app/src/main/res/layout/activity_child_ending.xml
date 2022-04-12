@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="naunehalendline.ui.ChildEndingActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="child"
+            type="edu.aku.hassannaqvi.naunehalendline.models.Child" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_effect"
+        android:orientation="vertical">
+
+
+        <!-- CUSTOM TOOLBAR -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fldGrpEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- ec22  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVec22"
+                    style="@style/cardView">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Qec22" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/ec22" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/ec22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/ec2201"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`1`)}"
+                                android:onClick="@{()->child.setEc22(`1`)}"
+                                android:text="@string/ec2201" />
+
+                            <RadioButton
+                                android:id="@+id/ec2202"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`2`)}"
+                                android:onClick="@{()->child.setEc22(`2`)}"
+                                android:text="@string/ec2202" />
+
+                            <RadioButton
+                                android:id="@+id/ec2203"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`3`)}"
+                                android:onClick="@{()->child.setEc22(`3`)}"
+                                android:text="@string/ec2203" />
+
+                            <RadioButton
+                                android:id="@+id/ec2204"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`4`)}"
+                                android:onClick="@{()->child.setEc22(`4`)}"
+                                android:text="@string/ec2204" />
+
+                            <RadioButton
+                                android:id="@+id/ec2205"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`5`)}"
+                                android:onClick="@{()->child.setEc22(`5`)}"
+                                android:text="@string/ec2205" />
+
+                            <RadioButton
+                                android:id="@+id/ec2206"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`6`)}"
+                                android:onClick="@{()->child.setEc22(`6`)}"
+                                android:text="@string/ec2206" />
+
+                            <EditText
+                                android:id="@+id/ec2206x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/ec2206"
+                                android:tag="ec2206"
+                                android:text="@={child.ec2206x}"
+                                android:visibility="@{child.ec22.equals(`6`) ? View.VISIBLE : View.GONE}" />
+
+                            <RadioButton
+                                android:id="@+id/ec2296"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{child.ec22.equals(`96`)}"
+                                android:onClick="@{()->child.setEc22(`96`)}"
+                                android:text="@string/ec2296" />
+
+                            <EditText
+                                android:id="@+id/ec2296x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/ec2296"
+                                android:tag="ec2296"
+                                android:text="@={child.ec2296x}"
+                                android:visibility="@{child.ec22.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--EndButton LinearLayout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+
+                    <!--
+                             <enum name="src_over" value="3" />
+                                <enum name="src_in" value="5" />
+                                <enum name="src_atop" value="9" />
+                                <enum name="multiply" value="14" />
+                                <enum name="screen" value="15" />
+                                <enum name="add" value="16" />
+                    -->
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccentOverlay"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="btnEnd"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="OnClick" />
+
+                </LinearLayout>
+                <!--EndButton LinearLayout-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</layout>

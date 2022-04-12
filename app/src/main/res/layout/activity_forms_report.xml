@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="custerReport"
+            type="edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportCluster" />
+
+        <variable
+            name="dtReport"
+            type="edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportDate" />
+
+        <variable
+            name="pendingReport"
+            type="edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportPending" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        tools:context=".ui.lists.FormsReportCluster">
+        <!-- CUSTOM TOOLBAR -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="Please enter a ebCode to search forms"
+            app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
+            app:title="Forms By Cluster"
+            app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/filter"
+            style="@style/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal">
+
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                        android:id="@+id/dtFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:dateFormat="yyyy-MM-dd"
+                        app:theme="@style/DatePickerEditTextDialogTheme" />
+
+                    <EditText
+                        android:id="@+id/clusterFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="9"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:background="@color/colorPrimary"
+                        android:drawableStart="@drawable/search"
+                        android:onClick="filterForms"
+                        android:text="Search"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/pendingform_layout" />
+
+    </LinearLayout>
+</layout>

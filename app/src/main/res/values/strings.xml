@@ -1,0 +1,963 @@
+<resources>
+
+    <string name="app_name">Naunehal Endline Survey App - English</string>
+    <string name="btnDownload" translatable="false">Download Data</string>
+    <string name="btnUpload">Upload Data</string>
+    <string name="promptemail">Email</string>
+    <string name="promptpassword">Password</string>
+    <string name="actionsignin">Login</string>
+    <string name="actionsigninshort">Sign in</string>
+    <string name="splashText"> </string>
+    <string name="checkpendingforms">CHECK PENDING FORMS</string>
+    <string name="startinterview" translatable="false">START INTERVIEW</string>
+    <string name="openHouseholdForm" translatable="false">OPEN HOUSEHOLD FORM</string>
+    <string name="addChild" translatable="false">ADD A CHILD</string>
+    <string name="openbloodform" translatable="false">UPDATE BLOOD INFORMANTION</string>
+    <string name="openstoolform" translatable="false">UPDATE STOOL INFORMANTION</string>
+    <string name="recordssummary">Records Summary</string>
+    <string name="mainmenu">Main Menu</string>
+    <string name="onlyfortesting">ONLY FOR TESTING</string>
+    <string name="database">Database</string>
+    <string name="district" translatable="false">DISTRICT</string>
+    <string name="uc" translatable="false">UC</string>
+    <string name="btnSave" translatable="false">Save</string>
+    <string name="btnEnd" translatable="false">Cancel</string>
+    <string name="signin" translatable="false">SIGN IN</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="newPassword" translatable="false">New Password</string>
+    <string name="confirmPassword" translatable="false">Confirm Password</string>
+    <string name="country">Language (Click to change)</string>
+    <string name="pakistan" translatable="false">Pakistan</string>
+    <string name="tajikistan" translatable="false">Tajikistan</string>
+    <string name="btnLogin" translatable="false">Login</string>
+    <string name="btnReset" translatable="false">Reset</string>
+    <string name="btnDownloadData" translatable="false">Download Data</string>
+    <string name="csMAexist" translatable="false">might be already exist</string>
+
+    <string name="netwrok" translatable="false">Network connection not available!</string>
+    <string name="invalidpass" translatable="false">Invalid Password</string>
+    <string name="unameRequired" translatable="false">Username is required.</string>
+    <string name="incorrcetPass" translatable="false">Incorrect Password</string>
+    <string name="downData" translatable="false">Download Data</string>
+    <string name="permission" translatable="false">Permissions Required</string>
+    <string name="warning" translatable="false">Warning</string>
+    <string name="newApp" translatable="false">New App downloaded!!</string>
+    <string name="appVer" translatable="false">App New Version</string>
+    <string name="btnSync">Download Data</string>
+    <string name="downloaded" translatable="false">Downloaded</string>
+    <string name="appDownload" translatable="false">appDownload</string>
+    <string name="newVer" translatable="false">New Version</string>
+    <string name="downloading" translatable="false">Downloading</string>
+    <string name="available" translatable="false">Available</string>
+    <string name="downError" translatable="false">Cant download.. Internet connectivity issue!</string>
+    <string name="backbtn" translatable="false">Press Back again to Exit</string>
+    <string name="noNetwork" translatable="false">No network connection available!</string>
+    <string name="appAvailable" translatable="false">APP is available!</string>
+    <string name="oldAppMsg" translatable="false">App Ver." + " is now available. Your are currently using older Ver."</string>
+    <string name="installNewApp" translatable="false">Install new version to use this app</string>
+    <string name="install" translatable="false">Install</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="complete" translatable="false">complete</string>
+    <string name="updatingError" translatable="false">Error in updating db!!</string>
+    <string name="updateDbError1" translatable="false">"Sorry. You can't go further."</string>
+    <string name="updateDbError2" translatable="false">"Please contact IT Team (Failed to update DB)"</string>
+    <string name="bckbtn" translatable="false">You Cant go back</string>
+    <string name="processing" translatable="false">Processing</string>
+    <string name="confirmation" translatable="false">Confirmation!</string>
+    <string name="confirm">Confirm?</string>
+    <string name="cntbtn" translatable="false">Are you sure, you want to continue - interview</string>
+    <string name="failedUpdateDb" translatable="false">SORRY! Failed to update DB</string>
+    <string name="invalidDate" translatable="false">Invalid date!</string>
+    <string name="ageCalc" translatable="false">"Both Month and Year don't be zero!!"</string>
+    <string name="actiondatabase" translatable="false">Database Manager</string>
+    <string name="actiondatasync" translatable="false">Sync Data</string>
+    <string name="dkn"> Don’t Know </string>
+    <string name="none"> No one </string>
+    <string name="never"> Never</string>
+    <string name="na"> Applicable /Not Available</string>
+    <string name="nap"> Not Applicable </string>
+    <string name="errorinvalidpassword">This password is too short</string>
+    <string name="errorfieldrequired">This field is required</string>
+    <string name="errorincorrectpassword">This password is incorrect</string>
+    <string name="nav">Not Available </string>
+    <string name="ref"> Refused </string>
+    <string name="other"> Other </string>
+    <string name="specify"> Please explain </string>
+    <string name="year"> Year </string>
+    <string name="month"> Month </string>
+    <string name="weeks"> Week(s) </string>
+    <string name="days"> Day(s) </string>
+    <string name="hours"> Hour(s) </string>
+    <string name="minutes"> Minute(s) </string>
+    <string name="kg"> Kilograms </string>
+    <string name="km"> Kilometers </string>
+    <string name="cm"> cm </string>
+    <string name="in"> Inch </string>
+    <string name="rupees"> Rupees </string>
+    <string name="num"> Number </string>
+    <string name="name"> Name </string>
+
+    <!--Error Messages-->
+    <string name="upd_db_form" translatable="false"> updateDB(Form):\t </string>
+    <string name="upd_db_error" translatable="false"> Updating Database… ERROR! </string>
+    <string name="db_excp_error" translatable="false"> Database Exception... ERROR! </string>
+    <string name="upd_db" translatable="false"> Updating Database...\t </string>
+    <string name="fail_db_upd" translatable="false"> Failed to Update Database! </string>
+    <string name="backPress" translatable="false"> Back Press Not Allowed </string>
+    <string name="invalid_response" translatable="false"> Invalid Response </string>
+    <string name="agecal" translatable="false">ageCal:\t</string>
+    <string name="title_child_dialog" translatable="false">Child Count</string>
+    <string name="message_child_dialog_proceeed" translatable="false">You have entered only %1$s of %2$s Children in the household. \nAre you sure you want to continue now?</string>
+    <string name="message_child_dialog_addmore" translatable="false">You have already entered %1$s Children. \nAre you sure you want to add more Child?</string>
+    <string name="network_conn_error" translatable="false"> Network connection not available ! </string>
+    <string name="no_mother_selected_child_list" translatable="false"> No Mother has been selected. Please select a mother before opening Child List </string>
+    <string name="onitemselected" translatable="false"> onItemSelected(Samples):\t </string>
+    <string name="upd_samples" translatable="false"> updateDB(Samples):\t </string>
+    <string name="upd_anthro" translatable="false"> updateDB(Anthro):\t </string>
+    <string name="folder_not_created" translatable="false"> Folder Not Created </string>
+    <string name="invalid_password" translatable="false"> Invalid Password </string>
+    <string name="username_required" translatable="false"> Username is required. </string>
+    <string name="incorrect_username_or_password" translatable="false">Incorrect Username or Password</string>
+    <string name="open_hh_form" translatable="false"> Open Household Form </string>
+    <string name="hh_not_found" translatable="false">Household not Found</string>
+    <string name="hh_exists_form" translatable="false"> JSONException(Form): \t </string>
+    <string name="child_info_missing" translatable="false">Please fill child sections before entering this information</string>
+    <string name="open_new_form" translatable="false">OPEN NEW FORM</string>
+    <string name="options" translatable="false">Options</string>
+
+
+    <string name="istatus"> Result of Household Questionnaire interview </string>
+    <string name="istatusi"> Discuss any result not completed with team leader </string>
+    <string name="istatus01"> Completed </string>
+    <string name="istatus02"> No HH member at home or no competent respondent at home at time of visit </string>
+    <string name="istatus03"> Entire household absent for extended period of time </string>
+    <string name="istatus04"> Refused </string>
+    <string name="istatus05"> Dwelling vacant or address not a dwelling </string>
+    <string name="istatus06"> Dwelling not found </string>
+    <string name="istatus07"> No child of 06-23 months in this household </string>
+    <string name="istatus96"> Other (Specify) </string>
+
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="btnResetPassword">Reset Password</string>
+
+
+    <string name="householdidentificationmainheading">Household Identification: </string>
+    <string name="respondentinfomainheading">Respondent Info:</string>
+    <string name="respondentinfosubheading">Enter the respondents information and write down the exact number of people in the household and eligible children</string>
+
+    <string name="splashText2">  </string>
+
+
+    <string name="sectionhhhouseholdinformationhhmainheading">SECTION HH: HOUSEHOLD INFORMATION</string>
+    <string name="sectionhhhouseholdinformationhhsubheading">Household Information</string>
+    <string name="cbmainheading">CB: ELIGIBLE CHILD’S BACKGROUND</string>
+    <string name="cbsubheading">Information of Eligible Children of 6-23 Months Old</string>
+    <string name="sectionsssocioeconomicstatusssmainheading">SECTION SS: SOCIO-ECONOMIC STATUS (SS) </string>
+    <string name="sectionsssocioeconomicstatussssubheading">Instructions: This section will be filled by the Head of the household (HH) or knowledgeable member atleast 18 years old</string>
+    <string name="immainheading">IM: IMMUNIZATION</string>
+    <string name="sectionchlistofchildren0623monthsoldmainheading">SECTION CH:</string>
+    <string name="sectionchlistofchildren0623monthsoldsubheading">List of Children 06-23 months old: List of Children 0623 months old</string>
+    <string name="no"> No </string>
+    <string name="yes"> Yes </string>
+
+    <string name="consentmainheading">Consent:</string>
+    <string name="consentsubheading">Introduce yourself to the respondent and explain the reason for your visit and ask for permission</string>
+
+
+    <string name="contactnum">Contact Number </string>
+    <string name="checkHHpresent"> The name of head of the household corresponds to the line listing data.</string>
+    <string name="newHHheadname"> Name of new head of the household </string>
+    <string name="hh01">Date of interview:</string>
+    <string name="hh02">Time of interview: </string>
+    <string name="hh03">Interviews Code</string>
+    <string name="hh03a">Interviewer’s name</string>
+    <string name="hh04">Supervisors Code</string>
+    <string name="hh04a">Supervisor’s name</string>
+    <string name="hh05">Enumeration Block Number:</string>
+    <string name="hh06">Province                        </string>
+    <string name="hh07">District: </string>
+    <string name="hh08">Tehsil/Taluka:</string>
+    <string name="hh09">City/Village:</string>
+    <string name="hh10">Locality, Street Address with landmarks</string>
+    <string name="hh11">Cluster</string>
+    <string name="hh12">Household number: </string>
+    <string name="hh13">Name of the Respondent</string>
+    <string name="hh18t">Asalum-o-Alaikum, my name is %1$s. \n\nWe are from National Ministry of Health Services, Regulation and Coordination, Government of Pakistan. We are conducting a survey about the situation of the children health in Pakistan. \n\nI would like to talk to you about (child’s name)’s vaccination history. This interview will take about 30 minutes. All the information we obtain will remain strictly confidential and anonymous. \n\nIf you wish not to answer a question or wish to stop the interview, please let me know.</string>
+    <string name="hh18">May I start the interview now?</string>
+    <string name="hh13a">Respondents Contact Number</string>
+    <string name="hh18a">Yes, Permission is Given</string>
+    <string name="hh18b">No, Permission is not Given</string>
+    <string name="hh14">Age of Respondent in completed   years      </string>
+    <string name="hh15">Is respondent Head of Household?</string>
+    <string name="hh16">Name and contact number of the head of Household: </string>
+    <string name="hh15a">Yes</string>
+    <string name="hh16a">Head of Households</string>
+    <string name="hh15b">No</string>
+    <string name="hh16b">Head of Households Contact No </string>
+    <string name="hh19">How many members are living in this household? (NUMBER OF PERSONS) (If 95 or more, record ‘95’) Note for enumorators: Persons who live in this dwelling/ compound and usually share a meal together </string>
+    <string name="hh19info"> (NUMBER OF PERSONS) (If 95 or more, record ‘95’) Note for enumerators: Persons who live in this dwelling/ compound and usually share a meal together </string>
+    <string name="hh20"> Does this HH have children 06-23 months years of age? (i.e., children who have reached their first birthday, but not their second birthday)</string>
+    <string name="hh201">Yes</string>
+    <string name="hh202">No</string>
+    <string name="hh20a">If Yes, Numbers of childrens 06-23 months:</string>
+    <string name="hh21">Result of Household Questionnaire Discuss any result not completed with supervisor. interview</string>
+    <string name="hh21a">Completed</string>
+    <string name="hh21b">No HH member at home or no competent respondent at home at time of visit  </string>
+    <string name="hh21c">Entire household absent for extended period of time</string>
+    <string name="hh21d">Refused</string>
+    <string name="hh21e">Dwelling vacant or address not a dwelling </string>
+    <string name="hh21f">Dwelling not found</string>
+    <string name="hh21g">No child of 06-23 months in this household</string>
+    <string name="hh21x">Other (specify) </string>
+    <string name="hh19a">Number of Male Members</string>
+    <string name="hh19b">Number of Female Members</string>
+    <string name="ec01">Date of Interview</string>
+    <string name="ec02">Record the time     </string>
+    <string name="ec03">Interviews Code</string>
+    <string name="ec03a">Interviewer’s name</string>
+    <string name="ec04">Supervisor’s name</string>
+    <string name="ec04a">Supervisors Code Number</string>
+    <string name="ec05">Village </string>
+    <string name="ec06">Province </string>
+    <string name="ec07">District </string>
+    <string name="ec09">City </string>
+    <string name="ec11">Cluster Number</string>
+    <string name="ec12">Household Number</string>
+    <string name="ec13cline">Child Line Number</string>
+    <string name="ec14cname">Child Name</string>
+    <string name="ec18">Relationship of respondent with child</string>
+    <string name="ec1801">Mother</string>
+    <string name="ec1802">Father</string>
+    <string name="ec1803">Primary Caretaker (not mother/father)</string>
+    <string name="ec1804">Other Family Member</string>
+    <string name="ec1896">Other Specify</string>
+    <string name="ec19">Check if this respondent is interviewed for household or children questionnaire in this household?</string>
+    <string name="ec20">Now I would like to talk to you about (child’s name)’s vaccination record in more detail. This interview will take about 30 minutes. Again, all the information we obtain will remain strictly confidential and anonymous. If you wish not to answer a question or wish to stop the interview, please let me know. May I start now?</string>
+    <string name="ec21info">Now I would like to talk to you about (Childs name) vaccination record in detail.</string>
+    <string name="ec21">May I start now?</string>
+    <string name="ec19a">Yes, interviewed already</string>
+    <string name="ec21a">Yes, permission is granted  </string>
+    <string name="ec19b">No, first interview </string>
+    <string name="ec21b">No, permission is denied  </string>
+    <string name="ec22">Result of interview for children 06-23 months</string>
+    <string name="ec2201">Completed</string>
+    <string name="ec2202">Partially completed</string>
+    <string name="ec2203">Refused</string>
+    <string name="ec2204">Mother /Care Taker not Available</string>
+    <string name="ec2205">Child not eligible/Not 06-23 Months Age </string>
+    <string name="ec2206">Incapacitated(Specify)</string>
+    <string name="ec2296">Other specify</string>
+    <string name="cb01info">As for Education Grade passed for mother/caregiver \n (Write 77 if un educated and for Religious Education , write 20)</string>
+    <string name="cb01">What is your highest grade of completed education?</string>
+    <string name="cb01a">Grade</string>
+    <string name="cb01b">Religious Education</string>
+    <string name="cb02">What is highest grade of completed education of (names) father?</string>
+    <string name="cb02info">As for Education Grade passed for mother/caregiver (Write 77 if un educated and for Religious education write 20)</string>
+    <string name="cb02a">Grade</string>
+    <string name="cb02b">Religious Education</string>
+    <string name="ss01">What is the mother tongue of the head of household?</string>
+    <string name="ss02">What is ownership status of household? </string>
+    <string name="ss01a">Urdu   </string>
+    <string name="ss02a">Own</string>
+    <string name="ss02b">Rented </string>
+    <string name="ss02x">Other (specify) </string>
+    <string name="ss03">What is the main source of drinking water in your household?</string>
+    <string name="ss03atitle">Municipal Piped Water Connection</string>
+    <string name="ss01b">Punjabi   </string>
+    <string name="ss03a">PIPED INTO DWELLING </string>
+    <string name="ss03b">PIPED TO YARD/ PLOT </string>
+    <string name="ss03c">PIPED TO NEIGHBOUR </string>
+    <string name="ss03d">PUBLIC TAP /STANDPIPE </string>
+    <string name="ss03e">TUBE WELL / BOREHOLE</string>
+    <string name="ss03ftitle">DUG WELL</string>
+    <string name="ss03f">PROTECTED WELL </string>
+    <string name="ss03g">UNPROTECTED WELL </string>
+    <string name="ss03htitle">SPRING </string>
+    <string name="ss03h">PROTECTED SPRING </string>
+    <string name="ss03i">UNPROTECTED SPRING</string>
+    <string name="ss03j">RAIN WATER </string>
+    <string name="ss03k">TANKER-TRUCK </string>
+    <string name="ss03l">CART WITH SMALL TANK </string>
+    <string name="ss03m">SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL)</string>
+    <string name="ss03ntitle">PACKAGED WATER </string>
+    <string name="ss03n">BOTTELED WATER </string>
+    <string name="ss03x">Other (specify) </string>
+    <string name="ss04">Do you take any step to make the water safer to drink? </string>
+    <string name="ss04y">Yes</string>
+    <string name="ss04n">No</string>
+    <string name="ss01c">Sindhi   </string>
+    <string name="ss05">What do you usually do to make the water safe to drink? </string>
+    <string name="ss05a">Boil</string>
+    <string name="ss05b">Add bleach/chlorine </string>
+    <string name="ss05c">Strain through a cloth </string>
+    <string name="ss01d">Pushtu   </string>
+    <string name="ss05d">Use water filter </string>
+    <string name="ss05e">Solar disinfection </string>
+    <string name="ss05f">Let it stand and settle </string>
+    <string name="ss05x">Other (specify) </string>
+    <string name="ss06">What is the main source of water used by members of your household for other purposes such as cooking and handwashing?  If unclear, probe to identify the place from which members of this household most often collect water for other purposes.</string>
+    <string name="ss06atitle">Municipal Piped Water Connection</string>
+    <string name="ss06a">PIPED INTO DWELLING</string>
+    <string name="ss06b">PIPED TO YARD/ PLOT </string>
+    <string name="ss06c">PIPED TO NEIGHBOUR</string>
+    <string name="ss01e">Baluchi   </string>
+    <string name="ss06d">PUBLIC TAP /STANDPIPE</string>
+    <string name="ss06e">TUBE WELL / BOREHOLE</string>
+    <string name="ss06ftitle">DUG WELL</string>
+    <string name="ss06f">PROTECTED WELL</string>
+    <string name="ss06g">UNPROTECTED WELL</string>
+    <string name="ss06htitle">SPRING </string>
+    <string name="ss06h">PROTECTED SPRING</string>
+    <string name="ss06i">UNPROTECTED SPRING</string>
+    <string name="ss06j">RAIN WATER</string>
+    <string name="ss06k">TANKER-TRUCK</string>
+    <string name="ss06l">CART WITH SMALL TANK</string>
+    <string name="ss06m">SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL)</string>
+    <string name="ss06ntitle">PACKAGED WATER</string>
+    <string name="ss06n">BOTTELED WATER</string>
+    <string name="ss06x">Other (specify) </string>
+    <string name="ss07">What kind of toilet facility do members of your household usually use? If ‘Flush’ or ‘Pour’, probe: Where does it flush to? If not possible to determine, ask permission to observe the facility</string>
+    <string name="ss07atitle">Flush or Pour Flush Toilet </string>
+    <string name="ss07a">Flush to piped sewer system </string>
+    <string name="ss07b">Flush to septic tank </string>
+    <string name="ss07c">Flush to pit latrine </string>
+    <string name="ss07d">Flush to somewhere else</string>
+    <string name="ss01f">Siraiki  </string>
+    <string name="ss07etitle">PIT Latrine</string>
+    <string name="ss07e">Ventilated improved PIT latrine</string>
+    <string name="ss07f">PIT latrine with slab</string>
+    <string name="ss07g">PIT latrine without slab/open pit</string>
+    <string name="ss07h">Bucket toilet</string>
+    <string name="ss07i">No facility/bush/field</string>
+    <string name="ss07x">Other (specify) </string>
+    <string name="ss08">Where is this toilet facility located?</string>
+    <string name="ss08a">IN OWN DWELLING</string>
+    <string name="ss08b">IN OWN YARD/PLOT</string>
+    <string name="ss08c">ELSEWHERE</string>
+    <string name="ss01g">Hindko   </string>
+    <string name="ss01h">Broshki</string>
+    <string name="ss09">Do you share this toilet facility with others who are not members of your household? </string>
+    <string name="ss09a">Yes</string>
+    <string name="ss09b">No</string>
+    <string name="ss01j">Shina</string>
+    <string name="ss01x">Other (specify) </string>
+    <string name="ss01k">Khuar</string>
+    <string name="ss11">Do you share this facility only with members of other household that you know, or is the facility open to the use of the general public? </string>
+    <string name="ss11a">SHARED WITH KNOWN HOUSEHOLDS (NOT PUBLIC)</string>
+    <string name="ss11b">SHARED WITH GENERAL PUBLIC </string>
+    <string name="ss01m">Wakhi</string>
+    <string name="ss01n">DOMKI</string>
+    <string name="ss12"> How many households in total use this toilet facility, including your own household? </string>
+    <string name="ss12a">LESS THAN 10 </string>
+    <string name="ss12b">TEN OR MORE HOUSEHOLDS </string>
+    <string name="ss12c">Dont Know</string>
+    <string name="ss13">What is done to dispose the stools of the youngest child?</string>
+    <string name="ss13a">Child uses toilet/latrine</string>
+    <string name="ss12hh">Number of Households</string>
+    <string name="ss13b">Put/rinsed on into toiled or latrine</string>
+    <string name="ss13c">Put/rinsed on into drain/ditch</string>
+    <string name="ss13d">Thrown into garbage</string>
+    <string name="ss13e">Left in open</string>
+    <string name="ss13f">Buried</string>
+    <string name="ss13g">No Child Under 5  </string>
+    <string name="ss13x">Other (specify) </string>
+    <string name="ss14">Does your household have: Ask/probe for each [Multiple responses]  </string>
+    <string name="ss14a">Electricity Connection </string>
+    <string name="ss14b">Radio </string>
+    <string name="ss14c">Television </string>
+    <string name="ss14d">Landline phone</string>
+    <string name="ss14e">Refrigerator</string>
+    <string name="ss14f">Almirah/Cabinet</string>
+    <string name="ss14g">Chair</string>
+    <string name="ss14h">Room Cooler</string>
+    <string name="ss14i">Air conditioner</string>
+    <string name="ss14j">Washing machine </string>
+    <string name="ss14k">Water Pump</string>
+    <string name="ss14l">Bed </string>
+    <string name="ss14m">Clock </string>
+    <string name="ss14n">Sofa </string>
+    <string name="ss14o">Camera </string>
+    <string name="ss14p">Sewing machine</string>
+    <string name="ss14q">Computer/laptop  </string>
+    <string name="ss14r">Internet connection </string>
+    <string name="ss14s"> Dish/Cable Network </string>
+    <string name="ss14aa">Yes</string>
+    <string name="ss14ba">Yes</string>
+    <string name="ss14ca">Yes</string>
+    <string name="ss14da">Yes	</string>
+    <string name="ss14ea">Yes	</string>
+    <string name="ss14fa">Yes	</string>
+    <string name="ss14ga">Yes	</string>
+    <string name="ss14ha">Yes	</string>
+    <string name="ss14ia">Yes	</string>
+    <string name="ss14ja">Yes	</string>
+    <string name="ss14ka">Yes	</string>
+    <string name="ss14la">Yes	</string>
+    <string name="ss14ma">Yes	</string>
+    <string name="ss14na">Yes	</string>
+    <string name="ss14oa">Yes	</string>
+    <string name="ss14pa">Yes	</string>
+    <string name="ss14qa">Yes	</string>
+    <string name="ss14ra">Yes	</string>
+    <string name="ss14sa">Yes	</string>
+    <string name="ss14ab">No</string>
+    <string name="ss14bb">No</string>
+    <string name="ss14cb">No</string>
+    <string name="ss14db">No	</string>
+    <string name="ss14eb">No	</string>
+    <string name="ss14fb">No	</string>
+    <string name="ss14gb">No	</string>
+    <string name="ss14hb">No	</string>
+    <string name="ss14ib">No	</string>
+    <string name="ss14jb">No	</string>
+    <string name="ss14kb">No	</string>
+    <string name="ss14lb">No	</string>
+    <string name="ss14mb">No	</string>
+    <string name="ss14nb">No	</string>
+    <string name="ss14ob">No	</string>
+    <string name="ss14pb">No	</string>
+    <string name="ss14qb">No	</string>
+    <string name="ss14rb">No	</string>
+    <string name="ss14sb">No	</string>
+    <string name="ss15">Does any member of this household own: </string>
+    <string name="ss15a">Watch</string>
+    <string name="ss15b">Mobile Phone</string>
+    <string name="ss15c">Bicycle </string>
+    <string name="ss15d">Motorcycle or scooter</string>
+    <string name="ss15e">Animal-drawn cart </string>
+    <string name="ss15f">Car or truck or bus</string>
+    <string name="ss15g">Tractor </string>
+    <string name="ss15h">Boat with a motor</string>
+    <string name="ss15i">Boat without motor </string>
+    <string name="ss15aa">Yes	</string>
+    <string name="ss15ba">Yes	</string>
+    <string name="ss15ca">Yes	</string>
+    <string name="ss15da">Yes	</string>
+    <string name="ss15ea">Yes	</string>
+    <string name="ss15fa">Yes	</string>
+    <string name="ss15ga">Yes	</string>
+    <string name="ss15ha">Yes	</string>
+    <string name="ss15ia">Yes	</string>
+    <string name="ss15ab">No	</string>
+    <string name="ss15bb">No	</string>
+    <string name="ss15cb">No	</string>
+    <string name="ss15db">No	</string>
+    <string name="ss15eb">No	</string>
+    <string name="ss15fb">No	</string>
+    <string name="ss15gb">No	</string>
+    <string name="ss15hb">No	</string>
+    <string name="ss15ib">No	</string>
+    <string name="ss17">What type of fuel do you usually use for cooking in your household?</string>
+    <string name="ss17a">Electricity</string>
+    <string name="ss17b">LPG</string>
+    <string name="ss17c">Natural Gas</string>
+    <string name="ss17d">Biogas</string>
+    <string name="ss17e">Kerosene</string>
+    <string name="ss17f">Coal/Lignite</string>
+    <string name="ss17g">Charcoal</string>
+    <string name="ss17h">Wood</string>
+    <string name="ss17i">Straw/Shrubs/Grass</string>
+    <string name="ss17j">Animal Dung</string>
+    <string name="ss17k">No food cooked in household</string>
+    <string name="ss17x">Other (specify) </string>
+    <string name="ss18">Main material of the dwelling FLOOR  Record observation.  </string>
+    <string name="ss18info">If observation is not possible, ask the respondent toDetermine the material of the dwelling floor.</string>
+    <string name="ss18atitle">Natural Floor</string>
+    <string name="ss18a">Mud/Clay/Earth/Sand</string>
+    <string name="ss18b">Dung</string>
+    <string name="ss18ctitle">Rudimentary/Floor</string>
+    <string name="ss18e">Wood planks</string>
+    <string name="ss18f">Palm/Bamboo</string>
+    <string name="ss18gtitle">Finished Floor</string>
+    <string name="ss18g">Parquet or polished wood</string>
+    <string name="ss18h">Vinyl or asphalt strips</string>
+    <string name="ss18i">Ceramic tiles</string>
+    <string name="ss18j">Cement</string>
+    <string name="ss18k">Carpet</string>
+    <string name="ss18l">Bricks</string>
+    <string name="ss18m">Lime</string>
+    <string name="ss18x">Other (specify) </string>
+    <string name="ss19">Main material of the ROOF. Record observation.</string>
+    <string name="ss19atitle">Natural Roofing </string>
+    <string name="ss19a">No roof </string>
+    <string name="ss19b">Thatch/palm leaf</string>
+    <string name="ss19c">Sod</string>
+    <string name="ss19dtitle">Rudimentary Roofing</string>
+    <string name="ss19d">Rustic mat</string>
+    <string name="ss19e">Palm/Bamboo </string>
+    <string name="ss19f">Wood planks</string>
+    <string name="ss19g">Cardboard</string>
+    <string name="ss19htitle">Finished Roofing</string>
+    <string name="ss19h">Metal/Tin/CGI </string>
+    <string name="ss19i">Wood </string>
+    <string name="ss19j">Calamine / Cement fiber </string>
+    <string name="ss19k">Ceramic tiles</string>
+    <string name="ss19l">Cement RCC</string>
+    <string name="ss19m">Roofing shingles</string>
+    <string name="ss19n">Bricks </string>
+    <string name="ss19x">Other (specify) </string>
+    <string name="ss20">Main material of the exterior walls Record observation.</string>
+    <string name="ss20atitle">Natural walls</string>
+    <string name="ss20a">No walls</string>
+    <string name="ss20b">Cane/Palm/Trunks</string>
+    <string name="ss20c">Mud/Dirt</string>
+    <string name="ss20d">Bamboo with mud</string>
+    <string name="ss20dtitle">Rudimentary walls</string>
+    <string name="ss20e">Stone with mud</string>
+    <string name="ss20f">Uncovered adobe</string>
+    <string name="ss20g">Plywood</string>
+    <string name="ss20h">Cardboard</string>
+    <string name="ss20i">Reused wood</string>
+    <string name="ss20j">Cloth/Curtain/Tent</string>
+    <string name="ss20k">Cement</string>
+    <string name="ss20ktitle">Finished walls</string>
+    <string name="ss20l">Stone with cement/lime</string>
+    <string name="ss20m">Bricks</string>
+    <string name="ss20n">Cement blocks</string>
+    <string name="ss20o">Covered adobe</string>
+    <string name="ss20p">Wood planks/shingles/</string>
+    <string name="ss20x">Other (specify) </string>
+    <string name="ss21">How many rooms in your household are used for sleeping?</string>
+    <string name="ss22">Does any member of this household own any agricultural land?</string>
+    <string name="ss22a">Yes</string>
+    <string name="ss22b">No</string>
+    <string name="ss23">If yes, how many acres or canals of agricultural land do members of this household own?  If less than 1, record ‘00’.</string>
+    <string name="ss23a">Acres</string>
+    <string name="ss23b">Kanals</string>
+    <string name="ss23c">Dont Know</string>
+    <string name="ss23land">Land</string>
+    <string name="ss24">Do you have your own livestock, animals or poultry?</string>
+    <string name="ss24a">Yes</string>
+    <string name="ss24b">No</string>
+    <string name="ss25">If yes, how many livestock, animals or poultry does your household own?  Ask for each listed animals, one by one and observation by enumerator  Insert  000 if none</string>
+    <string name="ss25a">Cows, Bulls </string>
+    <string name="ss25b">Horses/Donkeys/ Mules</string>
+    <string name="ss25c">Goats</string>
+    <string name="ss25d">Sheep</string>
+    <string name="ss25e">Chickens /Poultry</string>
+    <string name="ss25f">Buffalo</string>
+    <string name="ss25g">Camels</string>
+    <string name="ss26">Does any member of this household have a bank account?</string>
+    <string name="ss27title">Thank the respondent for his/her cooperation and then proceed with the administration of the children 06-23 month’s questionnaire for children present in this household۔</string>
+    <string name="ss26a">YES</string>
+    <string name="ss26b">NO</string>
+    <string name="ss27">Record The Time</string>
+    <string name="ss28">INTERVIEWER’S OBSERVATIONS  </string>
+    <string name="ss21a">Rooms</string>
+    <string name="im01">Did you ever have a vaccination card from a Government or private health provider where (NAME)’s vaccinations are written down? for (NAME)?</string>
+    <string name="im011">Yes</string>
+    <string name="im012">No</string>
+    <string name="im02">If yes: may I see it please?  The respondent should already have brought the card when you got permission to begin the interview.</string>
+    <string name="im021">Seen</string>
+    <string name="im022">Not Seen</string>
+    <string name="im02a">If not seen , Reason?</string>
+    <string name="im02a1">Card not found at this time </string>
+    <string name="im02a2">Card Misplaced</string>
+    <string name="im02a3">Card is at vaccination center/with vaccinator</string>
+    <string name="im02a96">Other specify</string>
+    <string name="im03">If not, why you didn’t receive any vaccination card?</string>
+    <string name="im0301">Don’t think it’s important </string>
+    <string name="im0302">Never visited a facility </string>
+    <string name="im0303">Misplaced</string>
+    <string name="im0304">Card was not available with the health provider </string>
+    <string name="im0305">The vaccinator/ facility didn’t provide the card </string>
+    <string name="im0396">Other specify </string>
+    <string name="im04">Check and copy Date of Birth recorded on card:</string>
+    <string name="im04dd">Day</string>
+    <string name="im04mm">Month</string>
+    <string name="im04yy">Year</string>
+    <string name="im0497">Date not Visible on Card</string>
+    <string name="im05title1"> Immunization Status</string>
+    <string name="im05title2">INSTRUCTIONS: Please record the date of immunization for each antigen from the card \n\n1.If the date is recorded but not readable, record 44 in day column \n\n2.	If the date is not recorded but a tick () mark is present, record 88 in day column \n\n3.	If the neither date is recorded nor a tick () mark is present, prompt the mother for each such antigen and record 66 if she confirms the receipt of respective antigen by recall otherwise record 97.</string>
+    <string name="im05">Vaccine Names</string>
+    <string name="im05t1"> Vaccinations At Birth </string>
+    <string name="im05t2"> Vaccinations At 6 Weeks </string>
+    <string name="im05t3"> Vaccinations At 10 Weeks </string>
+    <string name="im05t4"> Vaccinations At 14 Weeks </string>
+    <string name="im05t5"> Vaccinations At 9 Months </string>
+    <string name="im0517typh">Typhoid</string>
+    <string name="im05t6"> Vaccinations At 15 Months </string>
+    <string name="im0501bcg"> B C G At Birth </string>
+    <string name="im0501dd">Day</string>
+    <string name="im0501mm">Month</string>
+    <string name="im0501yy">Year</string>
+    <string name="im0502opv0">Polio \n(at birth) (OPV 0) </string>
+    <string name="im0503opv1">Polio \n(OPV1)           </string>
+    <string name="im0502dd">Day</string>
+    <string name="im0503dd">Day</string>
+    <string name="im0502mm">Month</string>
+    <string name="im0503mm">Month</string>
+    <string name="im0502yy">Year</string>
+    <string name="im0503yy">Year</string>
+    <string name="im0504penta1">Pentavalent1 \n(DPTHibHepB) (Penta1)   </string>
+    <string name="im0504dd">Day</string>
+    <string name="im0504mm">Month</string>
+    <string name="im0504yy">Year</string>
+    <string name="im0505pcv1">Pneumococcal 1 \n(Conjugate) (PCV1)         </string>
+    <string name="im0505dd">Day</string>
+    <string name="im0505mm">Month</string>
+    <string name="im0505yy">Year</string>
+    <string name="im0506rv1">Rotavirus vaccine1 \n(RV1)                                      </string>
+    <string name="im0506dd">Day</string>
+    <string name="im0506mm">Month</string>
+    <string name="im0506yy">Year</string>
+    <string name="im0507opv2">Polio \n(OPV2)                 </string>
+    <string name="im0507dd">Day</string>
+    <string name="im0507mm">Month</string>
+    <string name="im0507yy">Year</string>
+    <string name="im0508penta2">Pentavalent2 \n(DPTHibHepB) (Penta 2)     </string>
+    <string name="im0508dd">Day</string>
+    <string name="im0508mm">Month</string>
+    <string name="im0508yy">Year</string>
+    <string name="im0509pcv2">Pneumococcal2 \n(Conjugate) (PCV2)      </string>
+    <string name="im0509dd">Day</string>
+    <string name="im0509mm">Month</string>
+    <string name="im0509yy">Year</string>
+    <string name="im0510rv2">Rotavirus vaccine2 \n(RV2)                                       </string>
+    <string name="im0510dd">Day</string>
+    <string name="im0510mm">Month</string>
+    <string name="im0510yy">Year</string>
+    <string name="im0510ahp">Hep-B (at Birth)                                 </string>
+    <string name="im0511opv3">Polio \n(OPV3)                 </string>
+    <string name="im0510add">Day</string>
+    <string name="im0511dd">Day</string>
+    <string name="im0510amm">Month</string>
+    <string name="im0511mm">Month</string>
+    <string name="im0510ayy">Year</string>
+    <string name="im0511yy">Year</string>
+    <string name="im0512penta3">Pentavalent3 \n(DPTHibHepB) (Penta 3)  </string>
+    <string name="im0513pcv3">Pneumococcal3 \n(Conjugate) (PCV3) </string>
+    <string name="im0512dd">Day</string>
+    <string name="im0513dd">Day</string>
+    <string name="im0512mm">Month</string>
+    <string name="im0513mm">Month</string>
+    <string name="im0512yy">Year</string>
+    <string name="im0513yy">Year</string>
+    <string name="im0514ipv">Polio \n(IPV)                                                                     </string>
+    <string name="im0514dd">Day</string>
+    <string name="im0514mm">Month</string>
+    <string name="im0514yy">Year</string>
+    <string name="im0515measles1">Measles-1                                                           </string>
+    <string name="im0515bipv2">IPV2 (at 9 months)</string>
+    <string name="im0515bdd">Day</string>
+    <string name="im0515bmm">Month</string>
+    <string name="im0515byy">Year</string>
+    <string name="im0516measles2">Measles-2                                                     </string>
+    <string name="im0515dd">Day</string>
+    <string name="im0516dd">Day</string>
+    <string name="im0515mm">Month</string>
+    <string name="im0516mm">Month</string>
+    <string name="im0515yy">Year</string>
+    <string name="im0516yy">Year</string>
+    <string name="im0517dd">Day</string>
+    <string name="im0517mm">Month</string>
+    <string name="im0517yy">Year</string>
+    <string name="im07">Check IM4: Are all vaccines (BCG to Measles-2) recorded?</string>
+    <string name="im0701">Yes</string>
+    <string name="im0702">No</string>
+    <string name="im08">Has (name) ever received any vaccinations to prevent (him/her) from getting diseases, including vaccinations received in a campaign, immunization day or child health day?</string>
+    <string name="im081">Yes </string>
+    <string name="im082">No  </string>
+    <string name="im083">Dont Know</string>
+    <string name="im09">. Has (name) ever received a BCG vaccination against tuberculosis – that is, an injection in the arm or shoulder that usually causes a scar?</string>
+    <string name="im091">Yes </string>
+    <string name="im092">No  </string>
+    <string name="im093">Dont know</string>
+    <string name="im10"> Has (name) ever received any vaccination drops in the mouth to protect (him/her) from polio?   Probe by indicating that the first drop is usually given at birth and later at the same time as injections to prevent other diseases.</string>
+    <string name="im101">Yes </string>
+    <string name="im102">No </string>
+    <string name="im103">Dont know</string>
+    <string name="im10a">Has (name) ever received Hepatitis B vaccination- that is, an injection in the arm or shoulder. Hepatitis B vaccine protects against a viral infection that causes inflammation and damage to the liver۔</string>
+    <string name="im10_1">Yes </string>
+    <string name="im10a1">Yes </string>
+    <string name="im10_2">No </string>
+    <string name="im10a2">No </string>
+    <string name="im10_3">Dont know</string>
+    <string name="im10a98">Dont know</string>
+
+    <string name="im11">Were the first polio drops received in the first two weeks after birth?</string>
+    <string name="im111">Yes</string>
+    <string name="im112">No  </string>
+    <string name="im113">Dont know</string>
+    <string name="im12">How many times were the polio drops received at Govt or Private Health Facility or from Govt Outreach services?  </string>
+    <string name="im12a">How many times was Polio vaccine received during a large campaign? </string>
+    <string name="im12d">Dont Know</string>
+    <string name="im14">Has (name) ever received a Pentavalent vaccination – that is, an injection in the thigh to prevent (him/her) from getting tetanus, whooping cough, diphtheria, Hepatitis B disease, and Haemophilus influenza type B?   Probe by indicating that Pentavalent vaccination is sometimes given at the same time as the Polio drops</string>
+    <string name="im141">Yes </string>
+    <string name="im142">No </string>
+    <string name="im143">Dont know</string>
+    <string name="im15">How many times was the Pentavalent vaccine received? Number of times</string>
+    <string name="im16">Has (name) ever received a Pneumococcal Conjugate vaccination – that is, an injection to prevent (him/her) from getting pneumococcal disease, including ear infections and meningitis caused by pneumococcus? Probe by indicating that Pneumococcal Conjugate vaccination is sometimes given at the same time as the Pentavalent vaccination.</string>
+    <string name="im161">Yes </string>
+    <string name="im162">No  </string>
+    <string name="im163">Dont know</string>
+    <string name="im17">How many times was the pneumococcal vaccine received? Number of times</string>
+    <string name="im18">Has (name) ever received drops for Rotavirus vaccine (RV) vaccination- A vaccine given orally soon after 6 weeks birth to protect against rotavirus infections, which are the leading cause of severe diarrhea among young children.</string>
+    <string name="im181">Yes </string>
+    <string name="im182">No  </string>
+    <string name="im183">Dont know</string>
+    <string name="im19">How many times were the drops received? Number of times</string>
+    <string name="im20">Has (name) ever received an inactivated polio vaccine (IPV) – that is, a shot in the thigh at the age of 14 weeks or older - to prevent (him/her) from getting polio?</string>
+    <string name="im201">Yes </string>
+    <string name="im202">No  </string>
+    <string name="im20a">How many times were the IPV Polio injected? Number of times</string>
+
+    <string name="im2101">Yes </string>
+    <string name="im2102">No  </string>
+    <string name="im21a98">Dont know</string>
+    <string name="im203">Dont know</string>
+    <string name="im21">Has (name) ever received a Measles Injection – that is, a shot in the arm at the age of 9 months or older - to prevent (him/her) from getting measles?</string>
+    <string name="im211">Yes </string>
+    <string name="im212">No  </string>
+    <string name="im213">Dont know</string>
+    <string name="im22">How many times was a Measles Injection vaccine received? Number of times</string>
+    <string name="im22a">Has (name) ever received a Typhoid Injection – that is, a shot in the arm at the age of 9 months or older - to prevent (him/her) from getting Typhoid?</string>
+    <string name="im23">Where from (name) is usually vaccinated?   If the child is vaccinated from multiple sources, mention the usual source with higher frequency of vaccine doses.</string>
+    <string name="im23a">Can you please specify where is this facility located? </string>
+    <string name="im23a1">Within Catchment area 10km</string>
+    <string name="im23a2">Within District/ city </string>
+    <string name="im23a3">Out of District/city </string>
+    <string name="im23a96">Other Specify</string>
+    <string name="im2396">Other Specify </string>
+    <string name="im231">Govt. Health facility </string>
+    <string name="im24">Why (name) is not vaccinated?   If the child has not received all their vaccinations, ask the mother/caretaker   Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons. </string>
+    <string name="im241">Place of immunization too far</string>
+    <string name="im2410">Fear of side reaction </string>
+    <string name="im2411">Time or Place of immunization not Known</string>
+    <string name="im2412">Took child but no vaccine available </string>
+    <string name="im2413">Took child but no vaccinator</string>
+    <string name="im2414">Took child facility closed</string>
+    <string name="im2415">Child was sick </string>
+    <string name="im2416">Took child but not vaccination day</string>
+    <string name="im2417">Other (specify) </string>
+    <string name="im242">Time of immunization not convenient </string>
+    <string name="im243">Mother too busy </string>
+    <string name="im244">Family problem including mother ill</string>
+    <string name="im245">Child ill, not brought </string>
+    <string name="im246">Child ill, brought but not vaccinated</string>
+    <string name="im247">Long wait </string>
+    <string name="im248">Rumors</string>
+    <string name="im249">No faith in immunization </string>
+    <string name="im2499">Don’t Know </string>
+    <string name="im232">Private health facility </string>
+    <string name="im233">Government outreach service </string>
+    <string name="im236">Other (specify) </string>
+    <string name="im24a">Has the child ever received polio drops during a national polo campaign?</string>
+    <string name="im24a1">Yes</string>
+    <string name="im24a2">No</string>
+    <string name="im24a98">Dont Know</string>
+    <string name="im24b">How many times has the child received Polio vaccine drops during national polio campaign?</string>
+    <string name="im24b98">Dont Know</string>
+    <string name="im24c">Did the child receive polio drops during the last national polio campaign?</string>
+    <string name="im24d">The last time (name) received the polio drops, did (he/she) also get an injection to protect against polio?</string>
+    <string name="im24c1">Yes</string>
+    <string name="im24d1">Yes</string>
+    <string name="im24c2">No</string>
+    <string name="im24d2">No</string>
+    <string name="im24c98">Dont know</string>
+    <string name="im24d98">Dont know</string>
+    <string name="im25">Observe BCG Scar</string>
+    <string name="im2501">Scar Present</string>
+    <string name="im2502">Scar Absent</string>
+    <string name="im2503">Child Not Available</string>
+    <string name="im2504">Not Observed</string>
+    <string name="im26">COMMENTS IF ANY</string>
+    <string name="ec13">CHILD Line Number</string>
+    <string name="ec14">Child Name</string>
+    <string name="ec15">Gender of Child </string>
+    <string name="ec1501">Boy</string>
+    <string name="ec1502">Girl</string>
+    <string name="ec16">Mother’s/Caregiver’s name </string>
+    <string name="ec17">Age of  Mother/Care giver in complete years </string>
+    <string name="cb0title">Could you please bring (name)’s Birth Certificate, Immunization Card, and any other immunization record from a public or private health provider available in home? We will need to refer to those documents.</string>
+    <string name="cb03info">Probe: What is (his/her) birthday? If the mother/caretaker knows the exact date of birth, also record the day; otherwise, circle ‘98’ for day. Month and year must be recorded</string>
+    <string name="cb03">On what day, month and year was (name) born? </string>
+    <string name="cb03dd">Day of Birth</string>
+    <string name="cb03mm">Month of Birth</string>
+    <string name="cb03yy">Year of Birth</string>
+    <string name="cb03dk">Don’t know</string>
+    <string name="cb04">How old is (name)? </string>
+    <string name="cb04info">Record age in completed years and months. Record ‘0’ if less than 1 year.If  Responses to CB3 and CB4 are inconsistent, probe further and correct. </string>
+    <string name="cb04mm">Age (in completed Months)</string>
+    <string name="cb04yy">Age (in completed Years)</string>
+
+    <string name='Qcb0title'>cb0title</string>
+    <string name='Qcb01'>cb01</string>
+    <string name='Qcb02'>cb02</string>
+    <string name='Qcb03'>cb03</string>
+    <string name='Qcb04'>cb04</string>
+    <string name='Qec01'>ec01</string>
+    <string name='Qec02'>ec02</string>
+    <string name='Qec03'>ec03</string>
+    <string name='Qec03a'>ec03a</string>
+    <string name='Qec04'>ec04</string>
+    <string name='Qec04a'>ec04a</string>
+    <string name='Qec05'>ec05</string>
+    <string name='Qec06'>ec06</string>
+    <string name='Qec07'>ec07</string>
+    <string name='Qec09'>ec09</string>
+    <string name='Qec11'>ec11</string>
+    <string name='Qec12'>ec12</string>
+    <string name='Qec13'>ec13</string>
+    <string name='Qec13cline'>ec13cline</string>
+    <string name='Qec14'>ec14</string>
+    <string name='Qec14cname'>ec14cname</string>
+    <string name='Qec15'>ec15</string>
+    <string name='Qec16'>ec16</string>
+    <string name='Qec17'>ec17</string>
+    <string name='Qec18'>ec18</string>
+    <string name='Qec19'>ec19</string>
+    <string name='Qec20'>ec20</string>
+    <string name='Qec21'>ec21</string>
+    <string name='Qec22'>ec22</string>
+    <string name='Qhh01'>hh01</string>
+    <string name='Qhh02'>hh02</string>
+    <string name='Qhh03'>hh03</string>
+    <string name='Qhh03a'>hh03a</string>
+    <string name='Qhh04'>hh04</string>
+    <string name='Qhh04a'>hh04a</string>
+    <string name='Qhh05'>hh05</string>
+    <string name='Qhh06'>hh06</string>
+    <string name='Qhh07'>hh07</string>
+    <string name='Qhh08'>hh08</string>
+    <string name='Qhh09'>hh09</string>
+    <string name='Qhh10'>hh10</string>
+    <string name='Qhh11'>hh11</string>
+    <string name='Qhh12'>hh12</string>
+    <string name='Qhh13'>hh13</string>
+    <string name='Qhh13a'>hh13a</string>
+    <string name='Qhh14'>hh14</string>
+    <string name='Qhh15'>hh15</string>
+    <string name='Qhh16'>hh16</string>
+    <string name='Qhh16a'>hh16a</string>
+    <string name='Qhh16b'>hh16b</string>
+    <string name='Qhh18'>hh18</string>
+    <string name='Qhh18t'>hh18t</string>
+    <string name='Qhh19'>hh19</string>
+    <string name='Qhh20'>hh20</string>
+    <string name='Qhh20a'>hh20a</string>
+    <string name='Qhh21'>hh21</string>
+    <string name='Qim01'>im01</string>
+    <string name='Qim02'>im02</string>
+    <string name='Qim02a'>im02a</string>
+    <string name='Qim03'>im03</string>
+    <string name='Qim04'>im04</string>
+    <string name='Qim051bcg'>im051bcg</string>
+    <string name='Qim05title1'>im05title1</string>
+    <string name='Qim05title2'>im05title2</string>
+    <string name='Qim0502opv0'>im0502opv0</string>
+    <string name='Qim0503opv1'>im0503opv1</string>
+    <string name='Qim0504penta1'>im0504penta1</string>
+    <string name='Qim0505pcv1'>im0505pcv1</string>
+    <string name='Qim0506rv1'>im0506rv1</string>
+    <string name='Qim0507opv2'>im0507opv2</string>
+    <string name='Qim0508penta2'>im0508penta2</string>
+    <string name='Qim0509pcv2'>im0509pcv2</string>
+    <string name='Qim0510ahp'>im0510ahp</string>
+    <string name='Qim0510rv2'>im0510rv2</string>
+    <string name='Qim0511opv3'>im0511opv3</string>
+    <string name='Qim0512penta3'>im0512penta3</string>
+    <string name='Qim0513pcv3'>im0513pcv3</string>
+    <string name='Qim0514ipv'>im0514ipv</string>
+    <string name='Qim0515measles1'>im0515measles1</string>
+    <string name='Qim0516measles2'>im0516measles2</string>
+    <string name='Qim07'>im07</string>
+    <string name='Qim08'>im08</string>
+    <string name='Qim09'>im09</string>
+    <string name='Qim10'>im10</string>
+    <string name='Qim10a'>im10a</string>
+    <string name='Qim11'>im11</string>
+    <string name='Qim12'>im12</string>
+    <string name='Qim12a'>im12a</string>
+    <string name='Qim14'>im14</string>
+    <string name='Qim15'>im15</string>
+    <string name='Qim16'>im16</string>
+    <string name='Qim17'>im17</string>
+    <string name='Qim18'>im18</string>
+    <string name='Qim19'>im19</string>
+    <string name='Qim20'>im20</string>
+    <string name='Qim20a'>im20a</string>
+
+    <string name='Qim21'>im21</string>
+    <string name='Qim22'>im22</string>
+    <string name='Qim22a'>im22a</string>
+    <string name='Qim23'>im23</string>
+    <string name='Qim23a'>im23a</string>
+    <string name='Qim24'>im24</string>
+    <string name='Qim24d'>im24d</string>
+    <string name='Qim24c'>im24c</string>
+    <string name='Qim24b'>im24b</string>
+    <string name='Qim24a'>im24a</string>
+
+
+    <string name='Qim25'>im25</string>
+    <string name='Qim26'>im26</string>
+    <string name='Qss01'>ss01</string>
+    <string name='Qss02'>ss02</string>
+    <string name='Qss03'>ss03</string>
+    <string name='Qss04'>ss04</string>
+    <string name='Qss05'>ss05</string>
+    <string name='Qss06'>ss06</string>
+    <string name='Qss07'>ss07</string>
+    <string name='Qss08'>ss08</string>
+    <string name='Qss09'>ss09</string>
+    <string name='Qss11'>ss11</string>
+    <string name='Qss12'>ss12</string>
+    <string name='Qss13'>ss13</string>
+    <string name='Qss14'>ss14</string>
+    <string name='Qss14a'>ss14a</string>
+    <string name='Qss14b'>ss14b</string>
+    <string name='Qss14c'>ss14c</string>
+    <string name='Qss14d'>ss14d</string>
+    <string name='Qss14e'>ss14e</string>
+    <string name='Qss14f'>ss14f</string>
+    <string name='Qss14g'>ss14g</string>
+    <string name='Qss14h'>ss14h</string>
+    <string name='Qss14i'>ss14i</string>
+    <string name='Qss14j'>ss14j</string>
+    <string name='Qss14k'>ss14k</string>
+    <string name='Qss14l'>ss14l</string>
+    <string name='Qss14m'>ss14m</string>
+    <string name='Qss14n'>ss14n</string>
+    <string name='Qss14o'>ss14o</string>
+    <string name='Qss14p'>ss14p</string>
+    <string name='Qss14q'>ss14q</string>
+    <string name='Qss14r'>ss14r</string>
+    <string name='Qss14s'>ss14s</string>
+    <string name='Qss15'>ss15</string>
+    <string name='Qss15a'>ss15a</string>
+    <string name='Qss15b'>ss15b</string>
+    <string name='Qss15c'>ss15c</string>
+    <string name='Qss15d'>ss15d</string>
+    <string name='Qss15e'>ss15e</string>
+    <string name='Qss15f'>ss15f</string>
+    <string name='Qss15g'>ss15g</string>
+    <string name='Qss15h'>ss15h</string>
+    <string name='Qss15i'>ss15i</string>
+    <string name='Qss17'>ss17</string>
+    <string name='Qss18'>ss18</string>
+    <string name='Qss19'>ss19</string>
+    <string name='Qss20'>ss20</string>
+    <string name='Qss21'>ss21</string>
+    <string name='Qss22'>ss22</string>
+    <string name='Qss23'>ss23</string>
+    <string name='Qss24'>ss24</string>
+    <string name='Qss25'>ss25</string>
+    <string name='Qss26'>ss26</string>
+    <string name='Qss27'>ss27</string>
+    <string name='Qss27title'>ss27title</string>
+    <string name='Qss28'>ss28</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

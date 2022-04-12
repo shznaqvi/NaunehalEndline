@@ -1,0 +1,138 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/action_settings_main"
+        android:icon="@drawable/ic_menu_hamburger"
+        android:title="@string/actiondatabase"
+        app:showAsAction="always">
+        <menu>
+
+
+            <item
+                android:id="@+id/action_database"
+                android:title="@string/actiondatabase"
+                android:visible="false"
+                tools:visible="true" />
+            <item
+                android:id="@+id/action_data_sync"
+                android:title="@string/actiondatasync" />
+
+
+            <item
+                android:id="@+id/action_forms"
+                android:title="Forms">
+                <menu>
+                    <item
+                        android:id="@+id/formsReportPending"
+                        android:title="Unfinished" />
+                    <item
+                        android:id="@+id/formsReportDate"
+                        android:title="Report by Date" />
+                    <item
+                        android:id="@+id/formsReportCluster"
+                        android:title="Report by LHW" />
+                </menu>
+            </item>
+            <!-- <item
+                 android:id="@+id/action_lhws"
+                 android:title="Lhws">
+                 <menu>
+                     <item
+                         android:id="@+id/lhwsReportPending"
+                         android:title="Unfinished" />
+                     <item
+                         android:id="@+id/lhwsReportDate"
+                         android:title="Report by Date" />
+                     <item
+                         android:id="@+id/lhwsReportCluster"
+                         android:title="Report by LHW" />
+                 </menu>
+             </item>
+ -->
+            <!--  <item
+                  android:id="@+id/action_sections"
+                  android:title="Sections">
+
+                  <menu>
+                      <group android:id="@+id/lists">
+
+                          <item
+                              android:id="@+id/mwraList"
+                              android:title="1" />
+                          <item
+                              android:id="@+id/childList"
+                              android:title="2" />
+                      </group>
+
+                      <group android:id="@+id/secH">
+                          <item
+                              android:id="@+id/secH1"
+                              android:title="3" />
+                          <item
+                              android:id="@+id/secH2b"
+                              android:title="4" />
+                          <item
+                              android:id="@+id/secH3a"
+                              android:title="5" />
+
+                          <item
+                              android:id="@+id/secH4"
+                              android:title="6" />
+                          <item
+                              android:id="@+id/secH5"
+                              android:title="H5" />
+                          <item
+                              android:id="@+id/secH6"
+                              android:title="H6" />
+                          <item
+                              android:id="@+id/secH7"
+                              android:title="7" />
+                          <item
+                              android:id="@+id/sech6"
+                              android:title="sech6" />
+                      </group>
+                      <group android:id="@+id/secW">
+
+
+                          <item
+                              android:id="@+id/secW1"
+                              android:title="secW1" />
+                          <item
+                              android:id="@+id/secW1b"
+                              android:title="secW1b" />
+                          <item
+                              android:id="@+id/secW2"
+                              android:title="secW2" />
+                          <item
+                              android:id="@+id/secW3"
+                              android:title="secW3" />
+
+                          <item
+                              android:id="@+id/secW4"
+                              android:title="secW4" />
+
+                      </group>
+                      <group android:id="@+id/secC">
+
+                          <item
+                              android:id="@+id/secC1"
+                              android:title="secC1" />
+                          <item
+                              android:id="@+id/secC2"
+                              android:title="secC2" />
+                          <item
+                              android:id="@+id/secC3"
+                              android:title="secC3" />
+
+                      </group>
+
+
+                  </menu>
+              </item>-->
+        </menu>
+    </item>
+</menu>

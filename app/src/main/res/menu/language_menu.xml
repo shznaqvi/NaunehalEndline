@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/NO"
+        android:icon="@drawable/ic_language_change"
+        android:title="@string/options"
+        app:showAsAction="always">
+        <!-- Settings, should always be in the overflow -->
+        <menu>
+
+            <item android:title="Language Selection" />
+
+            <item
+                android:id="@+id/UR"
+                android:title="Urdu" />
+
+            <item
+                android:id="@+id/EN"
+                android:title="English" />
+        </menu>
+    </item>
+
+</menu>
