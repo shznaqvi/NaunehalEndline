@@ -120,14 +120,14 @@ public class PhotoUploadWorker2 extends Worker {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("simplifiedcoding", nTitle, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel(String.valueOf(photoid), nTitle, NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "simplifiedcoding")
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), String.valueOf(photoid))
                 .setContentTitle(title)
                 .setContentText(task)
-                .setSmallIcon(R.mipmap.ic_launcher);
+                .setSmallIcon(R.drawable.app_icon);
 
         if (curProgress >= maxProgress) {
 
