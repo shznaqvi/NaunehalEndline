@@ -30,8 +30,6 @@ import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityHouseholdScreenBinding;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionCHActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionSS_1Activity;
 
 
 public class HouseholdScreenActivity extends AppCompatActivity {

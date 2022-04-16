@@ -29,6 +29,24 @@
         android:usesCleartextTraffic="false"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".ui.sections.Section_08_SEActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_07_CVActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_06_BFActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_05_PDActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_03_CSActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_01_HHActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.ChildEndingActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -73,7 +91,6 @@
             android:name=".ui.lists.FormsReportDate"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".ui.TakePhoto"
             android:hardwareAccelerated="true"
@@ -100,44 +117,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-
         <activity
-            android:name=".ui.sections.SectionCBActivity"
+            android:name=".ui.sections.Section_02_CBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.SectionCHActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish1"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name=".ui.sections.SectionIM1Activity"
+            android:name=".ui.sections.Section_04_IM1Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.SectionIM2Activity"
+            android:name=".ui.sections.Section_04_IM2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ui.sections.SectionRIActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish1"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ui.sections.SectionSS_1Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish1"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ui.sections.SectionSS_2Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish1"
-            android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".ui.WebViewActivity"
             android:screenOrientation="portrait"

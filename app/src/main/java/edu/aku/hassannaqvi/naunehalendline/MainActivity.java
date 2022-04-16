@@ -35,12 +35,8 @@ import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportCluster;
 import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportDate;
 import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.naunehalendline.ui.sections.ConsentActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionCBActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionCHActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionIM1Activity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionRIActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionSS_1Activity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionSS_2Activity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_04_IM1Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -145,12 +141,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.secCB:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, SectionCBActivity.class));
+                startActivity(new Intent(this, Section_02_CBActivity.class));
                 break;
 
             case R.id.secIM:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, SectionIM1Activity.class));
+                startActivity(new Intent(this, Section_04_IM1Activity.class));
                 break;
 
             case R.id.seccs:

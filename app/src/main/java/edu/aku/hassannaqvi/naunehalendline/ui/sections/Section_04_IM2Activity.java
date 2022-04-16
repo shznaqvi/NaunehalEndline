@@ -28,7 +28,7 @@ import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionIm2Binding;
 import edu.aku.hassannaqvi.naunehalendline.ui.ChildEndingActivity;
 
-public class SectionIM2Activity extends AppCompatActivity {
+public class Section_04_IM2Activity extends AppCompatActivity {
 
 
     private static final String TAG = "SectionIM2Activity";

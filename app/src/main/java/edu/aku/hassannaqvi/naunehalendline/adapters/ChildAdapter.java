@@ -22,8 +22,7 @@ import java.util.List;
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionCBActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.SectionCHActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
 
 
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> {
@@ -183,7 +182,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             MainApp.child = MainApp.childList.get(position);
             if (child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23) {
 
-                Intent intent = new Intent(mContext, SectionCBActivity.class);
+                Intent intent = new Intent(mContext, Section_02_CBActivity.class);
 
                 intent.putExtra("position", position);
                 intent.putExtra("requestCode", "4");
