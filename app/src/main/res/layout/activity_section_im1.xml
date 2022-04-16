@@ -34,7 +34,7 @@
             android:theme="@style/CustomToolbarTheme"
             app:popupTheme="@style/CustomPopupTheme"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
-            app:title="@string/immainheading"
+            app:title="@string/sectionimchildimmunization_mainheading"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
 
