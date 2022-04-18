@@ -27,9 +27,9 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/CustomToolbarTheme"
             app:popupTheme="@style/CustomPopupTheme"
+            app:subtitle="@string/hh01_title1"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
             app:title="@string/sectionaidentificationinformationhh_mainheading"
-            app:subtitle="@string/hh01_title1"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
 
@@ -44,45 +44,44 @@
                 android:orientation="vertical">
 
 
-
                 <!-- hh01  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVhh01"
                     style="@style/cardView">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_hh01" />
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh01" />
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/hh01" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/hh01" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/hh01"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:gravity="center"
-                                android:hint="@string/hh01"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:text="@={form.hh01}"
-                                app:maxValue="0"
-                                app:minValue="0"
-                                app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh01"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:hint="@string/hh01"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:text="@={form.hh01}"
+                            app:maxValue="0"
+                            app:minValue="0"
+                            app:type="range" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -161,39 +160,39 @@
                     android:id="@+id/fldGrpCVhh03"
                     style="@style/cardView">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_hh03" />
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh03" />
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/hh03" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/hh03" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/hh03"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:gravity="center"
-                                android:hint="####"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text="@={form.hh03}"
-                                app:maxValue="9999"
-                                app:minValue="1"
-                                app:type="range" />
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh03"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:hint="####"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:text="@={form.hh03}"
+                            app:maxValue="9999"
+                            app:minValue="1"
+                            app:type="range" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -203,34 +202,34 @@
                     android:id="@+id/fldGrpCVhh04"
                     style="@style/cardView">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_hh04" />
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh04" />
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/hh04" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/hh04" />
 
-                            <EditText
-                                android:id="@+id/hh04"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/hh04"
-                                android:text="@={form.hh04}" />
+                        <EditText
+                            android:id="@+id/hh04"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/hh04"
+                            android:text="@={form.hh04}" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -607,15 +606,19 @@
                             android:id="@+id/hh13"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh13"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh13}"
                             app:maxValue="99"
                             app:minValue="0"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh12  Input   -->
                 <androidx.cardview.widget.CardView
@@ -1306,15 +1309,19 @@
                             android:id="@+id/hh21"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh21"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh21}"
                             app:maxValue="60"
                             app:minValue="1"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh22  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
@@ -1349,7 +1356,8 @@
                             android:id="@+id/hh22"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh22"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh22}"
@@ -1392,7 +1400,8 @@
                             android:id="@+id/hh23"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh23"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh23}"
@@ -1435,15 +1444,19 @@
                             android:id="@+id/hh24"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh24"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh24}"
                             app:maxValue="20"
                             app:minValue="0"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh25  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
@@ -1478,15 +1491,19 @@
                             android:id="@+id/hh25"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hh25"
+                            android:gravity="center"
+                            android:hint="##"
                             android:inputType="number"
                             android:maxLength="2"
                             android:text="@={form.hh25}"
                             app:maxValue="20"
                             app:minValue="0"
                             app:type="range" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh26  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -1595,9 +1612,15 @@
                                 android:tag="hh2696"
                                 android:text="@={form.hh2696x}"
                                 android:visibility="@{form.hh26.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
                         </RadioGroup>
+
                     </LinearLayout>
-                </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!--EndButton LinearLayout-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1610,8 +1633,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/red_overlay"
-                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:background="@color/redOverlay"
+                        android:onClick="btnEnd"
                         android:text="Cancel"
                         android:textColor="@color/white" />
 
@@ -1620,13 +1643,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/green_overlay"
-                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:background="@color/redOverlay"
+                        android:onClick="btnContinue"
                         android:text="Save"
                         android:textColor="@color/white" />
+
                 </LinearLayout>
+                <!--EndButton LinearLayout-->
+
+
             </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>
+
 </layout>
