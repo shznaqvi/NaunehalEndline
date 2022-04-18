@@ -139,8 +139,8 @@ public class TableContracts {
         public static final String COLUMN_CSTATUS = "cstatus";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_SNO = "sno";
-        public static final String COLUMN_SCH = "sch";
         public static final String COLUMN_SCB = "scb";
+        public static final String COLUMN_SCS = "scs";
         public static final String COLUMN_SIM = "sim";
 
         public static final String COLUMN_DEVICEID = "deviceid";
