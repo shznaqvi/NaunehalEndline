@@ -2,14 +2,14 @@ package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -19,9 +19,7 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionCbBinding;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionHhBinding;
-import edu.aku.hassannaqvi.naunehalendline.ui.ChildEndingActivity;
 
 public class Section_01_HHActivity extends AppCompatActivity {
 
@@ -37,7 +35,6 @@ public class Section_01_HHActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_hh);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
-        setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
 
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
@@ -91,12 +88,7 @@ public class Section_01_HHActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
-            return false;
-        }
-
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
 
