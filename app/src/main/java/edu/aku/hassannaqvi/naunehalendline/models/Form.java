@@ -1892,37 +1892,45 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe2001(String se2001) {
+        if (this.se2001.equals(se2001)) return; // for all checkboxes
         this.se2001 = se2001;
         notifyPropertyChanged(BR.se2001);
     }
 
     public void setSe2002(String se2002) {
+        if (this.se2002.equals(se2002)) return; // for all checkboxes
         this.se2002 = se2002;
         notifyPropertyChanged(BR.se2002);
     }
 
     public void setSe2003(String se2003) {
+        if (this.se2003.equals(se2003)) return; // for all checkboxes
         this.se2003 = se2003;
         notifyPropertyChanged(BR.se2003);
     }
 
     public void setSe2004(String se2004) {
+        if (this.se2004.equals(se2004)) return; // for all checkboxes
         this.se2004 = se2004;
         notifyPropertyChanged(BR.se2004);
     }
 
     public void setSe2005(String se2005) {
+        if (this.se2005.equals(se2005)) return; // for all checkboxes
         this.se2005 = se2005;
         notifyPropertyChanged(BR.se2005);
     }
 
     public void setSe2006(String se2006) {
+        if (this.se2006.equals(se2006)) return; // for all checkboxes
         this.se2006 = se2006;
         notifyPropertyChanged(BR.se2006);
     }
 
     public void setSe2096(String se2096) {
+        if (this.se2096.equals(se2096)) return; // for all checkboxes
         this.se2096 = se2096;
+        setSe2096x(se2096.equals("96") ? this.se2096x : "");
         notifyPropertyChanged(BR.se2096);
     }
 
@@ -1937,31 +1945,37 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe2101(String se2101) {
+        if (this.se2101.equals(se2101)) return; // for all checkboxes
         this.se2101 = se2101;
         notifyPropertyChanged(BR.se2101);
     }
 
     public void setSe2102(String se2102) {
+        if (this.se2102.equals(se2102)) return; // for all checkboxes
         this.se2102 = se2102;
         notifyPropertyChanged(BR.se2102);
     }
 
     public void setSe2103(String se2103) {
+        if (this.se2103.equals(se2103)) return; // for all checkboxes
         this.se2103 = se2103;
         notifyPropertyChanged(BR.se2103);
     }
 
     public void setSe2104(String se2104) {
+        if (this.se2104.equals(se2104)) return; // for all checkboxes
         this.se2104 = se2104;
         notifyPropertyChanged(BR.se2104);
     }
 
     public void setSe2105(String se2105) {
+        if (this.se2105.equals(se2105)) return; // for all checkboxes
         this.se2105 = se2105;
         notifyPropertyChanged(BR.se2105);
     }
 
     public void setSe2196(String se2196) {
+        if (this.se2196.equals(se2196)) return; // for all checkboxes
         this.se2196 = se2196;
         notifyPropertyChanged(BR.se2196);
     }
@@ -2112,61 +2126,73 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe4301(String se4301) {
+        if (this.se4301.equals(se4301)) return; // for all checkboxes
         this.se4301 = se4301;
         notifyPropertyChanged(BR.se4301);
     }
 
     public void setSe4302(String se4302) {
+        if (this.se4302.equals(se4302)) return; // for all checkboxes
         this.se4302 = se4302;
         notifyPropertyChanged(BR.se4302);
     }
 
     public void setSe4303(String se4303) {
+        if (this.se4303.equals(se4303)) return; // for all checkboxes
         this.se4303 = se4303;
         notifyPropertyChanged(BR.se4303);
     }
 
     public void setSe4304(String se4304) {
+        if (this.se4304.equals(se4304)) return; // for all checkboxes
         this.se4304 = se4304;
         notifyPropertyChanged(BR.se4304);
     }
 
     public void setSe4305(String se4305) {
+        if (this.se4305.equals(se4305)) return; // for all checkboxes
         this.se4305 = se4305;
         notifyPropertyChanged(BR.se4305);
     }
 
     public void setSe4306(String se4306) {
+        if (this.se4306.equals(se4306)) return; // for all checkboxes
         this.se4306 = se4306;
         notifyPropertyChanged(BR.se4306);
     }
 
     public void setSe4307(String se4307) {
+        if (this.se4307.equals(se4307)) return; // for all checkboxes
         this.se4307 = se4307;
         notifyPropertyChanged(BR.se4307);
     }
 
     public void setSe4308(String se4308) {
+        if (this.se4308.equals(se4308)) return; // for all checkboxes
         this.se4308 = se4308;
         notifyPropertyChanged(BR.se4308);
     }
 
     public void setSe4309(String se4309) {
+        if (this.se4309.equals(se4309)) return; // for all checkboxes
         this.se4309 = se4309;
         notifyPropertyChanged(BR.se4309);
     }
 
     public void setSe4310(String se4310) {
+        if (this.se4310.equals(se4310)) return; // for all checkboxes
         this.se4310 = se4310;
         notifyPropertyChanged(BR.se4310);
     }
 
     public void setSe4311(String se4311) {
+        if (this.se4311.equals(se4311)) return; // for all checkboxes
         this.se4311 = se4311;
         notifyPropertyChanged(BR.se4311);
     }
 
     public void setSe4396(String se4396) {
+        if (this.se4396.equals(se4396)) return; // for all checkboxes
         this.se4396 = se4396;
         notifyPropertyChanged(BR.se4396);
     }
@@ -2182,26 +2208,31 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe4401(String se4401) {
+        if (this.se4401.equals(se4401)) return; // for all checkboxes
         this.se4401 = se4401;
         notifyPropertyChanged(BR.se4401);
     }
 
     public void setSe4402(String se4402) {
+        if (this.se4402.equals(se4402)) return; // for all checkboxes
         this.se4402 = se4402;
         notifyPropertyChanged(BR.se4402);
     }
 
     public void setSe4403(String se4403) {
+        if (this.se4403.equals(se4403)) return; // for all checkboxes
         this.se4403 = se4403;
         notifyPropertyChanged(BR.se4403);
     }
 
     public void setSe4404(String se4404) {
+        if (this.se4404.equals(se4404)) return; // for all checkboxes
         this.se4404 = se4404;
         notifyPropertyChanged(BR.se4404);
     }
 
     public void setSe4496(String se4496) {
+        if (this.se4496.equals(se4496)) return; // for all checkboxes
         this.se4496 = se4496;
         notifyPropertyChanged(BR.se4496);
     }
@@ -2222,36 +2253,43 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe4601(String se4601) {
+        if (this.se4601.equals(se4601)) return; // for all checkboxes
         this.se4601 = se4601;
         notifyPropertyChanged(BR.se4601);
     }
 
     public void setSe4602(String se4602) {
+        if (this.se4602.equals(se4602)) return; // for all checkboxes
         this.se4602 = se4602;
         notifyPropertyChanged(BR.se4602);
     }
 
     public void setSe4603(String se4603) {
+        if (this.se4603.equals(se4603)) return; // for all checkboxes
         this.se4603 = se4603;
         notifyPropertyChanged(BR.se4603);
     }
 
     public void setSe4604(String se4604) {
+        if (this.se4604.equals(se4604)) return; // for all checkboxes
         this.se4604 = se4604;
         notifyPropertyChanged(BR.se4604);
     }
 
     public void setSe4605(String se4605) {
+        if (this.se4605.equals(se4605)) return; // for all checkboxes
         this.se4605 = se4605;
         notifyPropertyChanged(BR.se4605);
     }
 
     public void setSe4606(String se4606) {
+        if (this.se4606.equals(se4606)) return; // for all checkboxes
         this.se4606 = se4606;
         notifyPropertyChanged(BR.se4606);
     }
 
     public void setSe4696(String se4696) {
+        if (this.se4696.equals(se4696)) return; // for all checkboxes
         this.se4696 = se4696;
         notifyPropertyChanged(BR.se4696);
     }
@@ -2292,36 +2330,43 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe54_01(String se54_01) {
+        if (this.se54_01.equals(se54_01)) return; // for all checkboxes
         this.se54_01 = se54_01;
         notifyPropertyChanged(BR.se54_01);
     }
 
     public void setSe54_02(String se54_02) {
+        if (this.se54_02.equals(se54_02)) return; // for all checkboxes
         this.se54_02 = se54_02;
         notifyPropertyChanged(BR.se54_02);
     }
 
     public void setSe54_03(String se54_03) {
+        if (this.se54_03.equals(se54_03)) return; // for all checkboxes
         this.se54_03 = se54_03;
         notifyPropertyChanged(BR.se54_03);
     }
 
     public void setSe54_04(String se54_04) {
+        if (this.se54_04.equals(se54_04)) return; // for all checkboxes
         this.se54_04 = se54_04;
         notifyPropertyChanged(BR.se54_04);
     }
 
     public void setSe54_05(String se54_05) {
+        if (this.se54_05.equals(se54_05)) return; // for all checkboxes
         this.se54_05 = se54_05;
         notifyPropertyChanged(BR.se54_05);
     }
 
     public void setSe54_06(String se54_06) {
+        if (this.se54_06.equals(se54_06)) return; // for all checkboxes
         this.se54_06 = se54_06;
         notifyPropertyChanged(BR.se54_06);
     }
 
     public void setSe54_96(String se54_96) {
+        if (this.se54_96.equals(se54_96)) return; // for all checkboxes
         this.se54_96 = se54_96;
         notifyPropertyChanged(BR.se54_96);
     }
@@ -2352,36 +2397,43 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe56_01(String se56_01) {
+        if (this.se56_01.equals(se56_01)) return; // for all checkboxes
         this.se56_01 = se56_01;
         notifyPropertyChanged(BR.se56_01);
     }
 
     public void setSe56_02(String se56_02) {
+        if (this.se56_02.equals(se56_02)) return; // for all checkboxes
         this.se56_02 = se56_02;
         notifyPropertyChanged(BR.se56_02);
     }
 
     public void setSe56_03(String se56_03) {
+        if (this.se56_03.equals(se56_03)) return; // for all checkboxes
         this.se56_03 = se56_03;
         notifyPropertyChanged(BR.se56_03);
     }
 
     public void setSe56_04(String se56_04) {
+        if (this.se56_04.equals(se56_04)) return; // for all checkboxes
         this.se56_04 = se56_04;
         notifyPropertyChanged(BR.se56_04);
     }
 
     public void setSe56_05(String se56_05) {
+        if (this.se56_05.equals(se56_05)) return; // for all checkboxes
         this.se56_05 = se56_05;
         notifyPropertyChanged(BR.se56_05);
     }
 
     public void setSe56_06(String se56_06) {
+        if (this.se56_06.equals(se56_06)) return; // for all checkboxes
         this.se56_06 = se56_06;
         notifyPropertyChanged(BR.se56_06);
     }
 
     public void setSe56_96(String se56_96) {
+        if (this.se56_96.equals(se56_96)) return; // for all checkboxes
         this.se56_96 = se56_96;
         notifyPropertyChanged(BR.se56_96);
     }
@@ -2397,32 +2449,43 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe4901(String se4901) {
+        if (this.se4901.equals(se4901)) return; // for all checkboxes
         this.se4901 = se4901;
         notifyPropertyChanged(BR.se4901);
     }
 
     public void setSe4902(String se4902) {
+        if (this.se4902.equals(se4902)) return; // for all checkboxes
         this.se4902 = se4902;
         notifyPropertyChanged(BR.se4902);
     }
 
     public void setSe4903(String se4903) {
+        if (this.se4903.equals(se4903)) return; // for all checkboxes
         this.se4903 = se4903;
         notifyPropertyChanged(BR.se4903);
     }
 
     public void setSe4904(String se4904) {
+        if (this.se4904.equals(se4904)) return; // for all checkboxes
         this.se4904 = se4904;
         notifyPropertyChanged(BR.se4904);
     }
 
     public void setSe4998(String se4998) {
+        if (this.se4998.equals(se4998)) return; // for all checkboxes
         this.se4998 = se4998;
         notifyPropertyChanged(BR.se4998);
     }
 
     public void setSe4996(String se4996) {
+        if (this.se4996.equals(se4996)) return; // for all checkboxes
         this.se4996 = se4996;
+        setSe4901(se4998.equals("98") ? "" : this.se4901);
+        setSe4902(se4998.equals("98") ? "" : this.se4902);
+        setSe4903(se4998.equals("98") ? "" : this.se4903);
+        setSe4904(se4998.equals("98") ? "" : this.se4904);
+        setSe4996(se4998.equals("98") ? "" : this.se4996);
         notifyPropertyChanged(BR.se4996);
     }
 
@@ -2477,41 +2540,56 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe60_01(String se60_01) {
+        if (this.se60_01.equals(se60_01)) return; // for all checkboxes
         this.se60_01 = se60_01;
         notifyPropertyChanged(BR.se60_01);
     }
 
     public void setSe60_02(String se60_02) {
+        if (this.se60_02.equals(se60_02)) return; // for all checkboxes
         this.se60_02 = se60_02;
         notifyPropertyChanged(BR.se60_02);
     }
 
     public void setSe60_03(String se60_03) {
+        if (this.se60_03.equals(se60_03)) return; // for all checkboxes
         this.se60_03 = se60_03;
         notifyPropertyChanged(BR.se60_03);
     }
 
     public void setSe60_04(String se60_04) {
+        if (this.se60_04.equals(se60_04)) return; // for all checkboxes
         this.se60_04 = se60_04;
         notifyPropertyChanged(BR.se60_04);
     }
 
     public void setSe60_05(String se60_05) {
+        if (this.se60_05.equals(se60_05)) return; // for all checkboxes
         this.se60_05 = se60_05;
         notifyPropertyChanged(BR.se60_05);
     }
 
     public void setSe60_06(String se60_06) {
+        if (this.se60_06.equals(se60_06)) return; // for all checkboxes
         this.se60_06 = se60_06;
         notifyPropertyChanged(BR.se60_06);
     }
 
     public void setSe60_98(String se60_98) {
+        if (this.se60_98.equals(se60_98)) return; // for all checkboxes
         this.se60_98 = se60_98;
+        setSe60_01(se60_98.equals("98") ? "" : this.se60_01);
+        setSe60_02(se60_98.equals("98") ? "" : this.se60_02);
+        setSe60_03(se60_98.equals("98") ? "" : this.se60_03);
+        setSe60_04(se60_98.equals("98") ? "" : this.se60_04);
+        setSe60_05(se60_98.equals("98") ? "" : this.se60_05);
+        setSe60_06(se60_98.equals("98") ? "" : this.se60_06);
+        setSe60_96(se60_98.equals("98") ? "" : this.se60_96);
         notifyPropertyChanged(BR.se60_98);
     }
 
     public void setSe60_96(String se60_96) {
+        if (this.se60_96.equals(se60_96)) return; // for all checkboxes
         this.se60_96 = se60_96;
         notifyPropertyChanged(BR.se60_96);
     }
@@ -2537,56 +2615,67 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setSe3701(String se3701) {
+        if (this.se3701.equals(se3701)) return; // for all checkboxes
         this.se3701 = se3701;
         notifyPropertyChanged(BR.se3701);
     }
 
     public void setSe3702(String se3702) {
+        if (this.se3702.equals(se3702)) return; // for all checkboxes
         this.se3702 = se3702;
         notifyPropertyChanged(BR.se3702);
     }
 
     public void setSe3703(String se3703) {
+        if (this.se3703.equals(se3703)) return; // for all checkboxes
         this.se3703 = se3703;
         notifyPropertyChanged(BR.se3703);
     }
 
     public void setSe3704(String se3704) {
+        if (this.se3704.equals(se3704)) return; // for all checkboxes
         this.se3704 = se3704;
         notifyPropertyChanged(BR.se3704);
     }
 
     public void setSe3705(String se3705) {
+        if (this.se3705.equals(se3705)) return; // for all checkboxes
         this.se3705 = se3705;
         notifyPropertyChanged(BR.se3705);
     }
 
     public void setSe3706(String se3706) {
+        if (this.se3706.equals(se3706)) return; // for all checkboxes
         this.se3706 = se3706;
         notifyPropertyChanged(BR.se3706);
     }
 
     public void setSe3707(String se3707) {
+        if (this.se3707.equals(se3707)) return; // for all checkboxes
         this.se3707 = se3707;
         notifyPropertyChanged(BR.se3707);
     }
 
     public void setSe3708(String se3708) {
+        if (this.se3708.equals(se3708)) return; // for all checkboxes
         this.se3708 = se3708;
         notifyPropertyChanged(BR.se3708);
     }
 
     public void setSe3709(String se3709) {
+        if (this.se3709.equals(se3709)) return; // for all checkboxes
         this.se3709 = se3709;
         notifyPropertyChanged(BR.se3709);
     }
 
     public void setSe3710(String se3710) {
+        if (this.se3710.equals(se3710)) return; // for all checkboxes
         this.se3710 = se3710;
         notifyPropertyChanged(BR.se3710);
     }
 
     public void setSe3796(String se3796) {
+        if (this.se3796.equals(se3796)) return; // for all checkboxes
         this.se3796 = se3796;
         notifyPropertyChanged(BR.se3796);
     }
