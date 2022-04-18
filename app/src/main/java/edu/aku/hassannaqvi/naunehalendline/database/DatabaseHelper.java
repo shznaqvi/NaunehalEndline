@@ -4,6 +4,7 @@ package edu.aku.hassannaqvi.naunehalendline.database;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.IBAHC;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.mwra;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedCluster;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedHousehold;
 import static edu.aku.hassannaqvi.naunehalendline.core.UserAuth.checkPassword;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ChildTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.EntryLogTable;
@@ -41,6 +43,7 @@ import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.models.Clusters;
 import edu.aku.hassannaqvi.naunehalendline.models.EntryLog;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
+import edu.aku.hassannaqvi.naunehalendline.models.MWRA;
 import edu.aku.hassannaqvi.naunehalendline.models.RandomHH;
 import edu.aku.hassannaqvi.naunehalendline.models.Users;
 import edu.aku.hassannaqvi.naunehalendline.models.VersionApp;
@@ -79,6 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_ENTRYLOGS);
         db.execSQL(CreateTable.SQL_CREATE_CHILD);
+        db.execSQL(CreateTable.SQL_CREATE_MWRA);
 
     }
 
@@ -164,6 +168,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
+
+    public Long addMWRA(MWRA mwra) throws JSONException {
+        SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
+        ContentValues values = new ContentValues();
+        values.put(TableContracts.MWRATable.COLUMN_PROJECT_NAME, mwra.getProjectName());
+        values.put(TableContracts.MWRATable.COLUMN_UID, mwra.getUid());
+        values.put(TableContracts.MWRATable.COLUMN_UUID, mwra.getUuid());
+        values.put(TableContracts.MWRATable.COLUMN_EB_CODE, mwra.getEbCode());
+        values.put(TableContracts.MWRATable.COLUMN_HHID, mwra.getHhid());
+        values.put(TableContracts.MWRATable.COLUMN_SNO, mwra.getSno());
+        values.put(TableContracts.MWRATable.COLUMN_USERNAME, mwra.getUserName());
+        values.put(TableContracts.MWRATable.COLUMN_SYSDATE, mwra.getSysDate());
+        //values.put(TableContracts.MWRATable.COLUMN_CSTATUS, mwra.getCStatus());
+
+        values.put(TableContracts.MWRATable.COLUMN_SPD, mwra.sPDtoString());
+
+     /*   values.put(ChildsTable.COLUMN_SSS, child.sMtoString());
+        values.put(ChildsTable.COLUMN_SCB, child.sNtoString());
+        values.put(ChildsTable.COLUMN_IM, child.sOtoString());*/
+
+        values.put(TableContracts.MWRATable.COLUMN_DEVICETAGID, mwra.getDeviceTag());
+/*
+        values.put(ChildTable.COLUMN_ENTRY_TYPE, child.getEntryType());
+*/
+        values.put(TableContracts.MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
+        values.put(TableContracts.MWRATable.COLUMN_APPVERSION, mwra.getAppver());
+        values.put(TableContracts.MWRATable.COLUMN_SYNCED, mwra.getSynced());
+        values.put(TableContracts.MWRATable.COLUMN_SYNC_DATE, mwra.getSyncDate());
+
+        long newRowId;
+        newRowId = db.insertOrThrow(
+                TableContracts.MWRATable.TABLE_NAME,
+                TableContracts.MWRATable.COLUMN_NAME_NULLABLE,
+                values);
+        return newRowId;
+    }
+
     public Long addEntryLog(EntryLog entryLog) throws SQLiteException {
         SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
         ContentValues values = new ContentValues();
@@ -234,6 +275,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(child.getId())};
 
         return db.update(ChildTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesMWRAColumn(String column, String value) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = TableContracts.MWRATable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(mwra.getId())};
+
+        return db.update(TableContracts.MWRATable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -584,6 +640,40 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.d(TAG, "getUnsyncedChild: " + allChild.toString().length());
         Log.d(TAG, "getUnsyncedChild: " + allChild);
         return allChild;
+    }
+
+
+    public JSONArray getUnsyncedMWRA() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+        String whereClause;
+        whereClause = TableContracts.MWRATable.COLUMN_SYNCED + " = '' ";
+
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = TableContracts.MWRATable.COLUMN_ID + " ASC";
+
+        JSONArray allMWRA = new JSONArray();
+        c = db.query(
+                TableContracts.MWRATable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            Log.d(TAG, "getUnsyncedMWRA: " + c.getCount());
+            MWRA mw = new MWRA();
+            allMWRA.put(mw.Hydrate(c).toJSONObject());
+        }
+
+        Log.d(TAG, "getUnsyncedMWRA: " + allMWRA.toString().length());
+        Log.d(TAG, "getUnsyncedMWRA: " + allMWRA);
+        return allMWRA;
     }
 
 
