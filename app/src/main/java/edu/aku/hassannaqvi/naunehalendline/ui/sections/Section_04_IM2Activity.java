@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionIm2Binding;
 import edu.aku.hassannaqvi.naunehalendline.ui.ChildEndingActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
 
 public class Section_04_IM2Activity extends AppCompatActivity {
 
@@ -123,7 +125,7 @@ public class Section_04_IM2Activity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent forwardIntent = new Intent(this, ChildEndingActivity.class);
+            Intent forwardIntent = new Intent(this, form.getHh11().equals("2") || Integer.parseInt(form.getHh13()) < 15 ? EndingActivity.class : ChildEndingActivity.class);
             forwardIntent.putExtra("requestCode", requestCode);
             forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             setResult(RESULT_OK, forwardIntent);

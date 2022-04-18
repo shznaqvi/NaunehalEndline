@@ -87,9 +87,7 @@ public class Section_01_HHActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
         return Validator.emptyCheckingContainer(this, bi.GrpName);
-
     }
 
 
