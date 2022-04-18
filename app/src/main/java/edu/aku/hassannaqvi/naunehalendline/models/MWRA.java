@@ -1672,6 +1672,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd05(String pd05) {
         this.pd05 = pd05;
+        setPd0596x(pd05.equals("96") ? this.pd0596x : "");
         notifyPropertyChanged(BR.pd05);
     }
 
@@ -1767,6 +1768,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setPd08a96(String pd08a96) {
         if (this.pd08a96.equals(pd08a96)) return; // for all checkboxes
         this.pd08a96 = pd08a96;
+        setPd08a96x(pd08a96.equals("96") ? this.pd08a96x : "");
         notifyPropertyChanged(BR.pd08a96);
     }
 
@@ -1812,6 +1814,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd12(String pd12) {
         this.pd12 = pd12;
+        setPd1296x(pd12.equals("96") ? this.pd1296x : "");
         notifyPropertyChanged(BR.pd12);
     }
 
@@ -1837,6 +1840,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd14(String pd14) {
         this.pd14 = pd14;
+        setPd1496x(pd14.equals("96") ? this.pd1496x : "");
         notifyPropertyChanged(BR.pd14);
     }
 
@@ -1900,6 +1904,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setPd1696(String pd1696) {
         if (this.pd1696.equals(pd1696)) return; // for all checkboxes
         this.pd1696 = pd1696;
+        setPd1696x(pd1696.equals("96") ? this.pd1696x : "");
         notifyPropertyChanged(BR.pd1696);
     }
 
@@ -1988,6 +1993,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setPd2096(String pd2096) {
         if (this.pd2096.equals(pd2096)) return; // for all checkboxes
         this.pd2096 = pd2096;
+        setPd2096x(pd2096.equals("96") ? this.pd2096x : "");
         notifyPropertyChanged(BR.pd2096);
     }
 
@@ -2070,6 +2076,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setPd2496(String pd2496) {
         if (this.pd2496.equals(pd2496)) return; // for all checkboxes
         this.pd2496 = pd2496;
+        setPd2496x(pd2496.equals("96") ? this.pd2496x : "");
         notifyPropertyChanged(BR.pd2496);
     }
 
@@ -2153,6 +2160,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf07(String bf07) {
         this.bf07 = bf07;
+        setBf0796x(bf07.equals("96") ? this.bf0796x : "");
         notifyPropertyChanged(BR.bf07);
     }
 
@@ -2240,6 +2248,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setBf0996(String bf0996) {
         if (this.bf0996.equals(bf0996)) return; // for all checkboxes
         this.bf0996 = bf0996;
+        setBf0996x(bf0996.equals("96") ? this.bf0996x : "");
         notifyPropertyChanged(BR.bf0996);
     }
 
@@ -2435,6 +2444,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf19(String bf19) {
         this.bf19 = bf19;
+        setBf1996x(bf19.equals("96") ? this.bf1996x : "");
         notifyPropertyChanged(BR.bf19);
     }
 
@@ -2523,6 +2533,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0596(String cv0596) {
         if (this.cv0596.equals(cv0596)) return; // for all checkboxes
         this.cv0596 = cv0596;
+        setCv0596x(cv0596.equals("96") ? this.cv0596x : "");
         notifyPropertyChanged(BR.cv0596);
     }
 
@@ -2611,6 +2622,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0696(String cv0696) {
         if (this.cv0696.equals(cv0696)) return; // for all checkboxes
         this.cv0696 = cv0696;
+        setCv0696x(cv0696.equals("96") ? this.cv0696x : "");
         notifyPropertyChanged(BR.cv0696);
     }
 
@@ -2680,6 +2692,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0896(String cv0896) {
         if (this.cv0896.equals(cv0896)) return; // for all checkboxes
         this.cv0896 = cv0896;
+        setCv0896x(cv0896.equals("96") ? this.cv0896x : "");
         notifyPropertyChanged(BR.cv0896);
     }
 
@@ -2750,6 +2763,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0996(String cv0996) {
         if (this.cv0996.equals(cv0996)) return; // for all checkboxes
         this.cv0996 = cv0996;
+        setCv0996x(cv0996.equals("96") ? this.cv0996x : "");
         notifyPropertyChanged(BR.cv0996);
     }
 
@@ -2826,6 +2840,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv1096(String cv1096) {
         if (this.cv1096.equals(cv1096)) return; // for all checkboxes
         this.cv1096 = cv1096;
+        setCv1096x(cv1096.equals("96") ? this.cv1096x : "");
         notifyPropertyChanged(BR.cv1096);
     }
 
@@ -2841,6 +2856,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setCv12(String cv12) {
         this.cv12 = cv12;
+        setCv1296x(cv12.equals("96") ? this.cv1296x : "");
         notifyPropertyChanged(BR.cv12);
     }
 
@@ -2866,6 +2882,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setCv16(String cv16) {
         this.cv16 = cv16;
+        setCv1696x(cv16.equals("96") ? this.cv1696x : "");
         notifyPropertyChanged(BR.cv16);
     }
 
@@ -2881,6 +2898,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setCv18(String cv18) {
         this.cv18 = cv18;
+        setCv1896x(cv18.equals("96") ? this.cv1896x : "");
         notifyPropertyChanged(BR.cv18);
     }
 
@@ -2891,6 +2909,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setCv19(String cv19) {
         this.cv19 = cv19;
+        setCv1996x(cv19.equals("96") ? this.cv1996x : "");
         notifyPropertyChanged(BR.cv19);
     }
 
@@ -2972,6 +2991,7 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv2196(String cv2196) {
         if (this.cv2196.equals(cv2196)) return; // for all checkboxes
         this.cv2196 = cv2196;
+        setCv2196x(cv2196.equals("96") ? this.cv2196x : "");
         notifyPropertyChanged(BR.cv2196);
     }
 

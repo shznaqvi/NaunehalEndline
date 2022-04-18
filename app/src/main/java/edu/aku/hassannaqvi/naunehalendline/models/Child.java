@@ -892,6 +892,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb10(String cb10) {
         this.cb10 = cb10;
+        setCb1096x(cb10.equals("96") ? this.cb1096x : "");
         notifyPropertyChanged(BR.cb10);
     }
 
@@ -917,6 +918,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb14(String cb14) {
         this.cb14 = cb14;
+        setCb1496x(cb14.equals("96") ? this.cb1496x : "");
         notifyPropertyChanged(BR.cb14);
     }
 
@@ -1048,6 +1050,7 @@ public class Child extends BaseObservable implements Observable {
     public void setCs0896(String cs0896) {
         if (this.cs0896.equals(cs0896)) return; // for all checkboxes
         this.cs0896 = cs0896;
+        setCs0896x(cs0896.equals("96") ? this.cs0896x : "");
         notifyPropertyChanged(BR.cs0896);
     }
 
@@ -1068,6 +1071,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs09(String cs09) {
         this.cs09 = cs09;
+        setCs0996x(cs09.equals("96") ? this.cs0996x : "");
         notifyPropertyChanged(BR.cs09);
     }
 
@@ -1103,6 +1107,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs15(String cs15) {
         this.cs15 = cs15;
+        setCs1596x(cs15.equals("96") ? this.cs1596x : "");
         notifyPropertyChanged(BR.cs15);
     }
 
@@ -1191,6 +1196,7 @@ public class Child extends BaseObservable implements Observable {
     public void setCs1896(String cs1896) {
         if (this.cs1896.equals(cs1896)) return; // for all checkboxes
         this.cs1896 = cs1896;
+        setCs1896x(cs1896.equals("96") ? this.cs1896x : "");
         notifyPropertyChanged(BR.cs1896);
     }
 
@@ -1201,6 +1207,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs19(String cs19) {
         this.cs19 = cs19;
+        setCs1996x(cs19.equals("96") ? this.cs1996x : "");
         notifyPropertyChanged(BR.cs19);
     }
 
