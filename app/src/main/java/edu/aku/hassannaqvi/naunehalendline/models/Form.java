@@ -31,10 +31,18 @@ public class Form extends BaseObservable implements Observable {
     private final transient PropertyChangeRegistry propertyChangeRegistry = new PropertyChangeRegistry();
     // FORM SECTIONS
     private final String sHH = _EMPTY_;
-    private final String sCH = _EMPTY_;
-    private final String sSS = _EMPTY_;
-    private final String sCB = _EMPTY_;
-    private final String sIM = _EMPTY_;
+    private final String sSE = _EMPTY_;
+
+    public String getsHH() {
+        return sHH;
+    }
+
+    public String getsSE() {
+        return sSE;
+    }
+
+
+
     // APP VARIABLES
     private String projectName = PROJECT_NAME;
     // APP VARIABLES
@@ -2622,7 +2630,7 @@ public class Form extends BaseObservable implements Observable {
 
 
         sHHHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SHH)));
-        sSEHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SSS)));
+        sSEHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SSE)));
 
         return this;
     }
@@ -2891,7 +2899,7 @@ public class Form extends BaseObservable implements Observable {
         return json.toString();
     }
 
-    public String sSStoString() throws JSONException {
+    public String sSEtoString() throws JSONException {
         Log.d(TAG, "sAtoString: ");
         JSONObject json = new JSONObject();
 
@@ -3101,7 +3109,7 @@ public class Form extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_SYNCED, this.synced);
 
         json.put(FormsTable.COLUMN_SHH, new JSONObject(sHHtoString()));
-        json.put(FormsTable.COLUMN_SSS, new JSONObject(sSStoString()));
+        json.put(FormsTable.COLUMN_SSE, new JSONObject(sSEtoString()));
 
 //        json.put(FormsTable.COLUMN_SYNCED_DATE, this.syncDate);
 //        json.put(FormsTable.COLUMN_DISTRICT_CODE, this.districtCode);

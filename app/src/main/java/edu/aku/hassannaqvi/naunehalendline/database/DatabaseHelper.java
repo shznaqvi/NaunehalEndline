@@ -104,6 +104,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SYSDATE, form.getSysDate());
 
         values.put(FormsTable.COLUMN_SHH, form.sHHtoString());
+        values.put(FormsTable.COLUMN_SSE, form.sSEtoString());
 
      /*   values.put(FormsTable.COLUMN_SSS, form.sMtoString());
         values.put(FormsTable.COLUMN_SCB, form.sNtoString());
@@ -205,6 +206,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
     }
+
 
     public int updatesEntryLogColumn(String column, String value, String id) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);

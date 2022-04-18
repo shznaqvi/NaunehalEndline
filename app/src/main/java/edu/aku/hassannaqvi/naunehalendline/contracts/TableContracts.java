@@ -18,7 +18,7 @@ public class TableContracts {
         public static final String COLUMN_SYSDATE = "sysdate";
 
         public static final String COLUMN_SHH = "sHH";
-        public static final String COLUMN_SSS = "sSS";
+        public static final String COLUMN_SSE = "sSE";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_DEVICETAGID = "devicetagid";
         public static final String COLUMN_SYNCED = "synced";
