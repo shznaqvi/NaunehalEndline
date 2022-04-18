@@ -225,7 +225,10 @@
                             android:text="@={child.cb04dd}"
                             app:maxValue="30"
                             app:minValue="1"
-                            app:type="range" />
+                            app:type="range"
+                            android:enabled="@{!child.cb04dk.equals(`98`)}"
+
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -242,7 +245,10 @@
                             android:text="@={child.cb04mm}"
                             app:maxValue="12"
                             app:minValue="1"
-                            app:type="range" />
+                            app:type="range"
+                            android:enabled="@{!child.cb04dk.equals(`98`)}"
+
+                            />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -259,7 +265,24 @@
                             android:text="@={child.cb04yy}"
                             app:maxValue="2022"
                             app:minValue="2017"
-                            app:type="range" />
+                            app:type="range"
+                            android:enabled="@{!child.cb04dk.equals(`98`)}"
+
+                            />
+
+                        <CheckBox
+                            android:id="@+id/cb04dk"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_height="wrap_content"
+                            android:checked="@{child.cb04dk.equals(`98`)}"
+                            android:onClick="@{()->child.setCb04dk(child.cb04dk.equals(`98`)?``:`98`)}"
+                            android:tag="-1"
+                            android:backgroundTint="@color/redOverlay"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/redDark"
+                            android:text="@string/cb04dk" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1206,6 +1229,7 @@
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
             </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"

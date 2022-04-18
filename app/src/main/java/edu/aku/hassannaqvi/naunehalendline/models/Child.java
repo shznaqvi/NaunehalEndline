@@ -57,6 +57,9 @@ public class Child extends BaseObservable implements Observable {
     public String cb04dd = _EMPTY_;
     public String cb04mm = _EMPTY_;
     public String cb04yy = _EMPTY_;
+    private String cb04dk = _EMPTY_;
+
+
     public String cb0501 = _EMPTY_;
     public String cb0502 = _EMPTY_;
     public String cb06 = _EMPTY_;
@@ -460,6 +463,15 @@ public class Child extends BaseObservable implements Observable {
         return cb04yy;
     }
 
+    public void setCb04dk(String cb04dk) {
+        this.cb04dk = cb04dk;
+        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
+
+        notifyPropertyChanged(BR.cb04dk);
+    }
+
     @Bindable
     public String getCb0501() {
         return cb0501;
@@ -844,6 +856,14 @@ public class Child extends BaseObservable implements Observable {
         this.cb04yy = cb04yy;
         notifyPropertyChanged(BR.cb04yy);
     }
+
+
+    @Bindable
+    public String getCb04dk() {
+        return cb04dk;
+    }
+
+
 
     public void setCb0501(String cb0501) {
         this.cb0501 = cb0501;
@@ -3183,6 +3203,8 @@ public class Child extends BaseObservable implements Observable {
             this.cb04dd = json.getString("cb04dd");
             this.cb04mm = json.getString("cb04mm");
             this.cb04yy = json.getString("cb04yy");
+            this.cb04dk = json.getString("cb04dk");
+
             this.cb0501 = json.getString("cb0501");
             this.cb0502 = json.getString("cb0502");
             this.cb06 = json.getString("cb06");
@@ -3425,6 +3447,7 @@ public class Child extends BaseObservable implements Observable {
                 .put("cb04dd", cb04dd)
                 .put("cb04mm", cb04mm)
                 .put("cb04yy", cb04yy)
+                .put("cb04dk", cb04dk)
                 .put("cb0501", cb0501)
                 .put("cb0502", cb0502)
                 .put("cb06", cb06)

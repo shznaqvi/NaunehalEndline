@@ -270,6 +270,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cb04dd">Days</string>
     <string name="cb04mm">Months</string>
     <string name="cb04yy">Year</string>
+    <string name="cb04dk">Dont Know</string>
     <string name="cb05">Age</string>
     <string name="cb0501">Year</string>
     <string name="cb0502">Months</string>
