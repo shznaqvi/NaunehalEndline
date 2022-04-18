@@ -437,9 +437,11 @@
                 <!-- cb17  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb17"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.cb15.equals(`98`) ? View.VISIBLE : View.GONE}">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -579,6 +581,12 @@
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{child.cb06.equals(`1`)  ? View.GONE : View.VISIBLE}">
 
                 <!-- cb07_title_2  Title   -->
                 <androidx.cardview.widget.CardView
@@ -881,59 +889,66 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- cb11  Radio   -->
+                    <!-- cb11  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb11"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_cb11" />
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/cb11" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_cb11" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/cb11" />
+
+                            </LinearLayout>
+
+                            <RadioGroup
+                                android:id="@+id/cb11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/cb1101"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{child.cb11.equals(`1`)}"
+                                    android:onClick="@{()->child.setCb11(`1`)}"
+                                    android:text="@string/cb1101" />
+
+                                <RadioButton
+                                    android:id="@+id/cb1102"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{child.cb11.equals(`2`)}"
+                                    android:onClick="@{()->child.setCb11(`2`)}"
+                                    android:text="@string/cb1102" />
+                            </RadioGroup>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <RadioGroup
-                            android:id="@+id/cb11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                </LinearLayout>
 
-                            <RadioButton
-                                android:id="@+id/cb1101"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{child.cb11.equals(`1`)}"
-                                android:onClick="@{()->child.setCb11(`1`)}"
-                                android:text="@string/cb1101" />
-
-                            <RadioButton
-                                android:id="@+id/cb1102"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{child.cb11.equals(`2`)}"
-                                android:onClick="@{()->child.setCb11(`2`)}"
-                                android:text="@string/cb1102" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="@{child.cb06.equals(`2`)  ? View.GONE : View.VISIBLE}">
                 <!-- cb12_title3  Title   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb12_title3"
@@ -1191,6 +1206,7 @@
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1203,8 +1219,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/red_overlay"
-                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:background="@color/redOverlay"
+                        android:onClick="btnEnd"
                         android:text="Cancel"
                         android:textColor="@color/white" />
 
@@ -1213,12 +1229,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/green_overlay"
-                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:background="@color/greenOverlay"
+                        android:onClick="btnContinue"
                         android:text="Save"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>

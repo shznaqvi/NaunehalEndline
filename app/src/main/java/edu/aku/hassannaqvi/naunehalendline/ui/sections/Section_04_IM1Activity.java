@@ -298,8 +298,6 @@ public class Section_04_IM1Activity extends AppCompatActivity {
                 } else {
                     bi.checkim0501.setVisibility(View.INVISIBLE);
                 }
-
-
             }
 
             // IM0502

@@ -109,6 +109,8 @@ public class Section_02_CBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
+
+
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
             return false;
         }
@@ -124,6 +126,16 @@ public class Section_02_CBActivity extends AppCompatActivity {
             }
         }
 
+        try {
+            int cbo4mm = Integer.parseInt(MainApp.child.getCb04mm());
+            int cbo4yy = Integer.parseInt(MainApp.child.getCb04yy());
+
+            if (cbo4mm == 0 && cbo4yy == 0) {
+                return Validator.emptyCustomTextBox(this, bi.cb04mm, "Incorrect value for Day.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         return true;
 
