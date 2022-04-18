@@ -104,7 +104,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SYSDATE, form.getSysDate());
 
         values.put(FormsTable.COLUMN_SHH, form.sHHtoString());
-        values.put(FormsTable.COLUMN_SSE, form.sSEtoString());
+
 
      /*   values.put(FormsTable.COLUMN_SSS, form.sMtoString());
         values.put(FormsTable.COLUMN_SCB, form.sNtoString());
@@ -141,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(ChildTable.COLUMN_SYSDATE, child.getSysDate());
         values.put(ChildTable.COLUMN_CSTATUS, child.getCStatus());
 
-        values.put(ChildTable.COLUMN_SCH, child.sCHtoString());
+        values.put(ChildTable.COLUMN_SCB, child.sCBtoString());
 
      /*   values.put(ChildsTable.COLUMN_SSS, child.sMtoString());
         values.put(ChildsTable.COLUMN_SCB, child.sNtoString());

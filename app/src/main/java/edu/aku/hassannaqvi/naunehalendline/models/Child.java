@@ -50,43 +50,88 @@ public class Child extends BaseObservable implements Observable {
 
 
     // Field Variables
-    // CH
-    private String ec13 = _EMPTY_;
-    private String ec14 = _EMPTY_;
-    private String ec15 = _EMPTY_;
-    private String ec16 = _EMPTY_;
-    private String ec17 = _EMPTY_;
-    private String cb03dd = _EMPTY_;
-    private String cb03mm = _EMPTY_;
-    private String cb03yy = _EMPTY_;
-    private String cb03dk = _EMPTY_;
-    private String cb04mm = _EMPTY_;
-    private String cb04yy = _EMPTY_;
-
     // CB
-    private String ec01 = _EMPTY_;
-    private String ec02 = _EMPTY_;
-    private String ec03 = _EMPTY_;
-    private String ec04 = _EMPTY_;
-    private String ec04a = _EMPTY_;
-    private String ec05 = _EMPTY_;
-    private String ec06 = _EMPTY_;
-    private String ec07 = _EMPTY_;
-    private String ec09 = _EMPTY_;
-    private String ec11 = _EMPTY_;
-    private String ec12 = _EMPTY_;
-    private String ec13cline = _EMPTY_;
-    private String ec14cname = _EMPTY_;
-    private String ec18 = _EMPTY_;
-    private String ec19 = _EMPTY_;
-    private String ec21 = _EMPTY_;
-    private String ec22 = _EMPTY_;
-    private String ec2206x = _EMPTY_;
-    private String ec2296x = _EMPTY_;
-    private String cb01a = _EMPTY_;
-    private String cb01b = _EMPTY_;
-    private String cb02a = _EMPTY_;
-    private String cb02b = _EMPTY_;
+    public String cb01 = _EMPTY_;
+    public String cb02 = _EMPTY_;
+    public String cb03 = _EMPTY_;
+    public String cb04dd = _EMPTY_;
+    public String cb04mm = _EMPTY_;
+    public String cb04yy = _EMPTY_;
+    public String cb0501 = _EMPTY_;
+    public String cb0502 = _EMPTY_;
+    public String cb06 = _EMPTY_;
+    public String cb15 = _EMPTY_;
+    public String cb17 = _EMPTY_;
+    public String cb16 = _EMPTY_;
+    public String cb07 = _EMPTY_;
+    public String cb08 = _EMPTY_;
+    public String cb09 = _EMPTY_;
+    public String cb10 = _EMPTY_;
+    public String cb1096x = _EMPTY_;
+    public String cb11 = _EMPTY_;
+    public String cb12 = _EMPTY_;
+    public String cb13 = _EMPTY_;
+    public String cb14 = _EMPTY_;
+    public String cb1496x = _EMPTY_;
+
+
+    // CS
+    public String cs01 = _EMPTY_;
+    public String cs02 = _EMPTY_;
+    public String cs02a = _EMPTY_;
+    public String cs02b = _EMPTY_;
+    public String cs03 = _EMPTY_;
+    public String cs04 = _EMPTY_;
+    public String cs05 = _EMPTY_;
+    public String cs06 = _EMPTY_;
+    public String cs07 = _EMPTY_;
+    public String cs07961x = _EMPTY_;
+    public String cs07962x = _EMPTY_;
+    public String cs08 = _EMPTY_;
+    public String cs0801 = _EMPTY_;
+    public String cs0802 = _EMPTY_;
+    public String cs0803 = _EMPTY_;
+    public String cs0804 = _EMPTY_;
+    public String cs0805 = _EMPTY_;
+    public String cs0806 = _EMPTY_;
+    public String cs0807 = _EMPTY_;
+    public String cs0808 = _EMPTY_;
+    public String cs0809 = _EMPTY_;
+    public String cs0810 = _EMPTY_;
+    public String cs0896 = _EMPTY_;
+    public String cs0896x = _EMPTY_;
+    public String cs08a = _EMPTY_;
+    public String cs08b = _EMPTY_;
+    public String cs09 = _EMPTY_;
+    public String cs0996x = _EMPTY_;
+    public String cs10 = _EMPTY_;
+    public String cs11 = _EMPTY_;
+    public String cs12 = _EMPTY_;
+    public String cs13 = _EMPTY_;
+    public String cs14 = _EMPTY_;
+    public String cs15 = _EMPTY_;
+    public String cs1596x = _EMPTY_;
+    public String cs16 = _EMPTY_;
+    public String cs17 = _EMPTY_;
+    public String cs17961x = _EMPTY_;
+    public String cs17962x = _EMPTY_;
+    public String cs17a = _EMPTY_;
+    public String cs17b = _EMPTY_;
+    public String cs18 = _EMPTY_;
+    public String cs1802 = _EMPTY_;
+    public String cs1803 = _EMPTY_;
+    public String cs1804 = _EMPTY_;
+    public String cs1805 = _EMPTY_;
+    public String cs1806 = _EMPTY_;
+    public String cs1807 = _EMPTY_;
+    public String cs1808 = _EMPTY_;
+    public String cs1896 = _EMPTY_;
+    public String cs1896x = _EMPTY_;
+    public String cs19 = _EMPTY_;
+    public String cs1996x = _EMPTY_;
+    public String cs20 = _EMPTY_;
+    public String cs21 = _EMPTY_;
+
 
     // IM
     private String im01 = _EMPTY_;
@@ -384,345 +429,25 @@ public class Child extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.ebCode);
     }
 
-    @Bindable
-    public String getEc01() {
-        return ec01;
-    }
 
-    public void setEc01(String ec01) {
-        this.ec01 = ec01;
-        notifyPropertyChanged(BR.ec01);
+    @Bindable
+    public String getCb01() {
+        return cb01;
     }
 
     @Bindable
-    public String getEc02() {
-        return ec02;
-    }
-
-    public void setEc02(String ec02) {
-        this.ec02 = ec02;
-        notifyPropertyChanged(BR.ec02);
+    public String getCb02() {
+        return cb02;
     }
 
     @Bindable
-    public String getEc03() {
-        return ec03;
-    }
-
-    public void setEc03(String ec03) {
-        this.ec03 = ec03;
-        notifyPropertyChanged(BR.ec03);
+    public String getCb03() {
+        return cb03;
     }
 
     @Bindable
-    public String getEc04() {
-        return ec04;
-    }
-
-    public void setEc04(String ec04) {
-        this.ec04 = ec04;
-        notifyPropertyChanged(BR.ec04);
-    }
-
-    @Bindable
-    public String getEc04a() {
-        return ec04a;
-    }
-
-    public void setEc04a(String ec04a) {
-        this.ec04a = ec04a;
-        notifyPropertyChanged(BR.ec04a);
-    }
-
-    @Bindable
-    public String getEc05() {
-        return ec05;
-    }
-
-    public void setEc05(String ec05) {
-        this.ec05 = ec05;
-        notifyPropertyChanged(BR.ec05);
-    }
-
-    @Bindable
-    public String getEc06() {
-        return ec06;
-    }
-
-    public void setEc06(String ec06) {
-        this.ec06 = ec06;
-        notifyPropertyChanged(BR.ec06);
-    }
-
-    @Bindable
-    public String getEc07() {
-        return ec07;
-    }
-
-    public void setEc07(String ec07) {
-        this.ec07 = ec07;
-        notifyPropertyChanged(BR.ec07);
-    }
-
-    @Bindable
-    public String getEc09() {
-        return ec09;
-    }
-
-    public void setEc09(String ec09) {
-        this.ec09 = ec09;
-        notifyPropertyChanged(BR.ec09);
-    }
-
-    @Bindable
-    public String getEc11() {
-        return ec11;
-    }
-
-    public void setEc11(String ec11) {
-        this.ec11 = ec11;
-        notifyPropertyChanged(BR.ec11);
-    }
-
-    @Bindable
-    public String getEc12() {
-        return ec12;
-    }
-
-    public void setEc12(String ec12) {
-        this.ec12 = ec12;
-        notifyPropertyChanged(BR.ec12);
-    }
-
-    @Bindable
-    public String getEc13cline() {
-        return ec13cline;
-    }
-
-    public void setEc13cline(String ec13cline) {
-        this.ec13cline = ec13cline;
-        notifyPropertyChanged(BR.ec13cline);
-    }
-
-    @Bindable
-    public String getEc14cname() {
-        return ec14cname;
-    }
-
-    public void setEc14cname(String ec14cname) {
-        this.ec14cname = ec14cname;
-        notifyPropertyChanged(BR.ec14cname);
-    }
-
-    @Bindable
-    public String getEc18() {
-        return ec18;
-    }
-
-    public void setEc18(String ec18) {
-        this.ec18 = ec18;
-        setEc19(ec18.equals("4") || ec18.equals("96") ? "" : this.ec19);
-        setEc21(ec18.equals("4") || ec18.equals("96") ? "" : this.ec19);
-
-        notifyPropertyChanged(BR.ec18);
-    }
-
-    @Bindable
-    public String getEc19() {
-        return ec19;
-    }
-
-    public void setEc19(String ec19) {
-        this.ec19 = ec19;
-        notifyPropertyChanged(BR.ec19);
-    }
-
-    @Bindable
-    public String getEc21() {
-        return ec21;
-    }
-
-    public void setEc21(String ec21) {
-        this.ec21 = ec21;
-        setCb01a(ec21.equals("1") ? this.cb01a : "");
-        setCb01b(ec21.equals("1") ? this.cb01b : "");
-        setCb02a(ec21.equals("1") ? this.cb02a : "");
-        setCb02b(ec21.equals("1") ? this.cb02b : "");
-
-
-        notifyPropertyChanged(BR.ec21);
-    }
-
-    @Bindable
-    public String getEc22() {
-        return ec22;
-    }
-
-    public void setEc22(String ec22) {
-        this.ec22 = ec22;
-        setEc2206x(ec22.equals("6") ? this.ec2206x : ""); // for all skips, mention all skipped questions
-        setEc2296x(ec22.equals("96") ? this.ec2296x : ""); // for all skips, mention all skipped questions
-        setCStatus(ec22);
-        notifyPropertyChanged(BR.ec22);
-    }
-
-    @Bindable
-    public String getEc2206x() {
-        return ec2206x;
-    }
-
-    public void setEc2206x(String ec2206x) {
-        this.ec2206x = ec2206x;
-        notifyPropertyChanged(BR.ec2206x);
-    }
-
-    @Bindable
-    public String getEc2296x() {
-        return ec2296x;
-    }
-
-    public void setEc2296x(String ec2296x) {
-        this.ec2296x = ec2296x;
-        notifyPropertyChanged(BR.ec2296x);
-    }
-
-    @Bindable
-    public String getCb01a() {
-        return cb01a;
-    }
-
-    public void setCb01a(String cb01a) {
-        this.cb01a = cb01a;
-        notifyPropertyChanged(BR.cb01a);
-    }
-
-    @Bindable
-    public String getCb01b() {
-        return cb01b;
-    }
-
-    public void setCb01b(String cb01b) {
-        this.cb01b = cb01b;
-        notifyPropertyChanged(BR.cb01b);
-    }
-
-    @Bindable
-    public String getCb02a() {
-        return cb02a;
-    }
-
-    public void setCb02a(String cb02a) {
-        this.cb02a = cb02a;
-        notifyPropertyChanged(BR.cb02a);
-    }
-
-    @Bindable
-    public String getCb02b() {
-        return cb02b;
-    }
-
-    public void setCb02b(String cb02b) {
-        this.cb02b = cb02b;
-        notifyPropertyChanged(BR.cb02b);
-    }
-
-    @Bindable
-    public String getEc13() {
-        return ec13;
-    }
-
-    public void setEc13(String ec13) {
-        this.ec13 = ec13;
-        this.sno = ec13;
-        this.ec13cline = ec13;
-        notifyPropertyChanged(BR.ec13);
-    }
-
-    @Bindable
-    public String getEc14() {
-        return ec14;
-    }
-
-    public void setEc14(String ec14) {
-        this.ec14 = ec14;
-        this.ec14cname = ec14;
-        notifyPropertyChanged(BR.ec14);
-    }
-
-    @Bindable
-    public String getEc15() {
-        return ec15;
-    }
-
-    public void setEc15(String ec15) {
-        this.ec15 = ec15;
-        notifyPropertyChanged(BR.ec15);
-    }
-
-    @Bindable
-    public String getEc16() {
-        return ec16;
-    }
-
-    public void setEc16(String ec16) {
-        this.ec16 = ec16;
-        notifyPropertyChanged(BR.ec16);
-    }
-
-    @Bindable
-    public String getEc17() {
-        return ec17;
-    }
-
-    public void setEc17(String ec17) {
-        this.ec17 = ec17;
-        notifyPropertyChanged(BR.ec17);
-    }
-
-    @Bindable
-    public String getCb03dd() {
-        return cb03dd;
-    }
-
-    public void setCb03dd(String cb03dd) {
-        this.cb03dd = cb03dd;
-        CaluculateAge(this.cb03dd, this.cb03mm, this.cb03yy, false);
-        notifyPropertyChanged(BR.cb03dd);
-    }
-
-    @Bindable
-    public String getCb03mm() {
-        return cb03mm;
-    }
-
-    public void setCb03mm(String cb03mm) {
-        this.cb03mm = cb03mm;
-        CaluculateAge(this.cb03dd, this.cb03mm, this.cb03yy, false);
-        notifyPropertyChanged(BR.cb03mm);
-    }
-
-    @Bindable
-    public String getCb03yy() {
-        return cb03yy;
-    }
-
-    public void setCb03yy(String cb03yy) {
-        this.cb03yy = cb03yy;
-        CaluculateAge(this.cb03dd, this.cb03mm, this.cb03yy, false);
-        notifyPropertyChanged(BR.cb03yy);
-    }
-
-    @Bindable
-    public String getCb03dk() {
-        return cb03dk;
-    }
-
-    public void setCb03dk(String cb03dk) {
-        this.cb03dk = cb03dk;
-        setCb03dd(cb03dk.equals("98") ? "" : this.cb03dd);
-        setCb03mm(cb03dk.equals("98") ? "" : this.cb03mm);
-        setCb03yy(cb03dk.equals("98") ? "" : this.cb03yy);
-        notifyPropertyChanged(BR.cb03dk);
+    public String getCb04dd() {
+        return cb04dd;
     }
 
     @Bindable
@@ -730,23 +455,749 @@ public class Child extends BaseObservable implements Observable {
         return cb04mm;
     }
 
-    public void setCb04mm(String cb04mm) {
-        this.cb04mm = cb04mm;
-        if (!cb04mm.equals("") && !this.cb04yy.equals(""))
-            setAgeInMonths((Integer.parseInt(cb04yy) * 12L) + Integer.parseInt(this.cb04mm));
-        notifyPropertyChanged(BR.cb04mm);
-    }
-
     @Bindable
     public String getCb04yy() {
         return cb04yy;
     }
 
+    @Bindable
+    public String getCb0501() {
+        return cb0501;
+    }
+
+    @Bindable
+    public String getCb0502() {
+        return cb0502;
+    }
+
+    @Bindable
+    public String getCb06() {
+        return cb06;
+    }
+
+    @Bindable
+    public String getCb15() {
+        return cb15;
+    }
+
+    @Bindable
+    public String getCb17() {
+        return cb17;
+    }
+
+    @Bindable
+    public String getCb16() {
+        return cb16;
+    }
+
+    @Bindable
+    public String getCb07() {
+        return cb07;
+    }
+
+    @Bindable
+    public String getCb08() {
+        return cb08;
+    }
+
+    @Bindable
+    public String getCb09() {
+        return cb09;
+    }
+
+    @Bindable
+    public String getCb10() {
+        return cb10;
+    }
+
+    @Bindable
+    public String getCb1096x() {
+        return cb1096x;
+    }
+
+    @Bindable
+    public String getCb11() {
+        return cb11;
+    }
+
+    @Bindable
+    public String getCb12() {
+        return cb12;
+    }
+
+    @Bindable
+    public String getCb13() {
+        return cb13;
+    }
+
+    @Bindable
+    public String getCb14() {
+        return cb14;
+    }
+
+    @Bindable
+    public String getCb1496x() {
+        return cb1496x;
+    }
+
+    @Bindable
+    public String getCs01() {
+        return cs01;
+    }
+
+    @Bindable
+    public String getCs02() {
+        return cs02;
+    }
+
+    @Bindable
+    public String getCs02a() {
+        return cs02a;
+    }
+
+    @Bindable
+    public String getCs02b() {
+        return cs02b;
+    }
+
+    @Bindable
+    public String getCs03() {
+        return cs03;
+    }
+
+    @Bindable
+    public String getCs04() {
+        return cs04;
+    }
+
+    @Bindable
+    public String getCs05() {
+        return cs05;
+    }
+
+    @Bindable
+    public String getCs06() {
+        return cs06;
+    }
+
+    @Bindable
+    public String getCs07() {
+        return cs07;
+    }
+
+    @Bindable
+    public String getCs07961x() {
+        return cs07961x;
+    }
+
+    @Bindable
+    public String getCs07962x() {
+        return cs07962x;
+    }
+
+    @Bindable
+    public String getCs08() {
+        return cs08;
+    }
+
+    @Bindable
+    public String getCs0801() {
+        return cs0801;
+    }
+
+    @Bindable
+    public String getCs0802() {
+        return cs0802;
+    }
+
+    @Bindable
+    public String getCs0803() {
+        return cs0803;
+    }
+
+    @Bindable
+    public String getCs0804() {
+        return cs0804;
+    }
+
+    @Bindable
+    public String getCs0805() {
+        return cs0805;
+    }
+
+    @Bindable
+    public String getCs0806() {
+        return cs0806;
+    }
+
+    @Bindable
+    public String getCs0807() {
+        return cs0807;
+    }
+
+    @Bindable
+    public String getCs0808() {
+        return cs0808;
+    }
+
+    @Bindable
+    public String getCs0809() {
+        return cs0809;
+    }
+
+    @Bindable
+    public String getCs0810() {
+        return cs0810;
+    }
+
+    @Bindable
+    public String getCs0896() {
+        return cs0896;
+    }
+
+    @Bindable
+    public String getCs0896x() {
+        return cs0896x;
+    }
+
+    @Bindable
+    public String getCs08a() {
+        return cs08a;
+    }
+
+    @Bindable
+    public String getCs08b() {
+        return cs08b;
+    }
+
+    @Bindable
+    public String getCs09() {
+        return cs09;
+    }
+
+    @Bindable
+    public String getCs0996x() {
+        return cs0996x;
+    }
+
+    @Bindable
+    public String getCs10() {
+        return cs10;
+    }
+
+    @Bindable
+    public String getCs11() {
+        return cs11;
+    }
+
+    @Bindable
+    public String getCs12() {
+        return cs12;
+    }
+
+    @Bindable
+    public String getCs13() {
+        return cs13;
+    }
+
+    @Bindable
+    public String getCs14() {
+        return cs14;
+    }
+
+    @Bindable
+    public String getCs15() {
+        return cs15;
+    }
+
+    @Bindable
+    public String getCs1596x() {
+        return cs1596x;
+    }
+
+    @Bindable
+    public String getCs16() {
+        return cs16;
+    }
+
+    @Bindable
+    public String getCs17() {
+        return cs17;
+    }
+
+    @Bindable
+    public String getCs17961x() {
+        return cs17961x;
+    }
+
+    @Bindable
+    public String getCs17962x() {
+        return cs17962x;
+    }
+
+    @Bindable
+    public String getCs17a() {
+        return cs17a;
+    }
+
+    @Bindable
+    public String getCs17b() {
+        return cs17b;
+    }
+
+    @Bindable
+    public String getCs18() {
+        return cs18;
+    }
+
+    @Bindable
+    public String getCs1802() {
+        return cs1802;
+    }
+
+    @Bindable
+    public String getCs1803() {
+        return cs1803;
+    }
+
+    @Bindable
+    public String getCs1804() {
+        return cs1804;
+    }
+
+    @Bindable
+    public String getCs1805() {
+        return cs1805;
+    }
+
+    @Bindable
+    public String getCs1806() {
+        return cs1806;
+    }
+
+    @Bindable
+    public String getCs1807() {
+        return cs1807;
+    }
+
+    @Bindable
+    public String getCs1808() {
+        return cs1808;
+    }
+
+    @Bindable
+    public String getCs1896() {
+        return cs1896;
+    }
+
+    @Bindable
+    public String getCs1896x() {
+        return cs1896x;
+    }
+
+    @Bindable
+    public String getCs19() {
+        return cs19;
+    }
+
+    @Bindable
+    public String getCs1996x() {
+        return cs1996x;
+    }
+
+    @Bindable
+    public String getCs20() {
+        return cs20;
+    }
+
+    @Bindable
+    public String getCs21() {
+        return cs21;
+    }
+
+    public void setCb01(String cb01) {
+        this.cb01 = cb01;
+        notifyPropertyChanged(BR.cb01);
+    }
+
+    public void setCb02(String cb02) {
+        this.cb02 = cb02;
+        notifyPropertyChanged(BR.cb02);
+    }
+
+    public void setCb03(String cb03) {
+        this.cb03 = cb03;
+        notifyPropertyChanged(BR.cb03);
+    }
+
+    public void setCb04dd(String cb04dd) {
+        this.cb04dd = cb04dd;
+        notifyPropertyChanged(BR.cb04dd);
+    }
+
+    public void setCb04mm(String cb04mm) {
+        this.cb04mm = cb04mm;
+        notifyPropertyChanged(BR.cb04mm);
+    }
+
     public void setCb04yy(String cb04yy) {
         this.cb04yy = cb04yy;
-        if (!cb04mm.equals("") && !this.cb04yy.equals(""))
-            setAgeInMonths((Integer.parseInt(this.cb04yy) * 12L) + Integer.parseInt(cb04mm));
         notifyPropertyChanged(BR.cb04yy);
+    }
+
+    public void setCb0501(String cb0501) {
+        this.cb0501 = cb0501;
+        notifyPropertyChanged(BR.cb0501);
+    }
+
+    public void setCb0502(String cb0502) {
+        this.cb0502 = cb0502;
+        notifyPropertyChanged(BR.cb0502);
+    }
+
+    public void setCb06(String cb06) {
+        this.cb06 = cb06;
+        notifyPropertyChanged(BR.cb06);
+    }
+
+    public void setCb15(String cb15) {
+        this.cb15 = cb15;
+        notifyPropertyChanged(BR.cb15);
+    }
+
+    public void setCb17(String cb17) {
+        this.cb17 = cb17;
+        notifyPropertyChanged(BR.cb17);
+    }
+
+    public void setCb16(String cb16) {
+        this.cb16 = cb16;
+        notifyPropertyChanged(BR.cb16);
+    }
+
+    public void setCb07(String cb07) {
+        this.cb07 = cb07;
+        notifyPropertyChanged(BR.cb07);
+    }
+
+    public void setCb08(String cb08) {
+        this.cb08 = cb08;
+        notifyPropertyChanged(BR.cb08);
+    }
+
+    public void setCb09(String cb09) {
+        this.cb09 = cb09;
+        notifyPropertyChanged(BR.cb09);
+    }
+
+    public void setCb10(String cb10) {
+        this.cb10 = cb10;
+        notifyPropertyChanged(BR.cb10);
+    }
+
+    public void setCb1096x(String cb1096x) {
+        this.cb1096x = cb1096x;
+        notifyPropertyChanged(BR.cb1096x);
+    }
+
+    public void setCb11(String cb11) {
+        this.cb11 = cb11;
+        notifyPropertyChanged(BR.cb11);
+    }
+
+    public void setCb12(String cb12) {
+        this.cb12 = cb12;
+        notifyPropertyChanged(BR.cb12);
+    }
+
+    public void setCb13(String cb13) {
+        this.cb13 = cb13;
+        notifyPropertyChanged(BR.cb13);
+    }
+
+    public void setCb14(String cb14) {
+        this.cb14 = cb14;
+        notifyPropertyChanged(BR.cb14);
+    }
+
+    public void setCb1496x(String cb1496x) {
+        this.cb1496x = cb1496x;
+        notifyPropertyChanged(BR.cb1496x);
+    }
+
+    public void setCs01(String cs01) {
+        this.cs01 = cs01;
+        notifyPropertyChanged(BR.cs01);
+    }
+
+    public void setCs02(String cs02) {
+        this.cs02 = cs02;
+        notifyPropertyChanged(BR.cs02);
+    }
+
+    public void setCs02a(String cs02a) {
+        this.cs02a = cs02a;
+        notifyPropertyChanged(BR.cs02a);
+    }
+
+    public void setCs02b(String cs02b) {
+        this.cs02b = cs02b;
+        notifyPropertyChanged(BR.cs02b);
+    }
+
+    public void setCs03(String cs03) {
+        this.cs03 = cs03;
+        notifyPropertyChanged(BR.cs03);
+    }
+
+    public void setCs04(String cs04) {
+        this.cs04 = cs04;
+        notifyPropertyChanged(BR.cs04);
+    }
+
+    public void setCs05(String cs05) {
+        this.cs05 = cs05;
+        notifyPropertyChanged(BR.cs05);
+    }
+
+    public void setCs06(String cs06) {
+        this.cs06 = cs06;
+        notifyPropertyChanged(BR.cs06);
+    }
+
+    public void setCs07(String cs07) {
+        this.cs07 = cs07;
+        notifyPropertyChanged(BR.cs07);
+    }
+
+    public void setCs07961x(String cs07961x) {
+        this.cs07961x = cs07961x;
+        notifyPropertyChanged(BR.cs07961x);
+    }
+
+    public void setCs07962x(String cs07962x) {
+        this.cs07962x = cs07962x;
+        notifyPropertyChanged(BR.cs07962x);
+    }
+
+    public void setCs08(String cs08) {
+        this.cs08 = cs08;
+        notifyPropertyChanged(BR.cs08);
+    }
+
+    public void setCs0801(String cs0801) {
+        this.cs0801 = cs0801;
+        notifyPropertyChanged(BR.cs0801);
+    }
+
+    public void setCs0802(String cs0802) {
+        this.cs0802 = cs0802;
+        notifyPropertyChanged(BR.cs0802);
+    }
+
+    public void setCs0803(String cs0803) {
+        this.cs0803 = cs0803;
+        notifyPropertyChanged(BR.cs0803);
+    }
+
+    public void setCs0804(String cs0804) {
+        this.cs0804 = cs0804;
+        notifyPropertyChanged(BR.cs0804);
+    }
+
+    public void setCs0805(String cs0805) {
+        this.cs0805 = cs0805;
+        notifyPropertyChanged(BR.cs0805);
+    }
+
+    public void setCs0806(String cs0806) {
+        this.cs0806 = cs0806;
+        notifyPropertyChanged(BR.cs0806);
+    }
+
+    public void setCs0807(String cs0807) {
+        this.cs0807 = cs0807;
+        notifyPropertyChanged(BR.cs0807);
+    }
+
+    public void setCs0808(String cs0808) {
+        this.cs0808 = cs0808;
+        notifyPropertyChanged(BR.cs0808);
+    }
+
+    public void setCs0809(String cs0809) {
+        this.cs0809 = cs0809;
+        notifyPropertyChanged(BR.cs0809);
+    }
+
+    public void setCs0810(String cs0810) {
+        this.cs0810 = cs0810;
+        notifyPropertyChanged(BR.cs0810);
+    }
+
+    public void setCs0896(String cs0896) {
+        this.cs0896 = cs0896;
+        notifyPropertyChanged(BR.cs0896);
+    }
+
+    public void setCs0896x(String cs0896x) {
+        this.cs0896x = cs0896x;
+        notifyPropertyChanged(BR.cs0896x);
+    }
+
+    public void setCs08a(String cs08a) {
+        this.cs08a = cs08a;
+        notifyPropertyChanged(BR.cs08a);
+    }
+
+    public void setCs08b(String cs08b) {
+        this.cs08b = cs08b;
+        notifyPropertyChanged(BR.cs08b);
+    }
+
+    public void setCs09(String cs09) {
+        this.cs09 = cs09;
+        notifyPropertyChanged(BR.cs09);
+    }
+
+    public void setCs0996x(String cs0996x) {
+        this.cs0996x = cs0996x;
+        notifyPropertyChanged(BR.cs0996x);
+    }
+
+    public void setCs10(String cs10) {
+        this.cs10 = cs10;
+        notifyPropertyChanged(BR.cs10);
+    }
+
+    public void setCs11(String cs11) {
+        this.cs11 = cs11;
+        notifyPropertyChanged(BR.cs11);
+    }
+
+    public void setCs12(String cs12) {
+        this.cs12 = cs12;
+        notifyPropertyChanged(BR.cs12);
+    }
+
+    public void setCs13(String cs13) {
+        this.cs13 = cs13;
+        notifyPropertyChanged(BR.cs13);
+    }
+
+    public void setCs14(String cs14) {
+        this.cs14 = cs14;
+        notifyPropertyChanged(BR.cs14);
+    }
+
+    public void setCs15(String cs15) {
+        this.cs15 = cs15;
+        notifyPropertyChanged(BR.cs15);
+    }
+
+    public void setCs1596x(String cs1596x) {
+        this.cs1596x = cs1596x;
+        notifyPropertyChanged(BR.cs1596x);
+    }
+
+    public void setCs16(String cs16) {
+        this.cs16 = cs16;
+        notifyPropertyChanged(BR.cs16);
+    }
+
+    public void setCs17(String cs17) {
+        this.cs17 = cs17;
+        notifyPropertyChanged(BR.cs17);
+    }
+
+    public void setCs17961x(String cs17961x) {
+        this.cs17961x = cs17961x;
+        notifyPropertyChanged(BR.cs17961x);
+    }
+
+    public void setCs17962x(String cs17962x) {
+        this.cs17962x = cs17962x;
+        notifyPropertyChanged(BR.cs17962x);
+    }
+
+    public void setCs17a(String cs17a) {
+        this.cs17a = cs17a;
+        notifyPropertyChanged(BR.cs17a);
+    }
+
+    public void setCs17b(String cs17b) {
+        this.cs17b = cs17b;
+        notifyPropertyChanged(BR.cs17b);
+    }
+
+    public void setCs18(String cs18) {
+        this.cs18 = cs18;
+        notifyPropertyChanged(BR.cs18);
+    }
+
+    public void setCs1802(String cs1802) {
+        this.cs1802 = cs1802;
+        notifyPropertyChanged(BR.cs1802);
+    }
+
+    public void setCs1803(String cs1803) {
+        this.cs1803 = cs1803;
+        notifyPropertyChanged(BR.cs1803);
+    }
+
+    public void setCs1804(String cs1804) {
+        this.cs1804 = cs1804;
+        notifyPropertyChanged(BR.cs1804);
+    }
+
+    public void setCs1805(String cs1805) {
+        this.cs1805 = cs1805;
+        notifyPropertyChanged(BR.cs1805);
+    }
+
+    public void setCs1806(String cs1806) {
+        this.cs1806 = cs1806;
+        notifyPropertyChanged(BR.cs1806);
+    }
+
+    public void setCs1807(String cs1807) {
+        this.cs1807 = cs1807;
+        notifyPropertyChanged(BR.cs1807);
+    }
+
+    public void setCs1808(String cs1808) {
+        this.cs1808 = cs1808;
+        notifyPropertyChanged(BR.cs1808);
+    }
+
+    public void setCs1896(String cs1896) {
+        this.cs1896 = cs1896;
+        notifyPropertyChanged(BR.cs1896);
+    }
+
+    public void setCs1896x(String cs1896x) {
+        this.cs1896x = cs1896x;
+        notifyPropertyChanged(BR.cs1896x);
+    }
+
+    public void setCs19(String cs19) {
+        this.cs19 = cs19;
+        notifyPropertyChanged(BR.cs19);
+    }
+
+    public void setCs1996x(String cs1996x) {
+        this.cs1996x = cs1996x;
+        notifyPropertyChanged(BR.cs1996x);
+    }
+
+    public void setCs20(String cs20) {
+        this.cs20 = cs20;
+        notifyPropertyChanged(BR.cs20);
+    }
+
+    public void setCs21(String cs21) {
+        this.cs21 = cs21;
+        notifyPropertyChanged(BR.cs21);
     }
 
     @Bindable
@@ -2685,8 +3136,8 @@ public class Child extends BaseObservable implements Observable {
         this.synced = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SYNCED));
         this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SYNC_DATE));
 
-        sCHHydrate(cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SCH)));
         sCBHydrate(cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SCB)));
+        sCSHydrate(cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SCS)));
         sIMHydrate(cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SIM)));
         //CaluculateAge();
 
@@ -2694,22 +3145,35 @@ public class Child extends BaseObservable implements Observable {
     }
 
 
-    public void sCHHydrate(String string) throws JSONException {
-        Log.d(TAG, "sCHHydrate: " + string);
+    public void sCBHydrate(String string) throws JSONException {
+        Log.d(TAG, "sCBHydrate: " + string);
         if (string != null) {
             JSONObject json = null;
             json = new JSONObject(string);
 
-            this.ec13 = json.getString("ec13");
-            this.ec14 = json.getString("ec14");
-            this.ec15 = json.getString("ec15");
-            this.ec16 = json.getString("ec16");
-            this.ec17 = json.getString("ec17");
-            this.cb03dd = json.getString("cb03dd");
-            this.cb03mm = json.getString("cb03mm");
-            this.cb03yy = json.getString("cb03yy");
+            this.cb01 = json.getString("cb01");
+            this.cb02 = json.getString("cb02");
+            this.cb03 = json.getString("cb03");
+            this.cb04dd = json.getString("cb04dd");
             this.cb04mm = json.getString("cb04mm");
             this.cb04yy = json.getString("cb04yy");
+            this.cb0501 = json.getString("cb0501");
+            this.cb0502 = json.getString("cb0502");
+            this.cb06 = json.getString("cb06");
+            this.cb15 = json.getString("cb15");
+            this.cb17 = json.getString("cb17");
+            this.cb16 = json.getString("cb16");
+            this.cb07 = json.getString("cb07");
+            this.cb08 = json.getString("cb08");
+            this.cb09 = json.getString("cb09");
+            this.cb10 = json.getString("cb10");
+            this.cb1096x = json.getString("cb1096x");
+            this.cb11 = json.getString("cb11");
+            this.cb12 = json.getString("cb12");
+            this.cb13 = json.getString("cb13");
+            this.cb14 = json.getString("cb14");
+            this.cb1496x = json.getString("cb1496x");
+
             this.ageInMonths = json.getLong("ageInMonths");
 
         }
@@ -2717,35 +3181,66 @@ public class Child extends BaseObservable implements Observable {
     }
 
 
-    public void sCBHydrate(String string) throws JSONException {
-        Log.d(TAG, "sIMHydrate: " + string);
+    public void sCSHydrate(String string) throws JSONException {
+        Log.d(TAG, "sCSHydrate: " + string);
         if (string != null) {
             JSONObject json = null;
             json = new JSONObject(string);
 
-            this.ec01 = json.getString("ec01");
-            this.ec02 = json.getString("ec02");
-            this.ec03 = json.getString("ec03");
-            this.ec04 = json.getString("ec04");
-            this.ec04a = json.getString("ec04a");
-            this.ec05 = json.getString("ec05");
-            this.ec06 = json.getString("ec06");
-            this.ec07 = json.getString("ec07");
-            this.ec09 = json.getString("ec09");
-            this.ec11 = json.getString("ec11");
-            this.ec12 = json.getString("ec12");
-            this.ec13cline = json.getString("ec13cline");
-            this.ec14cname = json.getString("ec14cname");
-            this.ec18 = json.getString("ec18");
-            this.ec19 = json.getString("ec19");
-            this.ec21 = json.getString("ec21");
-            this.ec22 = json.getString("ec22");
-            this.ec2206x = json.getString("ec2206x");
-            this.ec2296x = json.getString("ec2296x");
-            this.cb01a = json.getString("cb01a");
-            this.cb01b = json.getString("cb01b");
-            this.cb02a = json.getString("cb02a");
-            this.cb02b = json.getString("cb02b");
+            this.cs01 = json.getString("cs01");
+            this.cs02 = json.getString("cs02");
+            this.cs02a = json.getString("cs02a");
+            this.cs02b = json.getString("cs02b");
+            this.cs03 = json.getString("cs03");
+            this.cs04 = json.getString("cs04");
+            this.cs05 = json.getString("cs05");
+            this.cs06 = json.getString("cs06");
+            this.cs07 = json.getString("cs07");
+            this.cs07961x = json.getString("cs07961x");
+            this.cs07962x = json.getString("cs07962x");
+            this.cs0801 = json.getString("cs0801");
+            this.cs0802 = json.getString("cs0802");
+            this.cs0803 = json.getString("cs0803");
+            this.cs0804 = json.getString("cs0804");
+            this.cs0805 = json.getString("cs0805");
+            this.cs0806 = json.getString("cs0806");
+            this.cs0807 = json.getString("cs0807");
+            this.cs0808 = json.getString("cs0808");
+            this.cs0809 = json.getString("cs0809");
+            this.cs0810 = json.getString("cs0810");
+            this.cs0896 = json.getString("cs0896");
+            this.cs0896x = json.getString("cs0896x");
+            this.cs08a = json.getString("cs08a");
+            this.cs08b = json.getString("cs08b");
+            this.cs09 = json.getString("cs09");
+            this.cs0996x = json.getString("cs0996x");
+            this.cs10 = json.getString("cs10");
+            this.cs11 = json.getString("cs11");
+            this.cs12 = json.getString("cs12");
+            this.cs13 = json.getString("cs13");
+            this.cs14 = json.getString("cs14");
+            this.cs15 = json.getString("cs15");
+            this.cs1596x = json.getString("cs1596x");
+            this.cs16 = json.getString("cs16");
+            this.cs17 = json.getString("cs17");
+            this.cs17961x = json.getString("cs17961x");
+            this.cs17962x = json.getString("cs17962x");
+            this.cs17a = json.getString("cs17a");
+            this.cs17b = json.getString("cs17b");
+            this.cs1802 = json.getString("cs1802");
+            this.cs1803 = json.getString("cs1803");
+            this.cs1804 = json.getString("cs1804");
+            this.cs1805 = json.getString("cs1805");
+            this.cs1806 = json.getString("cs1806");
+            this.cs1807 = json.getString("cs1807");
+            this.cs1808 = json.getString("cs1808");
+            this.cs1896 = json.getString("cs1896");
+            this.cs1896x = json.getString("cs1896x");
+            this.cs19 = json.getString("cs19");
+            this.cs1996x = json.getString("cs1996x");
+            this.cs20 = json.getString("cs20");
+            this.cs21 = json.getString("cs21");
+
         }
     }
 
@@ -2894,20 +3389,32 @@ public class Child extends BaseObservable implements Observable {
     }
 
 
-    public String sCHtoString() throws JSONException {
-        Log.d(TAG, "sIMtoString: ");
+    public String sCBtoString() throws JSONException {
+        Log.d(TAG, "sCBtoString: ");
         JSONObject json = new JSONObject();
-        json.put("ec13", ec13)
-                .put("ec14", ec14)
-                .put("ec15", ec15)
-                .put("ec16", ec16)
-                .put("ec17", ec17)
-                .put("cb03dd", cb03dd)
-                .put("cb03mm", cb03mm)
-                .put("cb03yy", cb03yy)
+
+        json.put("cb01", cb01)
+                .put("cb02", cb02)
+                .put("cb03", cb03)
+                .put("cb04dd", cb04dd)
                 .put("cb04mm", cb04mm)
                 .put("cb04yy", cb04yy)
-                .put("ageInMonths", ageInMonths);
+                .put("cb0501", cb0501)
+                .put("cb0502", cb0502)
+                .put("cb06", cb06)
+                .put("cb15", cb15)
+                .put("cb17", cb17)
+                .put("cb16", cb16)
+                .put("cb07", cb07)
+                .put("cb08", cb08)
+                .put("cb09", cb09)
+                .put("cb10", cb10)
+                .put("cb1096x", cb1096x)
+                .put("cb11", cb11)
+                .put("cb12", cb12)
+                .put("cb13", cb13)
+                .put("cb14", cb14)
+                .put("cb1496x", cb1496x);
 
         return json.toString();
 
@@ -3057,33 +3564,63 @@ public class Child extends BaseObservable implements Observable {
     }
 
 
-    public String sCBtoString() throws JSONException {
-        Log.d(TAG, "sCBtoString: ");
+    public String sCStoString() throws JSONException {
+        Log.d(TAG, "sCStoString: ");
         JSONObject json = new JSONObject();
-        json.put("ec01", ec01)
-                .put("ec02", ec02)
-                .put("ec03", ec03)
-                .put("ec04", ec04)
-                .put("ec04a", ec04a)
-                .put("ec05", ec05)
-                .put("ec06", ec06)
-                .put("ec07", ec07)
-                .put("ec09", ec09)
-                .put("ec11", ec11)
-                .put("ec12", ec12)
-                .put("ec13cline", ec13cline)
-                .put("ec14cname", ec14cname)
-                .put("ec18", ec18)
-                .put("ec19", ec19)
-                .put("ec21", ec21)
-                .put("ec22", ec22)
-                .put("ec2206x", ec2206x)
-                .put("ec2296x", ec2296x)
-                .put("cb01a", cb01a)
-                .put("cb01b", cb01b)
-                .put("cb02a", cb02a)
-                .put("cb02b", cb02b);
 
+        json.put("cs01", cs01)
+                .put("cs02", cs02)
+                .put("cs02a", cs02a)
+                .put("cs02b", cs02b)
+                .put("cs03", cs03)
+                .put("cs04", cs04)
+                .put("cs05", cs05)
+                .put("cs06", cs06)
+                .put("cs07", cs07)
+                .put("cs07961x", cs07961x)
+                .put("cs07962x", cs07962x)
+                .put("cs0801", cs0801)
+                .put("cs0802", cs0802)
+                .put("cs0803", cs0803)
+                .put("cs0804", cs0804)
+                .put("cs0805", cs0805)
+                .put("cs0806", cs0806)
+                .put("cs0807", cs0807)
+                .put("cs0808", cs0808)
+                .put("cs0809", cs0809)
+                .put("cs0810", cs0810)
+                .put("cs0896", cs0896)
+                .put("cs0896x", cs0896x)
+                .put("cs08a", cs08a)
+                .put("cs08b", cs08b)
+                .put("cs09", cs09)
+                .put("cs0996x", cs0996x)
+                .put("cs10", cs10)
+                .put("cs11", cs11)
+                .put("cs12", cs12)
+                .put("cs13", cs13)
+                .put("cs14", cs14)
+                .put("cs15", cs15)
+                .put("cs1596x", cs1596x)
+                .put("cs16", cs16)
+                .put("cs17", cs17)
+                .put("cs17961x", cs17961x)
+                .put("cs17962x", cs17962x)
+                .put("cs17a", cs17a)
+                .put("cs17b", cs17b)
+                .put("cs1802", cs1802)
+                .put("cs1803", cs1803)
+                .put("cs1804", cs1804)
+                .put("cs1805", cs1805)
+                .put("cs1806", cs1806)
+                .put("cs1807", cs1807)
+                .put("cs1808", cs1808)
+                .put("cs1896", cs1896)
+                .put("cs1896x", cs1896x)
+                .put("cs19", cs19)
+                .put("cs1996x", cs1996x)
+                .put("cs20", cs20)
+                .put("cs21", cs21);
 
         return json.toString();
     }
@@ -3107,8 +3644,8 @@ public class Child extends BaseObservable implements Observable {
         json.put(TableContracts.ChildTable.COLUMN_SYNCED, this.synced);
         json.put(TableContracts.ChildTable.COLUMN_SYNC_DATE, this.syncDate);
         json.put(TableContracts.ChildTable.COLUMN_APPVERSION, this.appver);
-        json.put(TableContracts.ChildTable.COLUMN_SCH, new JSONObject(sCHtoString()));
         json.put(TableContracts.ChildTable.COLUMN_SCB, new JSONObject(sCBtoString()));
+        json.put(TableContracts.ChildTable.COLUMN_SCS, new JSONObject(sCStoString()));
         json.put(TableContracts.ChildTable.COLUMN_SIM, new JSONObject(sIMtoString()));
 
         return json;

@@ -72,8 +72,8 @@ object CreateTable {
             + ChildTable.COLUMN_SYNCED + " TEXT, "
             + ChildTable.COLUMN_SYNC_DATE + " TEXT, "
             + ChildTable.COLUMN_APPVERSION + " TEXT, "
-            + ChildTable.COLUMN_SCH + " TEXT, "
             + ChildTable.COLUMN_SCB + " TEXT, "
+            + ChildTable.COLUMN_SCS + " TEXT, "
             + ChildTable.COLUMN_SIM + " TEXT "
             + " );"
             )
