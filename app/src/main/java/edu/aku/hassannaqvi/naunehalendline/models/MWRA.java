@@ -1711,51 +1711,61 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setPd08a01(String pd08a01) {
+        if (this.pd08a01.equals(pd08a01)) return; // for all checkboxes
         this.pd08a01 = pd08a01;
         notifyPropertyChanged(BR.pd08a01);
     }
 
     public void setPd08a02(String pd08a02) {
+        if (this.pd08a02.equals(pd08a02)) return; // for all checkboxes
         this.pd08a02 = pd08a02;
         notifyPropertyChanged(BR.pd08a02);
     }
 
     public void setPd08a03(String pd08a03) {
+        if (this.pd08a03.equals(pd08a03)) return; // for all checkboxes
         this.pd08a03 = pd08a03;
         notifyPropertyChanged(BR.pd08a03);
     }
 
     public void setPd08a04(String pd08a04) {
+        if (this.pd08a04.equals(pd08a04)) return; // for all checkboxes
         this.pd08a04 = pd08a04;
         notifyPropertyChanged(BR.pd08a04);
     }
 
     public void setPd08a05(String pd08a05) {
+        if (this.pd08a05.equals(pd08a05)) return; // for all checkboxes
         this.pd08a05 = pd08a05;
         notifyPropertyChanged(BR.pd08a05);
     }
 
     public void setPd08a06(String pd08a06) {
+        if (this.pd08a06.equals(pd08a06)) return; // for all checkboxes
         this.pd08a06 = pd08a06;
         notifyPropertyChanged(BR.pd08a06);
     }
 
     public void setPd08a07(String pd08a07) {
+        if (this.pd08a07.equals(pd08a07)) return; // for all checkboxes
         this.pd08a07 = pd08a07;
         notifyPropertyChanged(BR.pd08a07);
     }
 
     public void setPd08a08(String pd08a08) {
+        if (this.pd08a08.equals(pd08a08)) return; // for all checkboxes
         this.pd08a08 = pd08a08;
         notifyPropertyChanged(BR.pd08a08);
     }
 
     public void setPd08a09(String pd08a09) {
+        if (this.pd08a09.equals(pd08a09)) return; // for all checkboxes
         this.pd08a09 = pd08a09;
         notifyPropertyChanged(BR.pd08a09);
     }
 
     public void setPd08a96(String pd08a96) {
+        if (this.pd08a96.equals(pd08a96)) return; // for all checkboxes
         this.pd08a96 = pd08a96;
         notifyPropertyChanged(BR.pd08a96);
     }
@@ -1846,41 +1856,49 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setPd1601(String pd1601) {
+        if (this.pd1601.equals(pd1601)) return; // for all checkboxes
         this.pd1601 = pd1601;
         notifyPropertyChanged(BR.pd1601);
     }
 
     public void setPd1602(String pd1602) {
+        if (this.pd1602.equals(pd1602)) return; // for all checkboxes
         this.pd1602 = pd1602;
         notifyPropertyChanged(BR.pd1602);
     }
 
     public void setPd1603(String pd1603) {
+        if (this.pd1603.equals(pd1603)) return; // for all checkboxes
         this.pd1603 = pd1603;
         notifyPropertyChanged(BR.pd1603);
     }
 
     public void setPd1604(String pd1604) {
+        if (this.pd1604.equals(pd1604)) return; // for all checkboxes
         this.pd1604 = pd1604;
         notifyPropertyChanged(BR.pd1604);
     }
 
     public void setPd1605(String pd1605) {
+        if (this.pd1605.equals(pd1605)) return; // for all checkboxes
         this.pd1605 = pd1605;
         notifyPropertyChanged(BR.pd1605);
     }
 
     public void setPd1606(String pd1606) {
+        if (this.pd1606.equals(pd1606)) return; // for all checkboxes
         this.pd1606 = pd1606;
         notifyPropertyChanged(BR.pd1606);
     }
 
     public void setPd1607(String pd1607) {
+        if (this.pd1607.equals(pd1607)) return; // for all checkboxes
         this.pd1607 = pd1607;
         notifyPropertyChanged(BR.pd1607);
     }
 
     public void setPd1696(String pd1696) {
+        if (this.pd1696.equals(pd1696)) return; // for all checkboxes
         this.pd1696 = pd1696;
         notifyPropertyChanged(BR.pd1696);
     }
@@ -1926,41 +1944,49 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setPd2001(String pd2001) {
+        if (this.pd2001.equals(pd2001)) return; // for all checkboxes
         this.pd2001 = pd2001;
         notifyPropertyChanged(BR.pd2001);
     }
 
     public void setPd2002(String pd2002) {
+        if (this.pd2002.equals(pd2002)) return; // for all checkboxes
         this.pd2002 = pd2002;
         notifyPropertyChanged(BR.pd2002);
     }
 
     public void setPd2003(String pd2003) {
+        if (this.pd2003.equals(pd2003)) return; // for all checkboxes
         this.pd2003 = pd2003;
         notifyPropertyChanged(BR.pd2003);
     }
 
     public void setPd2004(String pd2004) {
+        if (this.pd2004.equals(pd2004)) return; // for all checkboxes
         this.pd2004 = pd2004;
         notifyPropertyChanged(BR.pd2004);
     }
 
     public void setPd2005(String pd2005) {
+        if (this.pd2005.equals(pd2005)) return; // for all checkboxes
         this.pd2005 = pd2005;
         notifyPropertyChanged(BR.pd2005);
     }
 
     public void setPd2006(String pd2006) {
+        if (this.pd2006.equals(pd2006)) return; // for all checkboxes
         this.pd2006 = pd2006;
         notifyPropertyChanged(BR.pd2006);
     }
 
     public void setPd2007(String pd2007) {
+        if (this.pd2007.equals(pd2007)) return; // for all checkboxes
         this.pd2007 = pd2007;
         notifyPropertyChanged(BR.pd2007);
     }
 
     public void setPd2096(String pd2096) {
+        if (this.pd2096.equals(pd2096)) return; // for all checkboxes
         this.pd2096 = pd2096;
         notifyPropertyChanged(BR.pd2096);
     }
@@ -2006,36 +2032,43 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setPd2401(String pd2401) {
+        if (this.pd2401.equals(pd2401)) return; // for all checkboxes
         this.pd2401 = pd2401;
         notifyPropertyChanged(BR.pd2401);
     }
 
     public void setPd2402(String pd2402) {
+        if (this.pd2402.equals(pd2402)) return; // for all checkboxes
         this.pd2402 = pd2402;
         notifyPropertyChanged(BR.pd2402);
     }
 
     public void setPd2403(String pd2403) {
+        if (this.pd2403.equals(pd2403)) return; // for all checkboxes
         this.pd2403 = pd2403;
         notifyPropertyChanged(BR.pd2403);
     }
 
     public void setPd2404(String pd2404) {
+        if (this.pd2404.equals(pd2404)) return; // for all checkboxes
         this.pd2404 = pd2404;
         notifyPropertyChanged(BR.pd2404);
     }
 
     public void setPd2405(String pd2405) {
+        if (this.pd2405.equals(pd2405)) return; // for all checkboxes
         this.pd2405 = pd2405;
         notifyPropertyChanged(BR.pd2405);
     }
 
     public void setPd2406(String pd2406) {
+        if (this.pd2406.equals(pd2406)) return; // for all checkboxes
         this.pd2406 = pd2406;
         notifyPropertyChanged(BR.pd2406);
     }
 
     public void setPd2496(String pd2496) {
+        if (this.pd2496.equals(pd2496)) return; // for all checkboxes
         this.pd2496 = pd2496;
         notifyPropertyChanged(BR.pd2496);
     }
@@ -2046,7 +2079,15 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setPd2498(String pd2498) {
+        if (this.pd2498.equals(pd2498)) return; // for all checkboxes
         this.pd2498 = pd2498;
+        setPd2401(pd2498.equals("98") ? "" : this.pd2401);
+        setPd2402(pd2498.equals("98") ? "" : this.pd2402);
+        setPd2403(pd2498.equals("98") ? "" : this.pd2403);
+        setPd2404(pd2498.equals("98") ? "" : this.pd2404);
+        setPd2405(pd2498.equals("98") ? "" : this.pd2405);
+        setPd2406(pd2498.equals("98") ? "" : this.pd2406);
+        setPd2496(pd2498.equals("98") ? "" : this.pd2496);
         notifyPropertyChanged(BR.pd2498);
     }
 
@@ -2131,61 +2172,73 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setBf0901(String bf0901) {
+        if (this.bf0901.equals(bf0901)) return; // for all checkboxes
         this.bf0901 = bf0901;
         notifyPropertyChanged(BR.bf0901);
     }
 
     public void setBf0902(String bf0902) {
+        if (this.bf0902.equals(bf0902)) return; // for all checkboxes
         this.bf0902 = bf0902;
         notifyPropertyChanged(BR.bf0902);
     }
 
     public void setBf0903(String bf0903) {
+        if (this.bf0903.equals(bf0903)) return; // for all checkboxes
         this.bf0903 = bf0903;
         notifyPropertyChanged(BR.bf0903);
     }
 
     public void setBf0904(String bf0904) {
+        if (this.bf0904.equals(bf0904)) return; // for all checkboxes
         this.bf0904 = bf0904;
         notifyPropertyChanged(BR.bf0904);
     }
 
     public void setBf0905(String bf0905) {
+        if (this.bf0905.equals(bf0905)) return; // for all checkboxes
         this.bf0905 = bf0905;
         notifyPropertyChanged(BR.bf0905);
     }
 
     public void setBf0906(String bf0906) {
+        if (this.bf0906.equals(bf0906)) return; // for all checkboxes
         this.bf0906 = bf0906;
         notifyPropertyChanged(BR.bf0906);
     }
 
     public void setBf0907(String bf0907) {
+        if (this.bf0907.equals(bf0907)) return; // for all checkboxes
         this.bf0907 = bf0907;
         notifyPropertyChanged(BR.bf0907);
     }
 
     public void setBf0908(String bf0908) {
+        if (this.bf0908.equals(bf0908)) return; // for all checkboxes
         this.bf0908 = bf0908;
         notifyPropertyChanged(BR.bf0908);
     }
 
     public void setBf0909(String bf0909) {
+        if (this.bf0909.equals(bf0909)) return; // for all checkboxes
         this.bf0909 = bf0909;
         notifyPropertyChanged(BR.bf0909);
     }
 
     public void setBf0910(String bf0910) {
+        if (this.bf0910.equals(bf0910)) return; // for all checkboxes
         this.bf0910 = bf0910;
         notifyPropertyChanged(BR.bf0910);
     }
 
     public void setBf0999(String bf0999) {
+        if (this.bf0999.equals(bf0999)) return; // for all checkboxes
         this.bf0999 = bf0999;
         notifyPropertyChanged(BR.bf0999);
     }
 
     public void setBf0996(String bf0996) {
+        if (this.bf0996.equals(bf0996)) return; // for all checkboxes
         this.bf0996 = bf0996;
         notifyPropertyChanged(BR.bf0996);
     }
@@ -2426,41 +2479,49 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv0501(String cv0501) {
+        if (this.cv0501.equals(cv0501)) return; // for all checkboxes
         this.cv0501 = cv0501;
         notifyPropertyChanged(BR.cv0501);
     }
 
     public void setCv0502(String cv0502) {
+        if (this.cv0502.equals(cv0502)) return; // for all checkboxes
         this.cv0502 = cv0502;
         notifyPropertyChanged(BR.cv0502);
     }
 
     public void setCv0503(String cv0503) {
+        if (this.cv0503.equals(cv0503)) return; // for all checkboxes
         this.cv0503 = cv0503;
         notifyPropertyChanged(BR.cv0503);
     }
 
     public void setCv0504(String cv0504) {
+        if (this.cv0504.equals(cv0504)) return; // for all checkboxes
         this.cv0504 = cv0504;
         notifyPropertyChanged(BR.cv0504);
     }
 
     public void setCv0505(String cv0505) {
+        if (this.cv0505.equals(cv0505)) return; // for all checkboxes
         this.cv0505 = cv0505;
         notifyPropertyChanged(BR.cv0505);
     }
 
     public void setCv0506(String cv0506) {
+        if (this.cv0506.equals(cv0506)) return; // for all checkboxes
         this.cv0506 = cv0506;
         notifyPropertyChanged(BR.cv0506);
     }
 
     public void setCv0507(String cv0507) {
+        if (this.cv0507.equals(cv0507)) return; // for all checkboxes
         this.cv0507 = cv0507;
         notifyPropertyChanged(BR.cv0507);
     }
 
     public void setCv0596(String cv0596) {
+        if (this.cv0596.equals(cv0596)) return; // for all checkboxes
         this.cv0596 = cv0596;
         notifyPropertyChanged(BR.cv0596);
     }
@@ -2476,66 +2537,79 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv0601(String cv0601) {
+        if (this.cv0601.equals(cv0601)) return; // for all checkboxes
         this.cv0601 = cv0601;
         notifyPropertyChanged(BR.cv0601);
     }
 
     public void setCv0602(String cv0602) {
+        if (this.cv0602.equals(cv0602)) return; // for all checkboxes
         this.cv0602 = cv0602;
         notifyPropertyChanged(BR.cv0602);
     }
 
     public void setCv0603(String cv0603) {
+        if (this.cv0603.equals(cv0603)) return; // for all checkboxes
         this.cv0603 = cv0603;
         notifyPropertyChanged(BR.cv0603);
     }
 
     public void setCv0604(String cv0604) {
+        if (this.cv0604.equals(cv0604)) return; // for all checkboxes
         this.cv0604 = cv0604;
         notifyPropertyChanged(BR.cv0604);
     }
 
     public void setCv0605(String cv0605) {
+        if (this.cv0605.equals(cv0605)) return; // for all checkboxes
         this.cv0605 = cv0605;
         notifyPropertyChanged(BR.cv0605);
     }
 
     public void setCv0606(String cv0606) {
+        if (this.cv0606.equals(cv0606)) return; // for all checkboxes
         this.cv0606 = cv0606;
         notifyPropertyChanged(BR.cv0606);
     }
 
     public void setCv0607(String cv0607) {
+        if (this.cv0607.equals(cv0607)) return; // for all checkboxes
         this.cv0607 = cv0607;
         notifyPropertyChanged(BR.cv0607);
     }
 
     public void setCv0608(String cv0608) {
+        if (this.cv0608.equals(cv0608)) return; // for all checkboxes
         this.cv0608 = cv0608;
         notifyPropertyChanged(BR.cv0608);
     }
 
     public void setCv0609(String cv0609) {
+        if (this.cv0609.equals(cv0609)) return; // for all checkboxes
         this.cv0609 = cv0609;
         notifyPropertyChanged(BR.cv0609);
     }
 
     public void setCv0610(String cv0610) {
+        if (this.cv0610.equals(cv0610)) return; // for all checkboxes
         this.cv0610 = cv0610;
         notifyPropertyChanged(BR.cv0610);
     }
 
     public void setCv0611(String cv0611) {
+        if (this.cv0611.equals(cv0611)) return; // for all checkboxes
         this.cv0611 = cv0611;
         notifyPropertyChanged(BR.cv0611);
     }
 
     public void setCv0612(String cv0612) {
+        if (this.cv0612.equals(cv0612)) return; // for all checkboxes
         this.cv0612 = cv0612;
         notifyPropertyChanged(BR.cv0612);
     }
 
     public void setCv0696(String cv0696) {
+        if (this.cv0696.equals(cv0696)) return; // for all checkboxes
         this.cv0696 = cv0696;
         notifyPropertyChanged(BR.cv0696);
     }
@@ -2556,46 +2630,55 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv0801(String cv0801) {
+        if (this.cv0801.equals(cv0801)) return; // for all checkboxes
         this.cv0801 = cv0801;
         notifyPropertyChanged(BR.cv0801);
     }
 
     public void setCv0802(String cv0802) {
+        if (this.cv0802.equals(cv0802)) return; // for all checkboxes
         this.cv0802 = cv0802;
         notifyPropertyChanged(BR.cv0802);
     }
 
     public void setCv0803(String cv0803) {
+        if (this.cv0803.equals(cv0803)) return; // for all checkboxes
         this.cv0803 = cv0803;
         notifyPropertyChanged(BR.cv0803);
     }
 
     public void setCv0804(String cv0804) {
+        if (this.cv0804.equals(cv0804)) return; // for all checkboxes
         this.cv0804 = cv0804;
         notifyPropertyChanged(BR.cv0804);
     }
 
     public void setCv0805(String cv0805) {
+        if (this.cv0805.equals(cv0805)) return; // for all checkboxes
         this.cv0805 = cv0805;
         notifyPropertyChanged(BR.cv0805);
     }
 
     public void setCv0806(String cv0806) {
+        if (this.cv0806.equals(cv0806)) return; // for all checkboxes
         this.cv0806 = cv0806;
         notifyPropertyChanged(BR.cv0806);
     }
 
     public void setCv0807(String cv0807) {
+        if (this.cv0807.equals(cv0807)) return; // for all checkboxes
         this.cv0807 = cv0807;
         notifyPropertyChanged(BR.cv0807);
     }
 
     public void setCv0898(String cv0898) {
+        if (this.cv0898.equals(cv0898)) return; // for all checkboxes
         this.cv0898 = cv0898;
         notifyPropertyChanged(BR.cv0898);
     }
 
     public void setCv0896(String cv0896) {
+        if (this.cv0896.equals(cv0896)) return; // for all checkboxes
         this.cv0896 = cv0896;
         notifyPropertyChanged(BR.cv0896);
     }
@@ -2611,51 +2694,61 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv0901(String cv0901) {
+        if (this.cv0901.equals(cv0901)) return; // for all checkboxes
         this.cv0901 = cv0901;
         notifyPropertyChanged(BR.cv0901);
     }
 
     public void setCv0902(String cv0902) {
+        if (this.cv0902.equals(cv0902)) return; // for all checkboxes
         this.cv0902 = cv0902;
         notifyPropertyChanged(BR.cv0902);
     }
 
     public void setCv0903(String cv0903) {
+        if (this.cv0903.equals(cv0903)) return; // for all checkboxes
         this.cv0903 = cv0903;
         notifyPropertyChanged(BR.cv0903);
     }
 
     public void setCv0904(String cv0904) {
+        if (this.cv0904.equals(cv0904)) return; // for all checkboxes
         this.cv0904 = cv0904;
         notifyPropertyChanged(BR.cv0904);
     }
 
     public void setCv0905(String cv0905) {
+        if (this.cv0905.equals(cv0905)) return; // for all checkboxes
         this.cv0905 = cv0905;
         notifyPropertyChanged(BR.cv0905);
     }
 
     public void setCv0906(String cv0906) {
+        if (this.cv0906.equals(cv0906)) return; // for all checkboxes
         this.cv0906 = cv0906;
         notifyPropertyChanged(BR.cv0906);
     }
 
     public void setCv0907(String cv0907) {
+        if (this.cv0907.equals(cv0907)) return; // for all checkboxes
         this.cv0907 = cv0907;
         notifyPropertyChanged(BR.cv0907);
     }
 
     public void setCv0908(String cv0908) {
+        if (this.cv0908.equals(cv0908)) return; // for all checkboxes
         this.cv0908 = cv0908;
         notifyPropertyChanged(BR.cv0908);
     }
 
     public void setCv0998(String cv0998) {
+        if (this.cv0998.equals(cv0998)) return; // for all checkboxes
         this.cv0998 = cv0998;
         notifyPropertyChanged(BR.cv0998);
     }
 
     public void setCv0996(String cv0996) {
+        if (this.cv0996.equals(cv0996)) return; // for all checkboxes
         this.cv0996 = cv0996;
         notifyPropertyChanged(BR.cv0996);
     }
@@ -2671,56 +2764,67 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv1001(String cv1001) {
+        if (this.cv1001.equals(cv1001)) return; // for all checkboxes
         this.cv1001 = cv1001;
         notifyPropertyChanged(BR.cv1001);
     }
 
     public void setCv1002(String cv1002) {
+        if (this.cv1002.equals(cv1002)) return; // for all checkboxes
         this.cv1002 = cv1002;
         notifyPropertyChanged(BR.cv1002);
     }
 
     public void setCv1003(String cv1003) {
+        if (this.cv1003.equals(cv1003)) return; // for all checkboxes
         this.cv1003 = cv1003;
         notifyPropertyChanged(BR.cv1003);
     }
 
     public void setCv1004(String cv1004) {
+        if (this.cv1004.equals(cv1004)) return; // for all checkboxes
         this.cv1004 = cv1004;
         notifyPropertyChanged(BR.cv1004);
     }
 
     public void setCv1005(String cv1005) {
+        if (this.cv1005.equals(cv1005)) return; // for all checkboxes
         this.cv1005 = cv1005;
         notifyPropertyChanged(BR.cv1005);
     }
 
     public void setCv1006(String cv1006) {
+        if (this.cv1006.equals(cv1006)) return; // for all checkboxes
         this.cv1006 = cv1006;
         notifyPropertyChanged(BR.cv1006);
     }
 
     public void setCv1007(String cv1007) {
+        if (this.cv1007.equals(cv1007)) return; // for all checkboxes
         this.cv1007 = cv1007;
         notifyPropertyChanged(BR.cv1007);
     }
 
     public void setCv1008(String cv1008) {
+        if (this.cv1008.equals(cv1008)) return; // for all checkboxes
         this.cv1008 = cv1008;
         notifyPropertyChanged(BR.cv1008);
     }
 
     public void setCv1009(String cv1009) {
+        if (this.cv1009.equals(cv1009)) return; // for all checkboxes
         this.cv1009 = cv1009;
         notifyPropertyChanged(BR.cv1009);
     }
 
     public void setCv1098(String cv1098) {
+        if (this.cv1098.equals(cv1098)) return; // for all checkboxes
         this.cv1098 = cv1098;
         notifyPropertyChanged(BR.cv1098);
     }
 
     public void setCv1096(String cv1096) {
+        if (this.cv1096.equals(cv1096)) return; // for all checkboxes
         this.cv1096 = cv1096;
         notifyPropertyChanged(BR.cv1096);
     }
@@ -2806,56 +2910,67 @@ public class MWRA extends BaseObservable implements Observable {
     }
 
     public void setCv2101(String cv2101) {
+        if (this.cv2101.equals(cv2101)) return; // for all checkboxes
         this.cv2101 = cv2101;
         notifyPropertyChanged(BR.cv2101);
     }
 
     public void setCv2102(String cv2102) {
+        if (this.cv2102.equals(cv2102)) return; // for all checkboxes
         this.cv2102 = cv2102;
         notifyPropertyChanged(BR.cv2102);
     }
 
     public void setCv2103(String cv2103) {
+        if (this.cv2103.equals(cv2103)) return; // for all checkboxes
         this.cv2103 = cv2103;
         notifyPropertyChanged(BR.cv2103);
     }
 
     public void setCv2104(String cv2104) {
+        if (this.cv2104.equals(cv2104)) return; // for all checkboxes
         this.cv2104 = cv2104;
         notifyPropertyChanged(BR.cv2104);
     }
 
     public void setCv2105(String cv2105) {
+        if (this.cv2105.equals(cv2105)) return; // for all checkboxes
         this.cv2105 = cv2105;
         notifyPropertyChanged(BR.cv2105);
     }
 
     public void setCv2106(String cv2106) {
+        if (this.cv2106.equals(cv2106)) return; // for all checkboxes
         this.cv2106 = cv2106;
         notifyPropertyChanged(BR.cv2106);
     }
 
     public void setCv2107(String cv2107) {
+        if (this.cv2107.equals(cv2107)) return; // for all checkboxes
         this.cv2107 = cv2107;
         notifyPropertyChanged(BR.cv2107);
     }
 
     public void setCv2108(String cv2108) {
+        if (this.cv2108.equals(cv2108)) return; // for all checkboxes
         this.cv2108 = cv2108;
         notifyPropertyChanged(BR.cv2108);
     }
 
     public void setCv2109(String cv2109) {
+        if (this.cv2109.equals(cv2109)) return; // for all checkboxes
         this.cv2109 = cv2109;
         notifyPropertyChanged(BR.cv2109);
     }
 
     public void setCv2198(String cv2198) {
+        if (this.cv2198.equals(cv2198)) return; // for all checkboxes
         this.cv2198 = cv2198;
         notifyPropertyChanged(BR.cv2198);
     }
 
     public void setCv2196(String cv2196) {
+        if (this.cv2196.equals(cv2196)) return; // for all checkboxes
         this.cv2196 = cv2196;
         notifyPropertyChanged(BR.cv2196);
     }
