@@ -128,11 +128,13 @@
                         <RadioGroup
                             android:id="@+id/cv01"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/cv0101"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv01.equals(`1`)}"
                                 android:onClick="@{()->form.setCv01(`1`)}"
@@ -140,7 +142,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv0102"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv01.equals(`2`)}"
                                 android:onClick="@{()->form.setCv01(`2`)}"
@@ -264,20 +267,24 @@
                         <RadioGroup
                             android:id="@+id/cv03"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv0301"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv03.equals(`1`)}"
                                 android:onClick="@{()->form.setCv03(`1`)}"
                                 android:text="@string/cv0301" />
 
                             <RadioButton
                                 android:id="@+id/cv0302"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv03.equals(`2`)}"
                                 android:onClick="@{()->form.setCv03(`2`)}"
                                 android:text="@string/cv0302" />
@@ -675,11 +682,14 @@
                         <RadioGroup
                             android:id="@+id/cv07"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv0701"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv07.equals(`1`)}"
                                 android:onClick="@{()->form.setCv07(`1`)}"
@@ -687,7 +697,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv0702"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv07.equals(`2`)}"
                                 android:onClick="@{()->form.setCv07(`2`)}"
@@ -695,7 +706,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv0798"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv07.equals(`98`)}"
                                 android:onClick="@{()->form.setCv07(`98`)}"
@@ -1151,11 +1163,14 @@
                         <RadioGroup
                             android:id="@+id/cv11"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv1101"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv11.equals(`1`)}"
                                 android:onClick="@{()->form.setCv11(`1`)}"
@@ -1163,7 +1178,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv1102"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv11.equals(`2`)}"
                                 android:onClick="@{()->form.setCv11(`2`)}"
@@ -1300,11 +1316,14 @@
                         <RadioGroup
                             android:id="@+id/cv13"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv1301"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv13.equals(`1`)}"
                                 android:onClick="@{()->form.setCv13(`1`)}"
@@ -1312,7 +1331,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv1302"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv13.equals(`2`)}"
                                 android:onClick="@{()->form.setCv13(`2`)}"
@@ -1353,11 +1373,14 @@
                         <RadioGroup
                             android:id="@+id/cv14"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv1401"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv14.equals(`1`)}"
                                 android:onClick="@{()->form.setCv14(`1`)}"
@@ -1365,7 +1388,8 @@
 
                             <RadioButton
                                 android:id="@+id/cv1402"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.cv14.equals(`2`)}"
                                 android:onClick="@{()->form.setCv14(`2`)}"
@@ -1406,20 +1430,24 @@
                         <RadioGroup
                             android:id="@+id/cv15"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv1501"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv15.equals(`1`)}"
                                 android:onClick="@{()->form.setCv15(`1`)}"
                                 android:text="@string/cv1501" />
 
                             <RadioButton
                                 android:id="@+id/cv1502"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv15.equals(`2`)}"
                                 android:onClick="@{()->form.setCv15(`2`)}"
                                 android:text="@string/cv1502" />
@@ -1562,20 +1590,24 @@
                         <RadioGroup
                             android:id="@+id/cv17"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv1701"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv17.equals(`1`)}"
                                 android:onClick="@{()->form.setCv17(`1`)}"
                                 android:text="@string/cv1701" />
 
                             <RadioButton
                                 android:id="@+id/cv1702"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv17.equals(`2`)}"
                                 android:onClick="@{()->form.setCv17(`2`)}"
                                 android:text="@string/cv1702" />
@@ -1822,20 +1854,24 @@
                         <RadioGroup
                             android:id="@+id/cv20"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
 
                             <RadioButton
                                 android:id="@+id/cv2001"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv20.equals(`1`)}"
                                 android:onClick="@{()->form.setCv20(`1`)}"
                                 android:text="@string/cv2001" />
 
                             <RadioButton
                                 android:id="@+id/cv2002"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.cv20.equals(`2`)}"
                                 android:onClick="@{()->form.setCv20(`2`)}"
                                 android:text="@string/cv2002" />
