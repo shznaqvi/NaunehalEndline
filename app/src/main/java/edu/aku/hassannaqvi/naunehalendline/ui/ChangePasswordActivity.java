@@ -35,6 +35,7 @@ import javax.crypto.NoSuchPaddingException;
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.core.CipherSecure;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
+import edu.aku.hassannaqvi.naunehalendline.core.UserAuth;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityChangePasswordBinding;
 import edu.aku.hassannaqvi.naunehalendline.workers.UserWorker;
@@ -260,11 +261,28 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     public boolean isValidPassword(String password) {
         boolean isValid = true;
+
+        // Check not same as previous
+        try {
+            if (UserAuth.checkPassword(password, MainApp.user.getPassword())) {
+                System.out.println("Password is same as previous.");
+                bi.password1.setError("Password must not be same as previous.");
+                isValid = false;
+            }
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        }
+
+        // Check password length
         if (password.length() < 8) {
             System.out.println("Password must be at least 8 characters in length.");
             bi.password1.setError("Password must be at least 8 characters in length.");
             isValid = false;
         }
+
+        // Check special characters
         String upperCaseChars = "(.*[a-zA-Z].*)";
         if (!password.matches(upperCaseChars)) {
             System.out.println("Password must have atleast one alphabet");
@@ -277,12 +295,15 @@ public class ChangePasswordActivity extends AppCompatActivity {
             System.out.println("Password must have atleast one lowercase character");
             isValid = false;
         }*/
+
+        // Check number
         String numbers = "(.*[0-9].*)";
         if (!password.matches(numbers)) {
             System.out.println("Password must have atleast one number");
             bi.password1.setError("Password must have atleast one number");
             isValid = false;
         }
+
         /*String specialChars = "(.*[@,#,$,%].*$)";
         if (!password.matches(specialChars ))
         {

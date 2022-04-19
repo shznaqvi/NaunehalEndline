@@ -52,6 +52,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.naunehalendline.MainActivity;
 import edu.aku.hassannaqvi.naunehalendline.R;
@@ -250,37 +251,63 @@ public class LoginActivity extends AppCompatActivity {
 
     public void attemptLogin(View view) {
 
-        if (!username.equals(bi.username.getText().toString())) {
-            attemptCounter = 0;
+        MainApp.user = null;
+
+        if (username.equals(bi.username.getText().toString())) {
+            attemptCounter++;
+        } else {
+            attemptCounter = 1;
         }
-        attemptCounter++;
+        username = bi.username.getText().toString();
+
+
         // Reset errors.
         bi.username.setError(null);
         bi.password.setError(null);
-        //bi.as1q01.setError(null);
-        // Toast.makeText(this, String.valueOf(attemptCounter), Toast.LENGTH_SHORT).show();
+        long timeNowInMillis = System.currentTimeMillis();
+
+        Toast.makeText(this, String.valueOf(attemptCounter), Toast.LENGTH_SHORT).show();
+
+        if (MainApp.sharedPref.contains(bi.username.getText().toString())) {
+            long startTimeout = MainApp.sharedPref.getLong(bi.username.getText().toString(), timeNowInMillis);
+            long timeElapsed = TimeUnit.MILLISECONDS.toMinutes(timeNowInMillis - startTimeout);
+            Log.d(TAG, "attemptLogin(timeleft): " + timeElapsed);
+            if (timeElapsed > 15) {
+                MainApp.editor.remove(bi.username.getText().toString()).commit();
+            } else {
+                bi.username.setError("This user has been blocked.");
+                Toast.makeText(this, "This user has been blocked. Please try again after some time.", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+        }
         if (attemptCounter > 5) {
-            bi.username.setError("This user has been blocked.");
-            Toast.makeText(this, "This user has been blocked.", Toast.LENGTH_LONG).show();
+
+            if (!MainApp.sharedPref.contains(bi.username.getText().toString())) {
+                MainApp.editor.putLong(bi.username.getText().toString(), timeNowInMillis).commit();
+                Toast.makeText(this, "This user has been blocked.", Toast.LENGTH_LONG).show();
+                return;
+            }
 
         } else {
+
             // Store values at the time of the login attempt.
-            username = bi.username.getText().toString();
-            password = bi.password.getText().toString();
+            String username = bi.username.getText().toString();
+            String password = bi.password.getText().toString();
 
             boolean cancel = false;
             View focusView = null;
 
             // Check for a valid password, if the user entered one.
             if (password.length() < 8) {
-                bi.password.setError(getString(R.string.invalid_password));
+                bi.password.setError(getResources().getString(R.string.invalid_password));
                 focusView = bi.password;
                 return;
             }
 
             // Check for a valid username address.
             if (TextUtils.isEmpty(username)) {
-                bi.username.setError(getString(R.string.username_required));
+                bi.username.setError(getResources().getString(R.string.username_required));
                 focusView = bi.username;
                 return;
             }
@@ -290,15 +317,11 @@ public class LoginActivity extends AppCompatActivity {
                 bi.as1q01.setError(getString(R.string.as1q01));
                 return;
             }*/
-
             try {
-                if ((username.equals("dmu@aku") && password.equals("aku?dmu"))
-                        || (username.equals("test1234") && password.equals("test1234"))
-                        || db.doLogin(username, password)
-                ) {
 
+                if (db.doLogin(username, password)) {
                     MainApp.user.setUserName(username);
-                    MainApp.admin = username.contains("@") || username.contains("test1234");
+                    //   MainApp.admin = username.contains("@") || username.contains("test1234");
                     MainApp.superuser = MainApp.user.getDesignation().equals("Supervisor");
                     Intent iLogin = null;
                     if (MainApp.admin) {
@@ -306,7 +329,7 @@ public class LoginActivity extends AppCompatActivity {
                         iLogin = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(iLogin);
                     } else if (MainApp.user.getEnabled().equals("1")) {
-                        if (!MainApp.user.getNewUser().equals("1")) {
+                        if (!MainApp.user.getNewUser().equals("1")) { // TODO: getEnabled().equals("1")
                             recordEntry("Successful Login");
                             iLogin = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(iLogin);
@@ -321,7 +344,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 } else {
                     recordEntry("Failed Login: Incorrect username or password");
-                    bi.password.setError(getString(R.string.incorrect_username_or_password));
+                    bi.password.setError(getResources().getString(R.string.incorrect_username_or_password));
                     bi.password.requestFocus();
                     //  Toast.makeText(LoginActivity.this, username + " " + password, Toast.LENGTH_SHORT).show();
                 }
@@ -335,9 +358,7 @@ public class LoginActivity extends AppCompatActivity {
             } catch (IllegalArgumentException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "IllegalArgumentException(UserAuth):" + e.getMessage(), Toast.LENGTH_SHORT).show();
-
             }
-
 
         }
     }
