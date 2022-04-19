@@ -48,8 +48,8 @@ import java.util.concurrent.TimeUnit;
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.adapters.SyncListAdapter;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
-import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ChildTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable;
+import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.DistrictsTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.EntryLogTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.FormsTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.RandomHHTable;
@@ -159,7 +159,7 @@ public class SyncActivity extends AppCompatActivity {
 
 
                 //Child
-                uploadTables.add(new SyncModel(ChildTable.TABLE_NAME));
+                uploadTables.add(new SyncModel(TableContracts.ChildTable.TABLE_NAME));
                 try {
                     MainApp.uploadData.add(db.getUnsyncedChild());
                 } catch (JSONException e) {
@@ -217,6 +217,7 @@ public class SyncActivity extends AppCompatActivity {
                     filter = " enabled = '1' ";
 
                     downloadTables.add(new SyncModel(UsersTable.TABLE_NAME));
+                    downloadTables.add(new SyncModel(DistrictsTable.TABLE_NAME));
                     downloadTables.add(new SyncModel("versionApp"));
                 } else {
 

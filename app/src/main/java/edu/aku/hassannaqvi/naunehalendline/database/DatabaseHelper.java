@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTable.SQL_CREATE_USERS);
         db.execSQL(CreateTable.SQL_CREATE_CLUSTERS);
         db.execSQL(CreateTable.SQL_CREATE_RANDOM_HH);
-
+        db.execSQL(CreateTable.SQL_CREATE_DISTRICTS);
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_ENTRYLOGS);
         db.execSQL(CreateTable.SQL_CREATE_CHILD);
@@ -509,9 +509,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             clusters.sync(json);
             ContentValues values = new ContentValues();
 
-            values.put(ClusterTable.COLUMN_GEOAREA, clusters.getGeoarea());
-            values.put(ClusterTable.COLUMN_DIST_ID, clusters.getDistId());
-            values.put(ClusterTable.COLUMN_EB_CODE, clusters.getEbcode());
+            values.put(ClusterTable.COLUMN_CLUSTER_CODE, clusters.getClusterCode());
+            values.put(ClusterTable.COLUMN_CLUSTER_NAME, clusters.getClustername());
+            values.put(ClusterTable.COLUMN_DIST_CODE, clusters.getDistCode());
 
 
             long rowID = db.insertOrThrow(ClusterTable.TABLE_NAME, null, values);
@@ -544,13 +544,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(RandomHHTable.COLUMN_LUID, randomHH.getLUID());
             values.put(RandomHHTable.COLUMN_STRUCTURE_NO, randomHH.getStructure());
             values.put(RandomHHTable.COLUMN_FAMILY_EXT_CODE, randomHH.getExtension());
-            values.put(RandomHHTable.COLUMN_HH_NO, randomHH.getHhid());
-            values.put(RandomHHTable.COLUMN_EB_CODE, randomHH.getEbCode());
+            values.put(RandomHHTable.COLUMN_HH_NO, randomHH.getHh());
+            values.put(RandomHHTable.COLUMN_CLUSTER_CODE, randomHH.getClusterCode());
             values.put(RandomHHTable.COLUMN_RANDOMDT, randomHH.getRandomDT());
             values.put(RandomHHTable.COLUMN_HH_HEAD, randomHH.getHhhead());
             values.put(RandomHHTable.COLUMN_CONTACT, randomHH.getContact());
-            values.put(RandomHHTable.COLUMN_HH_SELECTED_STRUCT, randomHH.getSelStructure());
-            values.put(RandomHHTable.COLUMN_SNO, randomHH.getSno());
+//            values.put(RandomHHTable.COLUMN_HH_SELECTED_STRUCT, randomHH.getStructure());
+            values.put(RandomHHTable.COLUMN_SNO_HH, randomHH.getSno());
 
             long rowID = db.insertOrThrow(RandomHHTable.TABLE_NAME, null, values);
             if (rowID != -1) insertCount++;
@@ -1012,7 +1012,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = null;
         String whereClause = FormsTable.COLUMN_EB_CODE + "= ? AND " +
                 FormsTable.COLUMN_HHID + "= ? ";
-        String[] whereArgs = {selectedCluster.getEbcode(), selectedHousehold.getHhid()};
+        String[] whereArgs = {selectedCluster.getClusterCode(), selectedHousehold.getHh()};
         String groupBy = null;
         String having = null;
         String orderBy = FormsTable.COLUMN_SYSDATE + " ASC";
@@ -1047,7 +1047,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String[] columns = null;
 
-        String whereClause = RandomHHTable.COLUMN_EB_CODE + " = ? AND " +
+        String whereClause = RandomHHTable.COLUMN_CLUSTER_CODE + " = ? AND " +
                 RandomHHTable.COLUMN_HH_NO + " = ?";
 
         String[] whereArgs = {clustercode, hhid};
@@ -1090,7 +1090,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String[] columns = null;
 
-        String whereClause = ClusterTable.COLUMN_EB_CODE + " =?";
+        String whereClause = ClusterTable.COLUMN_CLUSTER_CODE + " =?";
         String[] whereArgs = new String[]{ebCode};
         String groupBy = null;
         String having = null;
@@ -1144,7 +1144,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor c = null;
         String[] columns = null;
 
-        String whereClause = ClusterTable.COLUMN_EB_CODE + " = ? ";
+        String whereClause = ClusterTable.COLUMN_CLUSTER_CODE + " = ? ";
 
         String[] whereArgs = {ebCode};
 
@@ -1183,10 +1183,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
         String[] columns = null;
-        String whereClause = RandomHHTable.COLUMN_EB_CODE + " = ? AND " +
+        String whereClause = RandomHHTable.COLUMN_CLUSTER_CODE + " = ? AND " +
                 RandomHHTable.COLUMN_HH_NO + " = ? ";
 
-        String[] whereArgs = {selectedCluster.getEbcode(), hhid};
+        String[] whereArgs = {selectedCluster.getClusterCode(), hhid};
         String groupBy = null;
         String having = null;
         String orderBy = null;
