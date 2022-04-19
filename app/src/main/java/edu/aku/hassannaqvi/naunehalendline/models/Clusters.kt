@@ -2,18 +2,20 @@ package edu.aku.hassannaqvi.naunehalendline.models
 
 import android.database.Cursor
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable
+import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable.*
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp._EMPTY_
 import org.json.JSONException
 import org.json.JSONObject
 
 /**
  * Created by hassan.naqvi on 11/30/2016.
+ * @update hussain.siddiqui
  */
 class Clusters {
     var ID: Long = 0
-    var geoarea: String = _EMPTY_
-    var distId: String = _EMPTY_
-    var ebcode: String = _EMPTY_
+    var clusterCode: String = _EMPTY_
+    var clustername: String = _EMPTY_
+    var distCode: String = _EMPTY_
 
 
     constructor() {
@@ -22,9 +24,9 @@ class Clusters {
 
     @Throws(JSONException::class)
     fun sync(jsonObject: JSONObject): Clusters {
-        geoarea = jsonObject.getString(ClusterTable.COLUMN_GEOAREA)
-        distId = jsonObject.getString(ClusterTable.COLUMN_DIST_ID)
-        ebcode = jsonObject.getString(ClusterTable.COLUMN_EB_CODE)
+        clusterCode = jsonObject.getString(COLUMN_CLUSTER_CODE)
+        clustername = jsonObject.getString(COLUMN_CLUSTER_NAME)
+        distCode = jsonObject.getString(COLUMN_DIST_CODE)
 
 
         return this
@@ -33,9 +35,9 @@ class Clusters {
     fun hydrate(cursor: Cursor): Clusters {
         ID = cursor.getLong(cursor.getColumnIndexOrThrow(ClusterTable.COLUMN_ID))
 
-        geoarea = cursor.getString(cursor.getColumnIndexOrThrow(ClusterTable.COLUMN_GEOAREA))
-        distId = cursor.getString(cursor.getColumnIndexOrThrow(ClusterTable.COLUMN_DIST_ID))
-        ebcode = cursor.getString(cursor.getColumnIndexOrThrow(ClusterTable.COLUMN_EB_CODE))
+        clusterCode = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CLUSTER_CODE))
+        clustername = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CLUSTER_NAME))
+        distCode = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DIST_CODE))
 
 
         return this

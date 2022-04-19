@@ -87,11 +87,20 @@ public class TableContracts {
 
     public static abstract class ClusterTable implements BaseColumns {
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
-        public static final String TABLE_NAME = "Clusters";
+        public static final String TABLE_NAME = "clusters";
         public static final String COLUMN_ID = "_id";
-        public static final String COLUMN_DIST_ID = "dist_id";
-        public static final String COLUMN_GEOAREA = "geoarea";
-        public static final String COLUMN_EB_CODE = "ebcode";
+        public static final String COLUMN_DIST_CODE = "dist_id";
+        public static final String COLUMN_CLUSTER_CODE = "cluster_no";
+        public static final String COLUMN_CLUSTER_NAME = "geoarea";
+
+    }
+
+    public static abstract class DistrictsTable implements BaseColumns {
+        public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
+        public static final String TABLE_NAME = "districts";
+        public static final String COLUMN_ID = "_id";
+        public static final String COLUMN_DISTRICT_CODE = "dist_id";
+        public static final String COLUMN_DISTRICT_NAME = "district";
 
     }
 
@@ -101,16 +110,17 @@ public class TableContracts {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
         public static final String COLUMN_LUID = "UID";
-        public static final String COLUMN_EB_CODE = "hh02";
+        public static final String COLUMN_SNO_HH = "sno";
+        public static final String COLUMN_CLUSTER_CODE = "hh02";
         public static final String COLUMN_STRUCTURE_NO = "hh03";
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH_NO = "hh";
         public static final String COLUMN_HH_HEAD = "hh08";
         public static final String COLUMN_CONTACT = "hh09";
-        public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
-        public static final String COLUMN_SNO = "sno";
+        public static final String COLUMN_UPDATEDT = "updDt";
         public static final String COLUMN_TAB_NO = "tabNo";
         public static String COLUMN_DIST_CODE = "dist_id";
+//        public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
     }
 
     public static abstract class VersionTable implements BaseColumns {
