@@ -1669,6 +1669,14 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd04(String pd04) {
         this.pd04 = pd04;
+
+        setPd05(pd04.equals("1") ? this.pd05 : "");
+        setPd06(pd04.equals("1") ? this.pd06 : "");
+        setPd07(pd04.equals("1") ? this.pd07 : "");
+
+        setPd08(pd04.equals("1") ? "" : this.pd08);
+
+
         notifyPropertyChanged(BR.pd04);
     }
 
@@ -1796,6 +1804,10 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd09(String pd09) {
         this.pd09 = pd09;
+        setPd10(pd09.equals("1") ? this.pd10 : "");
+        setPd1101(pd09.equals("1") ? this.pd1101 : "");
+        setPd1102(pd09.equals("1") ? this.pd1102 : "");
+
         notifyPropertyChanged(BR.pd09);
     }
 
@@ -1827,6 +1839,11 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd13(String pd13) {
         this.pd13 = pd13;
+        setPd14(pd13.equals("1") || pd13.equals("2") ? this.pd14 : "");
+        setPd13961x(pd13.equals("961") ? this.pd13961x : "");
+        setPd13962x(pd13.equals("962") ? this.pd13962x : "");
+
+
         notifyPropertyChanged(BR.pd13);
     }
 
@@ -1853,6 +1870,18 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd15(String pd15) {
         this.pd15 = pd15;
+
+        setPd1601(pd15.equals("1") ? this.pd1601 : "");
+        setPd1602(pd15.equals("1") ? this.pd1602 : "");
+        setPd1603(pd15.equals("1") ? this.pd1603 : "");
+        setPd1604(pd15.equals("1") ? this.pd1604 : "");
+        setPd1605(pd15.equals("1") ? this.pd1605 : "");
+        setPd1606(pd15.equals("1") ? this.pd1606 : "");
+        setPd1607(pd15.equals("1") ? this.pd1607 : "");
+        setPd1696(pd15.equals("1") ? this.pd1696 : "");
+        setPd17(pd15.equals("1") ? this.pd17 : "");
+        setPd18(pd15.equals("1") ? this.pd18 : "");
+
         notifyPropertyChanged(BR.pd15);
     }
 
@@ -1917,6 +1946,9 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd17(String pd17) {
         this.pd17 = pd17;
+        setPd1701x(pd17.equals("1") ? this.pd1701x : "");
+        setPd1702x(pd17.equals("2") ? this.pd1702x : "");
+        setPd1703x(pd17.equals("3") ? this.pd1703x : "");
         notifyPropertyChanged(BR.pd17);
     }
 
@@ -1942,6 +1974,25 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd19(String pd19) {
         this.pd19 = pd19;
+        setPd2001(pd19.equals("1") ? this.pd2001 : "");
+        setPd2002(pd19.equals("1") ? this.pd2002 : "");
+        setPd2003(pd19.equals("1") ? this.pd2003 : "");
+        setPd2004(pd19.equals("1") ? this.pd2004 : "");
+        setPd2005(pd19.equals("1") ? this.pd2005 : "");
+        setPd2006(pd19.equals("1") ? this.pd2006 : "");
+        setPd2007(pd19.equals("1") ? this.pd2007 : "");
+        setPd2096(pd19.equals("1") ? this.pd2096 : "");
+        setPd21(pd19.equals("1") ? this.pd21 : "");
+        setPd22(pd19.equals("1") ? this.pd22 : "");
+        setPd23(pd19.equals("1") ? this.pd23 : "");
+        setPd2401(pd19.equals("1") ? this.pd2401 : "");
+        setPd2402(pd19.equals("1") ? this.pd2402 : "");
+        setPd2403(pd19.equals("1") ? this.pd2403 : "");
+        setPd2404(pd19.equals("1") ? this.pd2404 : "");
+        setPd2405(pd19.equals("1") ? this.pd2405 : "");
+        setPd2406(pd19.equals("1") ? this.pd2406 : "");
+        setPd2496(pd19.equals("1") ? this.pd2496 : "");
+        setPd2498(pd19.equals("1") ? this.pd2498 : "");
         notifyPropertyChanged(BR.pd19);
     }
 
@@ -2006,6 +2057,10 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setPd21(String pd21) {
         this.pd21 = pd21;
+        setPd2101x(pd21.equals("1") ? this.pd2101x : "");
+        setPd2102x(pd21.equals("2") ? this.pd2102x : "");
+        setPd2103x(pd21.equals("3") ? this.pd2103x : "");
+
         notifyPropertyChanged(BR.pd21);
     }
 
