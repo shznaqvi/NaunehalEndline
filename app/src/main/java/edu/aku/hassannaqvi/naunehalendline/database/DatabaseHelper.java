@@ -35,9 +35,9 @@ import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ChildTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.EntryLogTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.FormsTable;
+import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.MWRATable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.RandomHHTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.UsersTable;
-import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.VersionTable;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.models.Clusters;
@@ -46,7 +46,6 @@ import edu.aku.hassannaqvi.naunehalendline.models.Form;
 import edu.aku.hassannaqvi.naunehalendline.models.MWRA;
 import edu.aku.hassannaqvi.naunehalendline.models.RandomHH;
 import edu.aku.hassannaqvi.naunehalendline.models.Users;
-import edu.aku.hassannaqvi.naunehalendline.models.VersionApp;
 /*
 import edu.aku.hassannaqvi.naunehalendline.models.Villages;
 */
@@ -77,7 +76,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(CreateTable.SQL_CREATE_USERS);
         db.execSQL(CreateTable.SQL_CREATE_CLUSTERS);
         db.execSQL(CreateTable.SQL_CREATE_RANDOM_HH);
-        db.execSQL(CreateTable.SQL_CREATE_VERSIONAPP);
 
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_ENTRYLOGS);
@@ -108,6 +106,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_SYSDATE, form.getSysDate());
 
         values.put(FormsTable.COLUMN_SHH, form.sHHtoString());
+        values.put(FormsTable.COLUMN_SSE, form.sSEtoString());
 
 
      /*   values.put(FormsTable.COLUMN_SSS, form.sMtoString());
@@ -146,10 +145,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(ChildTable.COLUMN_CSTATUS, child.getCStatus());
 
         values.put(ChildTable.COLUMN_SCB, child.sCBtoString());
-
-     /*   values.put(ChildsTable.COLUMN_SSS, child.sMtoString());
-        values.put(ChildsTable.COLUMN_SCB, child.sNtoString());
-        values.put(ChildsTable.COLUMN_IM, child.sOtoString());*/
+        values.put(ChildTable.COLUMN_SCS, child.sCStoString());
+        values.put(ChildTable.COLUMN_SIM, child.sIMtoString());
 
         values.put(ChildTable.COLUMN_DEVICETAGID, child.getDeviceTag());
 /*
@@ -183,10 +180,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //values.put(TableContracts.MWRATable.COLUMN_CSTATUS, mwra.getCStatus());
 
         values.put(TableContracts.MWRATable.COLUMN_SPD, mwra.sPDtoString());
-
-     /*   values.put(ChildsTable.COLUMN_SSS, child.sMtoString());
-        values.put(ChildsTable.COLUMN_SCB, child.sNtoString());
-        values.put(ChildsTable.COLUMN_IM, child.sOtoString());*/
+        values.put(TableContracts.MWRATable.COLUMN_SBF, mwra.sBFtoString());
+        values.put(TableContracts.MWRATable.COLUMN_SCV, mwra.sCVtoString());
 
         values.put(TableContracts.MWRATable.COLUMN_DEVICETAGID, mwra.getDeviceTag());
 /*
@@ -248,23 +243,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-
-    public int updatesEntryLogColumn(String column, String value, String id) {
-        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = EntryLogTable._ID + " =? ";
-        String[] selectionArgs = {id};
-
-        return db.update(EntryLogTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-
     public int updatesChildColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
 
@@ -290,6 +268,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(mwra.getId())};
 
         return db.update(TableContracts.MWRATable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+    }
+
+    public int updatesEntryLogColumn(String column, String value, String id) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+
+        ContentValues values = new ContentValues();
+        values.put(column, value);
+
+        String selection = EntryLogTable._ID + " =? ";
+        String[] selectionArgs = {id};
+
+        return db.update(EntryLogTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -438,26 +431,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public int syncVersionApp(JSONObject VersionList) throws JSONException {
+    public int syncversionApp(JSONArray VersionList) throws JSONException {
         SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
-        db.delete(VersionTable.TABLE_NAME, null, null);
         long count = 0;
-        JSONObject jsonObjectCC = ((JSONArray) VersionList.get(VersionTable.COLUMN_VERSION_PATH)).getJSONObject(0);
-        VersionApp Vc = new VersionApp();
-        Vc.sync(jsonObjectCC);
 
-        ContentValues values = new ContentValues();
+        JSONObject jsonObjectVersion = ((JSONArray) VersionList.getJSONObject(0).get("elements")).getJSONObject(0);
 
-        values.put(VersionTable.COLUMN_PATH_NAME, Vc.getPathname());
-        values.put(VersionTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
-        values.put(VersionTable.COLUMN_VERSION_NAME, Vc.getVersionname());
+        String appPath = jsonObjectVersion.getString("outputFile");
+        String versionCode = jsonObjectVersion.getString("versionCode");
 
-        count = db.insertOrThrow(VersionTable.TABLE_NAME, null, values);
-        if (count > 0) count = 1;
+        MainApp.editor.putString("outputFile", jsonObjectVersion.getString("outputFile"));
+        MainApp.editor.putString("versionCode", jsonObjectVersion.getString("versionCode"));
+        MainApp.editor.putString("versionName", jsonObjectVersion.getString("versionName") + ".");
+        MainApp.editor.apply();
+        count++;
+          /*  VersionApp Vc = new VersionApp();
+            Vc.sync(jsonObjectVersion);
 
+            ContentValues values = new ContentValues();
 
-        db.close();
+            values.put(VersionTable.COLUMN_PATH_NAME, Vc.getPathname());
+            values.put(VersionTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
+            values.put(VersionTable.COLUMN_VERSION_NAME, Vc.getVersionname());
 
+            count = db.insert(VersionTable.TABLE_NAME, null, values);
+            if (count > 0) count = 1;
+
+        } catch (Exception ignored) {
+        } finally {
+            db.close();
+        }*/
 
         return (int) count;
     }
@@ -745,6 +748,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
+
+    public void updateSyncedMwra(String id) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        ContentValues values = new ContentValues();
+        values.put(MWRATable.COLUMN_SYNCED, true);
+        values.put(MWRATable.COLUMN_SYNC_DATE, new Date().toString());
+        String where = MWRATable.COLUMN_ID + " = ?";
+        String[] whereArgs = {id};
+        int count = db.update(
+                MWRATable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+    }
+
+
     public void updateSyncedEntryLog(String id) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         ContentValues values = new ContentValues();
@@ -803,6 +822,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return alc;
         }
     }
+
 
     public Form getFormByPsuhhid(String ebCode, String hhid) throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -889,6 +909,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return allFC;
     }
+
 
     public List<Form> getTodayForms(String sysdate) {
 
@@ -1062,6 +1083,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return randHH;
     }
 
+
     public Clusters getCluster(String ebCode) {
 
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -1099,6 +1121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
     public int updatePassword(String hashedPassword) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
 
@@ -1114,6 +1137,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selection,
                 selectionArgs);
     }
+
 
     public Clusters getClusterByEBNum(String ebCode) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -1153,6 +1177,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
     public RandomHH getRandomByhhid(String hhid) {
 
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -1184,6 +1209,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return randomHH;
     }
+
 
     public List<Child> getChildrenBYUID() throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
