@@ -1,6 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <data>
 
         <import type="android.view.View" />
@@ -8,13 +9,16 @@
         <variable
             name="form"
             type="edu.aku.hassannaqvi.naunehalendline.models.Form" />
+
     </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/app_bg_gray"
         android:orientation="vertical">
+
 
 
         <!-- CUSTOM TOOLBAR -->
@@ -32,10 +36,12 @@
             app:title="@string/consentmainheading"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
+
 
             <LinearLayout
                 android:id="@+id/GrpName"
@@ -48,11 +54,6 @@
                     android:id="@+id/fldGrpCVhh01"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -63,20 +64,17 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh01" />
+                                android:text="@string/Q_hh01" />
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
                                 android:text="@string/hh01" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                                 android:id="@+id/hh01"
-                                android:layout_width="0dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
                                 android:focusable="false"
                                 android:gravity="center"
                                 android:hint="YYYY-DD-MM"
@@ -85,20 +83,15 @@
                                 app:maxDate="CR_DATE"
                                 app:theme="@style/DatePickerEditTextDialogTheme" />
 
-
                         </LinearLayout>
-                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh02  Time   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVhh02"
                     style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -110,20 +103,17 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh02" />
+                                android:text="@string/Q_hh02" />
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center_vertical"
                                 android:text="@string/hh02" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.TimePickerEditText
                                 android:id="@+id/hh02"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 android:focusable="false"
                                 android:gravity="center"
                                 android:hint="HH:mm"
@@ -133,8 +123,9 @@
                                 app:timeFormat="HH:mm" />
 
                         </LinearLayout>
-                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- hh03  Input   -->
                 <androidx.cardview.widget.CardView
@@ -159,7 +150,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh03" />
+                                android:text="@string/Q_hh03" />
 
                             <TextView
                                 android:layout_width="0dp"
@@ -178,7 +169,9 @@
                                 android:text="@={form.hh03}" />
 
                         </LinearLayout>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- hh03a  Input   -->
@@ -617,7 +610,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh18" />
+                                android:text="@string/Q_hh18" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -638,7 +631,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.hh18.equals(`1`)}"
                                 android:onClick="@{()->form.setHh18(`1`)}"
-                                android:text="@string/hh18a" />
+                                android:text="@string/hh1801" />
 
                             <RadioButton
                                 android:id="@+id/hh18b"
@@ -646,10 +639,14 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.hh18.equals(`2`)}"
                                 android:onClick="@{()->form.setHh18(`2`)}"
-                                android:text="@string/hh18b" />
+                                android:text="@string/hh1802" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!--EndButton LinearLayout-->
                 <LinearLayout
@@ -690,7 +687,10 @@
                 <!--EndButton LinearLayout-->
 
             </LinearLayout>
+
+
         </ScrollView>
 
     </LinearLayout>
+
 </layout>
