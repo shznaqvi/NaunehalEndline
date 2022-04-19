@@ -1,5 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.workers;
 
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp._APP_FOLDER;
+
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
@@ -45,7 +47,6 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
-import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.CipherSecure;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 
@@ -181,8 +182,8 @@ public class DataDownWorkerALL extends Worker {
 
             urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
-            urlConnection.setReadTimeout(5000 /* milliseconds */);
-            urlConnection.setConnectTimeout(5000 /* milliseconds */);
+            urlConnection.setReadTimeout(100000 /* milliseconds */);
+            urlConnection.setConnectTimeout(150000 /* milliseconds */);
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
             urlConnection.setDoInput(true);
@@ -208,8 +209,8 @@ public class DataDownWorkerALL extends Worker {
 
                 jsonTable.put("check", "");
 
-                if (uploadTable.equals(TableContracts.VersionTable.TABLE_NAME)) {
-                    jsonTable.put("folder", "/");
+                if (uploadTable.equals("versionApp")) {
+                    jsonTable.put("folder", _APP_FOLDER);
                 }
 
                 //jsonTable.put("limit", "3");
@@ -255,8 +256,18 @@ public class DataDownWorkerALL extends Worker {
 
                     // result = [{"status":0,"message":"No record found.","error":1}]
 
-                    JSONArray jsonArray = new JSONArray(result.toString());
-                    JSONObject jsonObject = jsonArray.getJSONObject(0);
+                    JSONArray jsonArray = new JSONArray();
+                    JSONObject jsonObject;
+
+                    if (!uploadTable.equals("versionApp")) {
+                        jsonArray = new JSONArray(result.toString());
+                        Log.d(TAG, "onChanged: " + jsonArray.getString(0));
+
+                        jsonObject = jsonArray.getJSONObject(0);
+                    } else {
+                        jsonObject = new JSONObject(result.toString());
+                        jsonArray.put(jsonObject);
+                    }
 
                     if (jsonObject.has("error") && jsonObject.getInt("error") > 0) {
 
