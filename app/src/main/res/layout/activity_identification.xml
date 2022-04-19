@@ -1,56 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <import type="android.view.View" />
 
-        <!--DO NOT BIND FIELDS IN IDENTIFICATION SECTION WITH ANY MODEL CLASS
         <variable
             name="form"
-            type="edu.aku.hassannaqvi.naunehalendline.models.Form" />-->
-
+            type="edu.aku.hassannaqvi.naunehalendline.models.Form" />
     </data>
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/app_bg_effect"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
 
-        <!-- CUSTOM TOOLBAR -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            style="@null"
+        <LinearLayout
+            android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/CustomToolbarTheme"
-            app:popupTheme="@style/CustomPopupTheme"
-            app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
-            app:title="@string/householdidentificationmainheading"
-            app:titleTextAppearance="@style/Toolbar.TitleText" />
-
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
 
 
             <LinearLayout
-                android:id="@+id/GrpName"
+                android:id="@+id/fldGrpHH01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
 
-                <!-- hh05  Input   -->
+                <!-- hh05  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVhh05"
                     style="@style/cardView">
@@ -58,311 +39,290 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh05" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/hh05" />
+
+                        <Spinner
+                            android:id="@+id/hh05"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/hh05" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <EditText
-                                android:id="@+id/hh05"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/hh05" />
-
-                            <ImageButton
-                                android:layout_width="48dp"
-                                android:layout_height="match_parent"
-                                android:backgroundTint="@color/colorAccent"
-                                android:onClick="checkEBNumber"
-                                android:src="@drawable/search" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/fldGrpIdentifier"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:visibility="gone"
-                            tools:visibility="visible">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bottom"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    style="@style/sub_labels"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="@string/hh06" />
-
-                                <TextView
-                                    android:id="@+id/hh06"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimary" />
-
-                                <CheckBox
-                                    android:id="@+id/checkHh06"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/confirm" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bottom"
-                                android:orientation="horizontal"
-                                android:visibility="@{checkHh06.checked?View.VISIBLE:View.GONE}">
-
-                                <TextView
-                                    style="@style/sub_labels"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="@string/hh07" />
-
-                                <TextView
-                                    android:id="@+id/hh07"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimary" />
-
-                                <CheckBox
-                                    android:id="@+id/checkHh07"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/confirm" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bottom"
-                                android:orientation="horizontal"
-                                android:visibility="@{checkHh07.checked?View.VISIBLE:View.GONE}">
-
-                                <TextView
-                                    style="@style/sub_labels"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="@string/hh08" />
-
-                                <TextView
-                                    android:id="@+id/hh08"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimary" />
-
-                                <CheckBox
-                                    android:id="@+id/checkHh08"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/confirm" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bottom"
-                                android:orientation="horizontal"
-                                android:visibility="@{checkHh08.checked?View.VISIBLE:View.GONE}">
-
-                                <TextView
-                                    style="@style/sub_labels"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="@string/hh09" />
-
-                                <TextView
-                                    android:id="@+id/hh09"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimary" />
-
-                                <CheckBox
-                                    android:id="@+id/checkHh09"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/confirm" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- hh12  Input   -->
+                <!-- hh06  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVhh12"
-                    style="@style/cardView"
-                    android:visibility="@{checkHh09.checked?View.VISIBLE:View.GONE}">
+                    android:id="@+id/fldGrpCVhh06"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                        <LinearLayout
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh06" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/hh06" />
+
+                        <Spinner
+                            android:id="@+id/hh06"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/hh12" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/hh12"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:hint="#-####-###"
-                                android:inputType="textCapCharacters"
-                                android:maxLength="10" />
-
-                            <ImageButton
-                                android:layout_width="48dp"
-                                android:layout_height="match_parent"
-                                android:backgroundTint="@color/colorAccent"
-                                android:onClick="checkHH"
-                                android:src="@drawable/search" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/headhh"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal"
-                            android:visibility="gone"
-                            tools:visibility="visible">
-
-                            <TextView
-                                style="@style/sub_labels"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/hh16a" />
-
-                            <TextView
-                                android:id="@+id/hh16a"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:gravity="center_vertical"
-                                android:textColor="@color/colorPrimary" />
-
-                            <CheckBox
-                                android:id="@+id/checkHh16a"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:text="@string/confirm" />
-
-                        </LinearLayout>
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
 
-                <!--EndButton LinearLayout-->
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <!-- hh08  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVhh08"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh08" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/hh08" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh08"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint="######"
+                            android:inputType="number"
+                            android:text="@={form.hh08}"
+                            app:mask="######" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh09  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVhh09"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh09" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/hh09" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh09"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint="#-####-###"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="10"
+                            android:text="@={form.hh09}" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hhHEad"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:fontFamily="sans-serif"
+                    android:padding="0dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textAlignment="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/checkHH"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="24dp"
-                    android:orientation="horizontal"
-                    android:padding="24dp">
-
-                    <!--
-                             <enum name="src_over" value="3" />
-                                <enum name="src_in" value="5" />
-                                <enum name="src_atop" value="9" />
-                                <enum name="multiply" value="14" />
-                                <enum name="screen" value="15" />
-                                <enum name="add" value="16" />
-                    -->
-                    <Button
-                        android:id="@+id/btn_Continue"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@drawable/capsule"
-                        android:backgroundTint="@color/gray"
-                        android:backgroundTintMode="src_atop"
-                        android:enabled="false"
-                        android:onClick="btnContinue"
-                        android:text="Save"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        tools:ignore="OnClick" />
-
-                </LinearLayout>
-                <!--EndButton LinearLayout-->
-
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="checkHHExist"
+                    android:padding="10dp"
+                    android:text="CHECK HH Exist"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
 
 
-        </ScrollView>
+            <!-- hh07  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhh07"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh07" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/hh07" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/hh07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                        android:hint="@string/hh07"
+                        android:text="@={form.hh07}" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
-    </LinearLayout>
+            <!-- hh10  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhh10"
+                style="@style/cardView">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_hh10" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/hh10" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/hh10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                        android:hint="@string/hh10"
+                        android:text="@={form.hh10}" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/progressBL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+            <!--<LinearLayout
+                android:id="@+id/fldGrpcheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/whiteOverlay"
+                    android:drawableStart="@drawable/database"
+                    android:onClick="childList"
+                    android:padding="8dp"
+                    android:text="Child List"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/blackOverlay" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </layout>

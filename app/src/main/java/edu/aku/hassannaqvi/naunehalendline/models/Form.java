@@ -1796,7 +1796,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe12(String se12) {
         this.se12 = se12;
-        setSe1296x(se01.equals("96") ? this.se1296x : "");
+        setSe1296x(se12.equals("96") ? this.se1296x : "");
         notifyPropertyChanged(BR.se12);
     }
 
@@ -1857,6 +1857,10 @@ public class Form extends BaseObservable implements Observable {
     public void setSe1705(String se1705) {
         if (this.se1705.equals(se1705)) return; // for all checkboxes
         this.se1705 = se1705;
+        setSe1701(se1705.equals("98") ? "" : this.se1701);
+        setSe1702(se1705.equals("98") ? "" : this.se1702);
+        setSe1703(se1705.equals("98") ? "" : this.se1703);
+        setSe1704(se1705.equals("98") ? "" : this.se1704);
         notifyPropertyChanged(BR.se1705);
     }
 
@@ -2408,6 +2412,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe55(String se55) {
         this.se55 = se55;
+        setSe55_01x(se55.equals("1") ? this.se55_01x : "");
         notifyPropertyChanged(BR.se55);
     }
 
@@ -2541,6 +2546,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe57(String se57) {
         this.se57 = se57;
+        setSe57_01x(se57.equals("1") ? this.se57_01x : "");
         notifyPropertyChanged(BR.se57);
     }
 

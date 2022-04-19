@@ -1,18 +1,12 @@
 package edu.aku.hassannaqvi.naunehalendline.ui;
 
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedCluster;
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedHousehold;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
@@ -43,13 +37,12 @@ public class IdentificationActivity extends AppCompatActivity {
         db = MainApp.appInfo.dbHelper;
         //   populateSpinner();
 
-        bi.btnContinue.setText(R.string.open_hh_form);
-        if (MainApp.superuser)
-            bi.btnContinue.setText("Review Form");
+        /*bi.btnContinue.setText(R.string.open_hh_form);
+        if (MainApp.superuser) bi.btnContinue.setText("Review Form");*/
         MainApp.form = new Form();
 
 
-        bi.hh12.addTextChangedListener(new TextWatcher() {
+        /*bi.hh12.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 //  Log.d(TAG, "beforeTextChanged: charSequence-"+charSequence+" i-"+i+ " i1-"+i1 +" i2-"+i2);
@@ -63,7 +56,7 @@ public class IdentificationActivity extends AppCompatActivity {
                 String txt = charSequence.toString();
                 Log.d(TAG, "onTextChanged: c-" + c + " c1-" + c1 + "\t\t\tCHAR: " + charSequence);
                 Log.d(TAG, "onTextChanged: i-" + i + " i1-" + i1 + " i2-" + i2 + "\t\t\tCHAR: " + charSequence);
-         /*       if (c == 0 && c1 == 1)
+         *//*       if (c == 0 && c1 == 1)
                     bi.hh12.setText(bi.hh12.getText().toString() + "-"); // A-
                 if (c == 5 && c1 == 6)
                     bi.hh12.setText(bi.hh12.getText().toString() + "-"); // A-0001-
@@ -71,7 +64,7 @@ public class IdentificationActivity extends AppCompatActivity {
                 if (c == 8 && c1 == 7)
                     bi.hh12.setText(bi.hh12.getText().toString().substring(0, 6)); // A-0001
                 if (c == 3 && c1 == 2)
-                    bi.hh12.setText(bi.hh12.getText().toString().substring(0, 1)); // A*/
+                    bi.hh12.setText(bi.hh12.getText().toString().substring(0, 1)); // A*//*
 
                 if (c1 > 6 && charSequence.charAt(6) != '-') {
                     txt = txt.substring(0, 6) + "-" + txt.substring(6);
@@ -91,7 +84,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
 
     }
 
@@ -145,7 +138,7 @@ public class IdentificationActivity extends AppCompatActivity {
     public void checkEBNumber(View view) {
         if (!formValidation()) return;
 
-        bi.hh06.setText(null);      //  Province
+        /*bi.hh06.setText(null);      //  Province
         bi.hh07.setText(null);      //  District
         bi.hh08.setText(null);      //  Tehsil
         bi.hh09.setText(null);      //  City/Village
@@ -175,15 +168,13 @@ public class IdentificationActivity extends AppCompatActivity {
             bi.fldGrpIdentifier.setVisibility(View.VISIBLE);
         } else {
             Toast.makeText(this, "Enumeration Block not found", Toast.LENGTH_SHORT).show();
-
-
-        }
+        }*/
     }
 
     public void checkHH(View view) {
         if (!formValidation()) return;
 
-        bi.hh16a.setText(null);
+        /*bi.hh16a.setText(null);
         bi.headhh.setVisibility(View.GONE);
 
         bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
@@ -197,7 +188,7 @@ public class IdentificationActivity extends AppCompatActivity {
             bi.btnContinue.setEnabled(true);
         } else {
             Toast.makeText(this, "Household not found", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
     }
 

@@ -70,7 +70,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qim01" />
+                                android:text="@string/Q_im01" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                                 android:layout_weight="1"
                                 android:checked="@{form.im01.equals(`1`)}"
                                 android:onClick="@{()->form.setIm01(`1`) + im03.clearCheck()}"
-                                android:text="@string/im011" />
+                                android:text="@string/im01_1" />
 
                             <RadioButton
                                 android:id="@+id/im01_2"
@@ -101,7 +101,7 @@
                                 android:layout_weight="1"
                                 android:checked="@{form.im01.equals(`2`)}"
                                 android:onClick="@{()->form.setIm01(`2`) + im02.clearCheck()}"
-                                android:text="@string/im012" />
+                                android:text="@string/im01_2" />
 
                         </RadioGroup>
 
@@ -131,7 +131,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qim02" />
+                                android:text="@string/Q_im02" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                                 android:layout_weight="1"
                                 android:checked="@{form.im02.equals(`1`)}"
                                 android:onClick="@{()->form.setIm02(`1`) + im02a.clearCheck()}"
-                                android:text="@string/im021" />
+                                android:text="@string/im02_1" />
 
                             <RadioButton
                                 android:id="@+id/im02_2"
@@ -162,7 +162,7 @@
                                 android:layout_weight="1"
                                 android:checked="@{form.im02.equals(`3`)}"
                                 android:onClick="@{()->form.setIm02(`3`)}"
-                                android:text="@string/im022" />
+                                android:text="@string/im02_2" />
 
                         </RadioGroup>
 
@@ -192,7 +192,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qim02a" />
+                                android:text="@string/Q_im02a" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -212,7 +212,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im02a.equals(`1`)}"
                                 android:onClick="@{()->form.setIm02a(`1`) + im03.clearCheck()}"
-                                android:text="@string/im02a1" />
+                                android:text="@string/im02a_01" />
 
                             <RadioButton
                                 android:id="@+id/im02a2"
@@ -220,7 +220,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im02a.equals(`2`)}"
                                 android:onClick="@{()->form.setIm02a(`2`) + im03.clearCheck()}"
-                                android:text="@string/im02a2" />
+                                android:text="@string/im02a_02" />
 
                             <RadioButton
                                 android:id="@+id/im02a3"
@@ -228,7 +228,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im02a.equals(`3`)}"
                                 android:onClick="@{()->form.setIm02a(`3`) + im03.clearCheck()}"
-                                android:text="@string/im02a3" />
+                                android:text="@string/im02a_03" />
 
                             <RadioButton
                                 android:id="@+id/im02a96"
@@ -276,7 +276,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qim03" />
+                                android:text="@string/Q_im03" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -296,7 +296,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`1`)}"
                                 android:onClick="@{()->form.setIm03(`1`)}"
-                                android:text="@string/im0301" />
+                                android:text="@string/im03_1" />
 
                             <RadioButton
                                 android:id="@+id/im0302"
@@ -304,7 +304,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`2`)}"
                                 android:onClick="@{()->form.setIm03(`2`)}"
-                                android:text="@string/im0302" />
+                                android:text="@string/im03_2" />
 
                             <RadioButton
                                 android:id="@+id/im0303"
@@ -312,7 +312,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`3`)}"
                                 android:onClick="@{()->form.setIm03(`3`)}"
-                                android:text="@string/im0303" />
+                                android:text="@string/im03_3" />
 
                             <RadioButton
                                 android:id="@+id/im0304"
@@ -320,7 +320,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`4`)}"
                                 android:onClick="@{()->form.setIm03(`4`)}"
-                                android:text="@string/im0304" />
+                                android:text="@string/im03_4" />
 
                             <RadioButton
                                 android:id="@+id/im0305"
@@ -328,7 +328,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`5`)}"
                                 android:onClick="@{()->form.setIm03(`5`)}"
-                                android:text="@string/im0305" />
+                                android:text="@string/im03_5" />
 
                             <RadioButton
                                 android:id="@+id/im0396"
@@ -336,14 +336,14 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.im03.equals(`96`)}"
                                 android:onClick="@{()->form.setIm03(`96`)}"
-                                android:text="@string/im0396" />
+                                android:text="@string/im03_96" />
 
                             <EditText
                                 android:id="@+id/im0396x"
                                 android:layout_width="match_parent"
                                 android:layout_height="52dp"
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/im0396"
+                                android:hint="@string/im03_96"
                                 android:tag="im0396"
                                 android:text="@={form.im0396x}"
                                 android:visibility="@{form.im03.equals(`96`) ? View.VISIBLE : View.GONE}" />
@@ -376,7 +376,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qim04" />
+                                android:text="@string/Q_im04" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -398,21 +398,21 @@
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/im04dd" />
+                                    android:text="@string/im04_dd" />
 
                                 <TextView
                                     style="@style/sub_labels"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/im04mm" />
+                                    android:text="@string/im04_mm" />
 
                                 <TextView
                                     style="@style/sub_labels"
                                     android:layout_width="0dp"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/im04yy" />
+                                    android:text="@string/im04_yy" />
                             </TableRow>
 
                             <TableRow android:layoutDirection="ltr">
@@ -547,7 +547,7 @@
                                     android:checked="@{form.im0497.equals(`97`)}"
                                     android:onClick="@{()->form.setIm0497(form.im0497.equals(`97`)?``:`97`)}"
                                     android:tag="-1"
-                                    android:text="@string/im0497" />
+                                    android:text="@string/im04" />
                             </TableRow>
 
 
@@ -673,7 +673,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="0dp"
                                 android:padding="0dp"
-                                android:text="@string/im05title1" />
+                                android:text="@string/im05_title1" />
 
                             <TextView
                                 style="@style/info"
@@ -2412,7 +2412,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:background="@color/colorAccentOverlay"
-                                        android:text="@string/im05t6"
+                                        android:text="@string/im05_16"
                                         android:textColor="@color/colorPrimaryDark" />
 
                                 </TableRow>
@@ -2425,7 +2425,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0516measles2" />
+                                        android:text="@string/im05_16" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -2522,7 +2522,7 @@
                                     style="@style/quesNum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
-                                    android:text="@string/Qim07" />
+                                    android:text="@string/Q_im07" />
 
                                 <TextView
                                     android:layout_width="match_parent"
