@@ -169,17 +169,6 @@ public class SyncActivity extends AppCompatActivity {
 
                 }
 
-                //MWRA
-                uploadTables.add(new SyncModel(TableContracts.MWRATable.TABLE_NAME));
-                try {
-                    MainApp.uploadData.add(db.getUnsyncedMWRA());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Log.d(TAG, "ProcessStart: JSONException(Mwra): " + e.getMessage());
-                    Toast.makeText(SyncActivity.this, "JSONException(Mwra)" + e.getMessage(), Toast.LENGTH_LONG).show();
-
-                }
-
 
                 //Entry Log
                 uploadTables.add(new SyncModel(EntryLogTable.TABLE_NAME));
