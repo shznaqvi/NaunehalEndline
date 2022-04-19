@@ -14,6 +14,8 @@ import androidx.databinding.PropertyChangeRegistry;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 import edu.aku.hassannaqvi.naunehalendline.BR;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
@@ -2135,6 +2137,26 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf04(String bf04) {
         this.bf04 = bf04;
+
+        setBf05(bf04.equals("1") ? this.bf05 : "");
+        setBf06(bf04.equals("1") ? this.bf06 : "");
+        setBf07(bf04.equals("1") ? this.bf07 : "");
+        setBf08(bf04.equals("1") ? this.bf08 : "");
+        setBf0901(bf04.equals("1") ? this.bf0901 : "");
+        setBf0902(bf04.equals("1") ? this.bf0902 : "");
+        setBf0903(bf04.equals("1") ? this.bf0903 : "");
+        setBf0904(bf04.equals("1") ? this.bf0904 : "");
+        setBf0905(bf04.equals("1") ? this.bf0905 : "");
+        setBf0906(bf04.equals("1") ? this.bf0906 : "");
+        setBf0907(bf04.equals("1") ? this.bf0907 : "");
+        setBf0908(bf04.equals("1") ? this.bf0908 : "");
+        setBf0909(bf04.equals("1") ? this.bf0909 : "");
+        setBf0910(bf04.equals("1") ? this.bf0910 : "");
+        setBf0999(bf04.equals("1") ? this.bf0999 : "");
+        setBf0996(bf04.equals("1") ? this.bf0996 : "");
+        setBf10(bf04.equals("1") ? this.bf10 : "");
+
+
         notifyPropertyChanged(BR.bf04);
     }
 
@@ -2157,6 +2179,8 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf06(String bf06) {
         this.bf06 = bf06;
+
+        setBf07(bf06.equals("1") ? "" : this.bf07);
         notifyPropertyChanged(BR.bf06);
     }
 
@@ -2173,6 +2197,19 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf08(String bf08) {
         this.bf08 = bf08;
+        setBf0901(bf08.equals("1") ? this.bf0901 : "");
+        setBf0902(bf08.equals("1") ? this.bf0902 : "");
+        setBf0903(bf08.equals("1") ? this.bf0903 : "");
+        setBf0904(bf08.equals("1") ? this.bf0904 : "");
+        setBf0905(bf08.equals("1") ? this.bf0905 : "");
+        setBf0906(bf08.equals("1") ? this.bf0906 : "");
+        setBf0907(bf08.equals("1") ? this.bf0907 : "");
+        setBf0908(bf08.equals("1") ? this.bf0908 : "");
+        setBf0909(bf08.equals("1") ? this.bf0909 : "");
+        setBf0910(bf08.equals("1") ? this.bf0910 : "");
+        setBf0999(bf08.equals("1") ? this.bf0999 : "");
+        setBf0996(bf08.equals("1") ? this.bf0996 : "");
+
         notifyPropertyChanged(BR.bf08);
     }
 
@@ -2244,17 +2281,17 @@ public class MWRA extends BaseObservable implements Observable {
     public void setBf0999(String bf0999) {
         if (this.bf0999.equals(bf0999)) return; // for all checkboxes
         this.bf0999 = bf0999;
-        setBf0901(bf0999.equals("98") ? "" : this.bf0901);
-        setBf0902(bf0999.equals("98") ? "" : this.bf0902);
-        setBf0903(bf0999.equals("98") ? "" : this.bf0903);
-        setBf0904(bf0999.equals("98") ? "" : this.bf0904);
-        setBf0905(bf0999.equals("98") ? "" : this.bf0905);
-        setBf0906(bf0999.equals("98") ? "" : this.bf0906);
-        setBf0907(bf0999.equals("98") ? "" : this.bf0907);
-        setBf0908(bf0999.equals("98") ? "" : this.bf0908);
-        setBf0909(bf0999.equals("98") ? "" : this.bf0909);
-        setBf0910(bf0999.equals("98") ? "" : this.bf0910);
-        setBf0996(bf0999.equals("98") ? "" : this.bf0996);
+        setBf0901(bf0999.equals("99") ? "" : this.bf0901);
+        setBf0902(bf0999.equals("99") ? "" : this.bf0902);
+        setBf0903(bf0999.equals("99") ? "" : this.bf0903);
+        setBf0904(bf0999.equals("99") ? "" : this.bf0904);
+        setBf0905(bf0999.equals("99") ? "" : this.bf0905);
+        setBf0906(bf0999.equals("99") ? "" : this.bf0906);
+        setBf0907(bf0999.equals("99") ? "" : this.bf0907);
+        setBf0908(bf0999.equals("99") ? "" : this.bf0908);
+        setBf0909(bf0999.equals("99") ? "" : this.bf0909);
+        setBf0910(bf0999.equals("99") ? "" : this.bf0910);
+        setBf0996(bf0999.equals("99") ? "" : this.bf0996);
         notifyPropertyChanged(BR.bf0999);
     }
 
@@ -2272,6 +2309,8 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf10(String bf10) {
         this.bf10 = bf10;
+
+        setBf11(bf10.equals("1") ? "" : this.bf11);
         notifyPropertyChanged(BR.bf10);
     }
 
@@ -2440,6 +2479,9 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf16(String bf16) {
         this.bf16 = bf16;
+
+        setBf17(bf16.equals("1") ? this.bf17 : "");
+
         notifyPropertyChanged(BR.bf16);
     }
 
@@ -2456,6 +2498,9 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf18(String bf18) {
         this.bf18 = bf18;
+
+        setBf19(bf18.equals("2") ? "" : this.bf19);
+
         notifyPropertyChanged(BR.bf18);
     }
 
