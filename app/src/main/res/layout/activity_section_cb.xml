@@ -517,15 +517,23 @@
                             android:text="@={child.cb15}"
                             app:maxValue="9.0"
                             app:minValue="0.5"
-                            app:type="range" />
+                            app:type="range"
+                            android:enabled="@{!child.cb15.equals(`98`)}"
 
-                        <RadioButton
+                            />
+
+                        <CheckBox
                             android:id="@+id/cb1598"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:tag="-1"
+                            android:backgroundTint="@color/redOverlay"
+                            android:paddingStart="0dp"
+                            android:textColor="@color/redDark"
                             android:checked="@{child.cb15.equals(`98`)}"
                             android:onClick="@{()->child.setCb15(`98`)}"
-                            android:text="@string/cb1598" />
+                            android:text="@string/cb1598"  />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -660,7 +668,8 @@
                                 android:layout_weight="1"
                                 android:checked="@{child.cb16.equals(`1`)}"
                                 android:onClick="@{()->child.setCb16(`1`)}"
-                                android:text="@string/cb1601" />
+                                android:text="@string/cb1601"
+                                />
 
                             <RadioButton
                                 android:id="@+id/cb1602"

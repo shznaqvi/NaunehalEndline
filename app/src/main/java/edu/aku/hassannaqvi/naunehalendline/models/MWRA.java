@@ -2803,6 +2803,14 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0898(String cv0898) {
         if (this.cv0898.equals(cv0898)) return; // for all checkboxes
         this.cv0898 = cv0898;
+        setCv0801("");
+        setCv0802("");
+        setCv0803("");
+        setCv0804("");
+        setCv0805("");
+        setCv0806("");
+        setCv0807("");
+        setCv0896("");
         notifyPropertyChanged(BR.cv0898);
     }
 
@@ -2874,6 +2882,17 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv0998(String cv0998) {
         if (this.cv0998.equals(cv0998)) return; // for all checkboxes
         this.cv0998 = cv0998;
+        setCv0901("");
+        setCv0902("");
+        setCv0903("");
+        setCv0904("");
+        setCv0905("");
+        setCv0906("");
+        setCv0907("");
+        setCv0908("");
+        setCv0996("");
+        setCv0996x("");
+
         notifyPropertyChanged(BR.cv0998);
     }
 
@@ -2951,6 +2970,17 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv1098(String cv1098) {
         if (this.cv1098.equals(cv1098)) return; // for all checkboxes
         this.cv1098 = cv1098;
+        setCv1001("");
+        setCv1002("");
+        setCv1003("");
+        setCv1004("");
+        setCv1005("");
+        setCv1006("");
+        setCv1007("");
+        setCv1008("");
+        setCv1009("");
+        setCv1096("");
+        setCv1096x("");
         notifyPropertyChanged(BR.cv1098);
     }
 
@@ -3102,6 +3132,18 @@ public class MWRA extends BaseObservable implements Observable {
     public void setCv2198(String cv2198) {
         if (this.cv2198.equals(cv2198)) return; // for all checkboxes
         this.cv2198 = cv2198;
+        setCv2101("");
+        setCv2102("");
+        setCv2103("");
+        setCv2104("");
+        setCv2105("");
+        setCv2106("");
+        setCv2107("");
+        setCv2108("");
+        setCv2109("");
+        setCv2196("");
+        setCv2196x("");
+
         notifyPropertyChanged(BR.cv2198);
     }
 
