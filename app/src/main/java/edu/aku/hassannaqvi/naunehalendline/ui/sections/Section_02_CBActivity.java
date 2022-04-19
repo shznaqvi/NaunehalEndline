@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,8 +40,8 @@ public class Section_02_CBActivity extends AppCompatActivity {
         db = MainApp.appInfo.dbHelper;
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
 
-        child.setEc13cline(child.getEc13());
-        child.setEc14cname(child.getEc14());
+        //child.setEc13cline(child.getEc13());
+        //child.setEc14cname(child.getEc14());
         bi.setChild(child);
 
         Intent intent = getIntent();
@@ -70,7 +71,7 @@ public class Section_02_CBActivity extends AppCompatActivity {
         if (!formValidation()) return;
         // saveDraft();
         if (updateDB()) {
-            if (child.getEc21().equals("1")) {
+            if (/*child.getEc21().equals("1")*/ form.getHh11().equals("1")) {
                 Intent forwardIntent = new Intent(this, Section_04_IM1Activity.class).putExtra("complete", true);
                 forwardIntent.putExtra("requestCode", requestCode);
                 forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
@@ -109,11 +110,9 @@ public class Section_02_CBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
-            return false;
-        }
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
-        if (child.getCb01a().equals("77")) {
+       /* if (child.getCb01a().equals("77")) {
             if (!child.getCb01b().equals("77") && !child.getCb01b().equals("88")) {
                 return Validator.emptyCustomTextBox(this, bi.cb01b, "Incorrect value, Only 77 or 88 is allowed.");
             }
@@ -122,10 +121,7 @@ public class Section_02_CBActivity extends AppCompatActivity {
             if (!child.getCb02b().equals("77") && !child.getCb02b().equals("88")) {
                 return Validator.emptyCustomTextBox(this, bi.cb02b, "Incorrect value, Only 77 or 88 is allowed.");
             }
-        }
-
-
-        return true;
+        }*/
 
     }
 

@@ -10,6 +10,7 @@
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/activity_section_im1.xml" value="0.56328125" />
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/fragment_blank.xml" value="0.37552083333333336" />
         <entry key="..\:/Users/abdul.sajid/Desktop/Android App/NaunehalEndline/app/src/main/res/layout/activity_ending.xml" value="0.55859375" />
+        <entry key="..\:/Users/abdul.sajid/Desktop/Android App/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.44125" />
         <entry key="..\:/Users/abdul.sajid/Desktop/Android App/NaunehalEndline/app/src/main/res/layout/activity_section_hh.xml" value="0.4575" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_household_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_identification.xml" value="0.36666666666666664" />
@@ -27,7 +28,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
