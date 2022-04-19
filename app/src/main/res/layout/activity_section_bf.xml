@@ -372,7 +372,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf04.equals(`2`)}"
-                                android:onClick="@{()->mwra.setBf04(`2`)}"
+                                android:onClick="@{()->mwra.setBf04(`2`) + bf05.clearCheck() + bf06.clearCheck() + bf07.clearCheck() + bf08.clearCheck() + bf10.clearCheck()}"
                                 android:text="@string/bf0402" />
 
                             <RadioButton
@@ -381,11 +381,18 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf04.equals(`98`)}"
-                                android:onClick="@{()->mwra.setBf04(`98`)}"
+                                android:onClick="@{()->mwra.setBf04(`98`) + bf05.clearCheck() + bf06.clearCheck() + bf07.clearCheck() + bf08.clearCheck() + bf10.clearCheck()}"
                                 android:text="@string/bf0498" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/fldGrpbf04"
+                    android:visibility="@{mwra.bf04.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                 <!-- bf05  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -525,7 +532,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf06.equals(`1`)}"
-                                android:onClick="@{()->mwra.setBf06(`1`)}"
+                                android:onClick="@{()->mwra.setBf06(`1`) + bf07.clearCheck()}"
                                 android:text="@string/bf0601" />
 
                             <RadioButton
@@ -552,7 +559,8 @@
                 <!-- bf07  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf07"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{mwra.bf06.equals(`1`) ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -696,7 +704,9 @@
                 <!-- bf09  CheckBox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf09"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{mwra.bf08.equals(`1`) ? View.VISIBLE : View.GONE}">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -889,7 +899,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf10.equals(`1`)}"
-                                android:onClick="@{()->mwra.setBf10(`1`)}"
+                                android:onClick="@{()->mwra.setBf10(`1`) + bf11.clearCheck()}"
                                 android:text="@string/bf1001" />
 
                             <RadioButton
@@ -913,10 +923,13 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                </LinearLayout>
+
                 <!-- bf11  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf11"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{mwra.bf10.equals(`1`) ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2947,7 +2960,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf16.equals(`2`)}"
-                                android:onClick="@{()->mwra.setBf16(`2`)}"
+                                android:onClick="@{()->mwra.setBf16(`2`) + bf17.clearCheck()}"
                                 android:text="@string/bf1602" />
 
                             <RadioButton
@@ -2956,7 +2969,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf16.equals(`98`)}"
-                                android:onClick="@{()->mwra.setBf16(`98`)}"
+                                android:onClick="@{()->mwra.setBf16(`98`) + bf17.clearCheck()}"
                                 android:text="@string/bf1698" />
                         </RadioGroup>
                     </LinearLayout>
@@ -2965,7 +2978,8 @@
                 <!-- bf17  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf17"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{mwra.bf16.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -3084,7 +3098,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{mwra.bf18.equals(`2`)}"
-                                android:onClick="@{()->mwra.setBf18(`2`)}"
+                                android:onClick="@{()->mwra.setBf18(`2`) + bf19.clearCheck()}"
                                 android:text="@string/bf1802" />
 
                             <RadioButton
@@ -3102,7 +3116,9 @@
                 <!-- bf19  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf19"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{mwra.bf18.equals(`2`) ? View.GONE : View.VISIBLE}">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
