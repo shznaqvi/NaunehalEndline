@@ -57,6 +57,9 @@ public class Child extends BaseObservable implements Observable {
     public String cb04dd = _EMPTY_;
     public String cb04mm = _EMPTY_;
     public String cb04yy = _EMPTY_;
+    private String cb04dk = _EMPTY_;
+
+
     public String cb0501 = _EMPTY_;
     public String cb0502 = _EMPTY_;
     public String cb06 = _EMPTY_;
@@ -460,6 +463,15 @@ public class Child extends BaseObservable implements Observable {
         return cb04yy;
     }
 
+    public void setCb04dk(String cb04dk) {
+        this.cb04dk = cb04dk;
+        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
+
+        notifyPropertyChanged(BR.cb04dk);
+    }
+
     @Bindable
     public String getCb0501() {
         return cb0501;
@@ -845,6 +857,14 @@ public class Child extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.cb04yy);
     }
 
+
+    @Bindable
+    public String getCb04dk() {
+        return cb04dk;
+    }
+
+
+
     public void setCb0501(String cb0501) {
         this.cb0501 = cb0501;
         notifyPropertyChanged(BR.cb0501);
@@ -892,6 +912,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb10(String cb10) {
         this.cb10 = cb10;
+        setCb1096x(cb10.equals("96") ? this.cb1096x : "");
         notifyPropertyChanged(BR.cb10);
     }
 
@@ -917,6 +938,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb14(String cb14) {
         this.cb14 = cb14;
+        setCb1496x(cb14.equals("96") ? this.cb1496x : "");
         notifyPropertyChanged(BR.cb14);
     }
 
@@ -986,57 +1008,69 @@ public class Child extends BaseObservable implements Observable {
     }
 
     public void setCs0801(String cs0801) {
+        if (this.cs0801.equals(cs0801)) return; // for all checkboxes
         this.cs0801 = cs0801;
         notifyPropertyChanged(BR.cs0801);
     }
 
     public void setCs0802(String cs0802) {
+        if (this.cs0802.equals(cs0802)) return; // for all checkboxes
         this.cs0802 = cs0802;
         notifyPropertyChanged(BR.cs0802);
     }
 
     public void setCs0803(String cs0803) {
+        if (this.cs0803.equals(cs0803)) return; // for all checkboxes
         this.cs0803 = cs0803;
         notifyPropertyChanged(BR.cs0803);
     }
 
     public void setCs0804(String cs0804) {
+        if (this.cs0804.equals(cs0804)) return; // for all checkboxes
         this.cs0804 = cs0804;
         notifyPropertyChanged(BR.cs0804);
     }
 
     public void setCs0805(String cs0805) {
+        if (this.cs0805.equals(cs0805)) return; // for all checkboxes
         this.cs0805 = cs0805;
         notifyPropertyChanged(BR.cs0805);
     }
 
     public void setCs0806(String cs0806) {
+        if (this.cs0806.equals(cs0806)) return; // for all checkboxes
         this.cs0806 = cs0806;
         notifyPropertyChanged(BR.cs0806);
     }
 
     public void setCs0807(String cs0807) {
+        if (this.cs0807.equals(cs0807)) return; // for all checkboxes
         this.cs0807 = cs0807;
         notifyPropertyChanged(BR.cs0807);
     }
 
     public void setCs0808(String cs0808) {
+        if (this.cs0808.equals(cs0808)) return; // for all checkboxes
         this.cs0808 = cs0808;
         notifyPropertyChanged(BR.cs0808);
     }
 
     public void setCs0809(String cs0809) {
+        if (this.cs0809.equals(cs0809)) return; // for all checkboxes
         this.cs0809 = cs0809;
         notifyPropertyChanged(BR.cs0809);
     }
 
     public void setCs0810(String cs0810) {
+        if (this.cs0810.equals(cs0810)) return; // for all checkboxes
         this.cs0810 = cs0810;
         notifyPropertyChanged(BR.cs0810);
     }
 
     public void setCs0896(String cs0896) {
+        if (this.cs0896.equals(cs0896)) return; // for all checkboxes
         this.cs0896 = cs0896;
+        setCs0896x(cs0896.equals("96") ? this.cs0896x : "");
         notifyPropertyChanged(BR.cs0896);
     }
 
@@ -1057,6 +1091,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs09(String cs09) {
         this.cs09 = cs09;
+        setCs0996x(cs09.equals("96") ? this.cs0996x : "");
         notifyPropertyChanged(BR.cs09);
     }
 
@@ -1092,6 +1127,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs15(String cs15) {
         this.cs15 = cs15;
+        setCs1596x(cs15.equals("96") ? this.cs1596x : "");
         notifyPropertyChanged(BR.cs15);
     }
 
@@ -1136,42 +1172,51 @@ public class Child extends BaseObservable implements Observable {
     }
 
     public void setCs1802(String cs1802) {
+        if (this.cs1802.equals(cs1802)) return; // for all checkboxes
         this.cs1802 = cs1802;
         notifyPropertyChanged(BR.cs1802);
     }
 
     public void setCs1803(String cs1803) {
+        if (this.cs1803.equals(cs1803)) return; // for all checkboxes
         this.cs1803 = cs1803;
         notifyPropertyChanged(BR.cs1803);
     }
 
     public void setCs1804(String cs1804) {
+        if (this.cs1804.equals(cs1804)) return; // for all checkboxes
         this.cs1804 = cs1804;
         notifyPropertyChanged(BR.cs1804);
     }
 
     public void setCs1805(String cs1805) {
+        if (this.cs1805.equals(cs1805)) return; // for all checkboxes
         this.cs1805 = cs1805;
         notifyPropertyChanged(BR.cs1805);
     }
 
     public void setCs1806(String cs1806) {
+        if (this.cs1806.equals(cs1806)) return; // for all checkboxes
         this.cs1806 = cs1806;
         notifyPropertyChanged(BR.cs1806);
     }
 
     public void setCs1807(String cs1807) {
+        if (this.cs1807.equals(cs1807)) return; // for all checkboxes
         this.cs1807 = cs1807;
         notifyPropertyChanged(BR.cs1807);
     }
 
     public void setCs1808(String cs1808) {
+        if (this.cs1808.equals(cs1808)) return; // for all checkboxes
         this.cs1808 = cs1808;
         notifyPropertyChanged(BR.cs1808);
     }
 
     public void setCs1896(String cs1896) {
+        if (this.cs1896.equals(cs1896)) return; // for all checkboxes
         this.cs1896 = cs1896;
+        setCs1896x(cs1896.equals("96") ? this.cs1896x : "");
         notifyPropertyChanged(BR.cs1896);
     }
 
@@ -1182,6 +1227,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs19(String cs19) {
         this.cs19 = cs19;
+        setCs1996x(cs19.equals("96") ? this.cs1996x : "");
         notifyPropertyChanged(BR.cs19);
     }
 
@@ -3157,6 +3203,8 @@ public class Child extends BaseObservable implements Observable {
             this.cb04dd = json.getString("cb04dd");
             this.cb04mm = json.getString("cb04mm");
             this.cb04yy = json.getString("cb04yy");
+            this.cb04dk = json.getString("cb04dk");
+
             this.cb0501 = json.getString("cb0501");
             this.cb0502 = json.getString("cb0502");
             this.cb06 = json.getString("cb06");
@@ -3399,6 +3447,7 @@ public class Child extends BaseObservable implements Observable {
                 .put("cb04dd", cb04dd)
                 .put("cb04mm", cb04mm)
                 .put("cb04yy", cb04yy)
+                .put("cb04dk", cb04dk)
                 .put("cb0501", cb0501)
                 .put("cb0502", cb0502)
                 .put("cb06", cb06)

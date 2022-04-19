@@ -270,6 +270,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cb04dd">Days</string>
     <string name="cb04mm">Months</string>
     <string name="cb04yy">Year</string>
+    <string name="cb04dk">Dont Know</string>
     <string name="cb05">Age</string>
     <string name="cb0501">Year</string>
     <string name="cb0502">Months</string>
@@ -354,8 +355,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cs0504">More</string>
     <string name="cs0405">Nothing To Drink</string>
     <string name="cs0505">Nothing to eat</string>
-    <string name="cs0498">Don&#039;t Know</string>
-    <string name="cs0598">Don&#039;t Know</string>
+    <string name="cs0498">Don\'t Know</string>
+    <string name="cs0598">Don\'t Know</string>
     <string name="cs06">Did you seek advice or treatment for diarrhoea from any source?</string>
     <string name="cs0601">Yes</string>
     <string name="cs0602">No</string>
@@ -465,7 +466,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cs20">Was (NAME) ever given vitamin A supplementation?</string>
     <string name="cs2001">Yes</string>
     <string name="cs2002">No</string>
-    <string name="cs2098">Don&#039;t Know</string>
+    <string name="cs2098">Don\'t Know</string>
     <string name="cs21">When was last dosage of vitamin A supplementation given to (NAME)?</string>
     <string name="cs2101">A week ago</string>
     <string name="cs2102">One month ago</string>
@@ -605,21 +606,21 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im14_3">Dont know</string>
     <string name="im15">How many times was the Pentavalent vaccine received? Number of times</string>
     <string name="im15_1">Number of times</string>
-    <string name="im15_98">Don&#039;t know</string>
+    <string name="im15_98">Don\'t know</string>
     <string name="im16">Has (name) ever received a Pneumococcal Conjugate vaccination – that is, an injection to prevent (him/her) from getting pneumococcal disease, including ear infections and meningitis caused by pneumococcus? Probe by indicating that Pneumococcal Conjugate vaccination is sometimes given at the same time as the Pentavalent vaccination.</string>
     <string name="im16_1">Yes </string>
     <string name="im16_2">No  </string>
     <string name="im16_3">Dont know</string>
     <string name="im17">How many times was the pneumococcal vaccine received? Number of times</string>
     <string name="im17_1">Number of times</string>
-    <string name="im17_98">Don&#039;t know</string>
+    <string name="im17_98">Don\'t know</string>
     <string name="im18">Has (name) ever received drops for Rotavirus vaccine (RV) vaccination- A vaccine given orally soon after 6 weeks birth to protect against rotavirus infections, which are the leading cause of severe diarrhea among young children.</string>
     <string name="im18_1">Yes </string>
     <string name="im18_2">No  </string>
     <string name="im18_3">Dont know</string>
     <string name="im19">How many times were the drops received? Number of times</string>
     <string name="im19_1">Number of times</string>
-    <string name="im19_98">Don&#039;t know</string>
+    <string name="im19_98">Don\'t know</string>
     <string name="im20">Has (name) ever received an inactivated polio vaccine (IPV) – that is, a shot in the thigh at the age of 14 weeks and at 9 months  to prevent children from getting polio?</string>
     <string name="im20_1">Yes </string>
     <string name="im20a">How many times was a IPV injection vaccine received? </string>
@@ -633,7 +634,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im21_3">Dont know</string>
     <string name="im22">How many times was a Measles Injection vaccine received? Number of times</string>
     <string name="im22_1">Number of times</string>
-    <string name="im22_98">Don&#039;t know</string>
+    <string name="im22_98">Don\'t know</string>
     <string name="im22a">Has (name) ever received a Typhoid vaccination – that is, a shot in the upper part of the arm at the age of 9 months or older - to prevent (him/her) from getting Typhoid disease?</string>
     <string name="im22a_01">Yes</string>
     <string name="im22a_02">No</string>
@@ -774,7 +775,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd08b">During your last pregnancy, did you receive any tetanus injections?</string>
     <string name="pd08b01">Yes</string>
     <string name="pd08b02">No</string>
-    <string name="pd08b98">Don&#039;t know</string>
+    <string name="pd08b98">Don\'t know</string>
     <string name="pd08c">How many times did you receive tetanus injection?</string>
     <string name="pd09">Have you ever taken any iron folic acid (IFA) while you were pregnant?</string>
     <string name="pd10">How often did you take IFA during pregnancy?</string>
@@ -858,7 +859,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd23">After the cord was cut and until it fell off, was anything applied to the cord?</string>
     <string name="pd2301">Yes</string>
     <string name="pd2302">No</string>
-    <string name="pd2398">Don&#039;t know</string>
+    <string name="pd2398">Don\'t know</string>
     <string name="pd24">What was applied to the cord? [Multiple responses]</string>
     <string name="pd2401">Chlorhexidine</string>
     <string name="pd2402">Other antiseptic (alcohol, spirit, gentian violet, Dettol)</string>
@@ -1075,7 +1076,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0403">Not Deadly</string>
     <string name="cv0404">Somewhat Deadly</string>
     <string name="cv0405">Extremely Deadly</string>
-    <string name="cv0498">Don&#039;t Know</string>
+    <string name="cv0498">Don\'t Know</string>
     <string name="cv05">Do you know which group of people are most at risk of COVID?[Multiple Responses]</string>
     <string name="cv0501">Everyone</string>
     <string name="cv0502">Elderly</string>
@@ -1304,7 +1305,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se1004">Use Water Filter (Ceramic/ Sand/Composite/Etc)</string>
     <string name="se1005">Solar Disinfection</string>
     <string name="se1006">Let It Stand And Settle</string>
-    <string name="se1098">Don&#039;t Know</string>
+    <string name="se1098">Don\'t Know</string>
     <string name="se1099">Other Pleas Specify</string>
     <string name="se11">What kind of toilet facility do members of your HH usually use?</string>
     <string name="se11title1">FLUSH OR POUR FLUSH TOILET</string>
@@ -1312,7 +1313,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se1102">Flush To Septic Tank</string>
     <string name="se1103">Flush To Pit Latrine</string>
     <string name="se1104">Flush To Somewhere Else</string>
-    <string name="se1105">Flush, Don&#039;t Know Where</string>
+    <string name="se1105">Flush, Don\'t Know Where</string>
     <string name="se11title2">PIT LATRINE</string>
     <string name="se1106">Ventilated Improved Pit Latrine</string>
     <string name="se1107">Pit Latrine With Slab</string>
