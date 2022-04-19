@@ -25,7 +25,6 @@ import java.util.List;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.models.Clusters;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
-import edu.aku.hassannaqvi.naunehalendline.models.MWRA;
 import edu.aku.hassannaqvi.naunehalendline.models.RandomHH;
 import edu.aku.hassannaqvi.naunehalendline.models.Users;
 
@@ -58,7 +57,6 @@ public class MainApp extends Application {
     public static Form form;
     // public static Pregnancy pregnancy;
     public static Child child;
-    public static MWRA mwra;
 
 
     //public static Samples samples;
