@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -87,7 +88,19 @@ public class Section_01_HHActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
+            return false;
+        }
+
+        if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
+            return Validator.emptyCustomTextBox(this, bi.hh24, "HH24 Can't be Greater than HH22");
+        }
+
+        if (Integer.parseInt(form.getHh25()) > Integer.parseInt(form.getHh23())) {
+            return Validator.emptyCustomTextBox(this, bi.hh25, "HH25 Can't be Greater than HH23");
+        }
+
+        return true;
     }
 
 
