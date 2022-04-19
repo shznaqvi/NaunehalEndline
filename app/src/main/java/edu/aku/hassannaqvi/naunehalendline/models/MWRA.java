@@ -2140,6 +2140,8 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf05(String bf05) {
         this.bf05 = bf05;
+        setBf0502x(bf05.equals("2") ? this.bf0502x : "");
+        setBf0503x(bf05.equals("3") ? this.bf0503x : "");
         notifyPropertyChanged(BR.bf05);
     }
 
@@ -2242,6 +2244,17 @@ public class MWRA extends BaseObservable implements Observable {
     public void setBf0999(String bf0999) {
         if (this.bf0999.equals(bf0999)) return; // for all checkboxes
         this.bf0999 = bf0999;
+        setBf0901(bf0999.equals("98") ? "" : this.bf0901);
+        setBf0902(bf0999.equals("98") ? "" : this.bf0902);
+        setBf0903(bf0999.equals("98") ? "" : this.bf0903);
+        setBf0904(bf0999.equals("98") ? "" : this.bf0904);
+        setBf0905(bf0999.equals("98") ? "" : this.bf0905);
+        setBf0906(bf0999.equals("98") ? "" : this.bf0906);
+        setBf0907(bf0999.equals("98") ? "" : this.bf0907);
+        setBf0908(bf0999.equals("98") ? "" : this.bf0908);
+        setBf0909(bf0999.equals("98") ? "" : this.bf0909);
+        setBf0910(bf0999.equals("98") ? "" : this.bf0910);
+        setBf0996(bf0999.equals("98") ? "" : this.bf0996);
         notifyPropertyChanged(BR.bf0999);
     }
 
@@ -2284,6 +2297,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf14b(String bf14b) {
         this.bf14b = bf14b;
+        setBf14b01x(bf14b.equals("1") ? this.bf14b01x : "");
         notifyPropertyChanged(BR.bf14b);
     }
 
@@ -2294,6 +2308,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf14c(String bf14c) {
         this.bf14c = bf14c;
+        setBf14c01x(bf14c.equals("1") ? this.bf14c01x : "");
         notifyPropertyChanged(BR.bf14c);
     }
 
@@ -2314,6 +2329,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf14f(String bf14f) {
         this.bf14f = bf14f;
+        setBf14f01x(bf14f.equals("1") ? this.bf14f01x : "");
         notifyPropertyChanged(BR.bf14f);
     }
 
@@ -2429,6 +2445,7 @@ public class MWRA extends BaseObservable implements Observable {
 
     public void setBf17(String bf17) {
         this.bf17 = bf17;
+        setBf1701x(bf17.equals("1") ? this.bf1701x : "");
         notifyPropertyChanged(BR.bf17);
     }
 

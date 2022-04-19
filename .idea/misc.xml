@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Office Work/NaunehalEndline/app/src/main/res/layout/activity_section_bf.xml" value="0.12664065271372826" />
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/activity_household_screen.xml" value="0.56328125" />
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/activity_login.xml" value="0.56328125" />
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/activity_main.xml" value="0.56328125" />
@@ -21,9 +22,6 @@
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_is.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_pd.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_child_ending.xml" value="0.215625" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_ending.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.36102564102564105" />
       </map>
     </option>
   </component>
