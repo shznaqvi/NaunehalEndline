@@ -114,7 +114,8 @@ object CreateTable {
             + RandomHHTable.COLUMN_CONTACT + " TEXT,"
             + RandomHHTable.COLUMN_UPDATEDT + " TEXT,"
             + RandomHHTable.COLUMN_RANDOMDT + " TEXT,"
-            + RandomHHTable.COLUMN_SNO_HH + " TEXT );"
+            + RandomHHTable.COLUMN_SNO_HH + " TEXT "
+            + ");"
             )
 
     const val SQL_CREATE_DISTRICTS = ("CREATE TABLE " + DistrictsTable.TABLE_NAME + "("

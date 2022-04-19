@@ -119,7 +119,7 @@ public class TableContracts {
         public static final String COLUMN_CONTACT = "hh09";
         public static final String COLUMN_UPDATEDT = "updDt";
         public static final String COLUMN_TAB_NO = "tabNo";
-        public static String COLUMN_DIST_CODE = "dist_id";
+        public static final String COLUMN_DIST_CODE = "dist_id";
 //        public static final String COLUMN_HH_SELECTED_STRUCT = "hhss";
     }
 
