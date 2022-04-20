@@ -391,6 +391,13 @@
     <string name="cs2104">آخری 6 مہینوں میں</string>
     <string name="cs2105">ایک سال پہلے</string>
     <string name="im1_title1">سیکشن آئی ایم:   حفاظتی ٹیکے ہدایات:  گھر میں رہنے والے 35 ماہ اور اس سے کم عمر تمام بچوں کے لئے سیکشن آئی ایم کو مکمل کریں (اگر ایک سے زیادہ بچے ہیں ، تو دوسری شیٹ استعمال کریں)</string>
+    <string name="im05t1"> Vaccinations At Birth </string>
+    <string name="im05t2"> Vaccinations At 6 Weeks </string>
+    <string name="im05t3"> Vaccinations At 10 Weeks </string>
+    <string name="im05t4"> Vaccinations At 14 Weeks </string>
+    <string name="im05t5"> Vaccinations At 9 Months </string>
+    <string name="im05t6"> Vaccinations At 15 Months </string>
+    <string name="im05_title2">Immunization Status</string>
     <string name="im01">کیا بچے کے لئے آپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود تھا؟ جس میں حفاظتی ٹیکوں کا اندراج موجود ہو۔</string>
     <string name="im01_1">ہاں</string>
     <string name="im01_2"> نہیں</string>
@@ -577,7 +584,7 @@
     <string name="im24_2">حفاظتی ٹیکے لگائے جانے کا وقت مناسب نہیں تھا</string>
     <string name="im24a">کیا قومی پولو مہم کے دوران بچے نے کبھی پولیو کے قطرے پلائے ہیں؟</string>
     <string name="im24a_01">ہاں</string>
-    <string name="im2a_02"> نہیں</string>
+    <string name="im24a_02"> نہیں</string>
     <string name="im24a_98">معلوم نہیں </string>
     <string name="im24_3">ماں مصروف تھی</string>
     <string name="im24b">قومی پولیو مہموں کے دوران (نام) کو کتنی بار پولیو کے قطرے پلائے گئے؟</string>

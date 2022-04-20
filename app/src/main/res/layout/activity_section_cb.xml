@@ -55,6 +55,8 @@
                         android:orientation="vertical">
 
                         <TextView
+                            style="@style/labelsHead"
+                            android:layout_marginTop="0dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cb01_title1" />
@@ -648,6 +650,7 @@
                                 android:text="@string/Q_cb16" />
 
                             <TextView
+
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="@string/cb16" />
@@ -710,13 +713,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                       <!-- <TextView
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_cb07_title_2" />
+                            android:text="@string/Q_cb07_title_2" />-->
 
                         <TextView
+                            style="@style/labelsHead"
+                            android:layout_marginTop="0dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cb07_title_2" />
@@ -1082,13 +1087,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <!--<TextView
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_cb12_title3" />
+                            android:text="@string/Q_cb12_title3" />-->
 
                         <TextView
+                            style="@style/labelsHead"
+                            android:layout_marginTop="0dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cb12_title3" />

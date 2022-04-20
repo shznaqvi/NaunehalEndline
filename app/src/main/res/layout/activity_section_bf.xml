@@ -47,7 +47,7 @@
 
 
                 <!-- bf_title1  Title   -->
-                <androidx.cardview.widget.CardView
+                <!--<androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf_title1"
                     style="@style/cardView">
 
@@ -63,7 +63,7 @@
                             android:text="@string/bf_title1" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
+-->
 
                 <!-- bf01  Input-Numeric   -->
                 <androidx.cardview.widget.CardView

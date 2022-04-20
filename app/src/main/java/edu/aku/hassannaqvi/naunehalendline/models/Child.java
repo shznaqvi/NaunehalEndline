@@ -230,15 +230,21 @@ public class Child extends BaseObservable implements Observable {
     private String im23 = _EMPTY_;
     private String im236x = _EMPTY_;
     private String im23a = _EMPTY_;
+    private String im23b_1 = _EMPTY_;
+    private String im23b_2 = _EMPTY_;
     private String im24 = _EMPTY_;
     private String im2417x = _EMPTY_;
     private String im24a = _EMPTY_;
-    /* private String im24b = _EMPTY_;
-     private String im24b98 = _EMPTY_;*/
+     private String im24b = _EMPTY_;
+     private String im24b98 = _EMPTY_;
     private String im24c = _EMPTY_;
     // private String im24d = _EMPTY_;
     private String im25 = _EMPTY_;
-    private String im26 = _EMPTY_;
+    private String im29 = _EMPTY_;
+    private String im30 = _EMPTY_;
+    private String im30_96x = _EMPTY_;
+
+    //private String im26 = _EMPTY_;
 
     private String im050198 = _EMPTY_;
     private String im050298 = _EMPTY_;
@@ -543,8 +549,8 @@ public class Child extends BaseObservable implements Observable {
         setUuid(MainApp.form.getUid());  // not applicable in Form table
         setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
-        setEbCode(MainApp.selectedHousehold.getEbCode());
-        setHhid(MainApp.selectedHousehold.getHhid());
+        //setEbCode(MainApp.selectedHousehold.getEbCode());
+        //setHhid(MainApp.selectedHousehold.getHhid());
 
     }
 
@@ -2970,6 +2976,26 @@ public class Child extends BaseObservable implements Observable {
     }
 
     @Bindable
+    public String getIm23b_1() {
+        return im23b_1;
+    }
+
+    public void setIm23b_1(String im23b_1) {
+        this.im23b_1 = im23b_1;
+        notifyPropertyChanged(BR.im23b_1);
+    }
+
+    @Bindable
+    public String getIm23b_2() {
+        return im23b_2;
+    }
+
+    public void setIm23b_2(String im23b_2) {
+        this.im23b_2 = im23b_2;
+        notifyPropertyChanged(BR.im23b_2);
+    }
+
+    @Bindable
     public String getIm24() {
         return im24;
     }
@@ -3000,12 +3026,12 @@ public class Child extends BaseObservable implements Observable {
         setIm24b98(im24b.equals("1") ? this.im24b98 : "");*/
         setIm24c(im24a.equals("1") ? this.im24c : "");
         setIm25(im24a.equals("2") ? this.im25 : "");
-        setIm26(im24a.equals("2") ? this.im26 : "");
+        //setIm26(im24a.equals("2") ? this.im26 : "");
         /* setIm24d(im24a.equals("1") ? this.im24d : "");*/
         notifyPropertyChanged(BR.im24a);
     }
 
-    /* @Bindable
+     @Bindable
      public String getIm24b() {
          return im24b;
      }
@@ -3026,7 +3052,7 @@ public class Child extends BaseObservable implements Observable {
          setIm24b(im24b98.equals("98") ? "" : this.im24b);
          notifyPropertyChanged(BR.im24b98);
      }
- */
+
     @Bindable
     public String getIm24c() {
         return im24c;
@@ -3058,15 +3084,45 @@ public class Child extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getIm26() {
-        return im26;
+    public String getIm29() {
+        return im29;
     }
 
-    public void setIm26(String im26) {
-        this.im26 = im26;
-        notifyPropertyChanged(BR.im26);
+    public void setIm29(String im29) {
+        this.im29 = im29;
+        notifyPropertyChanged(BR.im29);
     }
 
+    @Bindable
+    public String getIm30() {
+        return im30;
+    }
+
+    public void setIm30(String im30) {
+        this.im30 = im30;
+        notifyPropertyChanged(BR.im30);
+    }
+
+    @Bindable
+    public String getIm30_96x() {
+        return im30_96x;
+    }
+
+    public void setIm30_96x(String im30_96x) {
+        this.im30_96x = im30_96x;
+        notifyPropertyChanged(BR.im30_96x);
+    }
+
+    /* @Bindable
+            public String getIm26() {
+                return im26;
+            }
+
+            public void setIm26(String im26) {
+                this.im26 = im26;
+                notifyPropertyChanged(BR.im26);
+            }
+        */
     @Bindable
     public String getIm050198() {
         return im050198;
@@ -6467,12 +6523,15 @@ public class Child extends BaseObservable implements Observable {
             this.im24 = json.getString("im24");
             this.im2417x = json.getString("im2417x");
             this.im24a = json.getString("im24a");
-          /*  this.im24b = json.getString("im24b");
-            this.im24b98 = json.getString("im24b98");*/
+            this.im24b = json.getString("im24b");
+            this.im24b98 = json.getString("im24b98");
             this.im24c = json.getString("im24c");
             /*    this.im24d = json.getString("im24d");*/
             this.im25 = json.getString("im25");
-            this.im26 = json.getString("im26");
+            this.im29 = json.getString("im29");
+            this.im30 = json.getString("im30");
+            this.im30_96x = json.getString("im30_96x");
+            //this.im26 = json.getString("im26");
             this.im050198 = json.getString("im050198");
             this.im050298 = json.getString("im050298");
             this.im050398 = json.getString("im050398");
@@ -6935,12 +6994,15 @@ public class Child extends BaseObservable implements Observable {
                 .put("im24", im24)
                 .put("im2417x", im2417x)
                 .put("im24a", im24a)
-                /*  .put("im24b", im24b)
-                  .put("im24b98", im24b98)*/
+                  .put("im24b", im24b)
+                  .put("im24b98", im24b98)
                 .put("im24c", im24c)
                 /*     .put("im24d", im24d)*/
                 .put("im25", im25)
-                .put("im26", im26)
+                .put("im29", im29)
+                .put("im29", im30)
+                .put("im30_96x", im30_96x)
+                //.put("im26", im26)
                 .put("im050198", im050198)
                 .put("im050298", im050298)
                 .put("im050398", im050398)

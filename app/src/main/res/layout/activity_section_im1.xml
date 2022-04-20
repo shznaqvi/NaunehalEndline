@@ -669,18 +669,19 @@
 
                             <TextView
                                 style="@style/labelsHead"
+                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="0dp"
                                 android:padding="0dp"
-                                android:text="@string/im05_title1" />
+                                android:text="@string/im05_title2" />
 
                             <TextView
                                 style="@style/info"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="start"
-                                android:text="@string/im05title2" />
+                                android:text="@string/im05_title1" />
 
                             <TableLayout
                                 android:layout_width="match_parent"
@@ -693,7 +694,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="52dp"
                                         android:layout_weight="3"
-                                        android:text="@string/im05"
+                                        android:text="@string/im05_01"
                                         android:textColor="@color/black" />
 
 
@@ -702,7 +703,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:text="@string/im0501dd"
+                                        android:text="@string/im05_01_dd"
                                         android:textColor="@color/black" />
 
                                     <TextView
@@ -710,7 +711,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:text="@string/im0501mm"
+                                        android:text="@string/im05_01_mm"
                                         android:textColor="@color/black" />
 
                                     <TextView
@@ -718,7 +719,7 @@
                                         android:layout_width="0dp"
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
-                                        android:text="@string/im0501yy"
+                                        android:text="@string/im05_01_yy"
                                         android:textColor="@color/black" />
 
                                     <TextView
@@ -748,7 +749,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0501bcg" />
+                                        android:text="@string/im05_01" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -847,7 +848,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0502opv0" />
+                                        android:text="@string/im05_02" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -945,7 +946,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0510ahp" />
+                                        android:text="@string/im05_02a" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1030,7 +1031,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0503opv1" />
+                                        android:text="@string/im05_03" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1126,7 +1127,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0504penta1" />
+                                        android:text="@string/im05_04" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1223,7 +1224,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0505pcv1" />
+                                        android:text="@string/im05_05" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1319,7 +1320,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0506rv1" />
+                                        android:text="@string/im05_06" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1404,7 +1405,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0507opv2" />
+                                        android:text="@string/im05_07" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1501,7 +1502,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0508penta2" />
+                                        android:text="@string/im05_08" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1598,7 +1599,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0509pcv2" />
+                                        android:text="@string/im05_09" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1694,7 +1695,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0510rv2" />
+                                        android:text="@string/im05_10" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/im0510dd"
@@ -1779,7 +1780,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0511opv3" />
+                                        android:text="@string/im05_11" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -1875,7 +1876,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0512penta3" />
+                                        android:text="@string/im05_12" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/im0512dd"
@@ -1970,7 +1971,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0513pcv3" />
+                                        android:text="@string/im05_13" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -2066,7 +2067,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0514ipv" />
+                                        android:text="@string/im05_14" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -2150,7 +2151,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0515measles1" />
+                                        android:text="@string/im05_15" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -2246,7 +2247,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0515bipv2" />
+                                        android:text="@string/im05_15a" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -2341,7 +2342,7 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="3"
                                         android:minHeight="52dp"
-                                        android:text="@string/im0517typh" />
+                                        android:text="@string/im05_15b" />
 
 
                                     <com.edittextpicker.aliazaz.EditTextPicker

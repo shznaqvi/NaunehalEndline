@@ -41,7 +41,7 @@
                 android:orientation="vertical">
 
                 <!-- cv_title1  Title   -->
-                <androidx.cardview.widget.CardView
+               <!-- <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcv_title1"
                     style="@style/cardView">
 
@@ -51,12 +51,13 @@
                         android:orientation="vertical">
 
                         <TextView
+                            style="@style/sub_labels"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cv_title1" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
-
+-->
                 <!-- cv01a  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcv01a"
