@@ -5803,16 +5803,17 @@ public class Child extends BaseObservable implements Observable {
     public void setCv0998(String cv0998) {
         if (this.cv0998.equals(cv0998)) return; // for all checkboxes
         this.cv0998 = cv0998;
-        setCv0901("");
-        setCv0902("");
-        setCv0903("");
-        setCv0904("");
-        setCv0905("");
-        setCv0906("");
-        setCv0907("");
-        setCv0908("");
-        setCv0996("");
-        setCv0996x("");
+
+        setCv0901(cv0998.equals("98") ? "" : this.cv0901);
+        setCv0902(cv0998.equals("98") ? "" : this.cv0902);
+        setCv0903(cv0998.equals("98") ? "" : this.cv0903);
+        setCv0904(cv0998.equals("98") ? "" : this.cv0904);
+        setCv0905(cv0998.equals("98") ? "" : this.cv0905);
+        setCv0906(cv0998.equals("98") ? "" : this.cv0906);
+        setCv0907(cv0998.equals("98") ? "" : this.cv0907);
+        setCv0908(cv0998.equals("98") ? "" : this.cv0908);
+        setCv0996(cv0998.equals("98") ? "" : this.cv0996);
+        setCv0996x(cv0998.equals("98") ? "" : this.cv0996x);
 
         notifyPropertyChanged(BR.cv0998);
     }
@@ -5956,17 +5957,19 @@ public class Child extends BaseObservable implements Observable {
     public void setCv1098(String cv1098) {
         if (this.cv1098.equals(cv1098)) return; // for all checkboxes
         this.cv1098 = cv1098;
-        setCv1001("");
-        setCv1002("");
-        setCv1003("");
-        setCv1004("");
-        setCv1005("");
-        setCv1006("");
-        setCv1007("");
-        setCv1008("");
-        setCv1009("");
-        setCv1096("");
-        setCv1096x("");
+
+        setCv1001(cv1098.equals("98") ? "" : this.cv1001);
+        setCv1002(cv1098.equals("98") ? "" : this.cv1002);
+        setCv1003(cv1098.equals("98") ? "" : this.cv1003);
+        setCv1004(cv1098.equals("98") ? "" : this.cv1004);
+        setCv1005(cv1098.equals("98") ? "" : this.cv1005);
+        setCv1006(cv1098.equals("98") ? "" : this.cv1006);
+        setCv1007(cv1098.equals("98") ? "" : this.cv1007);
+        setCv1008(cv1098.equals("98") ? "" : this.cv1008);
+        setCv1009(cv1098.equals("98") ? "" : this.cv1009);
+        setCv1096(cv1098.equals("98") ? "" : this.cv1096);
+        setCv1096x(cv1098.equals("98") ? "" : this.cv1096x);
+
         notifyPropertyChanged(BR.cv1098);
     }
 
@@ -6253,17 +6256,18 @@ public class Child extends BaseObservable implements Observable {
     public void setCv2198(String cv2198) {
         if (this.cv2198.equals(cv2198)) return; // for all checkboxes
         this.cv2198 = cv2198;
-        setCv2101("");
-        setCv2102("");
-        setCv2103("");
-        setCv2104("");
-        setCv2105("");
-        setCv2106("");
-        setCv2107("");
-        setCv2108("");
-        setCv2109("");
-        setCv2196("");
-        setCv2196x("");
+
+        setCv2101(cv2198.equals("98") ? "" : this.cv2101);
+        setCv2102(cv2198.equals("98") ? "" : this.cv2102);
+        setCv2103(cv2198.equals("98") ? "" : this.cv2103);
+        setCv2104(cv2198.equals("98") ? "" : this.cv2104);
+        setCv2105(cv2198.equals("98") ? "" : this.cv2105);
+        setCv2106(cv2198.equals("98") ? "" : this.cv2106);
+        setCv2107(cv2198.equals("98") ? "" : this.cv2107);
+        setCv2108(cv2198.equals("98") ? "" : this.cv2108);
+        setCv2109(cv2198.equals("98") ? "" : this.cv2109);
+        setCv2196(cv2198.equals("98") ? "" : this.cv2196);
+        setCv2196x(cv2198.equals("98") ? "" : this.cv2196x);
 
         notifyPropertyChanged(BR.cv2198);
     }
