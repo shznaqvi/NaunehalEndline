@@ -24,18 +24,18 @@
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_child_ending.xml" value="0.215625" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_ending.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_bf.xml" value="0.55" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.55" />
+        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.46375" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cs.xml" value="0.15265815265815266" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cv.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_hh.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_im1.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_pd.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.55" />
+        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.5426829268292683" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -94,6 +94,27 @@ public class Section_08_SEActivity extends AppCompatActivity {
             return false;
         }
 
+        try {
+            int se3301 = Integer.parseInt(MainApp.form.getSe3301());
+            int se3302 = Integer.parseInt(MainApp.form.getSe3302());
+
+            if (se3301 == 0 && se3302 == 0) {
+                return Validator.emptyCustomTextBox(this, bi.se3301, "Incorrect value for Time.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            int se3401 = Integer.parseInt(MainApp.form.getSe3401());
+            int se3402 = Integer.parseInt(MainApp.form.getSe3402());
+
+            if (se3401 == 0 && se3402 == 0) {
+                return Validator.emptyCustomTextBox(this, bi.se3401, "Incorrect value.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
 
         return true;
 
