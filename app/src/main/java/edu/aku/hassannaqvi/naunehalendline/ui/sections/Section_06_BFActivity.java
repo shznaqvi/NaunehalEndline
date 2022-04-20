@@ -46,7 +46,7 @@ public class Section_06_BFActivity extends AppCompatActivity {
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SCB, child.sCBtoString());
+            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SBF, child.sBFtoString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
