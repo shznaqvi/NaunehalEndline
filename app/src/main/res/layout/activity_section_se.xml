@@ -3409,9 +3409,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{form.se51.equals(`2`)}"
-                                android:onClick="@{()->form.setSe51(`2`) + se41.clearCheck() + se42.clearCheck()
-                                + se45.clearCheck() + se47.clearCheck() + se52.clearCheck() + se53.clearCheck()
-                                 + se55.clearCheck() + se48.clearCheck()}"
+                                android:onClick="@{()->form.setSe51(`2`) + se41.clearCheck() + se42.clearCheck() + se45.clearCheck() + se47.clearCheck() + se52.clearCheck() + se53.clearCheck() + se55.clearCheck() + se48.clearCheck()}"
                                 android:text="@string/se51_02" />
 
                             <RadioButton
@@ -3420,15 +3418,15 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{form.se51.equals(`98`)}"
-                                android:onClick="@{()->form.setSe51(`98`) + se41.clearCheck() + se42.clearCheck()
-                                + se45.clearCheck() + se47.clearCheck() + se52.clearCheck() + se53.clearCheck()
-                                 + se55.clearCheck() + se48.clearCheck()}"
+                                android:onClick="@{()->form.setSe51(`98`) + se41.clearCheck() + se42.clearCheck() + se45.clearCheck() + se47.clearCheck() + se52.clearCheck() + se53.clearCheck() + se55.clearCheck() + se48.clearCheck()}"
                                 android:text="@string/se51_98" />
 
                         </RadioGroup>
 
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -3497,9 +3495,13 @@
                                     android:checked="@{form.se41.equals(`98`)}"
                                     android:onClick="@{()->form.setSe41(`98`) + se42.clearCheck()}"
                                     android:text="@string/se4198" />
+
                             </RadioGroup>
+
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
+
 
                     <!-- se42  Radio   -->
                     <androidx.cardview.widget.CardView
@@ -3601,9 +3603,13 @@
                                     android:tag="se4296"
                                     android:text="@={form.se4296x}"
                                     android:visibility="@{form.se42.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
                             </RadioGroup>
+
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"

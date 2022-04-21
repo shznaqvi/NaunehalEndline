@@ -129,8 +129,8 @@
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                                 android:hint="@string/istatus96"
                                 android:tag="istatus96"
-                                android:text='@{istatus96.checked ? istatus96x.getText().toString() : ""}'
-                                android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
+                                android:text="@{istatus96.checked ? istatus96x.getText().toString() : ``}"
+                                android:visibility="@{istatus96.checked? View.VISIBLE : View.GONE}" />
 
                         </RadioGroup>
 
