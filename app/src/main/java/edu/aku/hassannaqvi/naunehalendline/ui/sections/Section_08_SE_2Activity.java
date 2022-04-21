@@ -19,13 +19,14 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection08Se2Binding;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionHhBinding;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionSeBinding;
 
-public class Section_08_SEActivity extends AppCompatActivity {
+public class Section_08_SE_2Activity extends AppCompatActivity {
 
     private static final String TAG = "Section_02_SEActivity";
-    ActivitySectionSeBinding bi;
+    ActivitySection08Se2Binding bi;
     private DatabaseHelper db;
     private String requestCode;
 
@@ -34,7 +35,7 @@ public class Section_08_SEActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_se);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section08_se2);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
@@ -89,7 +90,25 @@ public class Section_08_SEActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
+            return false;
+        }
+
+        try {
+            int se3301 = Integer.parseInt(MainApp.form.getSe3301());
+            int se3302 = Integer.parseInt(MainApp.form.getSe3302());
+
+            if (se3301 == 0 && se3302 == 0) {
+                return Validator.emptyCustomTextBox(this, bi.se3301, "Incorrect value for Time.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+
+        return true;
+
     }
 
 

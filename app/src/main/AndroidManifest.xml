@@ -29,6 +29,12 @@
         android:usesCleartextTraffic="false"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".ui.sections.Section_08_SE_2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.sections.Section_08_SE_3Activity"
+            android:exported="true" />
+        <activity
             android:name=".ui.sections.Section_08_SEActivity"
             android:exported="true" />
         <activity
