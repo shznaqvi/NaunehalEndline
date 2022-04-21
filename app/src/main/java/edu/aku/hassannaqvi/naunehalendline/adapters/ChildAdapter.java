@@ -1,7 +1,5 @@
 package edu.aku.hassannaqvi.naunehalendline.adapters;
 
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
-
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -199,7 +197,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
         });
 
-        viewHolder.itemView.setOnLongClickListener(view -> {
+        /*viewHolder.itemView.setOnLongClickListener(view -> {
             MainApp.child = MainApp.childList.get(position);
             if (MainApp.child.getEc21().equals("")) {
                 Intent intent = new Intent(mContext, Section_02_CBActivity.class);
@@ -217,7 +215,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
                 Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
             }
             return true;
-        });
+        });*/
 
     }
 
