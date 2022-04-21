@@ -30,6 +30,8 @@ import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityHouseholdScreenBinding;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_08_SEActivity;
 
 
 public class HouseholdScreenActivity extends AppCompatActivity {
@@ -80,10 +82,10 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                                 Toast.makeText(HouseholdScreenActivity.this, "Child updated.", Toast.LENGTH_SHORT).show();
                             } else if (data.getStringExtra("requestCode").equals("4")) {          // Added IM information
 
-                                MainApp.childList.set(selectedChild, MainApp.child);
+                               /* MainApp.childList.set(selectedChild, MainApp.child);
                                 if (!MainApp.child.getEc22().equals("") && !MainApp.childCompleted.contains(selectedChild)) {
                                     MainApp.childCompleted.add(selectedChild);
-                                }
+                                }*/
 
                                 childsAdapter.notifyItemChanged(selectedChild);
                                 Toast.makeText(HouseholdScreenActivity.this, "Child information added.", Toast.LENGTH_SHORT).show();
@@ -108,7 +110,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
             bi.btnContinue.setText("Review Next");
         db = MainApp.appInfo.dbHelper;
 
-        MainApp.householdChecked = !MainApp.form.getSs27().equals("");
+        MainApp.householdChecked = !MainApp.form.getSe40().equals("");
 
         MainApp.childList = new ArrayList<>();
         MainApp.childCompleted = new ArrayList<>();
@@ -121,8 +123,8 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 if (child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23)
                     childCount++;
 
-                if (!child.getEc22().equals("")) {
-                    MainApp.childCompleted.add(Integer.parseInt(child.getEc13()) - 1);
+                if (!child.getPd24().equals("")) {
+                    MainApp.childCompleted.add(Integer.parseInt(child.getCb01()) - 1);
                 }
 
             }
@@ -166,7 +168,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // Toast.makeText(this, "Activity Resumed!", Toast.LENGTH_SHORT).show();
-        if (childCount >= Integer.parseInt(MainApp.form.getHh20a()) && MainApp.householdChecked) {
+        if (childCount >= (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25())) && MainApp.householdChecked) {
             bi.btnContinue.setEnabled(childCount == MainApp.childCompleted.size());
             bi.btnContinue.setBackground(childCount == MainApp.childCompleted.size() ? getResources().getDrawable(R.drawable.button_shape_green) : getResources().getDrawable(R.drawable.button_shape_gray));
             bi.childCompleteStatus.setVisibility(View.VISIBLE);
@@ -177,7 +179,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
 
     public void btnContinue(View view) {
-        if (childCount < Integer.parseInt(MainApp.form.getHh20a())) {
+        if (childCount < (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))) {
             displayProceedDialog();
         } else {
             proceedSelect();
@@ -190,7 +192,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     private void displayProceedDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
-                .setMessage(String.format(getString(R.string.message_child_dialog_proceeed), MainApp.childList.size() + "", MainApp.form.getHh20a()))
+                .setMessage(String.format(getString(R.string.message_child_dialog_proceeed), MainApp.childList.size() + "", (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))))
 
                 // Specifying a listener allows you to take an action before dismissing the dialog.
                 // The dialog is automatically dismissed when a dialog button is clicked.
@@ -217,7 +219,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     private void addChild() {
 
 
-        if (childCount >= Integer.parseInt(MainApp.form.getHh20a())) {
+        if (childCount >= (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))) {
             displayAddMoreDialog();
         } else {
             addMoreMWRA();
@@ -230,7 +232,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     private void displayAddMoreDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
-                .setMessage(String.format(getString(R.string.message_child_dialog_addmore), MainApp.form.getHh20a()))
+                .setMessage(String.format(getString(R.string.message_child_dialog_addmore), (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh24()))))
 
                 // Specifying a listener allows you to take an action before dismissing the dialog.
                 // The dialog is automatically dismissed when a dialog button is clicked.
@@ -251,7 +253,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     private void addMoreMWRA() {
         MainApp.child = new Child();
         // TODO: UNCOMMENT two line to launch the child info activity (CH)
-        Intent intent = new Intent(this, SectionCHActivity.class);
+        Intent intent = new Intent(this, Section_02_CBActivity.class);
         intent.putExtra("requestCode", "2");
 
 
@@ -260,7 +262,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
     private void addHouseholdInfo() {
         //TODO: UNCOMMENT two line to launch the child info activity (CH)
-        Intent intent = new Intent(this, SectionSS_1Activity.class);
+        Intent intent = new Intent(this, Section_08_SEActivity.class);
         intent.putExtra("requestCode", "1");
         MemberInfoLauncher.launch(intent);
     }

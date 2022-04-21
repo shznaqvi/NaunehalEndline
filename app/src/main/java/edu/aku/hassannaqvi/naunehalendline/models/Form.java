@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.naunehalendline.models;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp._EMPTY_;
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedCluster;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedHousehold;
 
 import android.database.Cursor;
@@ -301,18 +300,18 @@ public class Form extends BaseObservable implements Observable {
         //   setUuid(MainApp.form.getUid());  // not applicable in Form table
         setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
-        setEbCode(MainApp.selectedHousehold.getEbCode());
-        setHhid(MainApp.selectedHousehold.getHhid());
+        setEbCode(MainApp.selectedHousehold.getClusterCode());
+        setHhid(MainApp.selectedHousehold.getHh());
         setSno(MainApp.selectedHousehold.getSno());
         // setEntryType(String.valueOf(MainApp.entryType));
 
         //SECTION VARIABLES
-        setHh05(MainApp.selectedHousehold.getEbCode());
-        setHh06(selectedCluster.getGeoarea().split("\\|")[0]);
+        setHh05(MainApp.selectedHousehold.getClusterCode());
+/*        setHh06(selectedCluster.getGeoarea().split("\\|")[0]);
         setHh07(selectedCluster.getGeoarea().split("\\|")[1]);
         setHh08(selectedCluster.getGeoarea().split("\\|")[2]);
-        setHh09(selectedCluster.getGeoarea().split("\\|")[3]);
-        setHh12(selectedHousehold.getHhid());
+        setHh09(selectedCluster.getGeoarea().split("\\|")[3]);*/
+        setHh12(selectedHousehold.getHh());
 
     }
 

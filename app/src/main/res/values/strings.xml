@@ -1946,6 +1946,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name='Q_se58'>se58</string>
     <string name='Q_se59'>se59</string>
     <string name='Q_se60'>se60</string>
+    <string name="yes">Yes</string>
 
 
 </resources>

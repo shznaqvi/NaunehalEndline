@@ -21,6 +21,7 @@ import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionHhBinding;
 import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.lists.HouseholdScreenActivity;
 
 public class Section_01_HHActivity extends AppCompatActivity {
 
@@ -90,8 +91,9 @@ public class Section_01_HHActivity extends AppCompatActivity {
         if (!insertNewRecord()) return;
         if (updateDB()) {
             finish();
-            if (form.getHh18().equals("1")) {
-                startActivity(new Intent(this, Section_02_CBActivity.class));
+            // Check Consent
+            if (form.getHh11().equals("1")) {
+                startActivity(new Intent(this, HouseholdScreenActivity.class));
             } else {
                 Intent endingActivityIntent = new Intent(this, EndingActivity.class);
                 endingActivityIntent.putExtra("complete", false);

@@ -27,7 +27,6 @@ import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionIm2Binding;
-import edu.aku.hassannaqvi.naunehalendline.ui.ChildEndingActivity;
 import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
 
 public class Section_04_IM2Activity extends AppCompatActivity {
@@ -50,7 +49,7 @@ public class Section_04_IM2Activity extends AppCompatActivity {
 
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
-        bi.setForm(child);
+        bi.setChild(child);
         if (MainApp.superuser) bi.btnContinue.setText("Review Next");
     }
 
@@ -125,7 +124,7 @@ public class Section_04_IM2Activity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent forwardIntent = new Intent(this, form.getHh11().equals("2") || Integer.parseInt(form.getHh13()) < 15 ? EndingActivity.class : ChildEndingActivity.class);
+            Intent forwardIntent = new Intent(this, form.getHh11().equals("2") || Integer.parseInt(form.getHh13()) < 15 ? EndingActivity.class : Section_05_PDActivity.class);
             forwardIntent.putExtra("requestCode", requestCode);
             forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             setResult(RESULT_OK, forwardIntent);
