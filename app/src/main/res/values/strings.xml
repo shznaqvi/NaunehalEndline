@@ -503,6 +503,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im04_dd">Day</string>
     <string name="im04_mm">Month</string>
     <string name="im04_yy">Year</string>
+    <string name="im05">Vaccine Names</string>
     <string name="im05_title1">INSTRUCTION Please record the date of immunization for each antigen from the card 1.	If the date is recorded but not readable, record 44 in day column 2.	If the date is not recorded but a tick () mark is present, record 88 in day column 3.	If neither date is recorded nor a tick () mark is present, prompt the mother for each such antigen and record 66 if she confirms the receipt of respective antigen by recall otherwise record 97.</string>
     <string name="im05_title2">Immunization Status</string>
     <string name="im05_01">At Birth  -BCG</string>
