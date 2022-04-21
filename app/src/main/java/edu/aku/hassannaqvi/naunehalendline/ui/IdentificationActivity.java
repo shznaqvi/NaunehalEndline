@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityIdentificationBinding;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.ConsentActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_01_HHActivity;
 
 
 public class IdentificationActivity extends AppCompatActivity {
@@ -111,7 +111,7 @@ public class IdentificationActivity extends AppCompatActivity {
             Toast.makeText(this, "This form has been locked.", Toast.LENGTH_SHORT).show();
         } else {
             finish();
-            startActivity(new Intent(this, ConsentActivity.class));
+            startActivity(new Intent(this, Section_01_HHActivity.class));
         }
 
     }

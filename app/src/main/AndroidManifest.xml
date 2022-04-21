@@ -113,11 +113,6 @@
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.ConsentActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish1"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity
             android:name=".ui.sections.Section_02_CBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
