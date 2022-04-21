@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
@@ -21,6 +20,7 @@ import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionHhBinding;
+import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
 
 public class Section_01_HHActivity extends AppCompatActivity {
 
@@ -42,13 +42,37 @@ public class Section_01_HHActivity extends AppCompatActivity {
     }
 
 
+    private boolean insertNewRecord() {
+        if (!form.getUid().equals("") || MainApp.superuser) return true;
+
+        MainApp.form.populateMeta();
+
+        long rowId = 0;
+        try {
+            rowId = db.addForm(MainApp.form);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, R.string.db_excp_error + " FORM-add", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        MainApp.form.setId(String.valueOf(rowId));
+        if (rowId > 0) {
+            MainApp.form.setUid(MainApp.form.getDeviceId() + MainApp.form.getId());
+            db.updatesFormColumn(TableContracts.FormsTable.COLUMN_UID, MainApp.form.getUid());
+            return true;
+        } else {
+            Toast.makeText(this, R.string.upd_db_error + " FORM-update", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
     private boolean updateDB() {
         if (MainApp.superuser) return true;
 
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SCB, child.sCBtoString());
+            updcount = db.updatesFormColumn(TableContracts.FormsTable.COLUMN_SHH, form.sHHtoString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
@@ -63,18 +87,19 @@ public class Section_01_HHActivity extends AppCompatActivity {
 
     public void btnContinue(View view) {
         if (!formValidation()) return;
-        // saveDraft();
+        if (!insertNewRecord()) return;
         if (updateDB()) {
-            //     Intent i;
-            //   i = new Intent(this, SectionCBActivity.class).putExtra("complete", true);
-            //  startActivity(i);
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);
             finish();
-        } else {
+            if (form.getHh18().equals("1")) {
+                startActivity(new Intent(this, Section_02_CBActivity.class));
+            } else {
+                Intent endingActivityIntent = new Intent(this, EndingActivity.class);
+                endingActivityIntent.putExtra("complete", false);
+                endingActivityIntent.putExtra("checkToEnable", 4);
+                startActivity(endingActivityIntent);
+            }
+        } else
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
-        }
     }
 
 
