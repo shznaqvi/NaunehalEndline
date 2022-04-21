@@ -1,6 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -2144,7 +2143,8 @@
                 </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                    <!--EndButton LinearLayout-->
+
+                <!--EndButton LinearLayout-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2157,23 +2157,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/redOverlay"
-                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:background="@android:color/transparent"
+                        android:onClick="btnEnd"
                         android:text="Cancel"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_Continue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/greenOverlay"
-                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="btnContinue"
                         android:text="Save"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
+                <!--EndButton LinearLayout-->
+
+
             </LinearLayout>
+
+
         </ScrollView>
 
+
     </LinearLayout>
+
+
 </layout>

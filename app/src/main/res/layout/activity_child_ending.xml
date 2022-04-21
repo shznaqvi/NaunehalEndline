@@ -155,8 +155,11 @@
                                 android:tag="ec2296"
                                 android:text="@={child.ec2296x}"
                                 android:visibility="@{child.ec22.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
 
@@ -194,6 +197,7 @@
 
                 </LinearLayout>
                 <!--EndButton LinearLayout-->
+
 
             </LinearLayout>
 

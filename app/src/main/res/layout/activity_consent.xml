@@ -31,9 +31,9 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/CustomToolbarTheme"
             app:popupTheme="@style/CustomPopupTheme"
-            app:subtitle="@string/consentsubheading"
+            app:subtitle="@string/confirmation"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
-            app:title="@string/consentmainheading"
+            app:title="@string/confirm"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
 
@@ -195,7 +195,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh03a" />
+                                android:text="@string/Q_hh03a" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -235,7 +235,7 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Qhh04" />
+                                android:text="@string/Q_hh04" />
 
                             <TextView
                                 android:layout_width="match_parent"

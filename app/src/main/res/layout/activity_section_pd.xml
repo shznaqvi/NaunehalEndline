@@ -248,8 +248,8 @@
                             <RadioButton
                                 android:id="@+id/pd0401"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd04.equals(`1`)}"
                                 android:onClick="@{()->form.setPd04(`1`) + pd08.clearCheck()}"
                                 android:text="@string/pd0401" />
@@ -257,8 +257,8 @@
                             <RadioButton
                                 android:id="@+id/pd0402"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd04.equals(`2`)}"
                                 android:onClick="@{()->form.setPd04(`2`) + pd05.clearCheck() + pd06.clearCheck() + pd07.clearCheck()}"
                                 android:text="@string/pd0402" />
@@ -266,8 +266,8 @@
                             <RadioButton
                                 android:id="@+id/pd0498"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd04.equals(`98`)}"
                                 android:onClick="@{()->form.setPd04(`98`) + pd05.clearCheck() + pd06.clearCheck() + pd07.clearCheck()}"
                                 android:text="@string/pd0498" />
@@ -905,8 +905,8 @@
                             <RadioButton
                                 android:id="@+id/pd08b01"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd08b.equals(`1`)}"
                                 android:onClick="@{()->form.setPd08b(`1`)}"
                                 android:text="@string/pd08b01" />
@@ -914,8 +914,8 @@
                             <RadioButton
                                 android:id="@+id/pd08b02"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd08b.equals(`2`)}"
                                 android:onClick="@{()->form.setPd08b(`2`)}"
                                 android:text="@string/pd08b02" />
@@ -923,8 +923,8 @@
                             <RadioButton
                                 android:id="@+id/pd08b98"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd08b.equals(`98`)}"
                                 android:onClick="@{()->form.setPd08b(`98`)}"
                                 android:text="@string/pd08b98" />
@@ -1013,8 +1013,8 @@
                             <RadioButton
                                 android:id="@+id/pd0901"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd09.equals(`1`)}"
                                 android:onClick="@{()->form.setPd09(`1`)}"
                                 android:text="@string/pd0901" />
@@ -1022,8 +1022,8 @@
                             <RadioButton
                                 android:id="@+id/pd0902"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd09.equals(`2`)}"
                                 android:onClick="@{()->form.setPd09(`2`) + pd10.clearCheck()}"
                                 android:text="@string/pd0902" />
@@ -1032,10 +1032,10 @@
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/fldGrppd09"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/fldGrppd09"
                     android:visibility="@{form.pd09.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <!-- pd10  Radio   -->
@@ -1048,138 +1048,138 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd10" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd10" />
+
+                            </LinearLayout>
+
+                            <RadioGroup
+                                android:id="@+id/pd10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/pd1001"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd10.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd10(`1`)}"
+                                    android:text="@string/pd1001" />
+
+                                <RadioButton
+                                    android:id="@+id/pd1002"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd10.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd10(`2`)}"
+                                    android:text="@string/pd1002" />
+
+                                <RadioButton
+                                    android:id="@+id/pd1003"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd10.equals(`3`)}"
+                                    android:onClick="@{()->form.setPd10(`3`)}"
+                                    android:text="@string/pd1003" />
+
+                                <RadioButton
+                                    android:id="@+id/pd1004"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd10.equals(`4`)}"
+                                    android:onClick="@{()->form.setPd10(`4`)}"
+                                    android:text="@string/pd1004" />
+
+                                <RadioButton
+                                    android:id="@+id/pd1005"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd10.equals(`5`)}"
+                                    android:onClick="@{()->form.setPd10(`5`)}"
+                                    android:text="@string/pd1005" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- pd11  Title   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd11"
+                        style="@style/cardView">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd10" />
+                            android:orientation="vertical">
 
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd10" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/pd11" />
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/textView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/pd1101" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd1101"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="##"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text="@={form.pd1101}"
+                                    app:maxValue="10"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                                <TextView
+                                    style="@style/textView"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/pd1102" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd1102"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="##"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text="@={form.pd1102}"
+                                    app:maxValue="30"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                            </LinearLayout>
                         </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/pd10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/pd1001"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd10.equals(`1`)}"
-                                android:onClick="@{()->form.setPd10(`1`)}"
-                                android:text="@string/pd1001" />
-
-                            <RadioButton
-                                android:id="@+id/pd1002"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd10.equals(`2`)}"
-                                android:onClick="@{()->form.setPd10(`2`)}"
-                                android:text="@string/pd1002" />
-
-                            <RadioButton
-                                android:id="@+id/pd1003"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd10.equals(`3`)}"
-                                android:onClick="@{()->form.setPd10(`3`)}"
-                                android:text="@string/pd1003" />
-
-                            <RadioButton
-                                android:id="@+id/pd1004"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd10.equals(`4`)}"
-                                android:onClick="@{()->form.setPd10(`4`)}"
-                                android:text="@string/pd1004" />
-
-                            <RadioButton
-                                android:id="@+id/pd1005"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd10.equals(`5`)}"
-                                android:onClick="@{()->form.setPd10(`5`)}"
-                                android:text="@string/pd1005" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd11  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd11"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/pd11" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/textView"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="@string/pd1101" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pd1101"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:hint="##"
-                            android:gravity="center"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={form.pd1101}"
-                            app:maxValue="10"
-                            app:minValue="0"
-                            app:type="range" />
-
-                        <TextView
-                            style="@style/textView"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:text="@string/pd1102" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pd1102"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="match_parent"
-                            android:hint="##"
-                            android:gravity="center"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={form.pd1102}"
-                            app:maxValue="30"
-                            app:minValue="0"
-                            app:type="range" />
-
-                    </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -1587,8 +1587,8 @@
                             <RadioButton
                                 android:id="@+id/pd1501"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd15.equals(`1`)}"
                                 android:onClick="@{()->form.setPd15(`1`) + pd17.clearCheck()}"
                                 android:text="@string/pd1501" />
@@ -1596,8 +1596,8 @@
                             <RadioButton
                                 android:id="@+id/pd1502"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd15.equals(`2`)}"
                                 android:onClick="@{()->form.setPd15(`2`) + pd17.clearCheck()}"
                                 android:text="@string/pd1502" />
@@ -1606,282 +1606,281 @@
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/fldGrppd15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/fldGrppd15"
-                    android:visibility="@{form.pd15.equals(`1`) ? View.VISIBLE : View.GONE}"
-                    >
-                <!-- pd16  CheckBox   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd16"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    android:visibility="@{form.pd15.equals(`1`) ? View.VISIBLE : View.GONE}">
+                    <!-- pd16  CheckBox   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd16"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd16" />
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd16" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd16" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd16" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pd16check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
+
+                                <CheckBox
+                                    android:id="@+id/pd1601"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1601.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd1601(form.pd1601.equals(`1`)?``:`1`)}"
+                                    android:text="@string/pd1601" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1602"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1602.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd1602(form.pd1602.equals(`2`)?``:`2`)}"
+                                    android:text="@string/pd1602" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1603"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1603.equals(`3`)}"
+                                    android:onClick="@{()->form.setPd1603(form.pd1603.equals(`3`)?``:`3`)}"
+                                    android:text="@string/pd1603" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1604"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1604.equals(`4`)}"
+                                    android:onClick="@{()->form.setPd1604(form.pd1604.equals(`4`)?``:`4`)}"
+                                    android:text="@string/pd1604" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1605"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1605.equals(`5`)}"
+                                    android:onClick="@{()->form.setPd1605(form.pd1605.equals(`5`)?``:`5`)}"
+                                    android:text="@string/pd1605" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1606"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1606.equals(`6`)}"
+                                    android:onClick="@{()->form.setPd1606(form.pd1606.equals(`6`)?``:`6`)}"
+                                    android:text="@string/pd1606" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1607"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1607.equals(`7`)}"
+                                    android:onClick="@{()->form.setPd1607(form.pd1607.equals(`7`)?``:`7`)}"
+                                    android:text="@string/pd1607" />
+
+                                <CheckBox
+                                    android:id="@+id/pd1696"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd1696.equals(`96`)}"
+                                    android:onClick="@{()->form.setPd1696(form.pd1696.equals(`96`)?``:`96`)}"
+                                    android:text="@string/pd1696" />
+
+                                <EditText
+                                    android:id="@+id/pd1696x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                    android:hint="@string/pd1696"
+                                    android:tag="pd1696"
+                                    android:text="@={form.pd1696x}"
+                                    android:visibility="@{form.pd1696.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                            </LinearLayout>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- pd17  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd17"
+                        style="@style/cardView">
 
                         <LinearLayout
-                            android:id="@+id/pd16check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
+                            android:orientation="vertical">
 
-                            <CheckBox
-                                android:id="@+id/pd1601"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.pd1601.equals(`1`)}"
-                                android:onClick="@{()->form.setPd1601(form.pd1601.equals(`1`)?``:`1`)}"
-                                android:text="@string/pd1601" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
-                            <CheckBox
-                                android:id="@+id/pd1602"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1602.equals(`2`)}"
-                                android:onClick="@{()->form.setPd1602(form.pd1602.equals(`2`)?``:`2`)}"
-                                android:text="@string/pd1602" />
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd17" />
 
-                            <CheckBox
-                                android:id="@+id/pd1603"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1603.equals(`3`)}"
-                                android:onClick="@{()->form.setPd1603(form.pd1603.equals(`3`)?``:`3`)}"
-                                android:text="@string/pd1603" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd17" />
 
-                            <CheckBox
-                                android:id="@+id/pd1604"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1604.equals(`4`)}"
-                                android:onClick="@{()->form.setPd1604(form.pd1604.equals(`4`)?``:`4`)}"
-                                android:text="@string/pd1604" />
+                            </LinearLayout>
 
-                            <CheckBox
-                                android:id="@+id/pd1605"
+                            <RadioGroup
+                                android:id="@+id/pd17"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1605.equals(`5`)}"
-                                android:onClick="@{()->form.setPd1605(form.pd1605.equals(`5`)?``:`5`)}"
-                                android:text="@string/pd1605" />
+                                android:layout_height="wrap_content">
 
-                            <CheckBox
-                                android:id="@+id/pd1606"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1606.equals(`6`)}"
-                                android:onClick="@{()->form.setPd1606(form.pd1606.equals(`6`)?``:`6`)}"
-                                android:text="@string/pd1606" />
+                                <RadioButton
+                                    android:id="@+id/pd1701"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd17.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd17(`1`)}"
+                                    android:text="@string/pd1701" />
 
-                            <CheckBox
-                                android:id="@+id/pd1607"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1607.equals(`7`)}"
-                                android:onClick="@{()->form.setPd1607(form.pd1607.equals(`7`)?``:`7`)}"
-                                android:text="@string/pd1607" />
 
-                            <CheckBox
-                                android:id="@+id/pd1696"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd1696.equals(`96`)}"
-                                android:onClick="@{()->form.setPd1696(form.pd1696.equals(`96`)?``:`96`)}"
-                                android:text="@string/pd1696" />
+                                <RadioButton
+                                    android:id="@+id/pd1702"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd17.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd17(`2`)}"
+                                    android:text="@string/pd1702" />
 
-                            <EditText
-                                android:id="@+id/pd1696x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/pd1696"
-                                android:tag="pd1696"
-                                android:text="@={form.pd1696x}"
-                                android:visibility="@{form.pd1696.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                                <RadioButton
+                                    android:id="@+id/pd1703"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd17.equals(`3`)}"
+                                    android:onClick="@{()->form.setPd17(`3`)}"
+                                    android:text="@string/pd1703" />
+
+                                <RadioButton
+                                    android:id="@+id/pd1798"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd17.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd17(`98`)}"
+                                    android:text="@string/pd1798" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd1701x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd1701"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:tag="pd1701"
+                                    android:text="@={form.pd1701x}"
+                                    android:visibility="@{form.pd17.equals(`1`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="23"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd1702x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd1702"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:tag="pd1702"
+                                    android:text="@={form.pd1702x}"
+                                    android:visibility="@{form.pd17.equals(`2`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="6"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd1703x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd1703"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:tag="pd1703"
+                                    android:text="@={form.pd1703x}"
+                                    android:visibility="@{form.pd17.equals(`3`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="12"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+
+                            </RadioGroup>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <!-- pd17  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd17"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- pd18  Input-Numeric   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd18"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd17" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd17" />
-
-                        </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/pd17"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/pd1701"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.pd17.equals(`1`)}"
-                                android:onClick="@{()->form.setPd17(`1`)}"
-                                android:text="@string/pd1701" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd18" />
 
-                            <RadioButton
-                                android:id="@+id/pd1702"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd17.equals(`2`)}"
-                                android:onClick="@{()->form.setPd17(`2`)}"
-                                android:text="@string/pd1702" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd18" />
 
-                            <RadioButton
-                                android:id="@+id/pd1703"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd17.equals(`3`)}"
-                                android:onClick="@{()->form.setPd17(`3`)}"
-                                android:text="@string/pd1703" />
-
-                            <RadioButton
-                                android:id="@+id/pd1798"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd17.equals(`98`)}"
-                                android:onClick="@{()->form.setPd17(`98`)}"
-                                android:text="@string/pd1798" />
+                            </LinearLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd1701x"
+                                android:id="@+id/pd18"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/pd1701"
+                                android:hint="@string/pd18"
                                 android:inputType="number"
                                 android:maxLength="2"
-                                android:tag="pd1701"
-                                android:text="@={form.pd1701x}"
-                                android:visibility="@{form.pd17.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="23"
-                                app:minValue="0"
+                                android:text="@={form.pd18}"
+                                app:maxValue="20"
+                                app:minValue="1"
                                 app:type="range" />
-
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd1702x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/pd1702"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:tag="pd1702"
-                                android:text="@={form.pd1702x}"
-                                android:visibility="@{form.pd17.equals(`2`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="6"
-                                app:minValue="0"
-                                app:type="range" />
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd1703x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/pd1703"
-                                android:inputType="number"
-                                android:maxLength="2"
-                                android:tag="pd1703"
-                                android:text="@={form.pd1703x}"
-                                android:visibility="@{form.pd17.equals(`3`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="12"
-                                app:minValue="0"
-                                app:type="range" />
-
-
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd18  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd18"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd18" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd18" />
-
                         </LinearLayout>
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pd18"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/pd18"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={form.pd18}"
-                            app:maxValue="20"
-                            app:minValue="1"
-                            app:type="range" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -1923,8 +1922,8 @@
                             <RadioButton
                                 android:id="@+id/pd1901"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd19.equals(`1`)}"
                                 android:onClick="@{()->form.setPd19(`1`)}"
                                 android:text="@string/pd1901" />
@@ -1932,8 +1931,8 @@
                             <RadioButton
                                 android:id="@+id/pd1902"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd19.equals(`2`)}"
                                 android:onClick="@{()->form.setPd19(`2`) + pd21.clearCheck() + pd23.clearCheck()}"
                                 android:text="@string/pd1902" />
@@ -1941,8 +1940,8 @@
                             <RadioButton
                                 android:id="@+id/pd1998"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:checked="@{form.pd19.equals(`98`)}"
                                 android:onClick="@{()->form.setPd19(`98`) + pd21.clearCheck() + pd23.clearCheck()}"
                                 android:text="@string/pd1998" />
@@ -1952,10 +1951,10 @@
 
 
                 <LinearLayout
+                    android:id="@+id/fldGrppd19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:id="@+id/fldGrppd19"
                     android:visibility="@{form.pd19.equals(`1`) ? View.VISIBLE : View.GONE}">
                     <!-- pd20  CheckBox   -->
                     <androidx.cardview.widget.CardView
@@ -1968,452 +1967,459 @@
                             android:orientation="vertical">
 
                             <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd20" />
-
-                            <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd20" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd20" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd20" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pd20check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
+
+                                <CheckBox
+                                    android:id="@+id/pd2001"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2001.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd2001(form.pd2001.equals(`1`)?``:`1`)}"
+                                    android:text="@string/pd2001" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2002"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2002.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd2002(form.pd2002.equals(`2`)?``:`2`)}"
+                                    android:text="@string/pd2002" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2003"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2003.equals(`3`)}"
+                                    android:onClick="@{()->form.setPd2003(form.pd2003.equals(`3`)?``:`3`)}"
+                                    android:text="@string/pd2003" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2004"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2004.equals(`4`)}"
+                                    android:onClick="@{()->form.setPd2004(form.pd2004.equals(`4`)?``:`4`)}"
+                                    android:text="@string/pd2004" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2005"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2005.equals(`5`)}"
+                                    android:onClick="@{()->form.setPd2005(form.pd2005.equals(`5`)?``:`5`)}"
+                                    android:text="@string/pd2005" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2006"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2006.equals(`6`)}"
+                                    android:onClick="@{()->form.setPd2006(form.pd2006.equals(`6`)?``:`6`)}"
+                                    android:text="@string/pd2006" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2007"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2007.equals(`7`)}"
+                                    android:onClick="@{()->form.setPd2007(form.pd2007.equals(`7`)?``:`7`)}"
+                                    android:text="@string/pd2007" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2096"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2096.equals(`96`)}"
+                                    android:onClick="@{()->form.setPd2096(form.pd2096.equals(`96`)?``:`96`)}"
+                                    android:text="@string/pd2096" />
+
+                                <EditText
+                                    android:id="@+id/pd2096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                    android:hint="@string/pd2096"
+                                    android:tag="pd2096"
+                                    android:text="@={form.pd2096x}"
+                                    android:visibility="@{form.pd2096.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                            </LinearLayout>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <LinearLayout
-                            android:id="@+id/pd20check"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
-
-                            <CheckBox
-                                android:id="@+id/pd2001"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2001.equals(`1`)}"
-                                android:onClick="@{()->form.setPd2001(form.pd2001.equals(`1`)?``:`1`)}"
-                                android:text="@string/pd2001" />
-
-                            <CheckBox
-                                android:id="@+id/pd2002"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2002.equals(`2`)}"
-                                android:onClick="@{()->form.setPd2002(form.pd2002.equals(`2`)?``:`2`)}"
-                                android:text="@string/pd2002" />
-
-                            <CheckBox
-                                android:id="@+id/pd2003"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2003.equals(`3`)}"
-                                android:onClick="@{()->form.setPd2003(form.pd2003.equals(`3`)?``:`3`)}"
-                                android:text="@string/pd2003" />
-
-                            <CheckBox
-                                android:id="@+id/pd2004"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2004.equals(`4`)}"
-                                android:onClick="@{()->form.setPd2004(form.pd2004.equals(`4`)?``:`4`)}"
-                                android:text="@string/pd2004" />
-
-                            <CheckBox
-                                android:id="@+id/pd2005"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2005.equals(`5`)}"
-                                android:onClick="@{()->form.setPd2005(form.pd2005.equals(`5`)?``:`5`)}"
-                                android:text="@string/pd2005" />
-
-                            <CheckBox
-                                android:id="@+id/pd2006"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2006.equals(`6`)}"
-                                android:onClick="@{()->form.setPd2006(form.pd2006.equals(`6`)?``:`6`)}"
-                                android:text="@string/pd2006" />
-
-                            <CheckBox
-                                android:id="@+id/pd2007"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2007.equals(`7`)}"
-                                android:onClick="@{()->form.setPd2007(form.pd2007.equals(`7`)?``:`7`)}"
-                                android:text="@string/pd2007" />
-
-                            <CheckBox
-                                android:id="@+id/pd2096"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2096.equals(`96`)}"
-                                android:onClick="@{()->form.setPd2096(form.pd2096.equals(`96`)?``:`96`)}"
-                                android:text="@string/pd2096" />
-
-                            <EditText
-                                android:id="@+id/pd2096x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/pd2096"
-                                android:tag="pd2096"
-                                android:text="@={form.pd2096x}"
-                                android:visibility="@{form.pd2096.equals(`96`) ? View.VISIBLE : View.GONE}" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd21  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd21"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- pd21  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd21"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd21" />
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd21" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd21" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd21" />
+
+                            </LinearLayout>
+
+                            <RadioGroup
+                                android:id="@+id/pd21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/pd2101"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd21.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd21(`1`)}"
+                                    android:text="@string/pd2101" />
+
+
+                                <RadioButton
+                                    android:id="@+id/pd2102"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd21.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd21(`2`)}"
+                                    android:text="@string/pd2102" />
+
+
+                                <RadioButton
+                                    android:id="@+id/pd2103"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd21.equals(`3`)}"
+                                    android:onClick="@{()->form.setPd21(`3`)}"
+                                    android:text="@string/pd2103" />
+
+                                <RadioButton
+                                    android:id="@+id/pd2198"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd21.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd21(`98`)}"
+                                    android:text="@string/pd2198" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd2101x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd2101"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:tag="pd2101"
+                                    android:text="@={form.pd2101x}"
+                                    android:visibility="@{form.pd21.equals(`1`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="23"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd2102x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd2102"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:tag="pd2102"
+                                    android:text="@={form.pd2102x}"
+                                    android:visibility="@{form.pd21.equals(`2`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="6"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/pd2103x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/pd2103"
+                                    android:inputType="number"
+                                    android:maxLength="1"
+                                    android:tag="pd2103"
+                                    android:text="@={form.pd2103x}"
+                                    android:visibility="@{form.pd21.equals(`3`) ? View.VISIBLE : View.GONE}"
+                                    app:maxValue="8"
+                                    app:minValue="0"
+                                    app:type="range" />
+
+
+                            </RadioGroup>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <RadioGroup
-                            android:id="@+id/pd21"
+                    <!-- pd22  Input-Numeric   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd22"
+                        style="@style/cardView">
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/pd2101"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.pd21.equals(`1`)}"
-                                android:onClick="@{()->form.setPd21(`1`)}"
-                                android:text="@string/pd2101" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd22" />
 
-                            <RadioButton
-                                android:id="@+id/pd2102"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd21.equals(`2`)}"
-                                android:onClick="@{()->form.setPd21(`2`)}"
-                                android:text="@string/pd2102" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd22" />
 
-
-                            <RadioButton
-                                android:id="@+id/pd2103"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd21.equals(`3`)}"
-                                android:onClick="@{()->form.setPd21(`3`)}"
-                                android:text="@string/pd2103" />
-
-                            <RadioButton
-                                android:id="@+id/pd2198"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd21.equals(`98`)}"
-                                android:onClick="@{()->form.setPd21(`98`)}"
-                                android:text="@string/pd2198" />
+                            </LinearLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd2101x"
+                                android:id="@+id/pd22"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/pd2101"
+                                android:hint="@string/pd22"
                                 android:inputType="number"
                                 android:maxLength="2"
-                                android:tag="pd2101"
-                                android:text="@={form.pd2101x}"
-                                android:visibility="@{form.pd21.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="23"
-                                app:minValue="0"
+                                android:text="@={form.pd22}"
+                                app:maxValue="20"
+                                app:minValue="1"
                                 app:type="range" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd2102x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/pd2102"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:tag="pd2102"
-                                android:text="@={form.pd2102x}"
-                                android:visibility="@{form.pd21.equals(`2`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="6"
-                                app:minValue="0"
-                                app:type="range" />
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/pd2103x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/pd2103"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:tag="pd2103"
-                                android:text="@={form.pd2103x}"
-                                android:visibility="@{form.pd21.equals(`3`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="8"
-                                app:minValue="0"
-                                app:type="range" />
-
-
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd22  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd22"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- pd23  Radio   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd23"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd22" />
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd22" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd23" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd23" />
+
+                            </LinearLayout>
+
+                            <RadioGroup
+                                android:id="@+id/pd23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/pd2301"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="@{form.pd23.equals(`1`)}"
+                                    android:onClick="@{()->form.setPd23(`1`)}"
+                                    android:text="@string/pd2301" />
+
+                                <RadioButton
+                                    android:id="@+id/pd2302"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="@{form.pd23.equals(`2`)}"
+                                    android:onClick="@{()->form.setPd23(`2`)}"
+                                    android:text="@string/pd2302" />
+
+                                <RadioButton
+                                    android:id="@+id/pd2398"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="@{form.pd23.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd23(`98`)}"
+                                    android:text="@string/pd2398" />
+                            </RadioGroup>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/pd22"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/pd22"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={form.pd22}"
-                            app:maxValue="20"
-                            app:minValue="1"
-                            app:type="range" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd23  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd23"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- pd24  CheckBox   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVpd24"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd23" />
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd23" />
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_pd24" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/pd24" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pd24check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
+
+                                <CheckBox
+                                    android:id="@+id/pd2401"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2401.equals(`1`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2401(form.pd2401.equals(`1`)?``:`1`)}"
+                                    android:text="@string/pd2401" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2402"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2402.equals(`2`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2402(form.pd2402.equals(`2`)?``:`2`)}"
+                                    android:text="@string/pd2402" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2403"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2403.equals(`3`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2403(form.pd2403.equals(`3`)?``:`3`)}"
+                                    android:text="@string/pd2403" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2404"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2404.equals(`4`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2404(form.pd2404.equals(`4`)?``:`4`)}"
+                                    android:text="@string/pd2404" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2405"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2405.equals(`5`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2405(form.pd2405.equals(`5`)?``:`5`)}"
+                                    android:text="@string/pd2405" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2406"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2406.equals(`6`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2406(form.pd2406.equals(`6`)?``:`6`)}"
+                                    android:text="@string/pd2406" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2496"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2496.equals(`96`)}"
+                                    android:enabled="@{!form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2496(form.pd2496.equals(`96`)?``:`96`)}"
+                                    android:text="@string/pd2496" />
+
+                                <EditText
+                                    android:id="@+id/pd2496x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                    android:hint="@string/pd2496"
+                                    android:tag="pd2496"
+                                    android:text="@={form.pd2496x}"
+                                    android:visibility="@{form.pd2496.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
+                                <CheckBox
+                                    android:id="@+id/pd2498"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{form.pd2498.equals(`98`)}"
+                                    android:onClick="@{()->form.setPd2498(form.pd2498.equals(`98`)?``:`98`)}"
+                                    android:text="@string/pd2498" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                        <RadioGroup
-                            android:id="@+id/pd23"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                    </androidx.cardview.widget.CardView>
 
-                            <RadioButton
-                                android:id="@+id/pd2301"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="match_parent"
-                                android:checked="@{form.pd23.equals(`1`)}"
-                                android:onClick="@{()->form.setPd23(`1`)}"
-                                android:text="@string/pd2301" />
 
-                            <RadioButton
-                                android:id="@+id/pd2302"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="match_parent"
-                                android:checked="@{form.pd23.equals(`2`)}"
-                                android:onClick="@{()->form.setPd23(`2`)}"
-                                android:text="@string/pd2302" />
-
-                            <RadioButton
-                                android:id="@+id/pd2398"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:layout_height="match_parent"
-                                android:checked="@{form.pd23.equals(`98`)}"
-                                android:onClick="@{()->form.setPd23(`98`)}"
-                                android:text="@string/pd2398" />
-                        </RadioGroup>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- pd24  CheckBox   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVpd24"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_pd24" />
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:text="@string/pd24" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/pd24check"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
-
-                            <CheckBox
-                                android:id="@+id/pd2401"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2401.equals(`1`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2401(form.pd2401.equals(`1`)?``:`1`)}"
-                                android:text="@string/pd2401" />
-
-                            <CheckBox
-                                android:id="@+id/pd2402"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2402.equals(`2`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2402(form.pd2402.equals(`2`)?``:`2`)}"
-                                android:text="@string/pd2402" />
-
-                            <CheckBox
-                                android:id="@+id/pd2403"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2403.equals(`3`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2403(form.pd2403.equals(`3`)?``:`3`)}"
-                                android:text="@string/pd2403" />
-
-                            <CheckBox
-                                android:id="@+id/pd2404"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2404.equals(`4`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2404(form.pd2404.equals(`4`)?``:`4`)}"
-                                android:text="@string/pd2404" />
-
-                            <CheckBox
-                                android:id="@+id/pd2405"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2405.equals(`5`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2405(form.pd2405.equals(`5`)?``:`5`)}"
-                                android:text="@string/pd2405" />
-
-                            <CheckBox
-                                android:id="@+id/pd2406"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2406.equals(`6`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2406(form.pd2406.equals(`6`)?``:`6`)}"
-                                android:text="@string/pd2406" />
-
-                            <CheckBox
-                                android:id="@+id/pd2496"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2496.equals(`96`)}"
-                                android:enabled="@{!form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2496(form.pd2496.equals(`96`)?``:`96`)}"
-                                android:text="@string/pd2496" />
-
-                            <EditText
-                                android:id="@+id/pd2496x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/pd2496"
-                                android:tag="pd2496"
-                                android:text="@={form.pd2496x}"
-                                android:visibility="@{form.pd2496.equals(`96`) ? View.VISIBLE : View.GONE}" />
-
-                            <CheckBox
-                                android:id="@+id/pd2498"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.pd2498.equals(`98`)}"
-                                android:onClick="@{()->form.setPd2498(form.pd2498.equals(`98`)?``:`98`)}"
-                                android:text="@string/pd2498" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
                 </LinearLayout>
-                    <!--EndButton LinearLayout-->
+
+
+                <!--EndButton LinearLayout-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2426,23 +2432,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/red_overlay"
-                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:background="@android:color/transparent"
+                        android:onClick="btnEnd"
                         android:text="Cancel"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_Continue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:background="@color/green_overlay"
-                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="btnContinue"
                         android:text="Save"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
+                <!--EndButton LinearLayout-->
+
+
             </LinearLayout>
+
+
         </ScrollView>
 
+
     </LinearLayout>
+
+
 </layout>
