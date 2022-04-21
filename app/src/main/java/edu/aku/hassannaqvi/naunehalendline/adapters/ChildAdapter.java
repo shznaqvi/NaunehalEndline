@@ -78,19 +78,19 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
         //MainApp.memberComplete = completeCount == MainApp.childCount;
 
-        fName.setText(child.getEc14());
+        fName.setText(child.getCb02());
         fAge.setText(child.getAgeInMonths() + "m ");
         motherName.setText(null);
         String motherRelation = "";
 
 
-        if (child.getEc15().equals("1")) {
+        if (child.getCb03().equals("1")) {
             motherRelation = " S/o ";
         } else {
             motherRelation = " D/o ";
 
         }
-        motherName.setText(motherRelation + child.getEc16());
+        motherName.setText(motherRelation + child.getCb07());
         //      motherPresent = MainApp.childList.get(Integer.parseInt(child.getD107()) - 1).getD105().equals("1");
 
 
@@ -157,9 +157,9 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 */
 
         //  cloaked.setVisibility(!child.getMemCate().equals("") ? View.GONE : View.VISIBLE);
-        mainIcon.setImageResource(child.getEc15().equals("1") ? R.drawable.ic_boy : R.drawable.ic_girl);
+        mainIcon.setImageResource(child.getCb03().equals("1") ? R.drawable.ic_boy : R.drawable.ic_girl);
         //MainApp.selectedMWRA = child.getIndexed().equals("1") || child.getIndexed().equals("2") ? "-" : "";
-        mainIcon.setBackgroundColor(child.getEc15().equals("1") ? mContext.getResources().getColor(R.color.boy_blue) : mContext.getResources().getColor(R.color.girl_pink));
+        mainIcon.setBackgroundColor(child.getCb03().equals("1") ? mContext.getResources().getColor(R.color.boy_blue) : mContext.getResources().getColor(R.color.girl_pink));
         //  mainIcon.setBackgroundColor(  ((ColorDrawable) mainIcon.getBackground()).getColor());
         cloaked.setVisibility(child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23 ? View.GONE : View.VISIBLE);
 
@@ -199,27 +199,24 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
         });
 
-        viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                MainApp.child = MainApp.childList.get(position);
-                if (MainApp.child.getEc21().equals("")) {
-                    Intent intent = new Intent(mContext, SectionCHActivity.class);
+        viewHolder.itemView.setOnLongClickListener(view -> {
+            MainApp.child = MainApp.childList.get(position);
+            if (MainApp.child.getEc21().equals("")) {
+                Intent intent = new Intent(mContext, Section_02_CBActivity.class);
 
-                    intent.putExtra("position", position);
-                    intent.putExtra("requestCode", "3");
+                intent.putExtra("position", position);
+                intent.putExtra("requestCode", "3");
 
-                    MainApp.selectedChild = position;
-                    MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
+                MainApp.selectedChild = position;
+                MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
 
-                    intent.putExtra("position", position);
-                    childInfoLauncher.launch(intent);
+                intent.putExtra("position", position);
+                childInfoLauncher.launch(intent);
 
-                } else {
-                    Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
-                }
-                return true;
+            } else {
+                Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
             }
+            return true;
         });
 
     }
