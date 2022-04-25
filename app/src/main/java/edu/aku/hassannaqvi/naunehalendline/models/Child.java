@@ -1494,6 +1494,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs12(String cs12) {
         this.cs12 = cs12;
+
         notifyPropertyChanged(BR.cs12);
     }
 
@@ -1505,6 +1506,23 @@ public class Child extends BaseObservable implements Observable {
     public void setCs14(String cs14) {
         this.cs14 = cs14;
         setCs15(cs14.equals("1") ? this.cs15 : "");
+        setCs15(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs15);
+        setCs16(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs16);
+        setCs17(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17);
+        setCs17a(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17a);
+        setCs17b(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17b);
+        setCs1802(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1802);
+        setCs1803(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1803);
+        setCs1804(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1804);
+        setCs1805(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1805);
+        setCs1806(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1806);
+        setCs1807(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1807);
+        setCs1896(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1896);
+        setCs19(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs19);
+        setCs20(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs20);
+        setCs21(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs21);
+
+
         notifyPropertyChanged(BR.cs14);
     }
 
