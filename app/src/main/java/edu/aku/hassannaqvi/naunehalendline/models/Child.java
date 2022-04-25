@@ -65,6 +65,8 @@ public class Child extends BaseObservable implements Observable {
     public String cb0502 = _EMPTY_;
     public String cb06 = _EMPTY_;
     public String cb15 = _EMPTY_;
+
+    public String cb1598 = _EMPTY_;
     public String cb17 = _EMPTY_;
     public String cb16 = _EMPTY_;
     public String cb07 = _EMPTY_;
@@ -556,6 +558,7 @@ public class Child extends BaseObservable implements Observable {
 
     }
 
+
     public String getProjectName() {
         return projectName;
     }
@@ -722,9 +725,9 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dk(String cb04dk) {
         this.cb04dk = cb04dk;
-   /*     setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
-        setCb04mm(cb04dk.equals("98") ? "98" : this.cb04mm);
-        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);*/
+        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
         setCb0501(cb04dk.equals("98") ? "" : this.cb0501);
         setCb0502(cb04dk.equals("98") ? "" : this.cb0502);
 
@@ -749,6 +752,11 @@ public class Child extends BaseObservable implements Observable {
     @Bindable
     public String getCb15() {
         return cb15;
+    }
+
+    @Bindable
+    public String getCb1598() {
+        return cb1598;
     }
 
     @Bindable
@@ -981,6 +989,7 @@ public class Child extends BaseObservable implements Observable {
         return cs15;
     }
 
+
     @Bindable
     public String getCs1596x() {
         return cs1596x;
@@ -1142,12 +1151,33 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb06(String cb06) {
         this.cb06 = cb06;
+
+        // Mother info
+        setCb07(cb06.equals("1") ? "" : this.cb07);
+        setCb08(cb06.equals("1") ? "" : this.cb08);
+        setCb09(cb06.equals("1") ? "" : this.cb09);
+        setCb10(cb06.equals("1") ? "" : this.cb10);
+        setCb11(cb06.equals("1") ? "" : this.cb11);
+
+        // Father Info
+        setCb12(cb06.equals("2") ? "" : this.cb12);
+        setCb13(cb06.equals("2") ? "" : this.cb13);
+        setCb14(cb06.equals("2") ? "" : this.cb14);
         notifyPropertyChanged(BR.cb06);
     }
 
     public void setCb15(String cb15) {
         this.cb15 = cb15;
         notifyPropertyChanged(BR.cb15);
+    }
+
+    public void setCb1598(String cb1598) {
+        if (this.cb1598.equals(cb1598)) return; // for all checkboxes
+        setCb15(cb1598.equals("98") ? "" : this.cb15);
+
+        setCb17(cb1598.equals("98") ? this.cb17 : "");
+        this.cb1598 = cb1598;
+        notifyPropertyChanged(BR.cb1598);
     }
 
     public void setCb17(String cb17) {
@@ -1464,6 +1494,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCs12(String cs12) {
         this.cs12 = cs12;
+
         notifyPropertyChanged(BR.cs12);
     }
 
@@ -1475,6 +1506,23 @@ public class Child extends BaseObservable implements Observable {
     public void setCs14(String cs14) {
         this.cs14 = cs14;
         setCs15(cs14.equals("1") ? this.cs15 : "");
+        setCs15(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs15);
+        setCs16(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs16);
+        setCs17(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17);
+        setCs17a(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17a);
+        setCs17b(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs17b);
+        setCs1802(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1802);
+        setCs1803(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1803);
+        setCs1804(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1804);
+        setCs1805(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1805);
+        setCs1806(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1806);
+        setCs1807(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1807);
+        setCs1896(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs1896);
+        setCs19(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs19);
+        setCs20(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs20);
+        setCs21(cs12.equals("2") && cs13.equals("2") && cs14.equals("2") ? "" : this.cs21);
+
+
         notifyPropertyChanged(BR.cs14);
     }
 
@@ -1672,7 +1720,7 @@ public class Child extends BaseObservable implements Observable {
         setIm03(im01.equals("2") ? this.im03 : "");
         setIm08(im01.equals("2") ? this.im08 : "");
 
-       /* setIm04dd(im01.equals("1") ? this.im04dd : "");
+        setIm04dd(im01.equals("1") ? this.im04dd : "");
         setIm04mm(im01.equals("1") ? this.im04mm : "");
         setIm04yy(im01.equals("1") ? this.im04yy : "");
 
@@ -1791,7 +1839,7 @@ public class Child extends BaseObservable implements Observable {
         setIm0517mm(im01.equals("1") ? this.im0517mm : "");
         setIm0517yy(im01.equals("1") ? this.im0517yy : "");
         setIm051798(im01.equals("1") ?  this.im051798 : "");
-*/
+
 
         //setIm07(im01.equals("1") ? this.im07 : "");
 
@@ -1820,7 +1868,6 @@ public class Child extends BaseObservable implements Observable {
 
 
 
-/*
         // at birth
         setIm0501dd(im02.equals("1") ? this.im0501dd : "");
         setIm0501mm(im02.equals("1") ? this.im0501mm : "");
@@ -1951,11 +1998,11 @@ public class Child extends BaseObservable implements Observable {
         //setIm20a(im02.equals("1") ? "" : this.im20a);
 
         setIm21(im02.equals("1") ? "" : this.im21);
-        setIm22(im02.equals("1") ? "" : this.im22);
+        //setIm22(im02.equals("1") ? "" : this.im22);
         setIm22a(im02.equals("1") ? "" : this.im22a);
         setIm23(im02.equals("1") || this.im08.equals("1") ? this.im23 : "");
         setIm23a(im02.equals("1") || this.im08.equals("1") ? this.im23a : "");
-        setIm24(im02.equals("1") ? "" : this.im24);*/
+        setIm24(im02.equals("1") ? "" : this.im24);
 
 
         //setIm07(im02.equals("1") ? this.im07 : "");
