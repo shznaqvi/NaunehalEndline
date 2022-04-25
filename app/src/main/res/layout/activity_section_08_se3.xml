@@ -117,7 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="@{form.se51.equals(`2`) || form.se05.equals(`98`) ? View.GONE : View.VISIBLE}">
+                    android:visibility="@{form.se51.equals(`2`) || form.se51.equals(`98`) ? View.GONE : View.VISIBLE}">
 
                     <!-- se41  Radio   -->
                     <androidx.cardview.widget.CardView
@@ -186,7 +186,6 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
 
                     <!-- se42  Radio   -->
                     <androidx.cardview.widget.CardView
@@ -294,7 +293,6 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1430,6 +1428,7 @@
                                 android:text="@={form.se4996x}"
                                 android:visibility="@{form.se4996.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
+
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -2030,9 +2029,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse37"
                     style="@style/cardView"
-                    android:visibility="@{form.se58.equals(`1`) ? View.VISIBLE : View.GONE}">
-
-
+                    android:visibility="@{form.se36.equals(`1`) ? View.VISIBLE : View.GONE}">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -2163,13 +2160,14 @@
                                 android:visibility="@{form.se3796.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- se38  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse38"
                     style="@style/cardView"
-                    android:visibility="@{form.se58.equals(`1`) ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{form.se36.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2255,7 +2253,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse39"
                     style="@style/cardView"
-                    android:visibility="@{form.se58.equals(`1`) ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{form.se36.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"

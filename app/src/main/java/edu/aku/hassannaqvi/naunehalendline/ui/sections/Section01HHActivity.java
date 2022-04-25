@@ -127,6 +127,10 @@ public class Section01HHActivity extends AppCompatActivity {
             return Validator.emptyCustomTextBox(this, bi.hh25, "HH25 Can't be Greater than HH23");
         }
 
+        if (Integer.parseInt(form.getHh13()) < 15) {
+            return Validator.emptyCustomTextBox(this, bi.hh13, "Age Can't be less than 15");
+        }
+
         return true;
     }
 

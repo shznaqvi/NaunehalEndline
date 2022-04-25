@@ -1827,6 +1827,12 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe16(String se16) {
         this.se16 = se16;
+        setSe1701(se16.equals("1") ? this.se1701 : "");
+        setSe1702(se16.equals("1") ? this.se1702 : "");
+        setSe1703(se16.equals("1") ? this.se1703 : "");
+        setSe1704(se16.equals("1") ? this.se1704 : "");
+        setSe1705(se16.equals("1") ? this.se1705 : "");
+
         notifyPropertyChanged(BR.se16);
     }
 
@@ -1862,10 +1868,10 @@ public class Form extends BaseObservable implements Observable {
     public void setSe1705(String se1705) {
         if (this.se1705.equals(se1705)) return; // for all checkboxes
         this.se1705 = se1705;
-        setSe1701(se1705.equals("98") ? "" : this.se1701);
-        setSe1702(se1705.equals("98") ? "" : this.se1702);
-        setSe1703(se1705.equals("98") ? "" : this.se1703);
-        setSe1704(se1705.equals("98") ? "" : this.se1704);
+        setSe1701(se1705.equals("5") ? "" : this.se1701);
+        setSe1702(se1705.equals("5") ? "" : this.se1702);
+        setSe1703(se1705.equals("5") ? "" : this.se1703);
+        setSe1704(se1705.equals("5") ? "" : this.se1704);
         notifyPropertyChanged(BR.se1705);
     }
 
@@ -2134,11 +2140,76 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe51(String se51) {
         this.se51 = se51;
+
+        setSe41(se51.equals("1") ? this.se41 : "");
+        setSe42(se51.equals("1") ? this.se42 : "");
+
+        setSe4301(se51.equals("1") ? this.se4301 : "");
+        setSe4302(se51.equals("1") ? this.se4302 : "");
+        setSe4303(se51.equals("1") ? this.se4303 : "");
+        setSe4304(se51.equals("1") ? this.se4304 : "");
+        setSe4305(se51.equals("1") ? this.se4305 : "");
+        setSe4306(se51.equals("1") ? this.se4306 : "");
+        setSe4307(se51.equals("1") ? this.se4307 : "");
+        setSe4308(se51.equals("1") ? this.se4308 : "");
+        setSe4309(se51.equals("1") ? this.se4309 : "");
+        setSe4310(se51.equals("1") ? this.se4310 : "");
+        setSe4311(se51.equals("1") ? this.se4311 : "");
+        setSe4396(se51.equals("1") ? this.se4396 : "");
+        setSe4396x(se51.equals("1") ? this.se4396x : "");
+
+        setSe4401(se51.equals("1") ? this.se4401 : "");
+        setSe4402(se51.equals("1") ? this.se4402 : "");
+        setSe4403(se51.equals("1") ? this.se4403 : "");
+        setSe4404(se51.equals("1") ? this.se4404 : "");
+        setSe4496(se51.equals("1") ? this.se4496 : "");
+        setSe4496x(se51.equals("1") ? this.se4496x : "");
+
+
+        setSe45(se51.equals("1") ? this.se45 : "");
+        setSe46(se51.equals("1") ? this.se46 : "");
+        setSe47(se51.equals("1") ? this.se47 : "");
+        setSe41(se51.equals("1") ? this.se41 : "");
+        setSe52(se51.equals("1") ? this.se52 : "");
+        setSe53(se51.equals("1") ? this.se53 : "");
+
+        setSe54_01(se51.equals("1") ? this.se54_01 : "");
+        setSe54_02(se51.equals("1") ? this.se54_02 : "");
+        setSe54_03(se51.equals("1") ? this.se54_03 : "");
+        setSe54_04(se51.equals("1") ? this.se54_04 : "");
+        setSe54_05(se51.equals("1") ? this.se54_05 : "");
+        setSe54_06(se51.equals("1") ? this.se54_06 : "");
+        setSe54_96(se51.equals("1") ? this.se54_96 : "");
+        setSe54_96x(se51.equals("1") ? this.se54_96x : "");
+
+        setSe55(se51.equals("1") ? this.se55 : "");
+
+        setSe56_01(se51.equals("1") ? this.se56_01 : "");
+        setSe56_02(se51.equals("1") ? this.se56_02 : "");
+        setSe56_03(se51.equals("1") ? this.se56_03 : "");
+        setSe56_04(se51.equals("1") ? this.se56_04 : "");
+        setSe56_05(se51.equals("1") ? this.se56_05 : "");
+        setSe56_06(se51.equals("1") ? this.se56_06 : "");
+        setSe56_96(se51.equals("1") ? this.se56_96 : "");
+        setSe56_96x(se51.equals("1") ? this.se56_96x : "");
+
+        setSe48(se51.equals("1") ? this.se48 : "");
+
+        setSe4901(se51.equals("1") ? this.se4901 : "");
+        setSe4902(se51.equals("1") ? this.se4902 : "");
+        setSe4903(se51.equals("1") ? this.se4903 : "");
+        setSe4904(se51.equals("1") ? this.se4904 : "");
+        setSe4996(se51.equals("1") ? this.se4996 : "");
+        setSe4998(se51.equals("1") ? this.se4998 : "");
+        setSe4996x(se51.equals("1") ? this.se4996x : "");
+
         notifyPropertyChanged(BR.se51);
     }
 
     public void setSe41(String se41) {
         this.se41 = se41;
+        setSe42(se41.equals("1") ? "" : this.se42);
+
         notifyPropertyChanged(BR.se41);
     }
 

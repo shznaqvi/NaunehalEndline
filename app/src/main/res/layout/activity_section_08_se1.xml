@@ -1610,7 +1610,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse14"
                     style="@style/cardView"
-                    android:visibility="@{form.se13.equals(`1`) || form.se05.equals(`2`) ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{form.se13.equals(`1`) || form.se13.equals(`2`) ? View.VISIBLE : View.GONE}">
 
 
                     <LinearLayout
@@ -1668,7 +1668,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse15"
                     style="@style/cardView"
-                    android:visibility="@{form.se13.equals(`1`) || form.se05.equals(`2`) ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{form.se13.equals(`1`) || form.se13.equals(`2`) ? View.VISIBLE : View.GONE}">
 
 
                     <LinearLayout
@@ -1731,7 +1731,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse16"
                     style="@style/cardView"
-                    android:visibility="@{form.se13.equals(`3`) || form.se05.equals(`4`) || form.se05.equals(`5`) ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{form.se13.equals(`3`) || form.se13.equals(`4`) || form.se13.equals(`5`) ? View.VISIBLE : View.GONE}">
 
 
                     <LinearLayout
@@ -1865,6 +1865,8 @@
                                 android:checked="@{form.se1705.equals(`5`)}"
                                 android:onClick="@{()->form.setSe1705(form.se1705.equals(`5`)?``:`5`)}"
                                 android:text="@string/se1705" />
+
+
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

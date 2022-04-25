@@ -84,7 +84,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/hh08" />
+                                android:hint="@string/hh08"
+                                android:maxLength="6"
+                                />
 
                             <ImageButton
                                 android:layout_width="48dp"
