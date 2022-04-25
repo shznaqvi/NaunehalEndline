@@ -2168,6 +2168,17 @@ public class Form extends BaseObservable implements Observable {
 
         setSe45(se51.equals("1") ? this.se45 : "");
         setSe46(se51.equals("1") ? this.se46 : "");
+
+        setSe4601(se51.equals("1") ? this.se4601 : "");
+        setSe4602(se51.equals("1") ? this.se4602 : "");
+        setSe4603(se51.equals("1") ? this.se4603 : "");
+        setSe4604(se51.equals("1") ? this.se4604 : "");
+        setSe4605(se51.equals("1") ? this.se4605 : "");
+        setSe4606(se51.equals("1") ? this.se4606 : "");
+        setSe4696(se51.equals("1") ? this.se4696 : "");
+        setSe4696x(se51.equals("1") ? this.se4696x : "");
+
+
         setSe47(se51.equals("1") ? this.se47 : "");
         setSe41(se51.equals("1") ? this.se41 : "");
         setSe52(se51.equals("1") ? this.se52 : "");
@@ -2350,6 +2361,16 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe45(String se45) {
         this.se45 = se45;
+
+        setSe4601(se45.equals("1") ? this.se4601 : "");
+        setSe4602(se45.equals("1") ? this.se4602 : "");
+        setSe4603(se45.equals("1") ? this.se4603 : "");
+        setSe4604(se45.equals("1") ? this.se4604 : "");
+        setSe4605(se45.equals("1") ? this.se4605 : "");
+        setSe4606(se45.equals("1") ? this.se4606 : "");
+        setSe4696(se45.equals("1") ? this.se4696 : "");
+        setSe4696x(se45.equals("1") ? this.se4696x : "");
+
         notifyPropertyChanged(BR.se45);
     }
 

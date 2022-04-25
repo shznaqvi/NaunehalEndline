@@ -1371,7 +1371,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:id="@+id/fldGrpcs14"
-                        android:visibility="@{child.cs12.equals(`2`) &amp;&amp; child.cs13.equals(`2`) &amp;&amp; child.cs14.equals(`2`) ? View.GONE : View.VISIBLE}"
+                        android:visibility="@{child.cs12.equals(`2`) &amp;&amp; child.cs13.equals(`2`) &amp;&amp; child.cs14.equals(`2`) ? View.GONE : View.VISIBLE}">
 
                 <!-- cs15  Radio   -->
                 <androidx.cardview.widget.CardView
