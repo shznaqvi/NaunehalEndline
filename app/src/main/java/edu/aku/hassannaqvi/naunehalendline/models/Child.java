@@ -65,6 +65,8 @@ public class Child extends BaseObservable implements Observable {
     public String cb0502 = _EMPTY_;
     public String cb06 = _EMPTY_;
     public String cb15 = _EMPTY_;
+
+    public String cb1598 = _EMPTY_;
     public String cb17 = _EMPTY_;
     public String cb16 = _EMPTY_;
     public String cb07 = _EMPTY_;
@@ -556,6 +558,7 @@ public class Child extends BaseObservable implements Observable {
 
     }
 
+
     public String getProjectName() {
         return projectName;
     }
@@ -722,9 +725,9 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dk(String cb04dk) {
         this.cb04dk = cb04dk;
-   /*     setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
-        setCb04mm(cb04dk.equals("98") ? "98" : this.cb04mm);
-        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);*/
+        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
         setCb0501(cb04dk.equals("98") ? "" : this.cb0501);
         setCb0502(cb04dk.equals("98") ? "" : this.cb0502);
 
@@ -749,6 +752,11 @@ public class Child extends BaseObservable implements Observable {
     @Bindable
     public String getCb15() {
         return cb15;
+    }
+
+    @Bindable
+    public String getCb1598() {
+        return cb1598;
     }
 
     @Bindable
@@ -981,6 +989,7 @@ public class Child extends BaseObservable implements Observable {
         return cs15;
     }
 
+
     @Bindable
     public String getCs1596x() {
         return cs1596x;
@@ -1142,12 +1151,33 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb06(String cb06) {
         this.cb06 = cb06;
+
+        // Mother info
+        setCb07(cb06.equals("1") ? "" : this.cb07);
+        setCb08(cb06.equals("1") ? "" : this.cb08);
+        setCb09(cb06.equals("1") ? "" : this.cb09);
+        setCb10(cb06.equals("1") ? "" : this.cb10);
+        setCb11(cb06.equals("1") ? "" : this.cb11);
+
+        // Father Info
+        setCb12(cb06.equals("2") ? "" : this.cb12);
+        setCb13(cb06.equals("2") ? "" : this.cb13);
+        setCb14(cb06.equals("2") ? "" : this.cb14);
         notifyPropertyChanged(BR.cb06);
     }
 
     public void setCb15(String cb15) {
         this.cb15 = cb15;
         notifyPropertyChanged(BR.cb15);
+    }
+
+    public void setCb1598(String cb1598) {
+        if (this.cb1598.equals(cb1598)) return; // for all checkboxes
+        setCb15(cb1598.equals("98") ? "" : this.cb15);
+
+        setCb17(cb1598.equals("98") ? this.cb17 : "");
+        this.cb1598 = cb1598;
+        notifyPropertyChanged(BR.cb1598);
     }
 
     public void setCb17(String cb17) {
