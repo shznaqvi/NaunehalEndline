@@ -65,8 +65,7 @@ public class Form extends BaseObservable implements Observable {
 
     // FIELD VARIABLES
     public String hh01 = _EMPTY_;
-    public String hh0201 = _EMPTY_;
-    public String hh0202 = _EMPTY_;
+    public String hh02 = _EMPTY_;
     public String hh03 = _EMPTY_;
     public String hh04 = _EMPTY_;
     public String hh05 = _EMPTY_;
@@ -94,6 +93,7 @@ public class Form extends BaseObservable implements Observable {
     public String hh25 = _EMPTY_;
     public String hh26 = _EMPTY_;
     public String hh2696x = _EMPTY_;
+
     public String se01 = _EMPTY_;
     public String se0196x = _EMPTY_;
     public String se02 = _EMPTY_;
@@ -301,7 +301,7 @@ public class Form extends BaseObservable implements Observable {
         setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
         setEbCode(MainApp.selectedHousehold.getClusterCode());
-        setHhid(MainApp.selectedHousehold.getHh());
+        setHhid(MainApp.selectedHousehold.getHhid());
         setSno(MainApp.selectedHousehold.getSno());
         // setEntryType(String.valueOf(MainApp.entryType));
 
@@ -311,7 +311,7 @@ public class Form extends BaseObservable implements Observable {
         setHh07(selectedCluster.getGeoarea().split("\\|")[1]);
         setHh08(selectedCluster.getGeoarea().split("\\|")[2]);
         setHh09(selectedCluster.getGeoarea().split("\\|")[3]);*/
-        setHh12(selectedHousehold.getHh());
+        setHh12(selectedHousehold.getHhid());
 
     }
 
@@ -466,13 +466,8 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getHh0201() {
-        return hh0201;
-    }
-
-    @Bindable
-    public String getHh0202() {
-        return hh0202;
+    public String getHh02() {
+        return hh02;
     }
 
     @Bindable
@@ -1540,15 +1535,11 @@ public class Form extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.hh01);
     }
 
-    public void setHh0201(String hh0201) {
-        this.hh0201 = hh0201;
-        notifyPropertyChanged(BR.hh0201);
+    public void setHh02(String hh02) {
+        this.hh02 = hh02;
+        notifyPropertyChanged(BR.hh02);
     }
 
-    public void setHh0202(String hh0202) {
-        this.hh0202 = hh0202;
-        notifyPropertyChanged(BR.hh0202);
-    }
 
     public void setHh03(String hh03) {
         this.hh03 = hh03;
@@ -2746,7 +2737,7 @@ public class Form extends BaseObservable implements Observable {
         this.id = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ID));
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_UID));
         this.projectName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_PROJECT_NAME));
-        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_EB_CODE));
+        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE));
         this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_HHID));
         this.sno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SNO));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_USERNAME));
@@ -2773,8 +2764,7 @@ public class Form extends BaseObservable implements Observable {
             json = new JSONObject(string);
 
             this.hh01 = json.getString("hh01");
-            this.hh0201 = json.getString("hh0201");
-            this.hh0202 = json.getString("hh0202");
+            this.hh02 = json.getString("hh02");
             this.hh03 = json.getString("hh03");
             this.hh04 = json.getString("hh04");
             this.hh05 = json.getString("hh05");
@@ -2997,8 +2987,7 @@ public class Form extends BaseObservable implements Observable {
         JSONObject json = new JSONObject();
 
         json.put("hh01", hh01)
-                .put("hh0201", hh0201)
-                .put("hh0202", hh0202)
+                .put("hh02", hh02)
                 .put("hh03", hh03)
                 .put("hh04", hh04)
                 .put("hh05", hh05)
@@ -3218,7 +3207,7 @@ public class Form extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_ID, this.id);
         json.put(FormsTable.COLUMN_UID, this.uid);
         json.put(FormsTable.COLUMN_PROJECT_NAME, this.projectName);
-        json.put(FormsTable.COLUMN_EB_CODE, this.ebCode);
+        json.put(FormsTable.COLUMN_CLUSTER_CODE, this.ebCode);
         json.put(FormsTable.COLUMN_HHID, this.hhid);
         json.put(FormsTable.COLUMN_SNO, this.sno);
         json.put(FormsTable.COLUMN_USERNAME, this.userName);

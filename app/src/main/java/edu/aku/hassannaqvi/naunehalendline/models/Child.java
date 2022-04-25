@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.naunehalendline.models;
 
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp._EMPTY_;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
@@ -531,6 +532,7 @@ public class Child extends BaseObservable implements Observable {
 
 
     private long ageInMonths = -1;
+    private long ageInDays = -1;
     private long trueAgeInMonths = -1;
     private boolean ageCheck;
 
@@ -549,7 +551,7 @@ public class Child extends BaseObservable implements Observable {
         setUuid(MainApp.form.getUid());  // not applicable in Form table
         setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
-        //setEbCode(MainApp.selectedHousehold.getEbCode());
+        //setClusterCode(MainApp.selectedHousehold.getClusterCode());
         //setHhid(MainApp.selectedHousehold.getHhid());
 
     }
@@ -720,9 +722,11 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dk(String cb04dk) {
         this.cb04dk = cb04dk;
-        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
-        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
-        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
+   /*     setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "98" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);*/
+        setCb0501(cb04dk.equals("98") ? "" : this.cb0501);
+        setCb0502(cb04dk.equals("98") ? "" : this.cb0502);
 
         notifyPropertyChanged(BR.cb04dk);
     }
@@ -1099,16 +1103,19 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dd(String cb04dd) {
         this.cb04dd = cb04dd;
+        CaluculateAge(this.cb04dd, this.cb04mm, this.cb04yy, false);
         notifyPropertyChanged(BR.cb04dd);
     }
 
     public void setCb04mm(String cb04mm) {
         this.cb04mm = cb04mm;
+        CaluculateAge(this.cb04dd, this.cb04mm, this.cb04yy, false);
         notifyPropertyChanged(BR.cb04mm);
     }
 
     public void setCb04yy(String cb04yy) {
         this.cb04yy = cb04yy;
+        CaluculateAge(this.cb04dd, this.cb04mm, this.cb04yy, false);
         notifyPropertyChanged(BR.cb04yy);
     }
 
@@ -1121,11 +1128,15 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb0501(String cb0501) {
         this.cb0501 = cb0501;
+        if (!cb0501.equals("") && !this.cb0502.equals(""))
+            setAgeInMonths((Integer.parseInt(cb0501) * 12L) + Integer.parseInt(this.cb0502));
         notifyPropertyChanged(BR.cb0501);
     }
 
     public void setCb0502(String cb0502) {
         this.cb0502 = cb0502;
+        if (!cb0501.equals("") && !this.cb0502.equals(""))
+            setAgeInMonths((Integer.parseInt(cb0501) * 12L) + Integer.parseInt(this.cb0502));
         notifyPropertyChanged(BR.cb0502);
     }
 
@@ -1610,8 +1621,20 @@ public class Child extends BaseObservable implements Observable {
 
     public void setAgeInMonths(long ageInMonths) {
         this.ageInMonths = ageInMonths;
-        setAgeCheck(ageInMonths > 6 && ageInMonths < 23);
+        setAgeCheck(ageInMonths < 59);
         notifyPropertyChanged(BR.ageInMonths);
+
+    }
+
+    @Bindable
+    public long getAgeInDays() {
+        return ageInDays;
+    }
+
+
+    public void setAgeInDays(long ageInDays) {
+        this.ageInDays = ageInDays;
+        notifyPropertyChanged(BR.ageInDays);
 
     }
 
@@ -1623,7 +1646,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setTrueAgeInMonths(long trueAgeInMonths) {
         this.trueAgeInMonths = trueAgeInMonths;
-        setAgeCheck(trueAgeInMonths > 6 && trueAgeInMonths < 23);
+        setAgeCheck(trueAgeInMonths < 59);
         notifyPropertyChanged(BR.trueAgeInMonths);
     }
 
@@ -6300,10 +6323,11 @@ public class Child extends BaseObservable implements Observable {
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_UID));
         this.uuid = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_UUID));
 
-        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_EB_CODE));
+        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_CLUSTER_CODE));
         this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_HHID));
         this.projectName = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_PROJECT_NAME));
         this.sno = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SNO));
+        this.ageInDays = cursor.getLong(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_AGE_DAYS));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_USERNAME));
         this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SYSDATE));
         this.cstatus = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_CSTATUS));
@@ -6843,11 +6867,12 @@ public class Child extends BaseObservable implements Observable {
 
         json.put(TableContracts.ChildTable.COLUMN_ID, this.id);
         json.put(TableContracts.ChildTable.COLUMN_UID, this.uid);
-        json.put(TableContracts.ChildTable.COLUMN_EB_CODE, this.ebCode);
+        json.put(TableContracts.ChildTable.COLUMN_CLUSTER_CODE, this.ebCode);
         json.put(TableContracts.ChildTable.COLUMN_HHID, this.hhid);
         json.put(TableContracts.ChildTable.COLUMN_PROJECT_NAME, this.projectName);
         json.put(TableContracts.ChildTable.COLUMN_UUID, this.uuid);
         json.put(TableContracts.ChildTable.COLUMN_SNO, this.sno);
+        json.put(TableContracts.ChildTable.COLUMN_AGE_DAYS, this.ageInDays);
         json.put(TableContracts.ChildTable.COLUMN_USERNAME, this.userName);
         json.put(TableContracts.ChildTable.COLUMN_SYSDATE, this.sysDate);
         json.put(TableContracts.ChildTable.COLUMN_CSTATUS, this.cstatus);
@@ -6892,7 +6917,9 @@ public class Child extends BaseObservable implements Observable {
                 .put("cb12", cb12)
                 .put("cb13", cb13)
                 .put("cb14", cb14)
-                .put("cb1496x", cb1496x);
+                .put("cb1496x", cb1496x)
+                .put("ageInMonths", ageInMonths);
+
 
         return json.toString();
 
@@ -6998,13 +7025,13 @@ public class Child extends BaseObservable implements Observable {
                 .put("im24", im24)
                 .put("im2417x", im2417x)
                 .put("im24a", im24a)
-                  .put("im24b", im24b)
-                  .put("im24b98", im24b98)
+                .put("im24b", im24b)
+                .put("im24b98", im24b98)
                 .put("im24c", im24c)
                 /*     .put("im24d", im24d)*/
                 .put("im25", im25)
                 .put("im29", im29)
-                .put("im29", im30)
+                .put("im30", im30)
                 .put("im30_96x", im30_96x)
                 //.put("im26", im26)
                 .put("im050198", im050198)
@@ -7373,8 +7400,8 @@ public class Child extends BaseObservable implements Observable {
         Log.d(TAG, "CaluculateAge: " + yy + "-" + mm + "-" + dd);
 
         if (!trueAge) {
-            setCb04mm("");
-            setCb04yy("");
+            setCb0502("");
+            setCb0501("");
         } else {
             setTrueAgeInMonths(-1);
         }
@@ -7384,9 +7411,10 @@ public class Child extends BaseObservable implements Observable {
                     || (Integer.parseInt(dd) > 31 && !dd.equals("98"))
                     || Integer.parseInt(yy) < 1920) {
                 if (!trueAge) {
-                    setCb04yy("");
-                    setCb04mm("");
+                    setCb0501("");
+                    setCb0502("");
                     this.ageInMonths = 0;
+                    this.ageInDays = 0;
                 } else {
                     setTrueAgeInMonths(0);
 
@@ -7443,7 +7471,7 @@ public class Child extends BaseObservable implements Observable {
                 int tYear = c.get(Calendar.YEAR) - 1970;
                 int tMonth = c.get(Calendar.MONTH);
                 int tDay = c.get(Calendar.DAY_OF_MONTH);
-
+                ageInDays = MILLISECONDS.toDays(millis);
 
                 Log.d(TAG, "CaluculateAge: Y-" + tYear + " M-" + tMonth + " D-" + tDay);
                /* setH231d(String.valueOf(tDay));
@@ -7452,10 +7480,10 @@ public class Child extends BaseObservable implements Observable {
 
                 if (!trueAge) {
 
-                    setCb04yy(String.valueOf(tYear));
-                    setCb04mm(String.valueOf(tMonth));
+                    setCb0501(String.valueOf(tYear));
+                    setCb0502(String.valueOf(tMonth));
                     if (tYear < 0) {
-                        setCb04yy("");
+                        setCb0501("");
                     }
                 } else {
                     setTrueAgeInMonths((Integer.parseInt(String.valueOf(tYear)) * 12L) + Integer.parseInt(String.valueOf(tMonth)));
@@ -7477,6 +7505,5 @@ public class Child extends BaseObservable implements Observable {
             }
         }
     }
-
 
 }

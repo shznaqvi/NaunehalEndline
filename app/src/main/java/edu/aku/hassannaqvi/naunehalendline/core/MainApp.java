@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.List;
 
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
-import edu.aku.hassannaqvi.naunehalendline.models.Clusters;
+import edu.aku.hassannaqvi.naunehalendline.models.Cluster;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
 import edu.aku.hassannaqvi.naunehalendline.models.RandomHH;
 import edu.aku.hassannaqvi.naunehalendline.models.Users;
@@ -38,12 +38,12 @@ public class MainApp extends Application {
     // public static final String _IP = "https://cls-pae-fp51764";// .TEST server
     // public static final String _IP = "http://f49461:8080/prosystem";// .TEST server
     //public static final String _IP = "http://43.245.131.159:8080";// .TEST server
-    public static final String _HOST_URL = MainApp._IP + "/naunehalendline/api/";// .TEST server;
+    public static final String _HOST_URL = MainApp._IP + "/naunehal_el/api/";// .TEST server;
     public static final String _SERVER_URL = "syncenc.php";
     public static final String _USER_URL = "resetpassword.php";
     public static final String _SERVER_GET_URL = "getDataEnc.php";
     public static final String _PHOTO_UPLOAD_URL = _HOST_URL + "uploads.php";
-    public static final String _UPDATE_URL = MainApp._IP + "/naunehalendline/app/";
+    public static final String _UPDATE_URL = MainApp._IP + "/naunehal_el/app/";
     public static final String _APP_FOLDER = "../app/survey";
     public static final String _EMPTY_ = "";
     private static final String TAG = "MainApp";
@@ -80,6 +80,7 @@ public class MainApp extends Application {
     public static int childCount = 0;
     public static String selectedMWRA;
     public static int selectedChild;
+    public static int youngestChild;
     public static String selectedChildName = "";
     public static int memberCountComplete;
     public static boolean memberComplete;
@@ -95,10 +96,11 @@ public class MainApp extends Application {
     public static boolean langRTL = false;
     public static int ageOfIndexChild;
 
-    public static Clusters selectedCluster;
+    public static Cluster selectedCluster;
     public static List<Integer> childCompleted;
     public static boolean householdChecked = false;
     public static long preAgeInMonths;
+    public static String[] clusterInfo;
 
 
     public static void hideSystemUI(View decorView) {

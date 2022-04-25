@@ -1,6 +1,8 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,54 +21,31 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionCbBinding;
-
-public class Section_02_CBActivity extends AppCompatActivity {
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection03CsBinding;
 
 
-    private static final String TAG = "SectionCBActivity";
-    ActivitySectionCbBinding bi;
+public class Section03CSActivity extends AppCompatActivity {
+
+    private static final String TAG = "Section03CSActivity";
+    ActivitySection03CsBinding bi;
     private DatabaseHelper db;
     private String requestCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_cb);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_03_cs);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
+        setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
 
-        //child.setEc13cline(child.getEc13());
-        //child.setEc14cname(child.getEc14());
+        child.setCs01(child.getCb01());
+        child.setCs02(child.getCb02());
         bi.setChild(child);
-
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
-    }
-
-    private boolean insertNewRecord() {
-        if (!MainApp.child.getUid().equals("") || MainApp.superuser) return true;
-
-        MainApp.child.populateMeta();
-
-        long rowId = 0;
-        try {
-            rowId = db.addChild(MainApp.child);
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(this, R.string.db_excp_error, Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        MainApp.child.setId(String.valueOf(rowId));
-        if (rowId > 0) {
-            MainApp.child.setUid(MainApp.child.getDeviceId() + MainApp.child.getId());
-            db.updatesChildColumn(TableContracts.ChildTable.COLUMN_UID, MainApp.child.getUid());
-            return true;
-        } else {
-            Toast.makeText(this, R.string.upd_db_error, Toast.LENGTH_SHORT).show();
-            return false;
-        }
     }
 
     private boolean updateDB() {
@@ -90,16 +69,30 @@ public class Section_02_CBActivity extends AppCompatActivity {
 
     public void btnContinue(View view) {
         if (!formValidation()) return;
-        if (!insertNewRecord()) return;
         // saveDraft();
         if (updateDB()) {
-            //     Intent i;
-            //   i = new Intent(this, SectionCBActivity.class).putExtra("complete", true);
-            //  startActivity(i);
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);
+            Intent forwardIntent = null;
+            if (child.getAgeInMonths() <= 35 && !child.getCs02a().equals("4")) {
+                forwardIntent = new Intent(this, Section04IM1Activity.class);
+            } else if (child.getAgeInMonths() <= 59 && selectedChild == youngestChild) {
+                if (child.getCb11().equals("1")) {
+                    forwardIntent = new Intent(this, Section05PDActivity.class);
+                } else if (!child.getCs02a().equals("4")) {
+                    forwardIntent = new Intent(this, Section07CVActivity.class);
+                }
+                /*else if(child.getAgeInMonths() <= 23) {
+                    forwardIntent = new Intent(this, Section06BFActivity.class);
+                }*/
+            }
+            forwardIntent.putExtra("requestCode", requestCode);
+            forwardIntent.putExtra("complete", true);
+            forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            setResult(RESULT_OK, forwardIntent);
             finish();
+            startActivity(forwardIntent);
+        /*    Intent returnIntent = new Intent();
+            returnIntent.putExtra("requestCode", requestCode);
+            setResult(RESULT_OK, returnIntent);*/
         } else {
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
         }
@@ -117,35 +110,7 @@ public class Section_02_CBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-
-
-        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
-            return false;
-        }
-
-        /*if (child.getCb01a().equals("77")) {
-            if (!child.getCb01b().equals("77") && !child.getCb01b().equals("88")) {
-                return Validator.emptyCustomTextBox(this, bi.cb01b, "Incorrect value, Only 77 or 88 is allowed.");
-            }
-        }
-        if (child.getCb02a().equals("77")) {
-            if (!child.getCb02b().equals("77") && !child.getCb02b().equals("88")) {
-                return Validator.emptyCustomTextBox(this, bi.cb02b, "Incorrect value, Only 77 or 88 is allowed.");
-            }
-        }*/
-
-        try {
-            int cbo4mm = Integer.parseInt(MainApp.child.getCb04mm());
-            int cbo4yy = Integer.parseInt(MainApp.child.getCb04yy());
-
-            if (cbo4mm == 0 && cbo4yy == 0) {
-                return Validator.emptyCustomTextBox(this, bi.cb04mm, "Incorrect value for Day.");
-            }
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }
-
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
 
@@ -158,6 +123,5 @@ public class Section_02_CBActivity extends AppCompatActivity {
         setResult(RESULT_CANCELED, returnIntent);
         finish();
     }
-
 
 }

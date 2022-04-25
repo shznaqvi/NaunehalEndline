@@ -19,12 +19,12 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionCvBinding;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection07CvBinding;
 
-public class Section_07_CVActivity extends AppCompatActivity {
+public class Section07CVActivity extends AppCompatActivity {
 
-    private static final String TAG = "Section_07_CVActivity";
-    ActivitySectionCvBinding bi;
+    private static final String TAG = "Section07CVActivity";
+    ActivitySection07CvBinding bi;
     private DatabaseHelper db;
     private String requestCode;
 
@@ -33,10 +33,10 @@ public class Section_07_CVActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_cv);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_07_cv);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
-        bi.setForm(child);
+        bi.setChild(child);
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
     }
@@ -62,18 +62,13 @@ public class Section_07_CVActivity extends AppCompatActivity {
 
     public void btnContinue(View view) {
         if (!formValidation()) return;
-        // saveDraft();
         if (updateDB()) {
-            //     Intent i;
-            //   i = new Intent(this, SectionCBActivity.class).putExtra("complete", true);
-            //  startActivity(i);
             Intent returnIntent = new Intent();
             returnIntent.putExtra("requestCode", requestCode);
             setResult(RESULT_OK, returnIntent);
+            //startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
             finish();
-        } else {
-            Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
-        }
+        } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }
 
 

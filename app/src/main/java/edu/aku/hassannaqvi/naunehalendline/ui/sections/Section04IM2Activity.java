@@ -1,7 +1,8 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,14 +27,13 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionIm2Binding;
-import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection04Im2Binding;
 
-public class Section_04_IM2Activity extends AppCompatActivity {
+public class Section04IM2Activity extends AppCompatActivity {
 
 
     private static final String TAG = "SectionIM2Activity";
-    ActivitySectionIm2Binding bi;
+    ActivitySection04Im2Binding bi;
     String[] deff = {"44", "66", "88", "97"};
     private DatabaseHelper db;
     private String requestCode;
@@ -42,7 +42,7 @@ public class Section_04_IM2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_im2);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_04_im2);
 
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
@@ -124,7 +124,14 @@ public class Section_04_IM2Activity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent forwardIntent = new Intent(this, form.getHh11().equals("2") || Integer.parseInt(form.getHh13()) < 15 ? EndingActivity.class : Section_05_PDActivity.class);
+            Intent forwardIntent = null;
+            if (child.getCb11().equals("1")) {
+                if (selectedChild == youngestChild && child.getAgeInMonths() <= 23) {
+                    forwardIntent = new Intent(this, Section05PDActivity.class);
+                } else if (selectedChild == youngestChild) {
+                    forwardIntent = new Intent(this, Section07CVActivity.class);
+                }
+            }
             forwardIntent.putExtra("requestCode", requestCode);
             forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             setResult(RESULT_OK, forwardIntent);

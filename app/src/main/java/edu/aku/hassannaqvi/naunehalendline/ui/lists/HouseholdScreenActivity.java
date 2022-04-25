@@ -30,8 +30,8 @@ import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityHouseholdScreenBinding;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.ui.EndingActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_08_SEActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section02CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section08SE1Activity;
 
 
 public class HouseholdScreenActivity extends AppCompatActivity {
@@ -54,13 +54,13 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                         if (data != null) {
                             if (data.getStringExtra("requestCode").equals("1")) {               // Opened Household section
                                 Toast.makeText(HouseholdScreenActivity.this, "Household information entered.", Toast.LENGTH_SHORT).show();
-                                MainApp.householdChecked = true;
+                                MainApp.householdChecked = !MainApp.form.getSe40().equals("");
                                 bi.addHousehold.setEnabled(false);
 
                             } else if (data.getStringExtra("requestCode").equals("2")) {        // Added a Child
 
                                 MainApp.childList.add(MainApp.child);
-                                if (MainApp.child.getAgeInMonths() >= 6 && MainApp.child.getAgeInMonths() <= 23)
+                                if (MainApp.child.getAgeInMonths() <= 59)
                                     childCount++;
                                 childsAdapter.notifyItemInserted(MainApp.childList.size() - 1);
                                 Toast.makeText(HouseholdScreenActivity.this, "Child added.", Toast.LENGTH_SHORT).show();
@@ -71,10 +71,10 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                                 // MainApp.childList.set(selectedChild, MainApp.child);
                                 long postAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
 
-                                if ((MainApp.preAgeInMonths < 6 || MainApp.preAgeInMonths > 23) && postAgeInMonths >= 6 && postAgeInMonths <= 23) {
+                                if ((MainApp.preAgeInMonths > 59) && postAgeInMonths <= 59) {
                                     childCount++;
                                 }
-                                if (MainApp.preAgeInMonths >= 6 && MainApp.preAgeInMonths <= 23 && (postAgeInMonths < 6 || postAgeInMonths > 23)) {
+                                if (MainApp.preAgeInMonths <= 59 && (postAgeInMonths > 59)) {
                                     childCount--;
                                 }
 
@@ -120,7 +120,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         try {
             MainApp.childList = db.getChildrenBYUID();
             for (Child child : MainApp.childList) {
-                if (child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23)
+                if (child.getAgeInMonths() <= 59)
                     childCount++;
 
                 if (!child.getPd24().equals("")) {
@@ -222,7 +222,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         if (childCount >= (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))) {
             displayAddMoreDialog();
         } else {
-            addMoreMWRA();
+            addMoreChild();
 
         }
 
@@ -239,7 +239,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Continue with delete operation
-                        addMoreMWRA();
+                        addMoreChild();
                     }
                 })
 
@@ -250,10 +250,10 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
     }
 
-    private void addMoreMWRA() {
+    private void addMoreChild() {
         MainApp.child = new Child();
         // TODO: UNCOMMENT two line to launch the child info activity (CH)
-        Intent intent = new Intent(this, Section_02_CBActivity.class);
+        Intent intent = new Intent(this, Section02CBActivity.class);
         intent.putExtra("requestCode", "2");
 
 
@@ -262,7 +262,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
     private void addHouseholdInfo() {
         //TODO: UNCOMMENT two line to launch the child info activity (CH)
-        Intent intent = new Intent(this, Section_08_SEActivity.class);
+        Intent intent = new Intent(this, Section08SE1Activity.class);
         intent.putExtra("requestCode", "1");
         MemberInfoLauncher.launch(intent);
     }

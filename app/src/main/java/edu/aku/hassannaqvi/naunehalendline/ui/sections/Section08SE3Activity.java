@@ -1,6 +1,6 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,23 +19,25 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionBfBinding;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection08Se3Binding;
 
-public class Section_06_BFActivity extends AppCompatActivity {
+public class Section08SE3Activity extends AppCompatActivity {
 
-    private static final String TAG = "Section06_BFActivity";
-    ActivitySectionBfBinding bi;
+    private static final String TAG = "Section_02_SEActivity";
+    ActivitySection08Se3Binding bi;
     private DatabaseHelper db;
     private String requestCode;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_bf);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_08_se3);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
-        bi.setForm(child);
+        setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
+        bi.setForm(form);
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
     }
@@ -46,7 +48,7 @@ public class Section_06_BFActivity extends AppCompatActivity {
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SBF, child.sBFtoString());
+            updcount = db.updatesFormColumn(TableContracts.FormsTable.COLUMN_SSE, form.sSEtoString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
@@ -87,7 +89,22 @@ public class Section_06_BFActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
+            return false;
+        }
+
+        try {
+            int se3401 = Integer.parseInt(form.getSe3401());
+            int se3402 = Integer.parseInt(form.getSe3402());
+
+            if (se3401 == 0 && se3402 == 0) {
+                return Validator.emptyCustomTextBox(this, bi.se3401, "Incorrect value.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+        return true;
 
     }
 

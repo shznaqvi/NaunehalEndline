@@ -1,15 +1,15 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -19,13 +19,12 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionHhBinding;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionSeBinding;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection08Se1Binding;
 
-public class Section_08_SEActivity extends AppCompatActivity {
+public class Section08SE1Activity extends AppCompatActivity {
 
     private static final String TAG = "Section_02_SEActivity";
-    ActivitySectionSeBinding bi;
+    ActivitySection08Se1Binding bi;
     private DatabaseHelper db;
     private String requestCode;
 
@@ -34,11 +33,11 @@ public class Section_08_SEActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_se);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_08_se1);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-
+        bi.setForm(form);
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
     }
@@ -49,7 +48,7 @@ public class Section_08_SEActivity extends AppCompatActivity {
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SCB, child.sCBtoString());
+            updcount = db.updatesFormColumn(TableContracts.FormsTable.COLUMN_SSE, form.sSEtoString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
@@ -66,12 +65,12 @@ public class Section_08_SEActivity extends AppCompatActivity {
         if (!formValidation()) return;
         // saveDraft();
         if (updateDB()) {
-            //     Intent i;
-            //   i = new Intent(this, SectionCBActivity.class).putExtra("complete", true);
-            //  startActivity(i);
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);
+            Intent forwardIntent = new Intent(this, Section08SE2Activity.class);
+            forwardIntent.putExtra("requestCode", requestCode);
+            forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            setResult(RESULT_OK, forwardIntent);
+
+            startActivity(forwardIntent);
             finish();
         } else {
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();

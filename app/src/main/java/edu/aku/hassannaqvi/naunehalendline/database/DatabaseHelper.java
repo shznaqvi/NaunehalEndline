@@ -37,7 +37,7 @@ import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.RandomHHTabl
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.UsersTable;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
-import edu.aku.hassannaqvi.naunehalendline.models.Clusters;
+import edu.aku.hassannaqvi.naunehalendline.models.Cluster;
 import edu.aku.hassannaqvi.naunehalendline.models.EntryLog;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
 import edu.aku.hassannaqvi.naunehalendline.models.RandomHH;
@@ -94,7 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
         values.put(FormsTable.COLUMN_UID, form.getUid());
-        values.put(FormsTable.COLUMN_EB_CODE, form.getEbCode());
+        values.put(FormsTable.COLUMN_CLUSTER_CODE, form.getEbCode());
         values.put(FormsTable.COLUMN_HHID, form.getHhid());
         values.put(FormsTable.COLUMN_SNO, form.getSno());
         values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
@@ -132,9 +132,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(ChildTable.COLUMN_PROJECT_NAME, child.getProjectName());
         values.put(ChildTable.COLUMN_UID, child.getUid());
         values.put(ChildTable.COLUMN_UUID, child.getUuid());
-        values.put(ChildTable.COLUMN_EB_CODE, child.getEbCode());
+        values.put(ChildTable.COLUMN_CLUSTER_CODE, child.getEbCode());
         values.put(ChildTable.COLUMN_HHID, child.getHhid());
         values.put(ChildTable.COLUMN_SNO, child.getSno());
+        values.put(ChildTable.COLUMN_AGE_DAYS, child.getAgeInMonths());
         values.put(ChildTable.COLUMN_USERNAME, child.getUserName());
         values.put(ChildTable.COLUMN_SYSDATE, child.getSysDate());
         values.put(ChildTable.COLUMN_CSTATUS, child.getCStatus());
@@ -167,7 +168,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(EntryLogTable.COLUMN_PROJECT_NAME, entryLog.getProjectName());
         values.put(EntryLogTable.COLUMN_UUID, entryLog.getUuid());
-        values.put(EntryLogTable.COLUMN_EB_CODE, entryLog.getEbCode());
+        values.put(EntryLogTable.COLUMN_CLUSTER_CODE, entryLog.getEbCode());
         values.put(EntryLogTable.COLUMN_HHID, entryLog.getHhid());
         values.put(EntryLogTable.COLUMN_USERNAME, entryLog.getUserName());
         values.put(EntryLogTable.COLUMN_SYSDATE, entryLog.getSysDate());
@@ -452,13 +453,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             JSONObject json = clusterList.getJSONObject(i);
 
-            Clusters clusters = new Clusters();
-            clusters.sync(json);
+            Cluster cluster = new Cluster();
+            cluster.sync(json);
             ContentValues values = new ContentValues();
 
-            values.put(ClusterTable.COLUMN_CLUSTER_CODE, clusters.getClusterCode());
-            values.put(ClusterTable.COLUMN_CLUSTER_NAME, clusters.getClustername());
-            values.put(ClusterTable.COLUMN_DIST_CODE, clusters.getDistCode());
+
+            values.put(ClusterTable.COLUMN_GEOAREA, cluster.getGeoarea());
+            values.put(ClusterTable.COLUMN_DIST_ID, cluster.getDistId());
+            values.put(ClusterTable.COLUMN_CLUSTER_CODE, cluster.getClusterCode());
 
 
             long rowID = db.insertOrThrow(ClusterTable.TABLE_NAME, null, values);
@@ -491,13 +493,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(RandomHHTable.COLUMN_LUID, randomHH.getLUID());
             values.put(RandomHHTable.COLUMN_STRUCTURE_NO, randomHH.getStructure());
             values.put(RandomHHTable.COLUMN_FAMILY_EXT_CODE, randomHH.getExtension());
-            values.put(RandomHHTable.COLUMN_HH_NO, randomHH.getHh());
+            values.put(RandomHHTable.COLUMN_HH_NO, randomHH.getHhid());
             values.put(RandomHHTable.COLUMN_CLUSTER_CODE, randomHH.getClusterCode());
             values.put(RandomHHTable.COLUMN_RANDOMDT, randomHH.getRandomDT());
             values.put(RandomHHTable.COLUMN_HH_HEAD, randomHH.getHhhead());
             values.put(RandomHHTable.COLUMN_CONTACT, randomHH.getContact());
 //            values.put(RandomHHTable.COLUMN_HH_SELECTED_STRUCT, randomHH.getStructure());
-            values.put(RandomHHTable.COLUMN_SNO_HH, randomHH.getSno());
+            values.put(RandomHHTable.COLUMN_SNO, randomHH.getSno());
 
             long rowID = db.insertOrThrow(RandomHHTable.TABLE_NAME, null, values);
             if (rowID != -1) insertCount++;
@@ -726,7 +728,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = null;
 
         String whereClause;
-        whereClause = FormsTable.COLUMN_EB_CODE + "=? AND " +
+        whereClause = FormsTable.COLUMN_CLUSTER_CODE + "=? AND " +
                 FormsTable.COLUMN_HHID + " =? ";
 
         String[] whereArgs = {ebCode, hhid};
@@ -764,7 +766,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
         String[] columns = null;
-        String whereClause = FormsTable.COLUMN_EB_CODE + " = ? ";
+        String whereClause = FormsTable.COLUMN_CLUSTER_CODE + " = ? ";
         String[] whereArgs = new String[]{cluster};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
@@ -788,7 +790,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_EB_CODE)));
+            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
@@ -836,7 +838,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_EB_CODE)));
+            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
             fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
@@ -881,7 +883,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_EB_CODE)));
+            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
@@ -906,9 +908,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Boolean distinct = false;
         String tableName = FormsTable.TABLE_NAME;
         String[] columns = null;
-        String whereClause = FormsTable.COLUMN_EB_CODE + "= ? AND " +
+        String whereClause = FormsTable.COLUMN_CLUSTER_CODE + "= ? AND " +
                 FormsTable.COLUMN_HHID + "= ? ";
-        String[] whereArgs = {selectedCluster.getClusterCode(), selectedHousehold.getHh()};
+        String[] whereArgs = {selectedCluster.getClusterCode(), selectedHousehold.getHhid()};
         String groupBy = null;
         String having = null;
         String orderBy = FormsTable.COLUMN_SYSDATE + " ASC";
@@ -980,41 +982,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Clusters getCluster(String ebCode) {
-
+    public List<Cluster> getClusters() {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
-        String[] columns = null;
 
-        String whereClause = ClusterTable.COLUMN_CLUSTER_CODE + " =?";
-        String[] whereArgs = new String[]{ebCode};
+        String[] columns = null;
+        String whereClause = null;
+        String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
-        String orderBy =
-                ClusterTable._ID + " ASC";
+        String orderBy = ClusterTable.COLUMN_CLUSTER_CODE + " ASC";
 
-        Clusters cluster = new Clusters();
-
-        c = db.query(
-                ClusterTable.TABLE_NAME,  // The table to query
-                columns,                   // The columns to return
-                whereClause,               // The columns for the WHERE clause
-                whereArgs,                 // The values for the WHERE clause
-                groupBy,                   // don't group the rows
-                having,                    // don't filter by row groups
-                orderBy                    // The sort order
-        );
-        while (c.moveToNext()) {
-            cluster = new Clusters().hydrate(c);
+        List<Cluster> e = new ArrayList<>();
+        try {
+            c = db.query(
+                    ClusterTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy
+            );
+            while (c.moveToNext()) {
+                e.add(new Cluster().hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
         }
-
-        c.close();
-
-        db.close();
-
-        return cluster;
-
+        return e;
     }
 
 
@@ -1035,7 +1037,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Clusters getClusterByEBNum(String ebCode) {
+    public Cluster getClusterByEBNum(String ebCode) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
         String[] columns = null;
@@ -1050,7 +1052,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String orderBy = null;
 
 
-        Clusters cluster = null;
+        Cluster cluster = null;
         c = db.query(
                 ClusterTable.TABLE_NAME,   // The table to query
                 columns,                    // The columns to return
@@ -1061,7 +1063,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 orderBy                     // The sort order
         );
         while (c.moveToNext()) {
-            cluster = new Clusters().hydrate(c);
+            cluster = new Cluster().hydrate(c);
         }
 
         c.close();

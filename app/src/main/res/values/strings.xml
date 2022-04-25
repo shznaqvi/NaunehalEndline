@@ -136,7 +136,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="sectionbfbreastfeedinghealthcareseekingbehaviors_mainheading">Section BF Breastfeeding, Health &amp; Care-seeking Behaviors: Breastfeeding, Health &amp; Careseeking Behaviors</string>
     <string name="sectiong5covidtobeadministeredtothemotheroftheyoungestunderfivechildinthehousehold_mainheading">Section G5: COVID (To be administered to the mother of the youngest under-five child in the household): COVID (To be administered to the mother of the youngest underfive child in the household)</string>
     <string name="sectionsehouseholdcharacteristics_mainheading">Section SE: Household Characteristics: Section SE: Household Characteristics</string>
-    <string name="app_name">  </string>
+    <string name="app_name"> Naunehal Endline</string>
     <string name="btnSync">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
@@ -144,7 +144,6 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="splashText"> </string>
-    <string name="splashText2">  </string>
     <string name="check_pending_forms">CHECK PENDING FORMS</string>
     <string name="open_new_form">OPEN NEW FORM</string>
     <string name="records_summary">Records Summary</string>
@@ -155,7 +154,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="dkn"> Don’t Know </string>
     <string name="none"> No one </string>
     <string name="never"> Never</string>
-    <string name="na"> Applicable /Not Available  </string>
+    <string name="na"> Applicable /Not Available </string>
     <string name="nap"> Not Applicable </string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_field_required">This field is required</string>
@@ -183,8 +182,6 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="hh01_title1"> Identification Information (HH) </string>
     <string name="hh01">Date of interview</string>
     <string name="hh02">Time of Interview</string>
-    <string name="hh0201">Hours</string>
-    <string name="hh0202">Minutes</string>
     <string name="hh03">Code of Interviewer</string>
     <string name="hh04">Name of Interviewer</string>
     <string name="hh05">Name of District</string>
@@ -503,7 +500,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im04_dd">Day</string>
     <string name="im04_mm">Month</string>
     <string name="im04_yy">Year</string>
-    <string name="im05">Vaccine Names</string>
+    <string name="im05" translatable="false">Vaccine Names</string>
     <string name="im05_title1">INSTRUCTION Please record the date of immunization for each antigen from the card 1.	If the date is recorded but not readable, record 44 in day column 2.	If the date is not recorded but a tick () mark is present, record 88 in day column 3.	If neither date is recorded nor a tick () mark is present, prompt the mother for each such antigen and record 66 if she confirms the receipt of respective antigen by recall otherwise record 97.</string>
     <string name="im05_title2">Immunization Status</string>
     <string name="im05_01">At Birth  -BCG</string>

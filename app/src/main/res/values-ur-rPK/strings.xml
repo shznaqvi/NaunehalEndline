@@ -53,7 +53,7 @@
     <string name="sectionbfbreastfeedinghealthcareseekingbehaviors_mainheading">Section BF Breastfeeding, Health &amp; Care-seeking Behaviors: Breastfeeding, Health &amp; Care-seeking Behaviors</string>
     <string name="sectiong5covidtobeadministeredtothemotheroftheyoungestunderfivechildinthehousehold_mainheading">Section G5: COVID (To be administered to the mother of the youngest under-five child in the household): COVID (To be administered to the mother of the youngest under-five child in the household)</string>
     <string name="sectionsehouseholdcharacteristics_mainheading">سیکشن ایس ای: گھرانے کی خصوصیات : گھرانے کی خصوصیات</string>
-    <string name="app_name">  </string>
+    <string name="app_name">نونہال اینڈلائین</string>
     <string name="btnSync">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
@@ -61,7 +61,6 @@
     <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="splashText"> </string>
-    <string name="splashText2">  </string>
     <string name="check_pending_forms">CHECK PENDING FORMS</string>
     <string name="open_new_form">OPEN NEW FORM</string>
     <string name="records_summary">Records Summary</string>
@@ -75,7 +74,7 @@
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
     <string name="never"> کبھی نہیں </string>
-    <string name="na"> قابل اطلاق / دستیاب نہیں  </string>
+    <string name="na"> قابل اطلاق / دستیاب نہیں </string>
     <string name="nap"> قابل اطلاق نہیں </string>
     <string name="nav"> دستیاب نہیں </string>
     <string name="ref"> انکار کر دیا </string>
@@ -100,8 +99,6 @@
     <string name="hh01_title1">شناختی معلومات</string>
     <string name="hh01"> انٹرویو کی تاریخ </string>
     <string name="hh02"> انٹرویو شروع کرنےکا وقت </string>
-    <string name="hh0201">گھنٹے</string>
-    <string name="hh0202">منٹس</string>
     <string name="hh03"> انٹرویو لینے والے کا کوڈ</string>
     <string name="hh04"> انٹرویو لینے والے کا نام </string>
     <string name="hh05">ضلع کا نام</string>
@@ -292,7 +289,7 @@
     <string name="cs0710">ڈسپینسر / کمپاؤنڈر</string>
     <string name="cs0711">حکیم  </string>
     <string name="cs0712">دائی</string>
-    <string name="cs0713"></string>
+    <string name="cs0713">CMW</string>
     <string name="cs0714">نونہال ہیلتھ کیمپ</string>
     <string name="cs07962">دوسرے نجی وضاحت کریں </string>
     <string name="cs08">(نام)کو   اسہال(دست) کی بیماری کے علاج کے لئے کون کونسی دوا دی گئی؟</string>

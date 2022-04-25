@@ -34,15 +34,15 @@ import edu.aku.hassannaqvi.naunehalendline.ui.SyncActivity;
 import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportCluster;
 import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportDate;
 import edu.aku.hassannaqvi.naunehalendline.ui.lists.FormsReportPending;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_01_HHActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_03_CSActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_04_IM1Activity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_04_IM2Activity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_05_PDActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_06_BFActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_07_CVActivity;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_08_SEActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section01HHActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section02CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section03CSActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section04IM1Activity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section04IM2Activity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section05PDActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section06BFActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section07CVActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section08SE1Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -124,39 +124,39 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.secHH:
                 MainApp.form = new Form();
-                startActivity(new Intent(this, Section_01_HHActivity.class));
+                startActivity(new Intent(this, Section01HHActivity.class));
                 break;
             case R.id.secCB:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_02_CBActivity.class));
+                startActivity(new Intent(this, Section02CBActivity.class));
                 break;
             case R.id.secCS:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_03_CSActivity.class));
+                startActivity(new Intent(this, Section03CSActivity.class));
                 break;
             case R.id.secIM1:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_04_IM1Activity.class));
+                startActivity(new Intent(this, Section04IM1Activity.class));
                 break;
             case R.id.secIM2:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_04_IM2Activity.class));
+                startActivity(new Intent(this, Section04IM2Activity.class));
                 break;
             case R.id.secPD:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_05_PDActivity.class));
+                startActivity(new Intent(this, Section05PDActivity.class));
                 break;
             case R.id.secBF:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_06_BFActivity.class));
+                startActivity(new Intent(this, Section06BFActivity.class));
                 break;
             case R.id.secCV:
                 MainApp.child = new Child();
-                startActivity(new Intent(this, Section_07_CVActivity.class));
+                startActivity(new Intent(this, Section07CVActivity.class));
                 break;
             case R.id.secSE:
                 MainApp.form = new Form();
-                startActivity(new Intent(this, Section_08_SEActivity.class));
+                startActivity(new Intent(this, Section08SE1Activity.class));
                 break;
             case R.id.secEND:
                 MainApp.form = new Form();

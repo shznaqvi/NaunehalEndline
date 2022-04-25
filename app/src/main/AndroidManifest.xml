@@ -29,28 +29,28 @@
         android:usesCleartextTraffic="false"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".ui.sections.Section_08_SE_2Activity"
+            android:name=".ui.sections.Section08SE2Activity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_08_SE_3Activity"
+            android:name=".ui.sections.Section08SE3Activity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_08_SEActivity"
+            android:name=".ui.sections.Section08SE1Activity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_07_CVActivity"
+            android:name=".ui.sections.Section07CVActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_06_BFActivity"
+            android:name=".ui.sections.Section06BFActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_05_PDActivity"
+            android:name=".ui.sections.Section05PDActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_03_CSActivity"
+            android:name=".ui.sections.Section03CSActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.sections.Section_01_HHActivity"
+            android:name=".ui.sections.Section01HHActivity"
             android:exported="true" />
         <activity
             android:name=".ui.LoginActivity"
@@ -115,17 +115,17 @@
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.Section_02_CBActivity"
+            android:name=".ui.sections.Section02CBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.Section_04_IM1Activity"
+            android:name=".ui.sections.Section04IM1Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.sections.Section_04_IM2Activity"
+            android:name=".ui.sections.Section04IM2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize" />
@@ -139,12 +139,13 @@
                     android:name="YEK_REVRES"
                     android:value="GSTa@ndInC%apACIT12B?E(H+MbQeThWmZq4t7w!zsCsF)J@NcRfUjXn2r5u8x/A" />
         -->
+
         <meta-data
             android:name="YEK_REVRES"
-            android:value="ThWmZq4t7w!zVaLu@b1ePeRcE!V3r5u8x/A?D*G-KaPdSgVkYp3s6v9y$BNE)H@M" />
+            android:value="8x/A%D*2S!urviVoP%RACTiC1$BSE(H+MbQeThWmZq4t7w!z%C*F-J@NcRfUjXn2" />
         <meta-data
             android:name="YEK_TRATS"
-            android:value="12" />
+            android:value="8" />
     </application>
 
 </manifest>

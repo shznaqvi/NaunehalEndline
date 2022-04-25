@@ -1,5 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.adapters;
 
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -20,7 +22,8 @@ import java.util.List;
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.models.Child;
-import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section_02_CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section02CBActivity;
+import edu.aku.hassannaqvi.naunehalendline.ui.sections.Section03CSActivity;
 
 
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> {
@@ -159,9 +162,9 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         //MainApp.selectedMWRA = child.getIndexed().equals("1") || child.getIndexed().equals("2") ? "-" : "";
         mainIcon.setBackgroundColor(child.getCb03().equals("1") ? mContext.getResources().getColor(R.color.boy_blue) : mContext.getResources().getColor(R.color.girl_pink));
         //  mainIcon.setBackgroundColor(  ((ColorDrawable) mainIcon.getBackground()).getColor());
-        cloaked.setVisibility(child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23 ? View.GONE : View.VISIBLE);
+        cloaked.setVisibility(child.getAgeInMonths() <= 59 ? View.GONE : View.VISIBLE);
 
-        if (child.getAgeInMonths() < 6 || child.getAgeInMonths() > 23) {
+        if (child.getAgeInMonths() > 59) {
             mainIcon.setImageResource(R.drawable.ic_not_available);
             mainIcon.setBackgroundColor(mContext.getResources().getColor(R.color.gray));
         }
@@ -173,19 +176,22 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 */
         childcheck.setVisibility(child.getCStatus().equals("") ? View.INVISIBLE : View.VISIBLE);
 
+
         //fMaritalStatus.setText("Children: " + familyMember.getH226m() + " boy(s), " + familyMember.getH226f() + " girl(s)");
+
+        // To add Child's Health and Immunization Details
         viewHolder.itemView.setOnClickListener(v -> {
             // Get the current state of the item
 
             MainApp.child = MainApp.childList.get(position);
-            if (child.getAgeInMonths() >= 6 && child.getAgeInMonths() <= 23) {
+            if (child.getAgeInMonths() <= 59) {
 
-                Intent intent = new Intent(mContext, Section_02_CBActivity.class);
+                Intent intent = new Intent(mContext, Section03CSActivity.class);
 
                 intent.putExtra("position", position);
                 intent.putExtra("requestCode", "4");
 
-                MainApp.selectedChild = position;
+                selectedChild = position;
 
                 intent.putExtra("position", position);
                 childInfoLauncher.launch(intent);
@@ -197,15 +203,17 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
         });
 
-        /*viewHolder.itemView.setOnLongClickListener(view -> {
+        // TO EDIT Child's basic info
+        viewHolder.itemView.setOnLongClickListener(view -> {
             MainApp.child = MainApp.childList.get(position);
-            if (MainApp.child.getEc21().equals("")) {
-                Intent intent = new Intent(mContext, Section_02_CBActivity.class);
+            // Check if Child details has been added in next section
+            if (MainApp.child.getCs01().equals("")) {
+                Intent intent = new Intent(mContext, Section02CBActivity.class);
 
                 intent.putExtra("position", position);
                 intent.putExtra("requestCode", "3");
 
-                MainApp.selectedChild = position;
+                selectedChild = position;
                 MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
 
                 intent.putExtra("position", position);
@@ -215,7 +223,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
                 Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
             }
             return true;
-        });*/
+        });
 
     }
 

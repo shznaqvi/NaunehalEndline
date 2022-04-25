@@ -35,14 +35,14 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
-import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySectionIm1Binding;
+import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection04Im1Binding;
 import edu.aku.hassannaqvi.naunehalendline.ui.TakePhoto;
 
-public class Section_04_IM1Activity extends AppCompatActivity {
+public class Section04IM1Activity extends AppCompatActivity {
 
 
     private static final String TAG = "SectionIM1Activity";
-    ActivitySectionIm1Binding bi;
+    ActivitySection04Im1Binding bi;
     String[] deff = {"44", "66", "88", "97"};
     private DatabaseHelper db;
     private String requestCode;
@@ -51,13 +51,13 @@ public class Section_04_IM1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? R.style.AppThemeUrdu : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_im1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_04_im1);
         setSupportActionBar(bi.toolbar);
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
 
         db = MainApp.appInfo.dbHelper;
-        bi.setForm(child);
+        bi.setChild(child);
         setupSkips();
         if (MainApp.superuser) bi.btnContinue.setText("Review Next");
 
@@ -65,8 +65,8 @@ public class Section_04_IM1Activity extends AppCompatActivity {
         Calendar cal = Calendar.getInstance();
         // cal.add(Calendar.MONTH, -6);
         bi.im04yy.setMaxvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));
-        cal.add(Calendar.MONTH, +6);
-        cal.add(Calendar.MONTH, -23 - 6); // 6 months buffer
+        //  cal.add(Calendar.MONTH, +6);
+        cal.add(Calendar.MONTH, -59); // u-5
         bi.im04yy.setMinvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));
     }
 
@@ -223,7 +223,7 @@ public class Section_04_IM1Activity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent forwardIntent = new Intent(this, Section_04_IM2Activity.class);
+            Intent forwardIntent = new Intent(this, Section04IM2Activity.class);
             forwardIntent.putExtra("requestCode", requestCode);
             forwardIntent.putExtra("complete", true);
             forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);

@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -65,23 +66,23 @@
                                 android:text="@string/Q_cs01" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="match_parent"
                                 android:text="@string/cs01" />
 
+                            <TextView
+                                android:id="@+id/cs01"
+                                style="@style/sub_labels"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:minHeight="48dp"
+                                android:text="@={child.cs01}"
+                                tools:text="1" />
+
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cs01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/cs01"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={child.cs01}"
-                            app:maxValue="99"
-                            app:minValue="1"
-                            app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -108,19 +109,22 @@
                                 android:text="@string/Q_cs02" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="match_parent"
                                 android:text="@string/cs02" />
 
+                            <TextView
+                                android:id="@+id/cs02"
+                                style="@style/sub_labels"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:minHeight="48dp"
+                                android:text="@={child.cs02}"
+                                tools:text="childName" />
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/cs02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/cs02"
-                            android:text="@={child.cs02}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
