@@ -12,6 +12,8 @@
         <entry key="..\:/Users/abdul.sajid/Desktop/Android App/NaunehalEndline/app/src/main/res/layout/activity_section_hh.xml" value="0.50125" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_household_screen.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_identification.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_05_pd.xml" value="0.1028858218318695" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_06_bf.xml" value="0.3375" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_bf.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.1" />
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cs.xml" value="0.20520833333333333" />
@@ -24,15 +26,8 @@
         <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_child_ending.xml" value="0.215625" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_ending.xml" value="0.55" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_household_screen.xml" value="0.5265625" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_identification.xml" value="0.5265625" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section08_se2.xml" value="0.5265625" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section08_se3.xml" value="0.5265625" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_01_hh.xml" value="0.5265625" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_03_cs.xml" value="0.20905707196029777" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_08_se1.xml" value="0.5265625" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_08_se2.xml" value="0.67" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_08_se3.xml" value="0.11223980016652789" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_bf.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cb.xml" value="0.46375" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_cs.xml" value="0.15265815265815266" />
@@ -41,7 +36,7 @@
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_im1.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_im2.xml" value="0.55" />
         <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_pd.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.55" />
+        <entry key="..\:/Users/ibrahim.mushtaque/AndroidStudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_se.xml" value="0.10444754377808771" />
       </map>
     </option>
   </component>

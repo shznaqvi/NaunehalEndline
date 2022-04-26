@@ -4422,6 +4422,15 @@ public class Child extends BaseObservable implements Observable {
 
     public void setPd23(String pd23) {
         this.pd23 = pd23;
+        setPd2401(pd23.equals("1") ? this.pd2401 : "");
+        setPd2402(pd23.equals("1") ? this.pd2402 : "");
+        setPd2403(pd23.equals("1") ? this.pd2403 : "");
+        setPd2404(pd23.equals("1") ? this.pd2404 : "");
+        setPd2405(pd23.equals("1") ? this.pd2405 : "");
+        setPd2406(pd23.equals("1") ? this.pd2406 : "");
+        setPd2496(pd23.equals("1") ? this.pd2496 : "");
+
+
         notifyPropertyChanged(BR.pd23);
     }
 
