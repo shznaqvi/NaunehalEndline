@@ -3668,6 +3668,20 @@ public class Child extends BaseObservable implements Observable {
     public void setIm3098(String im3098) {
         if (this.im3098.equals(im3098)) return;
         this.im3098 = im3098;
+        setIm30a(im3098.equals("98") ? "" : this.im30a);
+        setIm30b(im3098.equals("98") ? "" : this.im30b);
+        setIm30c(im3098.equals("98") ? "" : this.im30c);
+        setIm30d(im3098.equals("98") ? "" : this.im30d);
+        setIm30e(im3098.equals("98") ? "" : this.im30e);
+        setIm30f(im3098.equals("98") ? "" : this.im30f);
+        setIm30g(im3098.equals("98") ? "" : this.im30g);
+        setIm30h(im3098.equals("98") ? "" : this.im30h);
+        setIm30i(im3098.equals("98") ? "" : this.im30i);
+        setIm30j(im3098.equals("98") ? "" : this.im30j);
+        setIm30k(im3098.equals("98") ? "" : this.im30k);
+        setIm30l(im3098.equals("98") ? "" : this.im30l);
+        setIm30m(im3098.equals("98") ? "" : this.im30m);
+        setIm3096(im3098.equals("98") ? "" : this.im3096);
         notifyPropertyChanged(BR.im3098);
     }
 
