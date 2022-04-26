@@ -3671,16 +3671,17 @@ public class Child extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.im3098);
     }
 
-    /* @Bindable
-            public String getIm26() {
-                return im26;
-            }
+    @Bindable
+    public String getIm26() {
+        return im26;
+    }
 
-            public void setIm26(String im26) {
-                this.im26 = im26;
-                notifyPropertyChanged(BR.im26);
-            }
-        */
+    public void setIm26(String im26) {
+        this.im26 = im26;
+        notifyPropertyChanged(BR.im26);
+    }
+
+
     @Bindable
     public String getIm050198() {
         return im050198;
