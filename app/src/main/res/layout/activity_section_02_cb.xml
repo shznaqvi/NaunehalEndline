@@ -11,7 +11,9 @@
         <variable
             name="child"
             type="edu.aku.hassannaqvi.naunehalendline.models.Child" />
+
     </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,11 +41,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <LinearLayout
                 android:id="@+id/GrpName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
 
                 <!-- cb01_title1  Title   -->
                 <androidx.cardview.widget.CardView
@@ -61,18 +65,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/cb01_title1" />
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- cb01  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb01"
                     style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -97,23 +99,18 @@
                                 style="@style/sub_labels"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="2"
+                                android:layout_weight="3"
                                 android:text="@={child.cb01}" />
+
                         </LinearLayout>
 
-
-                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- cb02  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb02"
                     style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -128,32 +125,30 @@
                                 android:text="@string/Q_cb02" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:text="@string/cb02" />
+
+                            <EditText
+                                android:id="@+id/cb02"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 "
+                                android:hint="@string/cb02"
+                                android:inputType="textCapWords|textPersonName"
+                                android:text="@={child.cb02}" />
 
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/cb02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 "
-                            android:hint="@string/cb02"
-                            android:inputType="textCapWords|textPersonName"
-                            android:text="@={child.cb02}" />
-                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- cb03  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcb03"
                     style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -168,42 +163,42 @@
                                 android:text="@string/Q_cb03" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
+                                android:layout_weight="1"
                                 android:text="@string/cb03" />
+
+                            <RadioGroup
+                                android:id="@+id/cb03"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/cb0301"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="@{child.cb03.equals(`1`)}"
+                                    android:onClick="@{()->child.setCb03(`1`)}"
+                                    android:text="@string/cb0301" />
+
+                                <RadioButton
+                                    android:id="@+id/cb0302"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="@{child.cb03.equals(`2`)}"
+                                    android:onClick="@{()->child.setCb03(`2`)}"
+                                    android:text="@string/cb0302" />
+
+                            </RadioGroup>
 
                         </LinearLayout>
 
-                        <RadioGroup
-                            android:id="@+id/cb03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:weightSum="1"
-                            >
-
-                            <RadioButton
-                                android:id="@+id/cb0301"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:checked="@{child.cb03.equals(`1`)}"
-                                android:onClick="@{()->child.setCb03(`1`)}"
-                                android:text="@string/cb0301"
-                                android:layout_weight="0.5"
-                                />
-
-                            <RadioButton
-                                android:id="@+id/cb0302"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:checked="@{child.cb03.equals(`2`)}"
-                                android:onClick="@{()->child.setCb03(`2`)}"
-                                android:text="@string/cb0302"
-                                android:layout_weight="0.5"
-                                />
-                        </RadioGroup>
-                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- cb04  Title   -->
                 <androidx.cardview.widget.CardView
@@ -260,7 +255,6 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/cb04yy" />
-
 
                     </LinearLayout>
 

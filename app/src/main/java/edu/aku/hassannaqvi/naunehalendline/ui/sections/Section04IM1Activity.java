@@ -57,7 +57,7 @@ public class Section04IM1Activity extends AppCompatActivity {
         requestCode = intent.getStringExtra("requestCode");
 
         db = MainApp.appInfo.dbHelper;
-        bi.setChild(child);
+        bi.setForm(child);
         setupSkips();
         if (MainApp.superuser) bi.btnContinue.setText("Review Next");
 
@@ -65,8 +65,8 @@ public class Section04IM1Activity extends AppCompatActivity {
         Calendar cal = Calendar.getInstance();
         // cal.add(Calendar.MONTH, -6);
         bi.im04yy.setMaxvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));
-        //  cal.add(Calendar.MONTH, +6);
-        cal.add(Calendar.MONTH, -59); // u-5
+        cal.add(Calendar.MONTH, +6);
+        cal.add(Calendar.MONTH, -23 - 6); // 6 months buffer
         bi.im04yy.setMinvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));
     }
 
@@ -293,11 +293,13 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0501date);
 
                 if (!validateDatesBCG(dobDate, im0501date)) {
-                    displayInvalidDateDialog(bi.checkim0501, R.string.im05_01, bi.trIm0501);
+                    displayInvalidDateDialog(bi.checkim0501, R.string.im0501bcg, bi.trIm0501);
                     return Validator.emptyCustomTextBox(this, bi.im0501yy, "Incorrect Date.");
                 } else {
                     bi.checkim0501.setVisibility(View.INVISIBLE);
                 }
+
+
             }
 
             // IM0502
@@ -310,7 +312,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0502date);
 
                 if (!validateDatesBCG(dobDate, im0502date)) {
-                    displayInvalidDateDialog(bi.checkim0502, R.string.im05_02, bi.trIm0502);
+                    displayInvalidDateDialog(bi.checkim0502, R.string.im0502opv0, bi.trIm0502);
                     return Validator.emptyCustomTextBox(this, bi.im0502yy, "Incorrect Date.");
                 } else {
                     bi.checkim0502.setVisibility(View.INVISIBLE);
@@ -337,7 +339,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0510adate);
 
                 if (!validateDatesBCG(dobDate, im0510adate)) {
-                    displayInvalidDateDialog(bi.checkim0510a, R.string.im05_02a, bi.trIm0510a);
+                    displayInvalidDateDialog(bi.checkim0510a, R.string.im0510ahp, bi.trIm0510a);
                     return Validator.emptyCustomTextBox(this, bi.im0510ayy, "Incorrect Date.");
                 } else {
                     bi.checkim0510a.setVisibility(View.INVISIBLE);
@@ -371,7 +373,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0503date);
 
                 if (!validateDates(firstVaccine, im0503date)) {
-                    displayInvalidDateDialog(bi.checkim0503, R.string.im05_03, bi.trIm0503);
+                    displayInvalidDateDialog(bi.checkim0503, R.string.im0503opv1, bi.trIm0503);
                     return Validator.emptyCustomTextBox(this, bi.im0503yy, "Incorrect Date.");
                 } else {
                     bi.checkim0503.setVisibility(View.INVISIBLE);
@@ -396,7 +398,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0504date);
 
                 if (!validateDates(firstVaccine, im0504date)) {
-                    displayInvalidDateDialog(bi.checkim0504, R.string.im05_04, bi.trIm0504);
+                    displayInvalidDateDialog(bi.checkim0504, R.string.im0504penta1, bi.trIm0504);
                     return Validator.emptyCustomTextBox(this, bi.im0504yy, "Incorrect Date.");
                 } else {
                     bi.checkim0504.setVisibility(View.INVISIBLE);
@@ -420,7 +422,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0505date);
 
                 if (!validateDates(firstVaccine, im0505date)) {
-                    displayInvalidDateDialog(bi.checkim0505, R.string.im05_05, bi.trIm0505);
+                    displayInvalidDateDialog(bi.checkim0505, R.string.im0505pcv1, bi.trIm0505);
                     return Validator.emptyCustomTextBox(this, bi.im0505yy, "Incorrect Date.");
                 } else {
                     bi.checkim0505.setVisibility(View.INVISIBLE);
@@ -444,7 +446,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0506date);
 
                 if (!validateDates(firstVaccine, im0506date)) {
-                    displayInvalidDateDialog(bi.checkim0506, R.string.im05_06, bi.trIm0506);
+                    displayInvalidDateDialog(bi.checkim0506, R.string.im0506rv1, bi.trIm0506);
                     return Validator.emptyCustomTextBox(this, bi.im0506yy, "Incorrect Date.");
                 } else {
                     bi.checkim0506.setVisibility(View.INVISIBLE);
@@ -480,7 +482,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0507date);
 
                 if (!validateDates(secondVaccine, im0507date)) {
-                    displayInvalidDateDialog(bi.checkim0507, R.string.im05_07, bi.trIm0507);
+                    displayInvalidDateDialog(bi.checkim0507, R.string.im0507opv2, bi.trIm0507);
                     return Validator.emptyCustomTextBox(this, bi.im0507yy, "Incorrect Date.");
                 } else {
                     bi.checkim0507.setVisibility(View.INVISIBLE);
@@ -505,7 +507,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0508date);
 
                 if (!validateDates(secondVaccine, im0508date)) {
-                    displayInvalidDateDialog(bi.checkim0508, R.string.im05_08, bi.trIm0508);
+                    displayInvalidDateDialog(bi.checkim0508, R.string.im0508penta2, bi.trIm0508);
                     return Validator.emptyCustomTextBox(this, bi.im0508yy, "Incorrect Date.");
                 } else {
                     bi.checkim0508.setVisibility(View.INVISIBLE);
@@ -530,7 +532,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0509date);
 
                 if (!validateDates(secondVaccine, im0509date)) {
-                    displayInvalidDateDialog(bi.checkim0509, R.string.im05_09, bi.trIm0509);
+                    displayInvalidDateDialog(bi.checkim0509, R.string.im0509pcv2, bi.trIm0509);
                     return Validator.emptyCustomTextBox(this, bi.im0509yy, "Incorrect Date.");
                 } else {
                     bi.checkim0509.setVisibility(View.INVISIBLE);
@@ -554,7 +556,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0510date);
 
                 if (!validateDates(secondVaccine, im0510date)) {
-                    displayInvalidDateDialog(bi.checkim0510, R.string.im05_10, bi.trIm0510);
+                    displayInvalidDateDialog(bi.checkim0510, R.string.im0510rv2, bi.trIm0510);
                     return Validator.emptyCustomTextBox(this, bi.im0510yy, "Incorrect Date.");
                 } else {
                     bi.checkim0510.setVisibility(View.INVISIBLE);
@@ -587,7 +589,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0511date);
 
                 if (!validateDates(thirdVaccine, im0511date)) {
-                    displayInvalidDateDialog(bi.checkim0511, R.string.im05_11, bi.trIm0511);
+                    displayInvalidDateDialog(bi.checkim0511, R.string.im0511opv3, bi.trIm0511);
                     return Validator.emptyCustomTextBox(this, bi.im0511yy, "Incorrect Date.");
                 } else {
                     bi.checkim0511.setVisibility(View.INVISIBLE);
@@ -613,7 +615,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0512date);
 
                 if (!validateDates(thirdVaccine, im0512date)) {
-                    displayInvalidDateDialog(bi.checkim0512, R.string.im05_12, bi.trIm0512);
+                    displayInvalidDateDialog(bi.checkim0512, R.string.im0512penta3, bi.trIm0512);
                     return Validator.emptyCustomTextBox(this, bi.im0512yy, "Incorrect Date.");
                 } else {
                     bi.checkim0512.setVisibility(View.INVISIBLE);
@@ -639,7 +641,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0513date);
 
                 if (!validateDates(thirdVaccine, im0513date)) {
-                    displayInvalidDateDialog(bi.checkim0513, R.string.im05_13, bi.trIm0513);
+                    displayInvalidDateDialog(bi.checkim0513, R.string.im0513pcv3, bi.trIm0513);
                     return Validator.emptyCustomTextBox(this, bi.im0513yy, "Incorrect Date.");
                 } else {
                     bi.checkim0513.setVisibility(View.INVISIBLE);
@@ -665,7 +667,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0514date);
 
                 if (!validateDates(thirdVaccine, im0514date)) {
-                    displayInvalidDateDialog(bi.checkim0514, R.string.im05_14, bi.trIm0514);
+                    displayInvalidDateDialog(bi.checkim0514, R.string.im0514ipv, bi.trIm0514);
                     return Validator.emptyCustomTextBox(this, bi.im0514yy, "Incorrect Date.");
                 } else {
                     bi.checkim0514.setVisibility(View.INVISIBLE);
@@ -702,7 +704,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0515date);
 
                 if (!validateDates(forthVaccine, im0515date)) {
-                    displayInvalidDateDialog(bi.checkim0515, R.string.im05_15, bi.trIm0515);
+                    displayInvalidDateDialog(bi.checkim0515, R.string.im0515measles1, bi.trIm0515);
                     return Validator.emptyCustomTextBox(this, bi.im0515yy, "Incorrect Date.");
                 } else {
                     bi.checkim0515.setVisibility(View.INVISIBLE);
@@ -728,7 +730,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0515bdate);
 
                 if (!validateDates(forthVaccine, im0515bdate)) {
-                    displayInvalidDateDialog(bi.checkim0515b, R.string.im05_15a, bi.trIm0515b);
+                    displayInvalidDateDialog(bi.checkim0515b, R.string.im0515bipv2, bi.trIm0515b);
                     return Validator.emptyCustomTextBox(this, bi.im0515byy, "Incorrect Date.");
                 } else {
                     bi.checkim0515b.setVisibility(View.INVISIBLE);
@@ -754,7 +756,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                     vaccDates.add(im0517date);
 
                 if (!validateDates(forthVaccine, im0517date)) {
-                    displayInvalidDateDialog(bi.checkim0517, R.string.im05_15b, bi.trIm0517);
+                    displayInvalidDateDialog(bi.checkim0517, R.string.im0517typh, bi.trIm0517);
                     return Validator.emptyCustomTextBox(this, bi.im0517yy, "Incorrect Date.");
                 } else {
                     bi.checkim0517.setVisibility(View.INVISIBLE);
@@ -789,7 +791,7 @@ public class Section04IM1Activity extends AppCompatActivity {
                 //vaccDates.add(im0516date);
 
                 if (!validateDates(fifthVaccine, im0516date)) {
-                    displayInvalidDateDialog(bi.checkim0516, R.string.im05_16, bi.trIm0516);
+                    displayInvalidDateDialog(bi.checkim0516, R.string.im0516measles2, bi.trIm0516);
                     return Validator.emptyCustomTextBox(this, bi.im0516yy, "Incorrect Date.");
                 } else {
                     bi.checkim0516.setVisibility(View.INVISIBLE);
@@ -895,16 +897,9 @@ public class Section04IM1Activity extends AppCompatActivity {
 
 
     public void takePhoto(View view) {
-
         Intent intent = new Intent(this, TakePhoto.class);
-
         intent.putExtra("picID", form.getEbCode() + "_" + form.getHhid() + "_" + MainApp.child.getSno() + "_");
-        //TODO:
-        //intent.putExtra("childName", MainApp.child.getEc14());
-/*
-        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
-        intent.putExtra("childName", "Hassan");
-*/
+        intent.putExtra("childName", MainApp.child.getCb02());
         if (view.getId() == R.id.frontPhoto) {
             intent.putExtra("picView", "front".toUpperCase());
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front

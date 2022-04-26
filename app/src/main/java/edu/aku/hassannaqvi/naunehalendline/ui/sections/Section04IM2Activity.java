@@ -32,7 +32,7 @@ import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection04Im2Bindi
 public class Section04IM2Activity extends AppCompatActivity {
 
 
-    private static final String TAG = "SectionIM2Activity";
+    private static final String TAG = "Section04IM2Activity";
     ActivitySection04Im2Binding bi;
     String[] deff = {"44", "66", "88", "97"};
     private DatabaseHelper db;
@@ -49,7 +49,7 @@ public class Section04IM2Activity extends AppCompatActivity {
 
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
-        bi.setChild(child);
+        bi.setForm(child);
         if (MainApp.superuser) bi.btnContinue.setText("Review Next");
     }
 
