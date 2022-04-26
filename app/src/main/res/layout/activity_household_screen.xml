@@ -63,6 +63,14 @@
                 tools:itemCount="1"
                 tools:listitem="@layout/child_box" />
 
+            <CheckBox
+                android:id="@+id/familyComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="completeFamily"
+                android:text="Child list complete"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
         </LinearLayout>
 
         <RelativeLayout
@@ -470,6 +478,7 @@
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
                 <!--EndButton LinearLayout-->
                 <LinearLayout
                     android:layout_width="match_parent"

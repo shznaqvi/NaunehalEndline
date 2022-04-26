@@ -80,7 +80,7 @@ public class MainApp extends Application {
     public static int childCount = 0;
     public static String selectedMWRA;
     public static int selectedChild;
-    public static int youngestChild;
+    public static Integer youngestChild = null;
     public static String selectedChildName = "";
     public static int memberCountComplete;
     public static boolean memberComplete;
@@ -101,6 +101,7 @@ public class MainApp extends Application {
     public static boolean householdChecked = false;
     public static long preAgeInMonths;
     public static String[] clusterInfo;
+    public static int totalChildren;
 
 
     public static void hideSystemUI(View decorView) {

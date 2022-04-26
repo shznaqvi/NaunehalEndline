@@ -148,6 +148,7 @@ public class TableContracts {
         public static final String COLUMN_CSTATUS = "cstatus";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_SNO = "sno";
+        public static final String COLUMN_INDEXED = "indexed";
         public static final String COLUMN_AGE_DAYS = "ageInDays";
         public static final String COLUMN_SCB = "scb";
         public static final String COLUMN_SCS = "scs";

@@ -61,6 +61,7 @@ object CreateTable {
             + ChildTable.COLUMN_CLUSTER_CODE + " TEXT, "
             + ChildTable.COLUMN_HHID + " TEXT, "
             + ChildTable.COLUMN_SNO + " TEXT, "
+            + ChildTable.COLUMN_INDEXED + " TEXT, "
             + ChildTable.COLUMN_AGE_DAYS + " INTEGER, "
             + ChildTable.COLUMN_USERNAME + " TEXT, "
             + ChildTable.COLUMN_SYSDATE + " TEXT, "

@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.adapters;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
 import android.content.Context;
 import android.content.Intent;
@@ -67,6 +68,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         TextView fAge = viewHolder.fAge;
         TextView motherName = viewHolder.motherName;
         TextView childcheck = viewHolder.childcheck;
+        TextView markChild = viewHolder.markChild;
         // LinearLayout subItem = viewHolder.subItem;
         ImageView fmRow = viewHolder.fmRow;
         ImageView mainIcon = viewHolder.mainIcon;
@@ -156,6 +158,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         }
 
 */
+        markChild.setVisibility(child.getIndexed().equals("1") ? View.VISIBLE : View.GONE);
 
         //  cloaked.setVisibility(!child.getMemCate().equals("") ? View.GONE : View.VISIBLE);
         mainIcon.setImageResource(child.getCb03().equals("1") ? R.drawable.ic_boy : R.drawable.ic_girl);
@@ -182,47 +185,59 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         // To add Child's Health and Immunization Details
         viewHolder.itemView.setOnClickListener(v -> {
             // Get the current state of the item
+            try {
+                int id = youngestChild;
+                MainApp.child = MainApp.childList.get(position);
+                if (child.getAgeInMonths() <= 59) {
 
-            MainApp.child = MainApp.childList.get(position);
-            if (child.getAgeInMonths() <= 59) {
+                    Intent intent = new Intent(mContext, Section03CSActivity.class);
 
-                Intent intent = new Intent(mContext, Section03CSActivity.class);
+                    intent.putExtra("position", position);
+                    intent.putExtra("requestCode", "4");
 
-                intent.putExtra("position", position);
-                intent.putExtra("requestCode", "4");
+                    selectedChild = position;
 
-                selectedChild = position;
+                    intent.putExtra("position", position);
+                    childInfoLauncher.launch(intent);
 
-                intent.putExtra("position", position);
-                childInfoLauncher.launch(intent);
-
-                //  ((Activity) mContext).startActivityForResult(intent, 2);
-            } else {
-                Toast.makeText(mContext, "INELIGIBLE: Child is " + child.getAgeInMonths() + " months old", Toast.LENGTH_SHORT).show();
+                    //  ((Activity) mContext).startActivityForResult(intent, 2);
+                } else {
+                    Toast.makeText(mContext, "INELIGIBLE: Child is " + child.getAgeInMonths() + " months old", Toast.LENGTH_SHORT).show();
+                }
+            } catch (NullPointerException e) {
+                Toast.makeText(mContext, "Please complete child list.", Toast.LENGTH_LONG).show();
             }
-
         });
 
         // TO EDIT Child's basic info
         viewHolder.itemView.setOnLongClickListener(view -> {
-            MainApp.child = MainApp.childList.get(position);
-            // Check if Child details has been added in next section
-            if (MainApp.child.getCs01().equals("")) {
-                Intent intent = new Intent(mContext, Section02CBActivity.class);
+            try {
+                int id = youngestChild;
+                Toast.makeText(mContext, "Child list has been completed. You cannot change basic information of this child.", Toast.LENGTH_LONG).show();
+                return false;
 
-                intent.putExtra("position", position);
-                intent.putExtra("requestCode", "3");
+            } catch (NullPointerException e) {
 
-                selectedChild = position;
-                MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
+                MainApp.child = MainApp.childList.get(position);
+                // Check if Child details has been added in next section
+                if (MainApp.child.getCs01().equals("")) {
+                    Intent intent = new Intent(mContext, Section02CBActivity.class);
 
-                intent.putExtra("position", position);
-                childInfoLauncher.launch(intent);
+                    intent.putExtra("position", position);
+                    intent.putExtra("requestCode", "3");
 
-            } else {
-                Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
+                    selectedChild = position;
+                    MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
+
+                    intent.putExtra("position", position);
+                    childInfoLauncher.launch(intent);
+
+                } else {
+                    Toast.makeText(mContext, "This child has been locked.", Toast.LENGTH_SHORT).show();
+                }
+                return true;
             }
-            return true;
+
         });
 
     }
@@ -249,6 +264,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         private final TextView fAge;
         private final TextView motherName;
         private final TextView childcheck;
+        private final TextView markChild;
         //private final TextView addSec;
         //private final LinearLayout subItem;
         private final ImageView fmRow;
@@ -263,6 +279,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             fAge = v.findViewById(R.id.chh05);
             motherName = v.findViewById(R.id.chh08);
             childcheck = v.findViewById(R.id.childcheck);
+            markChild = v.findViewById(R.id.markChild);
             //  addSec = v.findViewById(R.id.cadd_section);
             //  subItem = v.findViewById(R.id.csubitem);
             fmRow = v.findViewById(R.id.cfmRow);

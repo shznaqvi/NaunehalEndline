@@ -135,6 +135,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(ChildTable.COLUMN_CLUSTER_CODE, child.getEbCode());
         values.put(ChildTable.COLUMN_HHID, child.getHhid());
         values.put(ChildTable.COLUMN_SNO, child.getSno());
+        values.put(ChildTable.COLUMN_INDEXED, child.getIndexed());
         values.put(ChildTable.COLUMN_AGE_DAYS, child.getAgeInMonths());
         values.put(ChildTable.COLUMN_USERNAME, child.getUserName());
         values.put(ChildTable.COLUMN_SYSDATE, child.getSysDate());
@@ -1147,4 +1148,45 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return childrenByUID;
     }
+
+    public String getYoungestChild() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+
+        String whereClause;
+        whereClause = ChildTable.COLUMN_UUID + "=? ";
+
+        String[] whereArgs = {MainApp.form.getUid()};
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = ChildTable.COLUMN_AGE_DAYS + " ASC";
+
+        Child youngestChild = new Child();
+        c = db.query(
+                ChildTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy,                    // The sort order
+                "1"
+        );
+        while (c.moveToNext()) {
+            youngestChild = new Child().Hydrate(c);
+        }
+
+        if (c != null) {
+            c.close();
+        }
+        if (db != null) {
+            db.close();
+        }
+        return youngestChild.getSno();
+    }
+
+
 }

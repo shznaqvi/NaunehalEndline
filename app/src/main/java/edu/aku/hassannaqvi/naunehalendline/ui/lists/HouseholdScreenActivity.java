@@ -2,6 +2,8 @@ package edu.aku.hassannaqvi.naunehalendline.ui.lists;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.childCount;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.totalChildren;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -25,6 +27,7 @@ import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.adapters.ChildAdapter;
+import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivityHouseholdScreenBinding;
@@ -82,10 +85,10 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                                 Toast.makeText(HouseholdScreenActivity.this, "Child updated.", Toast.LENGTH_SHORT).show();
                             } else if (data.getStringExtra("requestCode").equals("4")) {          // Added IM information
 
-                               /* MainApp.childList.set(selectedChild, MainApp.child);
-                                if (!MainApp.child.getEc22().equals("") && !MainApp.childCompleted.contains(selectedChild)) {
+                                MainApp.childList.set(selectedChild, MainApp.child);
+                                if (!MainApp.child.getCs01().equals("") && !MainApp.childCompleted.contains(selectedChild)) {
                                     MainApp.childCompleted.add(selectedChild);
-                                }*/
+                                }
 
                                 childsAdapter.notifyItemChanged(selectedChild);
                                 Toast.makeText(HouseholdScreenActivity.this, "Child information added.", Toast.LENGTH_SHORT).show();
@@ -115,14 +118,19 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         MainApp.childList = new ArrayList<>();
         MainApp.childCompleted = new ArrayList<>();
         childCount = 0;
-
+        youngestChild = null;
+        totalChildren = (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()));
         Log.d(TAG, "onCreate(childList): " + MainApp.childList.size());
         try {
             MainApp.childList = db.getChildrenBYUID();
             for (Child child : MainApp.childList) {
+                if (child.getIndexed().equals("1")) {
+                    youngestChild = Integer.parseInt(child.getSno()) - 1;
+                    bi.familyComplete.setChecked(true);
+                    bi.familyComplete.setEnabled(false);
+                }
                 if (child.getAgeInMonths() <= 59)
                     childCount++;
-
                 if (!child.getPd24().equals("")) {
                     MainApp.childCompleted.add(Integer.parseInt(child.getCb01()) - 1);
                 }
@@ -168,7 +176,13 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // Toast.makeText(this, "Activity Resumed!", Toast.LENGTH_SHORT).show();
-        if (childCount >= (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25())) && MainApp.householdChecked) {
+        if (childCount > 0) {
+
+            bi.familyComplete.setVisibility(View.VISIBLE);
+        } else {
+            bi.familyComplete.setVisibility(View.GONE);
+        }
+        if (childCount >= totalChildren && MainApp.householdChecked) {
             bi.btnContinue.setEnabled(childCount == MainApp.childCompleted.size());
             bi.btnContinue.setBackground(childCount == MainApp.childCompleted.size() ? getResources().getDrawable(R.drawable.button_shape_green) : getResources().getDrawable(R.drawable.button_shape_gray));
             bi.childCompleteStatus.setVisibility(View.VISIBLE);
@@ -179,20 +193,28 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
 
     public void btnContinue(View view) {
-        if (childCount < (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))) {
-            displayProceedDialog();
-        } else {
-            proceedSelect();
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+    }
 
+    public void completeFamily(View view) {
+        if (bi.familyComplete.isChecked()) {
+            if (childCount < totalChildren) {
+                displayProceedDialog();
+            } else {
+                proceedSelect();
+
+            }
         }
-
 
     }
 
     private void displayProceedDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
-                .setMessage(String.format(getString(R.string.message_child_dialog_proceeed), MainApp.childList.size() + "", (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))))
+                .setMessage(String.format(getString(R.string.message_child_dialog_proceeed),
+                        MainApp.childList.size() + "", totalChildren + ""
+                ))
 
                 // Specifying a listener allows you to take an action before dismissing the dialog.
                 // The dialog is automatically dismissed when a dialog button is clicked.
@@ -204,22 +226,43 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 })
 
                 // A null listener allows the button to dismiss the dialog and take no further action.
-                .setNegativeButton(R.string.no, null)
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        bi.familyComplete.setChecked(false);
+                    }
+
+                    // Continue with delete operation
+                })
                 .setIcon(R.drawable.ic_alert_24)
                 .show();
 
     }
 
     private void proceedSelect() {
-        finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+
+        selectYoungestChild();
+
+    }
+
+    private void selectYoungestChild() {
+        try {
+            youngestChild = Integer.parseInt(db.getYoungestChild()) - 1;
+            MainApp.child = MainApp.childList.get(youngestChild);
+            db.updatesChildColumn(TableContracts.ChildTable.COLUMN_INDEXED, "1");
+            MainApp.childList.get(youngestChild).setIndexed("1");
+            bi.familyComplete.setEnabled(false);
+            childsAdapter.notifyItemChanged(youngestChild);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, e.getClass().getSimpleName() + "(" + e.getMessage() + ")", Toast.LENGTH_LONG);
+        }
     }
 
 
     private void addChild() {
 
 
-        if (childCount >= (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh25()))) {
+        if (childCount >= totalChildren) {
             displayAddMoreDialog();
         } else {
             addMoreChild();
@@ -232,7 +275,8 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     private void displayAddMoreDialog() {
         new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
-                .setMessage(String.format(getString(R.string.message_child_dialog_addmore), (Integer.parseInt(MainApp.form.getHh24()) + Integer.parseInt(MainApp.form.getHh24()))))
+                .setMessage(String.format(getString(R.string.message_child_dialog_addmore),
+                        childCount + ""))
 
                 // Specifying a listener allows you to take an action before dismissing the dialog.
                 // The dialog is automatically dismissed when a dialog button is clicked.
@@ -273,6 +317,8 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
     }
+
+
 
    /* @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

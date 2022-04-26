@@ -125,18 +125,29 @@ public class Section04IM2Activity extends AppCompatActivity {
         if (!formValidation()) return;
         if (updateDB()) {
             Intent forwardIntent = null;
-            if (child.getCb11().equals("1")) {
-                if (selectedChild == youngestChild && child.getAgeInMonths() <= 23) {
+            if (selectedChild == youngestChild) {
+                if (child.getCb11().equals("1") && child.getAgeInMonths() <= 23) {
                     forwardIntent = new Intent(this, Section05PDActivity.class);
-                } else if (selectedChild == youngestChild) {
+                } else if (!child.getCs02a().equals("4")) {
                     forwardIntent = new Intent(this, Section07CVActivity.class);
                 }
+                /*else if(child.getAgeInMonths() <= 23) {
+                    forwardIntent = new Intent(this, Section06BFActivity.class);
+                }*/
             }
-            forwardIntent.putExtra("requestCode", requestCode);
-            forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
-            setResult(RESULT_OK, forwardIntent);
-
-            startActivity(forwardIntent);
+            if (forwardIntent != null) {
+                forwardIntent.putExtra("requestCode", requestCode);
+                forwardIntent.putExtra("complete", true);
+                forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                setResult(RESULT_OK, forwardIntent);
+                startActivity(forwardIntent);
+            } else {
+                Intent returnIntent = null;
+                returnIntent.putExtra("requestCode", requestCode);
+                returnIntent.putExtra("complete", true);
+                setResult(RESULT_OK, returnIntent);
+                startActivity(returnIntent);
+            }
             finish();
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }

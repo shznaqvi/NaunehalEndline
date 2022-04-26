@@ -41,6 +41,7 @@ public class Child extends BaseObservable implements Observable {
     private String ebCode = _EMPTY_;
     private String hhid = _EMPTY_;
     private String sno = _EMPTY_;
+    private String indexed = _EMPTY_;
     private String deviceId = _EMPTY_;
     private String deviceTag = _EMPTY_;
     private String appver = _EMPTY_;
@@ -537,6 +538,7 @@ public class Child extends BaseObservable implements Observable {
     private long ageInDays = -1;
     private long trueAgeInMonths = -1;
     private boolean ageCheck;
+    private String isYoungest = "0";
 
 
     public void Child() {
@@ -632,6 +634,14 @@ public class Child extends BaseObservable implements Observable {
         this.sno = sno;
     }
 
+    public String getIndexed() {
+        return indexed;
+    }
+
+    public void setIndexed(String indexed) {
+        this.indexed = indexed;
+    }
+
     public String getDeviceId() {
         return deviceId;
     }
@@ -725,9 +735,9 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dk(String cb04dk) {
         this.cb04dk = cb04dk;
-        setCb04dd(cb04dk.equals("98") ? "" : this.cb04dd);
-        setCb04mm(cb04dk.equals("98") ? "" : this.cb04mm);
-        setCb04yy(cb04dk.equals("98") ? "" : this.cb04yy);
+   /*     setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
+        setCb04mm(cb04dk.equals("98") ? "98" : this.cb04mm);
+        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);*/
         setCb0501(cb04dk.equals("98") ? "" : this.cb0501);
         setCb0502(cb04dk.equals("98") ? "" : this.cb0502);
 
@@ -1097,6 +1107,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb01(String cb01) {
         this.cb01 = cb01;
+        setSno(cb01);
         notifyPropertyChanged(BR.cb01);
     }
 
@@ -1151,6 +1162,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb06(String cb06) {
         this.cb06 = cb06;
+        setCb11(cb06.equals("1") ? "1" : cb11);
 
         // Mother info
         setCb07(cb06.equals("1") ? "" : this.cb07);
@@ -1703,11 +1715,23 @@ public class Child extends BaseObservable implements Observable {
         return ageCheck;
     }
 
-    private void setAgeCheck(boolean ageCheck) {
+    public void setAgeCheck(boolean ageCheck) {
         this.ageCheck = ageCheck;
         notifyPropertyChanged(BR.ageCheck);
 
     }
+
+    @Bindable
+    public String getIsYoungest() {
+        return isYoungest;
+    }
+
+    public void setIsYoungest(String isYoungest) {
+        this.isYoungest = isYoungest;
+        notifyPropertyChanged(BR.isYoungest);
+
+    }
+
 
     @Bindable
     public String getIm01() {
@@ -6383,6 +6407,7 @@ public class Child extends BaseObservable implements Observable {
         this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_HHID));
         this.projectName = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_PROJECT_NAME));
         this.sno = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SNO));
+        this.indexed = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_INDEXED));
         this.ageInDays = cursor.getLong(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_AGE_DAYS));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_USERNAME));
         this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.ChildTable.COLUMN_SYSDATE));
@@ -6437,6 +6462,7 @@ public class Child extends BaseObservable implements Observable {
             this.cb1496x = json.getString("cb1496x");
 
             this.ageInMonths = json.getLong("ageInMonths");
+            this.isYoungest = json.getString("isYoungest");
 
         }
 
@@ -6928,6 +6954,7 @@ public class Child extends BaseObservable implements Observable {
         json.put(TableContracts.ChildTable.COLUMN_PROJECT_NAME, this.projectName);
         json.put(TableContracts.ChildTable.COLUMN_UUID, this.uuid);
         json.put(TableContracts.ChildTable.COLUMN_SNO, this.sno);
+        json.put(TableContracts.ChildTable.COLUMN_INDEXED, this.indexed);
         json.put(TableContracts.ChildTable.COLUMN_AGE_DAYS, this.ageInDays);
         json.put(TableContracts.ChildTable.COLUMN_USERNAME, this.userName);
         json.put(TableContracts.ChildTable.COLUMN_SYSDATE, this.sysDate);
@@ -6974,7 +7001,8 @@ public class Child extends BaseObservable implements Observable {
                 .put("cb13", cb13)
                 .put("cb14", cb14)
                 .put("cb1496x", cb1496x)
-                .put("ageInMonths", ageInMonths);
+                .put("ageInMonths", ageInMonths)
+                .put("isYoungest", isYoungest);
 
 
         return json.toString();
