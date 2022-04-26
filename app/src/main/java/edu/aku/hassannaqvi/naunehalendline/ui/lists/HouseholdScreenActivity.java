@@ -266,7 +266,6 @@ public class HouseholdScreenActivity extends AppCompatActivity {
             displayAddMoreDialog();
         } else {
             addMoreChild();
-
         }
 
 

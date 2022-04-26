@@ -34,8 +34,8 @@
             android:theme="@style/CustomToolbarTheme"
             app:popupTheme="@style/CustomPopupTheme"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
-            app:subtitle="@string/imm"
             app:title="@string/im"
+            app:subtitle="@string/imm"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
 
@@ -528,15 +528,15 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@{form.trueAgeInMonths > 23 || form.trueAgeInMonths &lt; 6 ?  context.getResources().getColor(R.color.redOverlay) : context.getResources().getColor(R.color.grayLight)}"
                                     android:text="@{`Age in months: `+form.trueAgeInMonths}"
+                                    android:background="@{form.trueAgeInMonths > 23 || form.trueAgeInMonths &lt; 6 ?  context.getResources().getColor(R.color.redOverlay) : context.getResources().getColor(R.color.grayLight)}"
                                     android:gravity="end"
                                     android:includeFontPadding="true"
                                     android:paddingEnd="12dp"
-                                    android:textColor="@{form.trueAgeInMonths > 23 || form.trueAgeInMonths &lt; 6 ?  context.getResources().getColor(R.color.redDark) : context.getResources().getColor(R.color.gray)}"
-                                    android:visibility="@{form.trueAgeInMonths != -1 ? View.VISIBLE : View.GONE}"
                                     android:textSize="13sp"
+                                    android:textColor="@{form.trueAgeInMonths > 23 || form.trueAgeInMonths &lt; 6 ?  context.getResources().getColor(R.color.redDark) : context.getResources().getColor(R.color.gray)}"
                                     tools:background="@color/grayLight"
+                                    android:visibility="@{form.trueAgeInMonths != -1 ? View.VISIBLE : View.GONE}"
                                     tools:text="Age in months: 99" />
                             </TableRow>
 
@@ -1453,8 +1453,8 @@
                                         android:hint="####"
                                         android:inputType="number"
                                         android:maxLength="4"
-                                        android:text="@={form.im0507yy}"
                                         app:pattern="^[0-9]{4,4}$"
+                                        android:text="@={form.im0507yy}"
                                         app:maxValue="2022"
                                         app:minValue="2020"
                                         app:type="range" />
@@ -1923,8 +1923,8 @@
                                         android:hint="####"
                                         android:inputType="number"
                                         android:maxLength="4"
-                                        android:text="@={form.im0512yy}"
                                         app:pattern="^[0-9]{4,4}$"
+                                        android:text="@={form.im0512yy}"
                                         app:maxValue="2022"
                                         app:minValue="2020"
                                         app:type="range" />
@@ -2019,8 +2019,8 @@
                                         android:hint="####"
                                         android:inputType="number"
                                         android:maxLength="4"
-                                        android:text="@={form.im0513yy}"
                                         app:pattern="^[0-9]{4,4}$"
+                                        android:text="@={form.im0513yy}"
                                         app:maxValue="2022"
                                         app:minValue="2020"
                                         app:type="range" />
@@ -2199,8 +2199,8 @@
                                         android:hint="####"
                                         android:inputType="number"
                                         android:maxLength="4"
-                                        android:text="@={form.im0515yy}"
                                         app:pattern="^[0-9]{4,4}$"
+                                        android:text="@={form.im0515yy}"
                                         app:maxValue="2022"
                                         app:minValue="2020"
                                         app:type="range" />
@@ -2569,13 +2569,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginTop="24dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:padding="24dp">
 
                     <Button
                         android:id="@+id/btn_End"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:onClick="btnEnd"
                         android:text="Cancel"
@@ -2585,15 +2586,15 @@
 
                     <Button
                         android:id="@+id/btn_Continue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:background="@drawable/capsule"
                         android:backgroundTint="@color/colorAccent"
                         android:backgroundTintMode="src_atop"
                         android:onClick="btnContinue"
                         android:text="Save"
-                        android:textColor="@color/white"
+                        android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
