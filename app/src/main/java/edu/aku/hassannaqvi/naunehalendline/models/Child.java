@@ -1707,6 +1707,9 @@ public class Child extends BaseObservable implements Observable {
     public void setTrueAgeInMonths(long trueAgeInMonths) {
         this.trueAgeInMonths = trueAgeInMonths;
         setAgeCheck(trueAgeInMonths < 59);
+
+        setCs20(trueAgeInMonths < 6 ? "" : this.cs20);
+        setCs21(trueAgeInMonths < 6 ? "" : this.cs21);
         notifyPropertyChanged(BR.trueAgeInMonths);
     }
 

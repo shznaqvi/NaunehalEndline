@@ -2014,7 +2014,8 @@
                 <!-- cs20  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs20"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.trueAgeInMonths &lt; 6 ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2079,7 +2080,8 @@
                 <!-- cs21  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs21"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.trueAgeInMonths &lt; 6 ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
