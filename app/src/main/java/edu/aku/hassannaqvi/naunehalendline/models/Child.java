@@ -262,10 +262,23 @@ public class Child extends BaseObservable implements Observable {
     // private String im24d = _EMPTY_;
     private String im25 = _EMPTY_;
     private String im29 = _EMPTY_;
-    private String im30 = _EMPTY_;
-    private String im30_96x = _EMPTY_;
-
-    //private String im26 = _EMPTY_;
+    private String im30a = _EMPTY_;
+    private String im30b = _EMPTY_;
+    private String im30c = _EMPTY_;
+    private String im30d = _EMPTY_;
+    private String im30e = _EMPTY_;
+    private String im30f = _EMPTY_;
+    private String im30g = _EMPTY_;
+    private String im30h = _EMPTY_;
+    private String im30i = _EMPTY_;
+    private String im30j = _EMPTY_;
+    private String im30k = _EMPTY_;
+    private String im30l = _EMPTY_;
+    private String im30m = _EMPTY_;
+    private String im3096 = _EMPTY_;
+    private String im3096x = _EMPTY_;
+    private String im3098 = _EMPTY_;
+    private String im26 = _EMPTY_;
 
     private String im050198 = _EMPTY_;
     private String im050298 = _EMPTY_;
@@ -559,8 +572,6 @@ public class Child extends BaseObservable implements Observable {
 
 
     public void Child() {
-
-
     }
 
 
@@ -3468,24 +3479,196 @@ public class Child extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.im29);
     }
 
-    @Bindable
-    public String getIm30() {
-        return im30;
-    }
-
-    public void setIm30(String im30) {
-        this.im30 = im30;
-        notifyPropertyChanged(BR.im30);
-    }
 
     @Bindable
-    public String getIm30_96x() {
-        return im30_96x;
+    public String getIm30a() {
+        return im30a;
     }
 
-    public void setIm30_96x(String im30_96x) {
-        this.im30_96x = im30_96x;
-        notifyPropertyChanged(BR.im30_96x);
+    public void setIm30a(String im30a) {
+        if (this.im30a.equals(im30a)) return;
+        this.im30a = im30a;
+        notifyPropertyChanged(BR.im30a);
+    }
+
+
+    @Bindable
+    public String getIm30b() {
+        return im30b;
+    }
+
+    public void setIm30b(String im30b) {
+        if (this.im30b.equals(im30b)) return;
+        this.im30b = im30b;
+        notifyPropertyChanged(BR.im30b);
+    }
+
+
+    @Bindable
+    public String getIm30c() {
+        return im30c;
+    }
+
+    public void setIm30c(String im30c) {
+        if (this.im30c.equals(im30c)) return;
+        this.im30c = im30c;
+        notifyPropertyChanged(BR.im30c);
+    }
+
+
+    @Bindable
+    public String getIm30d() {
+        return im30d;
+    }
+
+    public void setIm30d(String im30d) {
+        if (this.im30d.equals(im30d)) return;
+        this.im30d = im30d;
+        notifyPropertyChanged(BR.im30d);
+    }
+
+
+    @Bindable
+    public String getIm30e() {
+        return im30e;
+    }
+
+    public void setIm30e(String im30e) {
+        if (this.im30e.equals(im30e)) return;
+        this.im30e = im30e;
+        notifyPropertyChanged(BR.im30e);
+    }
+
+
+    @Bindable
+    public String getIm30f() {
+        return im30f;
+    }
+
+    public void setIm30f(String im30f) {
+        if (this.im30f.equals(im30f)) return;
+        this.im30f = im30f;
+        notifyPropertyChanged(BR.im30f);
+    }
+
+
+    @Bindable
+    public String getIm30g() {
+        return im30g;
+    }
+
+    public void setIm30g(String im30g) {
+        if (this.im30g.equals(im30g)) return;
+        this.im30g = im30g;
+        notifyPropertyChanged(BR.im30g);
+    }
+
+
+    @Bindable
+    public String getIm30h() {
+        return im30h;
+    }
+
+    public void setIm30h(String im30h) {
+        if (this.im30h.equals(im30h)) return;
+        this.im30h = im30h;
+        notifyPropertyChanged(BR.im30h);
+    }
+
+
+    @Bindable
+    public String getIm30i() {
+        return im30i;
+    }
+
+    public void setIm30i(String im30i) {
+        if (this.im30i.equals(im30i)) return;
+        this.im30i = im30i;
+        notifyPropertyChanged(BR.im30i);
+    }
+
+
+    @Bindable
+    public String getIm30j() {
+        return im30j;
+    }
+
+    public void setIm30j(String im30j) {
+        if (this.im30j.equals(im30j)) return;
+        this.im30j = im30j;
+        notifyPropertyChanged(BR.im30j);
+    }
+
+
+    @Bindable
+    public String getIm30k() {
+        return im30k;
+    }
+
+    public void setIm30k(String im30k) {
+        if (this.im30k.equals(im30k)) return;
+        this.im30k = im30k;
+        notifyPropertyChanged(BR.im30k);
+    }
+
+
+    @Bindable
+    public String getIm30l() {
+        return im30l;
+    }
+
+    public void setIm30l(String im30l) {
+        if (this.im30l.equals(im30l)) return;
+        this.im30l = im30l;
+        notifyPropertyChanged(BR.im30l);
+    }
+
+
+    @Bindable
+    public String getIm30m() {
+        return im30m;
+    }
+
+    public void setIm30m(String im30m) {
+        if (this.im30m.equals(im30m)) return;
+        this.im30m = im30m;
+        notifyPropertyChanged(BR.im30m);
+    }
+
+
+    @Bindable
+    public String getIm3096() {
+        return im3096;
+    }
+
+    public void setIm3096(String im3096) {
+        if (this.im3096.equals(im3096)) return;
+        this.im3096 = im3096;
+        setIm3096x(im3096.equals("96") ? this.im3096x : "");
+        notifyPropertyChanged(BR.im3096);
+    }
+
+
+    @Bindable
+    public String getIm3096x() {
+        return im3096x;
+    }
+
+    public void setIm3096x(String im3096x) {
+        this.im3096x = im3096x;
+        notifyPropertyChanged(BR.im3096x);
+    }
+
+
+    @Bindable
+    public String getIm3098() {
+        return im3098;
+    }
+
+    public void setIm3098(String im3098) {
+        if (this.im3098.equals(im3098)) return;
+        this.im3098 = im3098;
+        notifyPropertyChanged(BR.im3098);
     }
 
     /* @Bindable
@@ -6937,9 +7120,23 @@ public class Child extends BaseObservable implements Observable {
             /*    this.im24d = json.getString("im24d");*/
             this.im25 = json.getString("im25");
             this.im29 = json.getString("im29");
-            this.im30 = json.getString("im30");
-            this.im30_96x = json.getString("im30_96x");
-            //this.im26 = json.getString("im26");
+            this.im30a = json.getString("im30a");
+            this.im30b = json.getString("im30b");
+            this.im30c = json.getString("im30c");
+            this.im30d = json.getString("im30d");
+            this.im30e = json.getString("im30e");
+            this.im30f = json.getString("im30f");
+            this.im30g = json.getString("im30g");
+            this.im30h = json.getString("im30h");
+            this.im30i = json.getString("im30i");
+            this.im30j = json.getString("im30j");
+            this.im30k = json.getString("im30k");
+            this.im30l = json.getString("im30l");
+            this.im30m = json.getString("im30m");
+            this.im3096 = json.getString("im3096");
+            this.im3096x = json.getString("im3096x");
+            this.im3098 = json.getString("im3098");
+            this.im26 = json.getString("im26");
             this.im050198 = json.getString("im050198");
             this.im050298 = json.getString("im050298");
             this.im050398 = json.getString("im050398");
@@ -7430,9 +7627,23 @@ public class Child extends BaseObservable implements Observable {
                 /*     .put("im24d", im24d)*/
                 .put("im25", im25)
                 .put("im29", im29)
-                .put("im30", im30)
-                .put("im30_96x", im30_96x)
-                //.put("im26", im26)
+                .put("im30a", im30a)
+                .put("im30b", im30b)
+                .put("im30c", im30c)
+                .put("im30d", im30d)
+                .put("im30e", im30e)
+                .put("im30f", im30f)
+                .put("im30g", im30g)
+                .put("im30h", im30h)
+                .put("im30i", im30i)
+                .put("im30j", im30j)
+                .put("im30k", im30k)
+                .put("im30l", im30l)
+                .put("im30m", im30m)
+                .put("im3096", im3096)
+                .put("im3096x", im3096x)
+                .put("im3098", im3098)
+                .put("im26", im26)
                 .put("im050198", im050198)
                 .put("im050298", im050298)
                 .put("im050398", im050398)
