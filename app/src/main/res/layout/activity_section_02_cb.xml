@@ -545,15 +545,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/cb15"
-                            android:inputType="number"
+                            android:inputType="numberDecimal"
                             android:maxLength="3"
                             android:text="@={child.cb15}"
                             app:maxValue="9.0"
                             app:minValue="0.5"
                             app:type="range"
-                            android:enabled="@{!child.cb15.equals(`98`)}"
-
-                            />
+                            android:enabled="@{!child.cb15.equals(`98`)}" />
 
                         <CheckBox
                             android:id="@+id/cb1598"

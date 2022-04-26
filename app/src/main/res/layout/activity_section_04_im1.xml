@@ -114,7 +114,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVimim24a02"
                     style="@style/cardView"
-                    android:visibility="@{child.im01.equals(`1`)  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{child.im01.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim02a"
                     style="@style/cardView"
-                    android:visibility="@{child.im02.equals(`3`)  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{child.im02.equals(`3`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -259,7 +259,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim03"
                     style="@style/cardView"
-                    android:visibility="@{child.im01.equals(`2`)  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{child.im01.equals(`2`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -359,7 +359,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim04"
                     style="@style/cardView"
-                    android:visibility="@{child.im02.equals(`1`)  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{child.im02.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -563,7 +563,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:visibility="@{child.trueAgeInMonths &lt;= 59  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{child.trueAgeInMonths &lt;= 59 ? View.VISIBLE : View.GONE}">
 
                     <!-- Take Photo   -->
                     <androidx.cardview.widget.CardView
