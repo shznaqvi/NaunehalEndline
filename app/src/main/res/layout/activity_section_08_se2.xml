@@ -275,7 +275,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/se189601"
+                            android:hint="@string/se1896"
                             android:tag="se189601"
                             android:text="@={form.se189601x}"
                             android:visibility="@{form.se1896.equals(`1`) ? View.VISIBLE : View.GONE}" />

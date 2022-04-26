@@ -98,7 +98,7 @@ public class Section08SE3Activity extends AppCompatActivity {
             int se3402 = Integer.parseInt(form.getSe3402());
 
             if (se3401 == 0 && se3402 == 0) {
-                return Validator.emptyCustomTextBox(this, bi.se3401, "Incorrect value.");
+                return Validator.emptyCustomTextBox(this, bi.se3401, "All Values Can't be zero.");
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
