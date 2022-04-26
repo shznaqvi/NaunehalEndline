@@ -97,7 +97,7 @@ public class Section01HHActivity extends AppCompatActivity {
             } else {
                 Intent endingActivityIntent = new Intent(this, EndingActivity.class);
                 endingActivityIntent.putExtra("complete", false);
-                endingActivityIntent.putExtra("checkToEnable", 4);
+                endingActivityIntent.putExtra("checkToEnable", 3);
                 startActivity(endingActivityIntent);
             }
         } else
@@ -118,19 +118,19 @@ public class Section01HHActivity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
             return false;
         }
+        if (bi.hh1101.isChecked()) {
+            if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
+                return Validator.emptyCustomTextBox(this, bi.hh24, "HH24 Can't be Greater than HH22");
+            }
 
-        if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
-            return Validator.emptyCustomTextBox(this, bi.hh24, "HH24 Can't be Greater than HH22");
-        }
-
-        if (Integer.parseInt(form.getHh25()) > Integer.parseInt(form.getHh23())) {
-            return Validator.emptyCustomTextBox(this, bi.hh25, "HH25 Can't be Greater than HH23");
+            if (Integer.parseInt(form.getHh25()) > Integer.parseInt(form.getHh23())) {
+                return Validator.emptyCustomTextBox(this, bi.hh25, "HH25 Can't be Greater than HH23");
+            }
         }
 
         if (Integer.parseInt(form.getHh13()) < 15) {
             return Validator.emptyCustomTextBox(this, bi.hh13, "Age Can't be less than 15");
         }
-
         return true;
     }
 

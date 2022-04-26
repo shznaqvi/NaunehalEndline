@@ -952,7 +952,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv0908.equals(``)}"
                                 android:enabled="@{!child.cv0998.equals(`98`)}"
-                                android:onClick="@{()->child.setCv0908(child.cv0908.equals(``)?``:``)}"
+                                android:onClick="@{()->child.setCv0908(child.cv0908.equals(`8`)?``:`8`)}"
                                 android:text="@string/cv0908" />
 
                             <CheckBox
@@ -1183,7 +1183,7 @@
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv11.equals(`2`)}"
-                                android:onClick="@{()->child.setCv11(`2`)}"
+                                android:onClick="@{()->child.setCv11(`2`) + cv12.clearCheck()}"
                                 android:text="@string/cv1102" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1919,6 +1919,7 @@
 
                             <CheckBox
                                 android:id="@+id/cv2101"
+                                
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv2101.equals(`1`)}"

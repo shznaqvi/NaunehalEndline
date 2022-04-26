@@ -54,7 +54,7 @@ public class Section03CSActivity extends AppCompatActivity {
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SCB, child.sCBtoString());
+            updcount = db.updatesChildColumn(TableContracts.ChildTable.COLUMN_SCS, child.sCStoString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
@@ -74,8 +74,8 @@ public class Section03CSActivity extends AppCompatActivity {
             Intent forwardIntent = null;
             if (child.getAgeInMonths() <= 35 && !child.getCs02a().equals("4")) {
                 forwardIntent = new Intent(this, Section04IM1Activity.class);
-            } else if (child.getAgeInMonths() <= 59 && selectedChild == youngestChild) {
-                if (child.getCb11().equals("1")) {
+            } else if (selectedChild == youngestChild) {
+                if (child.getCb11().equals("1") && child.getAgeInMonths() <= 23) {
                     forwardIntent = new Intent(this, Section05PDActivity.class);
                 } else if (!child.getCs02a().equals("4")) {
                     forwardIntent = new Intent(this, Section07CVActivity.class);
@@ -84,15 +84,20 @@ public class Section03CSActivity extends AppCompatActivity {
                     forwardIntent = new Intent(this, Section06BFActivity.class);
                 }*/
             }
-            forwardIntent.putExtra("requestCode", requestCode);
-            forwardIntent.putExtra("complete", true);
-            forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
-            setResult(RESULT_OK, forwardIntent);
+            if (forwardIntent != null) {
+                forwardIntent.putExtra("requestCode", requestCode);
+                forwardIntent.putExtra("complete", true);
+                forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                setResult(RESULT_OK, forwardIntent);
+                startActivity(forwardIntent);
+            } else {
+                Intent returnIntent = null;
+                returnIntent.putExtra("requestCode", requestCode);
+                returnIntent.putExtra("complete", true);
+                setResult(RESULT_OK, returnIntent);
+                startActivity(returnIntent);
+            }
             finish();
-            startActivity(forwardIntent);
-        /*    Intent returnIntent = new Intent();
-            returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);*/
         } else {
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
         }
