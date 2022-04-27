@@ -49,6 +49,36 @@ public class IdentificationActivity extends AppCompatActivity {
         MainApp.form = new Form();
 
 
+        bi.hh08.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                bi.fldGrpIdentifier.setVisibility(View.GONE);
+                bi.headhh.setVisibility(View.GONE);
+                bi.hh05.setText(null);      //  Province
+                bi.hh06.setText(null);      //  District
+                bi.hh07.setText(null);      //  Tehsil
+                bi.hh09.setText(null);      //  City/Village
+                bi.hh19.setText(null);
+
+                bi.checkHh05.setChecked(false);
+                bi.checkHh06.setChecked(false);
+                bi.checkHh07.setChecked(false);
+                bi.checkHh19.setChecked(false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
         bi.hh09.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -59,6 +89,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
                 c1 = charSequence.length();
                 String txt = charSequence.toString();
                 Log.d(TAG, "onTextChanged: c-" + c + " c1-" + c1 + "\t\t\tCHAR: " + charSequence);
@@ -83,6 +114,12 @@ public class IdentificationActivity extends AppCompatActivity {
                 }
 
                 bi.hh09.setSelection(bi.hh09.getText().length());
+                bi.checkHh19.setChecked(false);
+                bi.hh19.setText(null);
+
+
+                bi.headhh.setVisibility(View.GONE);
+
 
             }
 
@@ -142,6 +179,7 @@ public class IdentificationActivity extends AppCompatActivity {
         bi.hh07.setText(null);      //  Tehsil
         bi.hh09.setText(null);      //  City/Village
         bi.hh19.setText(null);
+        //bi.hh08.setText(null);
 
         bi.checkHh05.setChecked(false);
         bi.checkHh06.setChecked(false);
