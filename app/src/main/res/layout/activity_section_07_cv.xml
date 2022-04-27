@@ -81,19 +81,23 @@
                                 android:text="@string/Q_cv01a" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
                                 android:text="@string/cv01a" />
+
+                            <EditText
+                                android:id="@+id/cv01a"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/cv01a"
+                                android:text="@={child.cv01a}" />
 
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/cv01a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/cv01a"
-                            android:text="@={child.cv01a}" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

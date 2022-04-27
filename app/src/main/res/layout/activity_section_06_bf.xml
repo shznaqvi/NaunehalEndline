@@ -107,23 +107,28 @@
                                 android:text="@string/Q_bf01" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
                                 android:text="@string/bf01" />
+
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/bf01"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/bf01"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:text="@={child.bf01}"
+                                app:maxValue="0"
+                                app:minValue="0"
+                                app:type="range" />
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/bf01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/bf01"
-                            android:inputType="number"
-                            android:maxLength="1"
-                            android:text="@={child.bf01}"
-                            app:maxValue="0"
-                            app:minValue="0"
-                            app:type="range" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -151,19 +156,23 @@
                                 android:text="@string/Q_bf02" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="match_parent"
                                 android:text="@string/bf02" />
 
+                            <EditText
+                                android:id="@+id/bf02"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/bf02"
+                                android:text="@={child.bf02}" />
+
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/bf02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/bf02"
-                            android:text="@={child.bf02}" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

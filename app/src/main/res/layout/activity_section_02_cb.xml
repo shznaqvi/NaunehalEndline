@@ -777,20 +777,24 @@
                                 android:text="@string/Q_cb07" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
                                 android:text="@string/cb07" />
+
+                            <EditText
+                                android:id="@+id/cb07"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 "
+                                android:hint="@string/cb07"
+                                android:inputType="textPersonName|textCapWords"
+                                android:text="@={child.cb07}" />
 
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/cb07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 "
-                            android:hint="@string/cb07"
-                            android:inputType="textPersonName|textCapWords"
-                            android:text="@={child.cb07}" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -817,23 +821,27 @@
                                 android:text="@string/Q_cb08" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
                                 android:text="@string/cb08" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb08"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/cb08"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:text="@={child.cb08}"
+                                app:maxValue="99"
+                                app:minValue="12"
+                                app:type="range" />
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb08"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/cb08"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={child.cb08}"
-                            app:maxValue="99"
-                            app:minValue="12"
-                            app:type="range" />
+
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -861,23 +869,27 @@
                                 android:text="@string/Q_cb09" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
                                 android:text="@string/cb09" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb09"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/cb09"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:text="@={child.cb09}"
+                                app:maxValue="55"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/cb09"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={child.cb09}"
-                            app:maxValue="55"
-                            app:minValue="1"
-                            app:type="range" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1152,20 +1164,24 @@
                                 android:text="@string/Q_cb12" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
                                 android:text="@string/cb12" />
+
+                            <EditText
+                                android:id="@+id/cb12"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/cb12"
+                                android:inputType="textPersonName|textCapWords"
+                                android:text="@={child.cb12}" />
 
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/cb12"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/cb12"
-                            android:inputType="textPersonName|textCapWords"
-                            android:text="@={child.cb12}" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1192,23 +1208,27 @@
                                 android:text="@string/Q_cb13" />
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
                                 android:text="@string/cb13" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/cb13"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/cb13"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:text="@={child.cb13}"
+                                app:maxValue="55"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb13"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/cb13"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={child.cb13}"
-                            app:maxValue="55"
-                            app:minValue="1"
-                            app:type="range" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
