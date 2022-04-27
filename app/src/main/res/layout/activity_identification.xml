@@ -83,10 +83,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:digits="0123456789"
+                                android:inputType="number"
                                 android:hint="@string/hh08"
-                                android:maxLength="6"
-                                />
+                                android:maxLength="6" />
 
                             <ImageButton
                                 android:layout_width="48dp"
@@ -271,6 +271,7 @@
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:hint="#-####-###"
+                                android:digits="ABCD-0123456789"
                                 android:inputType="textCapCharacters"
                                 android:maxLength="10" />
 

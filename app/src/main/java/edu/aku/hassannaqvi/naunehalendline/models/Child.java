@@ -763,9 +763,9 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb04dk(String cb04dk) {
         this.cb04dk = cb04dk;
-   /*     setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
+        setCb04dd(cb04dk.equals("98") ? "98" : this.cb04dd);
         setCb04mm(cb04dk.equals("98") ? "98" : this.cb04mm);
-        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);*/
+        setCb04yy(cb04dk.equals("98") ? "9998" : this.cb04yy);
         setCb0501(cb04dk.equals("98") ? "" : this.cb0501);
         setCb0502(cb04dk.equals("98") ? "" : this.cb0502);
 
@@ -1190,6 +1190,8 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCb06(String cb06) {
         this.cb06 = cb06;
+
+
         setCb11(cb06.equals("1") ? "1" : cb11);
 
         // Mother info
@@ -1197,7 +1199,8 @@ public class Child extends BaseObservable implements Observable {
         setCb08(cb06.equals("1") ? "" : this.cb08);
         setCb09(cb06.equals("1") ? "" : this.cb09);
         setCb10(cb06.equals("1") ? "" : this.cb10);
-        setCb11(cb06.equals("1") ? "" : this.cb11);
+
+        setCb11(cb06.equals("1") ? "1" : this.cb11);
 
         // Father Info
         setCb12(cb06.equals("2") ? "" : this.cb12);

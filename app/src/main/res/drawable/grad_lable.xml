@@ -6,8 +6,8 @@
 
             <gradient
                 android:angle="-90"
-                android:endColor="@color/colorPrimary"
-                android:startColor="@color/colorPrimaryDark" />
+                android:endColor="@color/grayLight"
+                android:startColor="@color/whiteOverlay" />
         </shape>
     </item>
     <item android:drawable="@drawable/drawable_floral_design" />

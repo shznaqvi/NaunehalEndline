@@ -1603,6 +1603,20 @@ public class Form extends BaseObservable implements Observable {
 
     public void setHh13(String hh13) {
         this.hh13 = hh13;
+        if (!hh13.equals("") && Integer.parseInt(hh13) < 15) {
+            setHh12("");
+            setHh14(""); // Radio
+            setHh15(""); // Radio
+            setHh16("");
+            setHh17(""); // Radio
+            setHh18(""); // Radio
+            setHh21("");
+            setHh22("");
+            setHh23("");
+            setHh24("");
+            setHh25("");
+
+        }
         notifyPropertyChanged(BR.hh13);
     }
 

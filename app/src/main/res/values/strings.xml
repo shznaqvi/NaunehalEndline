@@ -12,6 +12,7 @@
     <string name="startinterview" translatable="false">START INTERVIEW</string>
     <string name="openHouseholdForm" translatable="false">OPEN HOUSEHOLD FORM</string>
     <string name="addChild" translatable="false">ADD A CHILD</string>
+    <string name="addSibling" translatable="false">ADD A SIBLING</string>
     <string name="openbloodform" translatable="false">UPDATE BLOOD INFORMANTION</string>
     <string name="openstoolform" translatable="false">UPDATE STOOL INFORMANTION</string>
     <string name="recordssummary">Records Summary</string>
@@ -498,14 +499,14 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im0497">Date not Visible on Card</string>
     <string name="im05title1"> Immunization Status</string>
     <string name="im05title2">INSTRUCTIONS: Please record the date of immunization for each antigen from the card \n\n1.If the date is recorded but not readable, record 44 in day column \n\n2.	If the date is not recorded but a tick () mark is present, record 88 in day column \n\n3.	If the neither date is recorded nor a tick () mark is present, prompt the mother for each such antigen and record 66 if she confirms the receipt of respective antigen by recall otherwise record 97.</string>
-    <string name="im05">Vaccine Names</string>
-    <string name="im05t1"> Vaccinations At Birth </string>
-    <string name="im05t2"> Vaccinations At 6 Weeks </string>
-    <string name="im05t3"> Vaccinations At 10 Weeks </string>
-    <string name="im05t4"> Vaccinations At 14 Weeks </string>
-    <string name="im05t5"> Vaccinations At 9 Months </string>
+    <string name="im05" translatable="false">Vaccine Names</string>
+    <string name="im05t1" translatable="false"> Vaccinations At Birth </string>
+    <string name="im05t2" translatable="false"> Vaccinations At 6 Weeks </string>
+    <string name="im05t3" translatable="false"> Vaccinations At 10 Weeks </string>
+    <string name="im05t4" translatable="false"> Vaccinations At 14 Weeks </string>
+    <string name="im05t5" translatable="false"> Vaccinations At 9 Months </string>
     <string name="im0517typh">Typhoid</string>
-    <string name="im05t6"> Vaccinations At 15 Months </string>
+    <string name="im05t6" translatable="false"> Vaccinations At 15 Months </string>
     <string name="im0501bcg"> B C G At Birth </string>
     <string name="im0501dd">Day</string>
     <string name="im0501mm">Month</string>
@@ -581,9 +582,9 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im0517dd">Day</string>
     <string name="im0517mm">Month</string>
     <string name="im0517yy">Year</string>
-    <string name="im07">Check IM4: Are all vaccines (BCG to Measles-2) recorded?</string>
-    <string name="im0701">Yes</string>
-    <string name="im0702">No</string>
+    <string name="im07" translatable="false">Check IM4: Are all vaccines (BCG to Measles-2) recorded?</string>
+    <string name="im0701" translatable="false">Yes</string>
+    <string name="im0702" translatable="false">No</string>
     <string name="im08">Has (name) ever received any vaccinations to prevent (him/her) from getting diseases, including vaccinations received in a campaign, immunization day or child health day?</string>
     <string name="im081">Yes </string>
     <string name="im082">No  </string>
@@ -609,7 +610,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im112">No  </string>
     <string name="im113">Dont know</string>
     <string name="im12">How many times were the polio drops received at Govt or Private Health Facility or from Govt Outreach services?  </string>
-    <string name="im12a">How many times was Polio vaccine received during a large campaign? </string>
+    <string name="im12a" translatable="false">How many times was Polio vaccine received during a large campaign? </string>
     <string name="im12d">Dont Know</string>
     <string name="im14">Has (name) ever received a Pentavalent vaccination – that is, an injection in the thigh to prevent (him/her) from getting tetanus, whooping cough, diphtheria, Hepatitis B disease, and Haemophilus influenza type B?   Probe by indicating that Pentavalent vaccination is sometimes given at the same time as the Polio drops</string>
     <string name="im141">Yes </string>
@@ -676,7 +677,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im232">Private health facility </string>
     <string name="im233">Government outreach service </string>
     <string name="im234"> Naunehal Health Camp </string>
-    <string name="im236">Other (specify) </string>
+    <string name="im236" translatable="false">Other (specify) </string>
     <string name="im24a">Has the child ever received polio drops during a national polo campaign?</string>
     <string name="im24a1">Yes</string>
     <string name="im24a2">No</string>
@@ -1043,7 +1044,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="bf15q02">No</string>
     <string name="bf15q98">Don’t know</string>
     <string name="bf16">Did (NAME) eat any solid, semi- solid, or soft foods yesterday during the day or at night? </string>
-    <string name="bf1601">Yes </string>
+    <string name="bf1601" translatable="false">Yes </string>
     <string name="bf1602">No</string>
     <string name="bf1698">Don’t know</string>
     <string name="bf17">How many times did (NAME) eat solid, semi-solid, or soft foods other than liquids yesterday during the day or at night?</string>
@@ -1156,10 +1157,10 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv13">Has COVID-19, the subsequent lockdown &amp; restrictions and fear disrupted your child’s immunization? </string>
     <string name="cv1301">Yes</string>
     <string name="cv1302">No</string>
-    <string name="cv14">Has your child (under-5) received oral polio vaccine in the past 12 months? </string>
+    <string name="cv14" translatable="false">Has your child (under-5) received oral polio vaccine in the past 12 months? </string>
     <string name="cv1401">Yes</string>
     <string name="cv1402">No</string>
-    <string name="cv15">Has your child received all vaccinations in the past 12 months that were due as per EPI schedule? </string>
+    <string name="cv15" translatable="false">Has your child received all vaccinations in the past 12 months that were due as per EPI schedule? </string>
     <string name="cv1501">Yes</string>
     <string name="cv1502">No</string>
     <string name="cv16">If not, why was the child not taken for vaccination? </string>
@@ -1508,7 +1509,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se4306">LHVs</string>
     <string name="se4296">Others</string>
     <string name="se4307">Doctors</string>
-    <string name="se4496">دیگر</string>
+    <string name="se4496" translatable="false">دیگر</string>
     <string name="se4308">Nurses</string>
     <string name="se4309">Announcements at the mosque/ community </string>
     <string name="se4310">Neighbors</string>
@@ -1946,7 +1947,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name='Q_se58'>se58</string>
     <string name='Q_se59'>se59</string>
     <string name='Q_se60'>se60</string>
-    <string name="yes">Yes</string>
+    <string name="yes" translatable="false">Yes</string>
 
 
 </resources>

@@ -269,7 +269,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:enabled="@{!cb04dk.equals(`98`)}"
+                                android:enabled="@{!child.cb04dk.equals(`98`)}"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -366,6 +366,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
                         android:orientation="horizontal">
 
                         <TextView
@@ -387,6 +388,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layoutDirection="ltr"
                             android:orientation="horizontal">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -394,7 +396,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:enabled="@{!child.cb04dk.equals(`98`)}"
+                                android:enabled="@{child.cb04dk.equals(`98`)}"
                                 android:gravity="center"
                                 android:hint="####"
                                 android:inputType="number"
@@ -409,7 +411,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:enabled="@{!child.cb04dk.equals(`98`)}"
+                                android:enabled="@{child.cb04dk.equals(`98`)}"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -557,8 +559,9 @@
                             android:paddingStart="0dp"
                             android:textColor="@color/redDark"
                             android:checked="@{child.cb15.equals(`98`)}"
-                            android:onClick="@{()->child.setCb15(`98`)}"
-                            android:text="@string/cb1598"  />
+                            android:onClick="@{()->child.setCb15(child.cb15.equals(`98`)?``:`98`)}"
+
+                            android:text="@string/cb1598" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

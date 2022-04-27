@@ -33,6 +33,27 @@
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/childName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="12dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:minHeight="56dp"
+                android:radius="8dp"
+                android:text="Child D/o Mother"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

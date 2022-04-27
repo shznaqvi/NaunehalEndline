@@ -92,7 +92,7 @@ public class Section01HHActivity extends AppCompatActivity {
         if (updateDB()) {
             finish();
             // Check Consent
-            if (form.getHh11().equals("1")) {
+            if (form.getHh11().equals("1") && Integer.parseInt(form.getHh13()) > 14) {
                 startActivity(new Intent(this, HouseholdScreenActivity.class));
             } else {
                 Intent endingActivityIntent = new Intent(this, EndingActivity.class);
@@ -118,7 +118,9 @@ public class Section01HHActivity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
             return false;
         }
-        if (bi.hh1101.isChecked()) {
+
+        // check permission and age of respondent
+        if (bi.hh1101.isChecked() && !bi.hh13.equals("") && Integer.parseInt(bi.hh13.getText().toString()) > 14) {
             if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
                 return Validator.emptyCustomTextBox(this, bi.hh24, "HH24 Can't be Greater than HH22");
             }
@@ -128,9 +130,6 @@ public class Section01HHActivity extends AppCompatActivity {
             }
         }
 
-        if (Integer.parseInt(form.getHh13()) < 15) {
-            return Validator.emptyCustomTextBox(this, bi.hh13, "Age Can't be less than 15");
-        }
         return true;
     }
 

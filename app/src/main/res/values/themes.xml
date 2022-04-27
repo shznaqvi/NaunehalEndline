@@ -22,7 +22,7 @@
 
     <style name="AppThemeEnglish1" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">20dp</item>
 
         <item name="fontFamily">@font/roboto</item>
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -55,7 +55,7 @@
 
     <style name="AppThemeUrdu" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:textSize">18dp</item>
+        <item name="android:textSize">22dp</item>
 
         <item name="fontFamily">@font/jameel_noori_nastaleeq</item>
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -137,9 +137,9 @@
     <style name="labels" parent="@android:style/TextAppearance.Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">16sp</item>
         <item name="android:layout_marginTop">8dp</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">bold</item>
         <item name="android:minHeight">32dp</item>
         <item name="android:fontFamily">@font/roboto</item>
@@ -159,7 +159,6 @@
         <item name="android:layout_marginTop">24dp</item>
         <!--    <item name="android:textColor">@color/whiteOverlay</item>-->
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingStart">15dp</item>
         <item name="android:paddingEnd">4dp</item>
@@ -300,7 +299,7 @@
         <item name="android:background">@color/colorAccent</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:paddingTop">8dp</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:gravity">center_horizontal|center_vertical</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>

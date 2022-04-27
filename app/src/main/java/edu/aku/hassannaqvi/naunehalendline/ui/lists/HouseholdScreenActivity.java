@@ -157,6 +157,19 @@ public class HouseholdScreenActivity extends AppCompatActivity {
             }
         });
 
+        bi.addSibling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (MainApp.superuser) {
+                    Toast.makeText(HouseholdScreenActivity.this, "Supervisors cannot add new members.", Toast.LENGTH_LONG).show();
+                } else {
+                    //     Toast.makeText(MwraActivity.this, "Opening Mwra Form", Toast.LENGTH_LONG).show();
+                    MainApp.child = new Child();
+                    addChild();
+                }
+            }
+        });
+
         bi.addHousehold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

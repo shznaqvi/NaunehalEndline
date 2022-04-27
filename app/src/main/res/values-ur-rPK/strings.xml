@@ -161,11 +161,11 @@
     <string name="hh2012">ریٹائرڈ</string>
     <string name="hh2013">خاتون خانہ</string>
     <string name="hh2096">دیگر وضاحت کریں</string>
-    <string name="hh21">اس گھرانے میں کل کتنے افراد رہتے ہیں؟</string>
-    <string name="hh22">مردافراد بشمول ہر عمر کے مرد</string>
-    <string name="hh23">خواتین ،بشمول ہر عمر کی خواتین</string>
-    <string name="hh24">پانچ سال سے کم عمر بچوں کی تعداد - مرد</string>
-    <string name="hh25">پانچ سال سے کم عمر بچوں کی تعداد – خواتین</string>
+    <string name="hh21"> گھرانے میں کل افراد؟</string>
+    <string name="hh22">مرد، بشمول بچے</string>
+    <string name="hh23">خواتین، بشمول بچے</string>
+    <string name="hh24">پانچ سال سے کم عمر لڑکے</string>
+    <string name="hh25">پانچ سال سے کم عمر لڑکیاں</string>
     <string name="hh26">گھرانے کے انٹرویوکا نتیجہ نوٹ:  انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں۔</string>
     <string name="hh2601">مکمل</string>
     <string name="hh2602">جزوی مکمل</string>

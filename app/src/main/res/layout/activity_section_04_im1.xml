@@ -38,7 +38,25 @@
             app:subtitle="@string/imm"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/childName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="12dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:minHeight="56dp"
+                android:radius="8dp"
+                android:text="Child D/o Mother"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp" />
+
+        </LinearLayout>
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -465,7 +483,7 @@
                                     android:maxLength="4"
                                     android:text="@={form.im04yy}"
                                     app:maxValue="2022"
-                                    app:minValue="2020"
+                                    app:minValue="2017"
                                     app:type="range" />
                             </TableRow>
 
@@ -519,7 +537,7 @@
                                     android:maxLength="4"
                                     android:text="@={form.cb04yy}"
                                     app:maxValue="2022"
-                                    app:minValue="2020"
+                                    app:minValue="2017"
                                     app:type="range" />
                             </TableRow>
 
@@ -800,7 +818,7 @@
                                         android:text="@={form.im0501yy}"
                                         android:textDirection="ltr"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:type="range" />
 
@@ -898,7 +916,7 @@
                                         android:maxLength="4"
                                         android:text="@={form.im0502yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:type="range" />
 
@@ -997,7 +1015,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1082,7 +1100,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1178,7 +1196,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1274,7 +1292,7 @@
                                         android:maxLength="4"
                                         android:text="@={form.im0505yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:type="range" />
 
@@ -1370,7 +1388,7 @@
                                         android:maxLength="4"
                                         android:text="@={form.im0506yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:type="range" />
 
@@ -1456,7 +1474,7 @@
                                         app:pattern="^[0-9]{4,4}$"
                                         android:text="@={form.im0507yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1553,7 +1571,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1650,7 +1668,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1745,7 +1763,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1831,7 +1849,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -1926,7 +1944,7 @@
                                         app:pattern="^[0-9]{4,4}$"
                                         android:text="@={form.im0512yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -2022,7 +2040,7 @@
                                         app:pattern="^[0-9]{4,4}$"
                                         android:text="@={form.im0513yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -2118,7 +2136,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -2202,7 +2220,7 @@
                                         app:pattern="^[0-9]{4,4}$"
                                         android:text="@={form.im0515yy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -2297,7 +2315,7 @@
                                         android:maxLength="4"
                                         android:text="@={form.im0515byy}"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:type="range" />
 
@@ -2393,7 +2411,7 @@
                                         android:maxLength="4"
                                         app:pattern="^[0-9]{4,4}$"
                                         app:maxValue="2022"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox
@@ -2477,7 +2495,7 @@
                                         android:text="@={form.im0516yy}"
                                         app:maxValue="2022"
                                         app:pattern="^[0-9]{4,4}$"
-                                        app:minValue="2020"
+                                        app:minValue="2017"
                                         app:type="range" />
 
                                     <CheckBox

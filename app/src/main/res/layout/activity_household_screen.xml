@@ -201,7 +201,7 @@
                             android:layout_gravity="center_horizontal|center_vertical"
                             android:layout_marginStart="12dp"
                             android:background="@color/white"
-                            android:drawableStart="@drawable/ic_children"
+                            android:drawableStart="@drawable/ic_add_child"
                             android:gravity="center_vertical"
                             android:includeFontPadding="false"
                             android:textColor="@color/colorPrimary"
@@ -223,6 +223,78 @@
                                 android:includeFontPadding="false"
                                 android:minWidth="460dp"
                                 android:text="@string/addChild"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:includeFontPadding="false"
+                                android:text="Enter child information"
+                                android:textColor="@color/colorPrimaryOverlay"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/ic_item_right_arrow"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="24dp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="12dp"
+                    app:cardCornerRadius="24dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/addSibling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="sectionPress"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_marginStart="12dp"
+                            android:background="@color/white"
+                            android:drawableStart="@drawable/ic_add_sibling"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:minWidth="460dp"
+                                android:text="@string/addSibling"
                                 android:textColor="@color/colorPrimary"
                                 android:textSize="14dp" />
 

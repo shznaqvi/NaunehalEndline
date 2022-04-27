@@ -91,7 +91,7 @@ public class Section03CSActivity extends AppCompatActivity {
                 setResult(RESULT_OK, forwardIntent);
                 startActivity(forwardIntent);
             } else {
-                Intent returnIntent = null;
+                Intent returnIntent = new Intent();
                 returnIntent.putExtra("requestCode", requestCode);
                 returnIntent.putExtra("complete", true);
                 setResult(RESULT_OK, returnIntent);
