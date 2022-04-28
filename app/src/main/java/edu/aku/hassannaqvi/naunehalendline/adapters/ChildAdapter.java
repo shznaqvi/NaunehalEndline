@@ -72,7 +72,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         // LinearLayout subItem = viewHolder.subItem;
         ImageView fmRow = viewHolder.fmRow;
         ImageView mainIcon = viewHolder.mainIcon;
-        // TextView addSec = viewHolder.addSec;
+        TextView addSibling = viewHolder.addSibling;
 
         View cloaked = viewHolder.cloak;
         View indexedBar = viewHolder.indexedBar;
@@ -194,6 +194,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
                     intent.putExtra("position", position);
                     intent.putExtra("requestCode", "4");
+                    intent.putExtra("sibling", "");
 
                     selectedChild = position;
 
@@ -225,6 +226,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
                     intent.putExtra("position", position);
                     intent.putExtra("requestCode", "3");
+                    intent.putExtra("sibling", "");
 
                     selectedChild = position;
                     MainApp.preAgeInMonths = MainApp.childList.get(selectedChild).getAgeInMonths();
@@ -239,6 +241,36 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             }
 
         });
+        // TO EDIT Child's basic info
+        viewHolder.addSibling.setOnClickListener(view -> {
+            try {
+                int id = youngestChild;
+                Toast.makeText(mContext, "Child list has been completed. You cannot add sibling child.", Toast.LENGTH_LONG).show();
+
+            } catch (NullPointerException e) {
+
+                MainApp.child = new Child();
+
+                MainApp.child.cb06 = child.cb06;
+                MainApp.child.cb07 = child.cb07;
+                MainApp.child.cb08 = child.cb08;
+                MainApp.child.cb09 = child.cb09;
+                MainApp.child.cb10 = child.cb10;
+                MainApp.child.cb11 = child.cb11;
+                MainApp.child.cb12 = child.cb12;
+                MainApp.child.cb13 = child.cb13;
+                MainApp.child.cb14 = child.cb14;
+
+                Intent intent = new Intent(mContext, Section02CBActivity.class);
+                intent.putExtra("requestCode", "2");
+                intent.putExtra("sibling", "1");
+                childInfoLauncher.launch(intent);
+
+
+            }
+
+        });
+
 
     }
 
@@ -265,7 +297,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
         private final TextView motherName;
         private final TextView childcheck;
         private final TextView markChild;
-        //private final TextView addSec;
+        private final TextView addSibling;
         //private final LinearLayout subItem;
         private final ImageView fmRow;
         private final ImageView mainIcon;
@@ -280,7 +312,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             motherName = v.findViewById(R.id.chh08);
             childcheck = v.findViewById(R.id.childcheck);
             markChild = v.findViewById(R.id.markChild);
-            //  addSec = v.findViewById(R.id.cadd_section);
+            addSibling = v.findViewById(R.id.addSibling);
             //  subItem = v.findViewById(R.id.csubitem);
             fmRow = v.findViewById(R.id.cfmRow);
             mainIcon = v.findViewById(R.id.mainIcon);

@@ -22,17 +22,18 @@
 
         <RelativeLayout
             android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical">
 
             <View
                 android:id="@+id/cloaked"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="56dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:background="#d67f7f7f"
+                android:background="#7f7f7f7f"
                 android:elevation="10dp"
+                tools:visibility="gone"
                 android:visibility="visible" />
 
             <ImageView
@@ -45,7 +46,7 @@
 
             <LinearLayout
                 android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
@@ -57,23 +58,23 @@
                 <LinearLayout
 
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center_horizontal|center_vertical"
                     android:orientation="vertical">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1">
+                        android:layout_height="56dp">
 
                         <ImageView
                             android:id="@+id/mainIcon"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="56dp"
 
                             android:background="@color/gray"
                             android:padding="4dp"
-                            android:src="@drawable/ic_not_available" />
+                            android:src="@drawable/ic_not_available"
+                            tools:src="@drawable/ic_boy" />
 
                         <TextView
                             android:id="@+id/markChild"
@@ -110,6 +111,7 @@
                         android:text="Female Name"
                         android:textColor="@color/grayDark"
                         android:textSize="14sp"
+                        android:includeFontPadding="false"
                         android:textStyle="bold" />
 
                     <TextView
@@ -127,6 +129,7 @@
                         android:paddingStart="12dp"
                         android:paddingEnd="12dp"
                         android:text="age years"
+                        android:includeFontPadding="false"
                         android:textColor="@color/gray"
                         android:textStyle="italic" />
 
@@ -137,7 +140,7 @@
 
             <View
                 android:id="@+id/indexedBar"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="2sp"
                 android:layout_alignParentBottom="true"
                 android:background="@color/redLight"
@@ -147,4 +150,20 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/addSibling"
+        style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/all_round_corners_stroke"
+        android:backgroundTint="@color/colorAccent"
+        android:backgroundTintMode="add"
+        android:gravity="center_horizontal|center_vertical"
+        android:includeFontPadding="false"
+        android:minHeight="32dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="+ Add Sibling"
+        android:textColor="@color/white" />
 </LinearLayout>

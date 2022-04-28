@@ -1192,7 +1192,7 @@ public class Child extends BaseObservable implements Observable {
         this.cb06 = cb06;
 
 
-        setCb11(cb06.equals("1") ? "1" : cb11);
+    /*    setCb11(cb06.equals("1") ? "1" : cb11);
 
         // Mother info
         setCb07(cb06.equals("1") ? "" : this.cb07);
@@ -1205,7 +1205,7 @@ public class Child extends BaseObservable implements Observable {
         // Father Info
         setCb12(cb06.equals("2") ? "" : this.cb12);
         setCb13(cb06.equals("2") ? "" : this.cb13);
-        setCb14(cb06.equals("2") ? "" : this.cb14);
+        setCb14(cb06.equals("2") ? "" : this.cb14);*/
         notifyPropertyChanged(BR.cb06);
     }
 

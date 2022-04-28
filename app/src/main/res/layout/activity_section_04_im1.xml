@@ -518,7 +518,7 @@
                                     android:hint="##"
                                     android:inputType="number"
                                     android:maxLength="2"
-                                    android:text="@={form.cb04mm}"
+                                    android:text="@={form.cb0502}"
                                     app:maxValue="12"
                                     app:minValue="1"
                                     app:pattern="^[0-9]{2,2}$"
@@ -535,7 +535,7 @@
                                     android:hint="####"
                                     android:inputType="number"
                                     android:maxLength="4"
-                                    android:text="@={form.cb04yy}"
+                                    android:text="@={form.cb0501}"
                                     app:maxValue="2022"
                                     app:minValue="2017"
                                     app:type="range" />
@@ -583,7 +583,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:visibility="@{ form.im02.equals(`1`)  &amp;&amp; form.trueAgeInMonths >= 6  &amp;&amp; form.trueAgeInMonths &lt;= 23  ? View.VISIBLE : View.GONE}">
+                    android:visibility="@{ form.im02.equals(`1`)   &amp;&amp; form.trueAgeInMonths &lt;= 59 ? View.VISIBLE : View.GONE}">
 
                     <!-- Take Photo   -->
                     <androidx.cardview.widget.CardView

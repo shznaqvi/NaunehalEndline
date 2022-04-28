@@ -1,5 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -77,6 +78,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>-->
 
+
                 <!-- pd01  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVpd01"
@@ -105,21 +107,17 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/pd01" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <TextView
                                 android:id="@+id/pd01"
+                                style="@style/sub_labels"
                                 android:layout_width="0dp"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/pd01"
-                                android:inputType="number"
-                                android:maxLength="2"
+                                android:minHeight="48dp"
                                 android:text="@={child.pd01}"
-                                app:maxValue="99"
-                                app:minValue="1"
-                                app:type="range" />
+                                tools:text="1" />
 
                         </LinearLayout>
-
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -147,19 +145,22 @@
                                 android:text="@string/Q_pd02" />
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="match_parent"
                                 android:text="@string/pd02" />
 
+                            <TextView
+                                android:id="@+id/pd02"
+                                style="@style/sub_labels"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:minHeight="48dp"
+                                android:text="@={child.pd02}"
+                                tools:text="motherName" />
                         </LinearLayout>
 
-                        <EditText
-                            android:id="@+id/pd02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/pd02"
-                            android:text="@={child.pd02}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1163,14 +1164,33 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layoutDirection="ltr"
                                 android:orientation="horizontal">
 
                                 <TextView
-                                    style="@style/textView"
+                                    style="@style/sub_labels"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
                                     android:text="@string/pd1101" />
+
+
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/pd1102" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="ltr"
+                                android:orientation="horizontal">
+
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/pd1101"
@@ -1186,12 +1206,6 @@
                                     app:minValue="0"
                                     app:type="range" />
 
-                                <TextView
-                                    style="@style/textView"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:text="@string/pd1102" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/pd1102"

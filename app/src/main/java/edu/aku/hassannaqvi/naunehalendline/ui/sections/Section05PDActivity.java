@@ -38,7 +38,18 @@ public class Section05PDActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
+
+        child.setPd01(child.getCb01());
+        child.setPd02(child.getCb07());
         bi.setChild(child);
+
+        String motherRelation;
+        if (child.getCb03().equals("1")) {
+            motherRelation = " S/o ";
+        } else {
+            motherRelation = " D/o ";
+        }
+        bi.childName.setText(child.getCb02() + " " + motherRelation + " " + child.getCb07());
     }
 
     private boolean updateDB() {

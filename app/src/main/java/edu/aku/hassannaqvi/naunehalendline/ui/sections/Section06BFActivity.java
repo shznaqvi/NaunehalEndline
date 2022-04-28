@@ -35,9 +35,27 @@ public class Section06BFActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_06_bf);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
+
+        child.setBf01(child.getCb01());
+        child.setBf02(child.getCb06());
+
+        child.setBf3y(child.getCb04yy());
+        child.setBf03m(child.getCb04mm());
+        child.setBf3d(child.getCb04dd());
+        child.setBf03a02(child.getCb0501());
+        child.setBf03a01(child.getCb0502());
+
         bi.setChild(child);
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
+
+        String motherRelation;
+        if (child.getCb03().equals("1")) {
+            motherRelation = " S/o ";
+        } else {
+            motherRelation = " D/o ";
+        }
+        bi.childName.setText(child.getCb02() + " " + motherRelation + " " + child.getCb07());
     }
 
     private boolean updateDB() {
@@ -82,7 +100,7 @@ public class Section06BFActivity extends AppCompatActivity {
                 returnIntent.putExtra("requestCode", requestCode);
                 returnIntent.putExtra("complete", true);
                 setResult(RESULT_OK, returnIntent);
-                startActivity(returnIntent);
+                //startActivity(returnIntent);
             }
             finish();
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();

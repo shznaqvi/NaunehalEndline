@@ -68,6 +68,13 @@ public class Section04IM1Activity extends AppCompatActivity {
         cal.add(Calendar.MONTH, +6);
         cal.add(Calendar.MONTH, -23 - 6); // 6 months buffer
         bi.im04yy.setMinvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));
+        String motherRelation;
+        if (child.getCb03().equals("1")) {
+            motherRelation = " S/o ";
+        } else {
+            motherRelation = " D/o ";
+        }
+        bi.childName.setText(child.getCb02() + " " + motherRelation + " " + child.getCb07());
     }
 
 

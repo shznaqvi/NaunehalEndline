@@ -157,7 +157,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
             }
         });
 
-        bi.addSibling.setOnClickListener(new View.OnClickListener() {
+/*        bi.addSibling.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (MainApp.superuser) {
@@ -168,7 +168,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                     addChild();
                 }
             }
-        });
+        });*/
 
         bi.addHousehold.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -274,13 +274,18 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
     private void addChild() {
 
+        try {
+            int id = youngestChild;
+            Toast.makeText(this, "Child list has been completed. You cannot add a child.", Toast.LENGTH_LONG).show();
 
-        if (childCount >= totalChildren) {
-            displayAddMoreDialog();
-        } else {
-            addMoreChild();
+        } catch (NullPointerException e) {
+
+            if (childCount >= totalChildren) {
+                displayAddMoreDialog();
+            } else {
+                addMoreChild();
+            }
         }
-
 
     }
 
@@ -311,6 +316,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         // TODO: UNCOMMENT two line to launch the child info activity (CH)
         Intent intent = new Intent(this, Section02CBActivity.class);
         intent.putExtra("requestCode", "2");
+        intent.putExtra("sibling", "");
 
 
         MemberInfoLauncher.launch(intent);

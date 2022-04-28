@@ -44,6 +44,16 @@ public class Section03CSActivity extends AppCompatActivity {
         child.setCs01(child.getCb01());
         child.setCs02(child.getCb02());
         bi.setChild(child);
+
+        String motherRelation;
+        if (child.getCb03().equals("1")) {
+            motherRelation = " S/o ";
+        } else {
+            motherRelation = " D/o ";
+        }
+        bi.childName.setText(child.getCb02() + " " + motherRelation + " " + child.getCb07());
+
+
         Intent intent = getIntent();
         requestCode = intent.getStringExtra("requestCode");
     }
@@ -95,7 +105,6 @@ public class Section03CSActivity extends AppCompatActivity {
                 returnIntent.putExtra("requestCode", requestCode);
                 returnIntent.putExtra("complete", true);
                 setResult(RESULT_OK, returnIntent);
-                startActivity(returnIntent);
             }
             finish();
         } else {

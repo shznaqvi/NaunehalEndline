@@ -1,11 +1,13 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +31,7 @@ public class Section02CBActivity extends AppCompatActivity {
     private static final String TAG = "SectionCBActivity";
     ActivitySection02CbBinding bi;
     private DatabaseHelper db;
-    private String requestCode;
+    private String requestCode, sibling;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,14 @@ public class Section02CBActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         requestCode = intent.getStringExtra("requestCode");
+        sibling = "";
+        sibling = intent.getStringExtra("sibling");
+
+        if (sibling.equals("1")) {
+            bi.fldGrpCVMotherInfo.setVisibility(View.GONE);
+            bi.fldGrpCVFatherInfo.setVisibility(View.GONE);
+            bi.fldGrpCVcb06.setVisibility(View.GONE);
+        }
 
         // Set min year for 23 - 6 months
         Calendar cal = Calendar.getInstance();
@@ -55,6 +65,70 @@ public class Section02CBActivity extends AppCompatActivity {
         cal.add(Calendar.MONTH, +6);
         cal.add(Calendar.MONTH, -23 - 6); // 6 months buffer
         bi.cb04yy.setMinvalue(Float.parseFloat(String.valueOf(cal.get(Calendar.YEAR))));*/
+
+        bi.cb06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int id) {
+
+                // MOTHER
+                if (id == bi.cb0601.getId()) {
+                    child.setCb07(form.getHh12()); // Mother's Name
+                    child.setCb08(form.getHh13()); // Mother's Age
+                    child.setCb09(form.getHh16()); // Mother's Education
+                    child.setCb10(form.getHh17()); // Mother's Occupation
+                    child.setCb11("1"); // Mother Present
+                    child.setCb12(""); // Father's Name
+                    child.setCb13(""); // Father's Education
+                    child.setCb14(""); // Father's Occupation
+                    bi.cb1101.setEnabled(false);
+                    bi.cb1102.setEnabled(false);
+          /*          child.notifyPropertyChanged(BR.cb07);
+                    child.notifyPropertyChanged(BR.cb08);
+                    child.notifyPropertyChanged(BR.cb09);
+                    child.notifyPropertyChanged(BR.cb10);
+                    child.notifyPropertyChanged(BR.cb11);
+                    child.notifyPropertyChanged(BR.cb12);
+                    child.notifyPropertyChanged(BR.cb13);
+                    child.notifyPropertyChanged(BR.cb14);*/
+                }
+
+                // Father
+                else if (id == bi.cb0602.getId()) {
+                    child.setCb11(""); // Mother Present
+                    child.setCb07(""); // Mother's Name
+                    child.setCb08(""); // Mother's Age
+                    child.setCb09(""); // Mother's Education
+                    child.setCb10(""); // Mother's Occupation
+                    bi.cb11.clearCheck();
+                    bi.cb1101.setEnabled(true);
+                    bi.cb1102.setEnabled(true);
+                    child.setCb12(form.getHh12()); // Father's Name
+                    child.setCb13(form.getHh16()); // Father's Education
+                    child.setCb14(form.getHh17()); // Father's Occupation
+    /*                child.notifyPropertyChanged(BR.cb07);
+                    child.notifyPropertyChanged(BR.cb08);
+                    child.notifyPropertyChanged(BR.cb09);
+                    child.notifyPropertyChanged(BR.cb10);
+                    child.notifyPropertyChanged(BR.cb11);
+                    child.notifyPropertyChanged(BR.cb12);
+                    child.notifyPropertyChanged(BR.cb13);
+                    child.notifyPropertyChanged(BR.cb14);*/
+                } else {
+                    child.setCb07(""); // Mother's Name
+                    child.setCb08(""); // Mother's Age
+                    child.setCb09(""); // Mother's Education
+                    child.setCb10(""); // Mother's Occupation
+                    child.setCb11(""); // Mother Present
+                    bi.cb11.clearCheck();
+                    bi.cb1101.setEnabled(true);
+                    bi.cb1102.setEnabled(true);
+                    child.setCb12(""); // Father's Name
+                    child.setCb13(""); // Father's Education
+                    child.setCb14(""); // Father's Occupation
+                }
+            }
+        });
+
     }
 
     private boolean insertNewRecord() {

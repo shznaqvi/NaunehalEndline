@@ -102,6 +102,7 @@ public class MainApp extends Application {
     public static long preAgeInMonths;
     public static String[] clusterInfo;
     public static int totalChildren;
+    public static Child sibling;
 
 
     public static void hideSystemUI(View decorView) {

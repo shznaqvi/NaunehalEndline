@@ -51,6 +51,14 @@ public class Section04IM2Activity extends AppCompatActivity {
         db = MainApp.appInfo.dbHelper;
         bi.setForm(child);
         if (MainApp.superuser) bi.btnContinue.setText("Review Next");
+
+        String motherRelation;
+        if (child.getCb03().equals("1")) {
+            motherRelation = " S/o ";
+        } else {
+            motherRelation = " D/o ";
+        }
+        bi.childName.setText(child.getCb02() + " " + motherRelation + " " + child.getCb07());
     }
 
 
@@ -142,11 +150,11 @@ public class Section04IM2Activity extends AppCompatActivity {
                 setResult(RESULT_OK, forwardIntent);
                 startActivity(forwardIntent);
             } else {
-                Intent returnIntent = null;
+                Intent returnIntent = new Intent();
                 returnIntent.putExtra("requestCode", requestCode);
                 returnIntent.putExtra("complete", true);
                 setResult(RESULT_OK, returnIntent);
-                startActivity(returnIntent);
+                // startActivity(returnIntent);
             }
             finish();
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();

@@ -33,45 +33,6 @@
             app:title="@string/app_name"
             app:titleTextColor="@color/colorPrimary" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/childCompleteStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/capsule"
-                android:backgroundTint="@color/colorAccentLightOverlay"
-                android:text="Chidren 1 of 1 completed."
-                android:textColor="@color/colorPrimary"
-                android:visibility="gone"
-                tools:visibility="visible" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvChild"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="24dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:maxHeight="280dp"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:itemCount="1"
-                tools:listitem="@layout/child_box" />
-
-            <CheckBox
-                android:id="@+id/familyComplete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="completeFamily"
-                android:text="Child list complete"
-                android:textColor="@color/colorPrimary"
-                android:visibility="gone" />
-        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -81,7 +42,7 @@
             <LinearLayout
                 android:id="@+id/mainDrawer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/top_round_shape"
@@ -246,9 +207,54 @@
                             android:textSize="24dp" />
 
                     </LinearLayout>
+
+
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/grayLight"
+                    android:gravity="top|center_horizontal"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/childCompleteStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccentLightOverlay"
+                        android:text="Chidren 1 of 1 completed."
+                        android:textColor="@color/colorPrimary"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvChild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="24dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:maxHeight="280dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/child_box" />
+
+                    <CheckBox
+                        android:id="@+id/familyComplete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="completeFamily"
+                        android:text="Child list complete"
+                        android:textColor="@color/colorPrimary"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!--     <androidx.cardview.widget.CardView
                     android:layout_width="360dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -318,7 +324,7 @@
                             android:textSize="24dp" />
 
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>-->
 
                 <!-- <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -611,7 +617,7 @@
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
                 android:radius="10dp"
-                android:text="HOUSEHOLD SCREEN"
+                android:text="CHILDREN SCREEN"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />

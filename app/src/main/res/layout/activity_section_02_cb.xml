@@ -722,20 +722,19 @@
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/fldGrpCVMotherInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="@{child.cb06.equals(`1`)  ? View.GONE : View.VISIBLE}">
+                    android:orientation="vertical">
 
-                <!-- cb07_title_2  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVcb07_title_2"
-                    style="@style/cardView"
-                    android:layout_width="match_parent"
-                    >
+                    <!-- cb07_title_2  Title   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVcb07_title_2"
+                        style="@style/cardView"
+                        android:layout_width="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
@@ -790,10 +789,9 @@
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789 "
                                 android:hint="@string/cb07"
                                 android:inputType="textPersonName|textCapWords"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@={child.cb07}" />
-
                         </LinearLayout>
-
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -836,6 +834,7 @@
                                 android:maxLength="2"
                                 android:text="@={child.cb08}"
                                 app:maxValue="99"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 app:minValue="12"
                                 app:type="range" />
 
@@ -883,12 +882,11 @@
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:text="@={child.cb09}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 app:maxValue="55"
                                 app:minValue="1"
                                 app:type="range" />
-
                         </LinearLayout>
-
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -933,6 +931,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`1`)}"
                                 android:onClick="@{()->child.setCb10(`1`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1001" />
 
                             <RadioButton
@@ -941,6 +940,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`2`)}"
                                 android:onClick="@{()->child.setCb10(`2`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1002" />
 
                             <RadioButton
@@ -949,6 +949,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`3`)}"
                                 android:onClick="@{()->child.setCb10(`3`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1003" />
 
                             <RadioButton
@@ -957,6 +958,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`4`)}"
                                 android:onClick="@{()->child.setCb10(`4`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1004" />
 
                             <RadioButton
@@ -965,6 +967,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`5`)}"
                                 android:onClick="@{()->child.setCb10(`5`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1005" />
 
                             <RadioButton
@@ -981,6 +984,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`7`)}"
                                 android:onClick="@{()->child.setCb10(`7`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1007" />
 
                             <RadioButton
@@ -989,6 +993,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`8`)}"
                                 android:onClick="@{()->child.setCb10(`8`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1008" />
 
                             <RadioButton
@@ -997,6 +1002,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`9`)}"
                                 android:onClick="@{()->child.setCb10(`9`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1009" />
 
                             <RadioButton
@@ -1005,6 +1011,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`10`)}"
                                 android:onClick="@{()->child.setCb10(`10`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1010" />
 
                             <RadioButton
@@ -1013,6 +1020,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`11`)}"
                                 android:onClick="@{()->child.setCb10(`11`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1011" />
 
                             <RadioButton
@@ -1021,6 +1029,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`12`)}"
                                 android:onClick="@{()->child.setCb10(`12`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1012" />
 
                             <RadioButton
@@ -1029,6 +1038,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`13`)}"
                                 android:onClick="@{()->child.setCb10(`13`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1013" />
 
                             <RadioButton
@@ -1037,6 +1047,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`96`)}"
                                 android:onClick="@{()->child.setCb10(`96`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1096" />
 
                             <EditText
@@ -1047,6 +1058,7 @@
                                 android:hint="@string/cb1096"
                                 android:tag="cb1096"
                                 android:text="@={child.cb1096x}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:visibility="@{child.cb10.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1111,26 +1123,26 @@
 
                 </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="@{child.cb06.equals(`2`)  ? View.GONE : View.VISIBLE}">
-                <!-- cb12_title3  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVcb12_title3"
-                    style="@style/cardView">
+                <LinearLayout
+                    android:id="@+id/fldGrpCVFatherInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- cb12_title3  Title   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVcb12_title3"
+                        style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
-                        <!--<TextView
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:text="@string/Q_cb12_title3" />-->
+                            <!--<TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_cb12_title3" />-->
 
                         <TextView
                             style="@style/labelsHead"
@@ -1177,10 +1189,9 @@
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                                 android:hint="@string/cb12"
                                 android:inputType="textPersonName|textCapWords"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@={child.cb12}" />
-
                         </LinearLayout>
-
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1224,10 +1235,9 @@
                                 android:text="@={child.cb13}"
                                 app:maxValue="55"
                                 app:minValue="1"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 app:type="range" />
-
                         </LinearLayout>
-
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1272,6 +1282,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`1`)}"
                                 android:onClick="@{()->child.setCb14(`1`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1401" />
 
                             <RadioButton
@@ -1280,6 +1291,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`2`)}"
                                 android:onClick="@{()->child.setCb14(`2`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1402" />
 
                             <RadioButton
@@ -1288,6 +1300,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`3`)}"
                                 android:onClick="@{()->child.setCb14(`3`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1403" />
 
                             <RadioButton
@@ -1296,6 +1309,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`4`)}"
                                 android:onClick="@{()->child.setCb14(`4`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1404" />
 
                             <RadioButton
@@ -1304,6 +1318,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`5`)}"
                                 android:onClick="@{()->child.setCb14(`5`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1405" />
 
                             <RadioButton
@@ -1312,6 +1327,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`6`)}"
                                 android:onClick="@{()->child.setCb14(`6`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1406" />
 
                             <RadioButton
@@ -1320,6 +1336,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`7`)}"
                                 android:onClick="@{()->child.setCb14(`7`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1407" />
 
                             <RadioButton
@@ -1328,6 +1345,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`8`)}"
                                 android:onClick="@{()->child.setCb14(`8`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1408" />
 
                             <RadioButton
@@ -1336,6 +1354,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`9`)}"
                                 android:onClick="@{()->child.setCb14(`9`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1409" />
 
                             <RadioButton
@@ -1344,6 +1363,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`10`)}"
                                 android:onClick="@{()->child.setCb14(`10`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1410" />
 
                             <RadioButton
@@ -1352,6 +1372,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`11`)}"
                                 android:onClick="@{()->child.setCb14(`11`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1411" />
 
                             <RadioButton
@@ -1360,6 +1381,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`12`)}"
                                 android:onClick="@{()->child.setCb14(`12`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1412" />
 
                             <RadioButton
@@ -1368,6 +1390,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`13`)}"
                                 android:onClick="@{()->child.setCb14(`13`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1413" />
 
                             <RadioButton
@@ -1376,6 +1399,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb14.equals(`96`)}"
                                 android:onClick="@{()->child.setCb14(`96`)}"
+                                android:enabled="@{!child.cb06.equals(`2`)}"
                                 android:text="@string/cb1496" />
 
                             <EditText
