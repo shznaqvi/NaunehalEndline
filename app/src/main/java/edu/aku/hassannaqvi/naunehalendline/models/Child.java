@@ -1402,6 +1402,8 @@ public class Child extends BaseObservable implements Observable {
         setCs08a(cs06.equals("2") ? "" : this.cs08a);
         setCs08b(cs06.equals("2") ? "" : this.cs08b);
 
+        setCs09(cs06.equals("1") ? "" : this.cs09);
+
         setCs10(cs06.equals("1") ? "" : this.cs10);
         setCs11(cs06.equals("1") ? "" : this.cs11);
 
@@ -4185,9 +4187,19 @@ public class Child extends BaseObservable implements Observable {
         setPd05(pd04.equals("1") ? this.pd05 : "");
         setPd06(pd04.equals("1") ? this.pd06 : "");
         setPd07(pd04.equals("1") ? this.pd07 : "");
-
         setPd08(pd04.equals("1") ? "" : this.pd08);
 
+        setPd08a01(pd04.equals("1") ? this.pd08a01 : "");
+        setPd08a02(pd04.equals("1") ? this.pd08a02 : "");
+        setPd08a03(pd04.equals("1") ? this.pd08a03 : "");
+        setPd08a04(pd04.equals("1") ? this.pd08a04 : "");
+        setPd08a05(pd04.equals("1") ? this.pd08a05 : "");
+        setPd08a06(pd04.equals("1") ? this.pd08a06 : "");
+        setPd08a07(pd04.equals("1") ? this.pd08a07 : "");
+        setPd08a08(pd04.equals("1") ? this.pd08a08 : "");
+        setPd08a09(pd04.equals("1") ? this.pd08a09 : "");
+        setPd08a96(pd04.equals("1") ? this.pd08a96 : "");
+        setPd08a96x(pd04.equals("1") ? this.pd08a96x : "");
 
         notifyPropertyChanged(BR.pd04);
     }
@@ -4411,6 +4423,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setPd08b(String pd08b) {
         this.pd08b = pd08b;
+        setPd08c(pd08b.equals("1") ? this.pd08c : "");
         notifyPropertyChanged(BR.pd08b);
     }
 

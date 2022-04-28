@@ -444,9 +444,11 @@
                 <!-- pd06  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVpd06"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.pd04.equals(`1`) ? View.VISIBLE : View.GONE}">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -610,9 +612,11 @@
                 <!-- pd07  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVpd07"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.pd04.equals(`1`) ? View.VISIBLE : View.GONE}">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -686,9 +690,11 @@
                 <!-- pd08a  CheckBox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVpd08a"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.pd04.equals(`1`) ? View.VISIBLE : View.GONE}">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -961,15 +967,19 @@
                                 android:onClick="@{()->child.setPd08b(`98`)}"
                                 android:text="@string/pd08b98" />
                         </RadioGroup>
+
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- pd08c  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVpd08c"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.pd08b.equals(`1`) ? View.VISIBLE : View.GONE}">
 
-                    <LinearLayout
+
+                <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
@@ -1010,6 +1020,7 @@
 
 
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <!-- pd09  Radio   -->
@@ -2003,7 +2014,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-
                 <LinearLayout
                     android:id="@+id/fldGrppd19"
                     android:layout_width="match_parent"
@@ -2478,7 +2488,6 @@
 
 
                 </LinearLayout>
-
 
                 <!--EndButton LinearLayout-->
                 <LinearLayout

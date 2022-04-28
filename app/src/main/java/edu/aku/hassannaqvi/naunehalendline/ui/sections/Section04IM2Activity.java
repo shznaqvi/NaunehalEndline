@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.form;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
@@ -168,7 +169,23 @@ public class Section04IM2Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) {
+            return false;
+        }
+
+        try {
+            int im23b1 = Integer.parseInt(child.getIm23b_1());
+            int im23b2 = Integer.parseInt(child.getIm23b_2());
+
+            if (im23b1 == 0 && im23b2 == 0) {
+                return Validator.emptyCustomTextBox(this, bi.im23b1, "Both Values Can't be zero.");
+            }
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
+
+        return true;
     }
 
 

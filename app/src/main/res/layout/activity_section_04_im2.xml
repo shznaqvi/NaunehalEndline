@@ -1253,8 +1253,8 @@
                                     android:id="@+id/im234"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:checked="@{form.im23.equals(`3`)}"
-                                    android:onClick="@{()->form.setIm23(`3`)}"
+                                    android:checked="@{form.im23.equals(`4`)}"
+                                    android:onClick="@{()->form.setIm23(`4`)}"
                                     android:text="@string/im234" />
 
                                 <RadioButton
@@ -1286,7 +1286,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim23a"
                         style="@style/cardView"
-                        android:visibility="@{form.im02.equals(`1`) || form.im08.equals(`1`) ? View.VISIBLE : View.GONE}">
+                        android:visibility="@{form.im02.equals(`1`) || form.im08.equals(`1`) &amp;&amp; !form.im23.equals(`3`) ? View.VISIBLE : View.GONE}">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1359,7 +1359,8 @@
                     <!-- im23b  Title   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim23b"
-                        style="@style/cardView">
+                        style="@style/cardView"
+                        android:visibility="@{form.im23.equals(`3`) ? View.GONE : View.VISIBLE}">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1425,7 +1426,7 @@
                                     android:maxLength="2"
                                     android:text="@={form.im23b_1}"
                                     app:maxValue="10"
-                                    app:minValue="1"
+                                    app:minValue="0"
                                     app:type="range" />
 
 
@@ -1440,7 +1441,7 @@
                                     android:maxLength="2"
                                     android:text="@={form.im23b_2}"
                                     app:maxValue="59"
-                                    app:minValue="1"
+                                    app:minValue="0"
                                     app:type="range" />
 
                             </LinearLayout>
