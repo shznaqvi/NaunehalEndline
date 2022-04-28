@@ -825,7 +825,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse06"
                     style="@style/cardView"
-                    android:visibility="@{form.se05.equals(`1`) || form.se05.equals(`3`) || form.se05.equals(`96`) ? View.GONE : View.VISIBLE}">
+                    android:visibility="@{form.se05.equals(`2`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"

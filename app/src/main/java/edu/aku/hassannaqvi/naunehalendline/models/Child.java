@@ -5838,6 +5838,87 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCv01(String cv01) {
         this.cv01 = cv01;
+        setCv02(cv01.equals("1") ? this.cv02 : "");
+        setCv03(cv01.equals("1") ? this.cv03 : "");
+        setCv04(cv01.equals("1") ? this.cv04 : "");
+        setCv0501(cv01.equals("1") ? this.cv0501 : "");
+        setCv0502(cv01.equals("1") ? this.cv0502 : "");
+        setCv0503(cv01.equals("1") ? this.cv0503 : "");
+        setCv0504(cv01.equals("1") ? this.cv0504 : "");
+        setCv0505(cv01.equals("1") ? this.cv0505 : "");
+        setCv0506(cv01.equals("1") ? this.cv0506 : "");
+        setCv0507(cv01.equals("1") ? this.cv0507 : "");
+        setCv0596(cv01.equals("1") ? this.cv0596 : "");
+
+        setCv0601(cv01.equals("1") ? this.cv0601 : "");
+        setCv0602(cv01.equals("1") ? this.cv0602 : "");
+        setCv0603(cv01.equals("1") ? this.cv0603 : "");
+        setCv0604(cv04.equals("1") ? this.cv0604 : "");
+        setCv0605(cv01.equals("1") ? this.cv0605 : "");
+        setCv0606(cv01.equals("1") ? this.cv0606 : "");
+        setCv0607(cv01.equals("1") ? this.cv0607 : "");
+        setCv0608(cv01.equals("1") ? this.cv0608 : "");
+        setCv0609(cv01.equals("1") ? this.cv0609 : "");
+        setCv0610(cv01.equals("1") ? this.cv0610 : "");
+        setCv0611(cv01.equals("1") ? this.cv0611 : "");
+        setCv0612(cv01.equals("1") ? this.cv0612 : "");
+        setCv0696(cv01.equals("1") ? this.cv0696 : "");
+        setCv07(cv01.equals("1") ? this.cv07 : "");
+        setCv0801(cv01.equals("1") ? this.cv0801 : "");
+        setCv0802(cv01.equals("1") ? this.cv0802 : "");
+        setCv0803(cv01.equals("1") ? this.cv0803 : "");
+        setCv0804(cv01.equals("1") ? this.cv0804 : "");
+        setCv0805(cv01.equals("1") ? this.cv0805 : "");
+        setCv0806(cv01.equals("1") ? this.cv0806 : "");
+        setCv0807(cv01.equals("1") ? this.cv0807 : "");
+        setCv0898(cv01.equals("1") ? this.cv0898 : "");
+        setCv0896(cv01.equals("1") ? this.cv0896 : "");
+        setCv0901(cv01.equals("1") ? this.cv0901 : "");
+        setCv0902(cv01.equals("1") ? this.cv0902 : "");
+        setCv0903(cv01.equals("1") ? this.cv0903 : "");
+        setCv0904(cv01.equals("1") ? this.cv0904 : "");
+        setCv0905(cv01.equals("1") ? this.cv0905 : "");
+        setCv0906(cv01.equals("1") ? this.cv0906 : "");
+        setCv0907(cv01.equals("1") ? this.cv0907 : "");
+        setCv0908(cv01.equals("1") ? this.cv0908 : "");
+        setCv0998(cv01.equals("1") ? this.cv0998 : "");
+        setCv0996(cv01.equals("1") ? this.cv0996 : "");
+
+        setCv1001(cv01.equals("1") ? this.cv1001 : "");
+        setCv1002(cv01.equals("1") ? this.cv1002 : "");
+        setCv1003(cv01.equals("1") ? this.cv1003 : "");
+        setCv1004(cv01.equals("1") ? this.cv1004 : "");
+        setCv1005(cv01.equals("1") ? this.cv1005 : "");
+        setCv1006(cv01.equals("1") ? this.cv1006 : "");
+        setCv1007(cv01.equals("1") ? this.cv1007 : "");
+        setCv1008(cv01.equals("1") ? this.cv1008 : "");
+        setCv1009(cv01.equals("1") ? this.cv1009 : "");
+        setCv1098(cv01.equals("1") ? this.cv1098 : "");
+        setCv1096(cv01.equals("1") ? this.cv1001 : "");
+
+        setCv11(cv01.equals("1") ? this.cv11 : "");
+        setCv12(cv01.equals("1") ? this.cv12 : "");
+        setCv13(cv01.equals("1") ? this.cv13 : "");
+        setCv14(cv01.equals("1") ? this.cv14 : "");
+        setCv15(cv01.equals("1") ? this.cv15 : "");
+        setCv16(cv01.equals("1") ? this.cv16 : "");
+        setCv17(cv01.equals("1") ? this.cv17 : "");
+        setCv18(cv01.equals("1") ? this.cv18 : "");
+        setCv19(cv01.equals("1") ? this.cv19 : "");
+        setCv20(cv01.equals("1") ? this.cv20 : "");
+        setCv2101(cv01.equals("1") ? this.cv2101 : "");
+        setCv2102(cv01.equals("1") ? this.cv2102 : "");
+        setCv2103(cv01.equals("1") ? this.cv2103 : "");
+        setCv2104(cv01.equals("1") ? this.cv2104 : "");
+        setCv2105(cv01.equals("1") ? this.cv2105 : "");
+        setCv2106(cv01.equals("1") ? this.cv2106 : "");
+        setCv2107(cv01.equals("1") ? this.cv2107 : "");
+        setCv2108(cv01.equals("1") ? this.cv2108 : "");
+        setCv2109(cv01.equals("1") ? this.cv2109 : "");
+        setCv2198(cv01.equals("1") ? this.cv2198 : "");
+        setCv2196(cv01.equals("1") ? this.cv2196 : "");
+
+
         notifyPropertyChanged(BR.cv01);
     }
 
@@ -6249,14 +6330,14 @@ public class Child extends BaseObservable implements Observable {
     public void setCv0898(String cv0898) {
         if (this.cv0898.equals(cv0898)) return; // for all checkboxes
         this.cv0898 = cv0898;
-        setCv0801("");
-        setCv0802("");
-        setCv0803("");
-        setCv0804("");
-        setCv0805("");
-        setCv0806("");
-        setCv0807("");
-        setCv0896("");
+        setCv0801(cv0898.equals("98") ? "" : this.cv0801);
+        setCv0802(cv0898.equals("98") ? "" : this.cv0802);
+        setCv0803(cv0898.equals("98") ? "" : this.cv0803);
+        setCv0804(cv0898.equals("98") ? "" : this.cv0804);
+        setCv0805(cv0898.equals("98") ? "" : this.cv0805);
+        setCv0806(cv0898.equals("98") ? "" : this.cv0806);
+        setCv0807(cv0898.equals("98") ? "" : this.cv0807);
+        setCv0896(cv0898.equals("98") ? "" : this.cv0896);
         notifyPropertyChanged(BR.cv0898);
     }
 
@@ -6587,6 +6668,8 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCv11(String cv11) {
         this.cv11 = cv11;
+
+        setCv12(cv11.equals("1")? this.cv12 : "");
         notifyPropertyChanged(BR.cv11);
     }
 
@@ -6721,6 +6804,18 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCv20(String cv20) {
         this.cv20 = cv20;
+        setCv2101(cv20.equals("1") ? "" : cv2101);
+        setCv2102(cv20.equals("1") ? "" : cv2102);
+        setCv2103(cv20.equals("1") ? "" : cv2103);
+        setCv2104(cv20.equals("1") ? "" : cv2104);
+        setCv2105(cv20.equals("1") ? "" : cv2105);
+        setCv2106(cv20.equals("1") ? "" : cv2106);
+        setCv2107(cv20.equals("1") ? "" : cv2107);
+        setCv2108(cv20.equals("1") ? "" : cv2108);
+        setCv2109(cv20.equals("1") ? "" : cv2109);
+        setCv2198(cv20.equals("1") ? "" : cv2198);
+        setCv2196(cv20.equals("1") ? "" : cv2196);
+
         notifyPropertyChanged(BR.cv20);
     }
 
@@ -6852,7 +6947,6 @@ public class Child extends BaseObservable implements Observable {
         setCv2108(cv2198.equals("98") ? "" : this.cv2108);
         setCv2109(cv2198.equals("98") ? "" : this.cv2109);
         setCv2196(cv2198.equals("98") ? "" : this.cv2196);
-        setCv2196x(cv2198.equals("98") ? "" : this.cv2196x);
 
         notifyPropertyChanged(BR.cv2198);
     }
