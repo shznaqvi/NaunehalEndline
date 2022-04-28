@@ -81,12 +81,9 @@ public class Section06BFActivity extends AppCompatActivity {
         if (!formValidation()) return;
         if (updateDB()) {
             Intent forwardIntent = null;
-            // if (!child.getCs02a().equals("4")) {
-            forwardIntent = new Intent(this, Section07CVActivity.class);
-            //}
-                /*else if(child.getAgeInMonths() <= 23) {
-                    forwardIntent = new Intent(this, Section06BFActivity.class);
-                }*/
+            if (!child.getCs02a().equals("4")) {
+                forwardIntent = new Intent(this, Section07CVActivity.class);
+            }
 
             // NOTE: Following logic is implemented because functionality may be revised
             if (forwardIntent != null) {

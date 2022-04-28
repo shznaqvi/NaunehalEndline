@@ -177,7 +177,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
             indexedBar.setVisibility(child.getIndexed().equals("") ? View.GONE : View.VISIBLE);
         }
 */
-        childcheck.setVisibility(child.getCStatus().equals("") ? View.INVISIBLE : View.VISIBLE);
+        childcheck.setVisibility(child.getCs01().equals("") ? View.INVISIBLE : View.VISIBLE);
 
 
         //fMaritalStatus.setText("Children: " + familyMember.getH226m() + " boy(s), " + familyMember.getH226f() + " girl(s)");

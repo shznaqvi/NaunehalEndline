@@ -134,7 +134,7 @@ public class Section04IM2Activity extends AppCompatActivity {
         if (updateDB()) {
             Intent forwardIntent = null;
             if (selectedChild == youngestChild) {
-                if (child.getCb11().equals("1") && child.getAgeInMonths() <= 23) {
+                if (child.getCb11().equals("1")) {
                     forwardIntent = new Intent(this, Section05PDActivity.class);
                 } else if (!child.getCs02a().equals("4")) {
                     forwardIntent = new Intent(this, Section07CVActivity.class);

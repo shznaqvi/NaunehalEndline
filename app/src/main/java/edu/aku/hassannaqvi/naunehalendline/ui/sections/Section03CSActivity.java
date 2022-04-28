@@ -85,7 +85,7 @@ public class Section03CSActivity extends AppCompatActivity {
             if (child.getAgeInMonths() <= 35 && !child.getCs02a().equals("4")) {
                 forwardIntent = new Intent(this, Section04IM1Activity.class);
             } else if (selectedChild == youngestChild) {
-                if (child.getCb11().equals("1") && child.getAgeInMonths() <= 23) {
+                if (child.getCb11().equals("1")) {
                     forwardIntent = new Intent(this, Section05PDActivity.class);
                 } else if (!child.getCs02a().equals("4")) {
                     forwardIntent = new Intent(this, Section07CVActivity.class);

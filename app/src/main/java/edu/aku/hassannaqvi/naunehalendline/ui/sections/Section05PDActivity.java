@@ -1,6 +1,8 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.sections;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.youngestChild;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -74,12 +76,30 @@ public class Section05PDActivity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent forwardIntent = new Intent(this, Section06BFActivity.class);
-            forwardIntent.putExtra("requestCode", requestCode);
-            forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
-            setResult(RESULT_OK, forwardIntent);
-
-            startActivity(forwardIntent);
+            Intent forwardIntent = null;
+            if (selectedChild == youngestChild) {
+                if (child.getCb11().equals("1") && child.getAgeInMonths() <= 23) {
+                    forwardIntent = new Intent(this, Section06BFActivity.class);
+                } else if (!child.getCs02a().equals("4")) {
+                    forwardIntent = new Intent(this, Section07CVActivity.class);
+                }
+                /*else if(child.getAgeInMonths() <= 23) {
+                    forwardIntent = new Intent(this, Section06BFActivity.class);
+                }*/
+            }
+            if (forwardIntent != null) {
+                forwardIntent.putExtra("requestCode", requestCode);
+                forwardIntent.putExtra("complete", true);
+                forwardIntent.setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                setResult(RESULT_OK, forwardIntent);
+                startActivity(forwardIntent);
+            } else {
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("requestCode", requestCode);
+                returnIntent.putExtra("complete", true);
+                setResult(RESULT_OK, returnIntent);
+                // startActivity(returnIntent);
+            }
             finish();
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }

@@ -131,7 +131,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 }
                 if (child.getAgeInMonths() <= 59)
                     childCount++;
-                if (!child.getPd24().equals("")) {
+                if (!child.getCs01().equals("")) {
                     MainApp.childCompleted.add(Integer.parseInt(child.getCb01()) - 1);
                 }
 
@@ -195,11 +195,11 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         } else {
             bi.familyComplete.setVisibility(View.GONE);
         }
-        if (childCount >= totalChildren && MainApp.householdChecked) {
+        // if (childCount >= totalChildren && MainApp.householdChecked) {
             bi.btnContinue.setEnabled(childCount == MainApp.childCompleted.size());
             bi.btnContinue.setBackground(childCount == MainApp.childCompleted.size() ? getResources().getDrawable(R.drawable.button_shape_green) : getResources().getDrawable(R.drawable.button_shape_gray));
             bi.childCompleteStatus.setVisibility(View.VISIBLE);
-        }
+        //  }
         bi.hhcheck.setVisibility(MainApp.householdChecked ? View.VISIBLE : View.INVISIBLE);
         bi.childCompleteStatus.setText("Children " + MainApp.childCompleted.size() + " of " + childCount + " completed.");
     }
@@ -223,7 +223,12 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     }
 
     private void displayProceedDialog() {
-        new AlertDialog.Builder(this)
+        // Specifying a listener allows you to take an action before dismissing the dialog.
+        // The dialog is automatically dismissed when a dialog button is clicked.
+        // Continue with delete operation
+        // A null listener allows the button to dismiss the dialog and take no further action.
+        // Continue with delete operation
+        AlertDialog proceedDialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
                 .setMessage(String.format(getString(R.string.message_child_dialog_proceeed),
                         MainApp.childList.size() + "", totalChildren + ""
@@ -248,6 +253,8 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 })
                 .setIcon(R.drawable.ic_alert_24)
                 .show();
+        proceedDialog.setCanceledOnTouchOutside(false);
+
 
     }
 
@@ -290,7 +297,7 @@ public class HouseholdScreenActivity extends AppCompatActivity {
     }
 
     private void displayAddMoreDialog() {
-        new AlertDialog.Builder(this)
+        AlertDialog addMoreDialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.title_child_dialog)
                 .setMessage(String.format(getString(R.string.message_child_dialog_addmore),
                         childCount + ""))
@@ -308,6 +315,8 @@ public class HouseholdScreenActivity extends AppCompatActivity {
                 .setNegativeButton(R.string.no, null)
                 .setIcon(R.drawable.ic_alert_24)
                 .show();
+        addMoreDialog.setCanceledOnTouchOutside(false);
+
 
     }
 
