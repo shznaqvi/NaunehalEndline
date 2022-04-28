@@ -761,7 +761,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd0609">Private maternity home</string>
     <string name="pd0610">Naunehal health camp</string>
     <string name="pd06962">Other private Please Specify</string>
-    <string name="pd07">How many times did you receive antenatal care during last pregnancy? Probe to identify the number of times antenatal care was received. If a range is given, record the minimum number of times antenatal care received.</string>
+    <string name="pd07Info">Probe to identify the number of times antenatal care was received. If a range is given, record the minimum number of times antenatal care received.</string>
+    <string name="pd07">How many times did you receive antenatal care during last pregnancy? </string>
     <string name="pd08a">As part of your antenatal care during your pregnancy, were any of the following done at least once: (Ask about each option and circle all positive responses)</string>
     <string name="pd0701">Number of times</string>
     <string name="pd08a01">Were you weighed </string>
@@ -832,7 +833,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd15">Did anyone check on your health after delivery?</string>
     <string name="pd1501">Yes</string>
     <string name="pd1502">No</string>
-    <string name="pd16">Who checked your health after delivery? [MULTIPLE RESPONSES]</string>
+    <string name="pd16">Who checked your health after delivery?</string>
     <string name="pd1601">Gynaecologist</string>
     <string name="pd1602">Other doctor</string>
     <string name="pd1603">Nurse</string>
@@ -841,7 +842,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd1606">LHV</string>
     <string name="pd1607">TBA</string>
     <string name="pd1696">Others Please Specify</string>
-    <string name="pd17">How long after delivery did the first of these checks happen? 	If less than one day, record hours. 	If less than one week, record days. OTHERWISE, RECORD WEEKS.</string>
+    <string name="pd17Info">If less than one day, record hours. If less than one week, record days. OTHERWISE, RECORD WEEKS.</string>
+    <string name="pd17">How long after delivery did the first of these checks happen?</string>
     <string name="pd1701">Hours</string>
     <string name="pd1702">Days</string>
     <string name="pd1703">Weeks</string>
@@ -851,7 +853,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd1901">Yes</string>
     <string name="pd1902">No</string>
     <string name="pd1998">Don’t know</string>
-    <string name="pd20">Who checked the child’s health after delivery? [Multiple responses]</string>
+    <string name="pd20">Who checked the child’s health after delivery?</string>
     <string name="pd2001">Paediatrician</string>
     <string name="pd2002">Other doctor </string>
     <string name="pd2003">Nurse</string>
@@ -860,7 +862,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd2006">LHV</string>
     <string name="pd2007">TBA</string>
     <string name="pd2096">Others Please Specify</string>
-    <string name="pd21">How long after delivery did the first of these check-ups Conducted ? 	If less than one day, record hours. 	If less than one week, record days. Otherwise, record weeks.</string>
+    <string name="pd21Info">If less than one day, record hours. If less than one week, record days. Otherwise, record weeks.</string>
+    <string name="pd21">How long after delivery did the first of these check-ups Conducted?</string>
     <string name="pd2101">Hours</string>
     <string name="pd2102">Days </string>
     <string name="pd2103">Weeks </string>
@@ -870,7 +873,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="pd2301">Yes</string>
     <string name="pd2302">No</string>
     <string name="pd2398">Don\'t know</string>
-    <string name="pd24">What was applied to the cord? [Multiple responses]</string>
+    <string name="pd24">What was applied to the cord?</string>
     <string name="pd2401">Chlorhexidine</string>
     <string name="pd2402">Other antiseptic (alcohol, spirit, gentian violet, Dettol)</string>
     <string name="pd2403">Surma</string>

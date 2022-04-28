@@ -636,6 +636,12 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pd07Info" />
+
                         <RadioGroup
                             android:id="@+id/pd07"
                             android:layout_width="match_parent"
@@ -2145,6 +2151,12 @@
                                     android:text="@string/pd21" />
 
                             </LinearLayout>
+
+                            <TextView
+                                style="@style/info"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/pd21Info" />
 
                             <RadioGroup
                                 android:id="@+id/pd21"
