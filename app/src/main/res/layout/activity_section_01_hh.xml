@@ -617,6 +617,12 @@
 
                                 </LinearLayout>
 
+                                <TextView
+                                    style="@style/info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hh16Info" />
+
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/hh16"
                                     android:layout_width="match_parent"

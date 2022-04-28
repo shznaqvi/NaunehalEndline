@@ -204,7 +204,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="hh1401">Male</string>
     <string name="hh1402">Female</string>
     <string name="hh15">Literacy level of respondent</string>
-    <string name="hh16">Qualification of respondent Mention completed years of education; Code: 55 for uneducated, and 22 for only religious studies </string>
+    <string name="hh16Info">Mention completed years of education; Code: 55 for uneducated, and 22 for only religious studies </string>
+    <string name="hh16">Qualification of respondent</string>
     <string name="hh17">Profession of Respondent </string>
     <string name="hh1701">Professional/technical/managerial</string>
     <string name="hh1702">Clerical</string>
