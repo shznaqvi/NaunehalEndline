@@ -1479,6 +1479,12 @@
 
                             </LinearLayout>
 
+                            <TextView
+                                style="@style/info"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/im24Info" />
+
                             <LinearLayout
                                 android:id="@+id/im24check"
                                 android:layout_width="match_parent"
@@ -1852,7 +1858,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{form.im24c.equals(`2`)}"
-                                android:onClick="@{()->form.setIm24c(`2`) + im29.clearCheck()}"
+                                android:onClick="@{()->form.setIm24c(`2`) }"
                                 android:text="@string/im24c2" />
 
                             <RadioButton
@@ -1861,7 +1867,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{form.im24c.equals(`98`)}"
-                                android:onClick="@{()->form.setIm24c(`98`) + im29.clearCheck()}"
+                                android:onClick="@{()->form.setIm24c(`98`) }"
                                 android:text="@string/im24c98" />
 
                         </RadioGroup>
@@ -2039,6 +2045,12 @@
                                 android:text="@string/im30" />
 
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im30Info" />
 
                         <LinearLayout
                             android:id="@+id/im30"

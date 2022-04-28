@@ -656,7 +656,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im23b">What is the time taken to reach this facility where vaccination was received? </string>
     <string name="im23b_1">Hours</string>
     <string name="im23b_2">Minutes</string>
-    <string name="im24">Why (name) is not vaccinated?   If the child has not received all their vaccinations, ask the mother/caretaker   Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons. </string>
+    <string name="im24Info">If the child has not received all their vaccinations, ask the mother/caretaker   Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons. </string>
+    <string name="im24">Why (name) is not vaccinated?</string>
     <string name="im2401">Place of immunization too far</string>
     <string name="im2410">Fear of side reaction </string>
     <string name="im2411">Time or Place of immunization not Known</string>
@@ -703,7 +704,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im29a">Yes</string>
     <string name="im29b">No</string>
     <string name="im2998">Don’t know</string>
-    <string name="im30">Why did (name) not receive polio drops during the last campaign?  Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons.</string>
+    <string name="im30Info">Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons.</string>
+    <string name="im30">Why did (name) not receive polio drops during the last campaign?  </string>
     <string name="im30a">Not at home when vaccinator came</string>
     <string name="im30b">Time of immunization not convenient	</string>
     <string name="im30c">Family problem</string>

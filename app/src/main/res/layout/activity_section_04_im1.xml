@@ -844,16 +844,18 @@
                                     <CheckBox
                                         android:id="@+id/im050295"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050295.equals(`95`)}"
                                         android:enabled="@{!form.im0501yy.equals(``)}"
                                         android:gravity="center_horizontal|center_vertical"
                                         android:onClick="@{()->form.setIm050295(form.im050295.equals(`95`)?``:`95`)}"
-                                        android:padding="4dp"
+                                        android:includeFontPadding="false"
+                                        android:paddingStart="8dp"
                                         android:tag="-1"
                                         android:text="Same as above"
+                                        android:paddingEnd="8dp"
                                         android:textColor="@color/redDark" />
 
 
@@ -941,14 +943,14 @@
                                     <CheckBox
                                         android:id="@+id/im0510a95"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im0510a95.equals(`95`)}"
                                         android:enabled="@{!form.im0501yy.equals(``)}"
                                         android:gravity="center_horizontal|center_vertical"
                                         android:onClick="@{()->form.setIm0510a95(form.im0510a95.equals(`95`)?``:`95`)}"
-                                        android:padding="4dp"
                                         android:tag="-1"
                                         android:text="Same as above"
                                         android:textColor="@color/redDark" />
@@ -1123,7 +1125,8 @@
                                     <CheckBox
                                         android:id="@+id/im050495"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050495.equals(`95`)}"
@@ -1220,7 +1223,8 @@
                                     <CheckBox
                                         android:id="@+id/im050595"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050595.equals(`95`)}"
@@ -1316,7 +1320,8 @@
                                     <CheckBox
                                         android:id="@+id/im050695"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050695.equals(`95`)}"
@@ -1498,7 +1503,8 @@
                                     <CheckBox
                                         android:id="@+id/im050895"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050895.equals(`95`)}"
@@ -1595,7 +1601,8 @@
                                     <CheckBox
                                         android:id="@+id/im050995"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im050995.equals(`95`)}"
@@ -1691,7 +1698,8 @@
                                     <CheckBox
                                         android:id="@+id/im051095"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im051095.equals(`95`)}"
@@ -1872,7 +1880,8 @@
                                     <CheckBox
                                         android:id="@+id/im051295"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im051295.equals(`95`)}"
@@ -1967,7 +1976,8 @@
                                     <CheckBox
                                         android:id="@+id/im051395"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im051395.equals(`95`)}"
@@ -2063,7 +2073,8 @@
                                     <CheckBox
                                         android:id="@+id/im051495"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im051495.equals(`95`)}"
@@ -2243,7 +2254,8 @@
                                     <CheckBox
                                         android:id="@+id/im0515b95"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im0515b95.equals(`95`)}"
@@ -2338,7 +2350,8 @@
                                     <CheckBox
                                         android:id="@+id/im051795"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="32dp"
+                                        android:layout_height="36dp"
+                                        android:includeFontPadding="false"
                                         android:layout_gravity="end"
                                         android:background="@drawable/top_round_shape_transparent"
                                         android:checked="@{form.im051795.equals(`95`)}"
