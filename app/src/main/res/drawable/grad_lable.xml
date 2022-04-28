@@ -10,7 +10,10 @@
                 android:startColor="@color/whiteOverlay" />
         </shape>
     </item>
-    <item android:drawable="@drawable/drawable_floral_design" />
+    <item
+        android:drawable="@drawable/drawable_floral_design"
+
+        android:gravity="end|bottom|clip_vertical" />
 
     <item
         android:bottom="2dp"
