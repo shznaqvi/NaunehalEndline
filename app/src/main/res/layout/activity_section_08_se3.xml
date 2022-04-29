@@ -1201,7 +1201,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{form.se48.equals(`1`)}"
-                                android:onClick="@{()->form.setSe48(`1`)}"
+                                android:onClick="@{()->form.setSe48(`1`) + se50.clearCheck()}"
                                 android:text="@string/se4801" />
 
                             <RadioButton
@@ -1445,7 +1445,8 @@
                 <!-- se50  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse50"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{form.se48.equals(`1`) ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
