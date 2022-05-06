@@ -1445,7 +1445,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:checked="@{child.cv15.equals(`1`)}"
-                                android:onClick="@{()->child.setCv15(`1`)}"
+                                android:onClick="@{()->child.setCv15(`1`) + cv16.clearCheck()}"
                                 android:text="@string/cv1501" />
 
                             <RadioButton
@@ -1463,7 +1463,9 @@
                 <!-- cv16  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcv16"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{child.cv15.equals(`2`) ? View.VISIBLE : View.GONE}">
+
 
                     <LinearLayout
                         android:layout_width="match_parent"

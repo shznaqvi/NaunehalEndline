@@ -6787,6 +6787,7 @@ public class Child extends BaseObservable implements Observable {
 
     public void setCv15(String cv15) {
         this.cv15 = cv15;
+        setCv16(cv15.equals("1") ? "" : this.cv16);
         notifyPropertyChanged(BR.cv15);
     }
 
