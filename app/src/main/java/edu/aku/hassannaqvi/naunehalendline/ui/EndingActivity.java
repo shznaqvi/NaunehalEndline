@@ -27,6 +27,7 @@ public class EndingActivity extends AppCompatActivity {
 
     ActivityEndingBinding bi;
     int checkToEnable;
+    int checkToDisbale;
     private DatabaseHelper db;
 
 
@@ -41,6 +42,12 @@ public class EndingActivity extends AppCompatActivity {
         //setTitle(R.string.section1mainheading);
         if (MainApp.superuser)
             bi.btnContinue.setText("End Review");
+
+        if (form.getHh11().equals("2"))
+        {
+            bi.istatusd.setEnabled(false);
+        }
+        //bi.istatusd.setEnabled(!form.getHh11().equals("2") || (!form.getHh13().equals("")));
 
         db = MainApp.appInfo.dbHelper;
         boolean check = getIntent().getBooleanExtra("complete", false);
@@ -85,13 +92,14 @@ public class EndingActivity extends AppCompatActivity {
                 bi.istatusa.setEnabled(check);
                 bi.istatusb.setEnabled(!check);
                 bi.istatusc.setEnabled(!check);
-                bi.istatusd.setEnabled(check);
+                bi.istatusd.setEnabled(!check);
                 bi.istatuse.setEnabled(!check);
                 bi.istatusf.setEnabled(!check);
                 bi.istatusg.setEnabled(!check);
                 bi.istatus96.setEnabled(!check);
 
         }
+
 
     }
 

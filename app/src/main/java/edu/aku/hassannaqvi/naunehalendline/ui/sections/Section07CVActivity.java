@@ -63,9 +63,9 @@ public class Section07CVActivity extends AppCompatActivity {
     public void btnContinue(View view) {
         if (!formValidation()) return;
         if (updateDB()) {
-            Intent returnIntent = new Intent();
-            returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);
+            Intent forwardIntent = new Intent();
+            forwardIntent.putExtra("requestCode", requestCode);
+            setResult(RESULT_OK, forwardIntent);
             //startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
             finish();
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();

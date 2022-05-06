@@ -7638,6 +7638,7 @@ public class Child extends BaseObservable implements Observable {
         json.put(TableContracts.ChildTable.COLUMN_SYNCED, this.synced);
         json.put(TableContracts.ChildTable.COLUMN_SYNC_DATE, this.syncDate);
         json.put(TableContracts.ChildTable.COLUMN_APPVERSION, this.appver);
+
         json.put(TableContracts.ChildTable.COLUMN_SCB, new JSONObject(sCBtoString()));
         json.put(TableContracts.ChildTable.COLUMN_SCS, new JSONObject(sCStoString()));
         json.put(TableContracts.ChildTable.COLUMN_SIM, new JSONObject(sIMtoString()));

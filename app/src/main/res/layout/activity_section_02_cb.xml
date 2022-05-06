@@ -976,6 +976,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cb10.equals(`6`)}"
                                 android:onClick="@{()->child.setCb10(`6`)}"
+                                android:enabled="@{!child.cb06.equals(`1`)}"
                                 android:text="@string/cb1006" />
 
                             <RadioButton
