@@ -85,7 +85,7 @@ public class EndingActivity extends AppCompatActivity {
                 bi.istatusa.setEnabled(check);
                 bi.istatusb.setEnabled(!check);
                 bi.istatusc.setEnabled(!check);
-                bi.istatusd.setEnabled(!check);
+                bi.istatusd.setEnabled(check);
                 bi.istatuse.setEnabled(!check);
                 bi.istatusf.setEnabled(!check);
                 bi.istatusg.setEnabled(!check);

@@ -598,13 +598,13 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="im101">Yes </string>
     <string name="im102">No </string>
     <string name="im103">Dont know</string>
-    <string name="im10a">Has (name) ever received Hepatitis B vaccination- that is, an injection in the arm or shoulder. Hepatitis B vaccine protects against a viral infection that causes inflammation and damage to the liver۔</string>
+    <string name="im11a">Has (name) ever received Hepatitis B vaccination- that is, an injection in the arm or shoulder. Hepatitis B vaccine protects against a viral infection that causes inflammation and damage to the liver۔</string>
     <string name="im10_1">Yes </string>
-    <string name="im10a1">Yes </string>
+    <string name="im11a1">Yes </string>
     <string name="im10_2">No </string>
-    <string name="im10a2">No </string>
+    <string name="im11a2">No </string>
     <string name="im10_3">Dont know</string>
-    <string name="im10a98">Dont know</string>
+    <string name="im11a98">Dont know</string>
 
     <string name="im11">Were the first polio drops received in the first two weeks after birth?</string>
     <string name="im111">Yes</string>
@@ -1822,7 +1822,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name='Q_im09'>im09</string>
     <string name='Q_im1_title1'>im1_title1</string>
     <string name='Q_im10'>im10</string>
-    <string name='Qim10a'>im10a</string>
+    <string name='Qim11a'>im11a</string>
     <string name='Q_im11'>im11</string>
     <string name='Q_im11a'>im11a</string>
     <string name='Q_im12'>im12</string>

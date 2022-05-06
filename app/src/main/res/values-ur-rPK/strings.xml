@@ -507,13 +507,13 @@
     <string name="im092">نہیں</string>
     <string name="im093">معلوم نہیں</string>
     <string name="im10">(OPV)کیا بچےکوکبھی منہ کے ذ ریعے دیئے جانے والے  پولیو کی بیماری سے بچاؤکے قطرےپلوائے گئے ہیں؟   نشاندہی کرتے ہوئے  اس بات کی تحقیق کریں کہ بعض اوقات پولیو کے قطروں کی پہلی خوراک پیدائش کے وقت  اور  دیگر بیماریوں سے بچاؤکے انجکشن لگاتے وقت ایک ساتھ ہی دے دی جاتی ہے</string>
-    <string name="im10a">کیا (نام) نے کبھی ہیپاٹائٹس بی کی ویکسینیشن لی ہے یہ ایک انجکشن ہے جو پیدائش کے وقت بازو کے اوپر والے حصے میں  لگایا جاتا ہے ہیپا  ٹا ئٹس بی ویکسین ایک مخصوص  وائرل انفیکشن سے بچاتی ہے جو جگر کی سوزش اور  اسے نقصان پہنچانے کا سبب ہوتی ہے</string>
+    <string name="im11a">کیا (نام) نے کبھی ہیپاٹائٹس بی کی ویکسینیشن لی ہے یہ ایک انجکشن ہے جو پیدائش کے وقت بازو کے اوپر والے حصے میں  لگایا جاتا ہے ہیپا  ٹا ئٹس بی ویکسین ایک مخصوص  وائرل انفیکشن سے بچاتی ہے جو جگر کی سوزش اور  اسے نقصان پہنچانے کا سبب ہوتی ہے</string>
     <string name="im10_1">ہاں</string>
-    <string name="im10a1">ہاں</string>
+    <string name="im11a1">ہاں</string>
     <string name="im10_2"> نہیں</string>
-    <string name="im10a2"> نہیں</string>
+    <string name="im11a2"> نہیں</string>
     <string name="im10_3">معلوم نہیں</string>
-    <string name="im10a98">معلوم نہیں</string>
+    <string name="im11a98">معلوم نہیں</string>
     <string name="im11">(OPV0)کیاپہلی بار پلائے گئے پولیو کے قطرے پیدائش کےبعد  پہلے دو ہفتوں میں دیئےگئے تھے؟</string>
     <string name="im101"> ہاں</string>
     <string name="im102"> نہیں</string>
@@ -1733,7 +1733,7 @@
     <string name='Q_im09'>im09</string>
     <string name='Q_im1_title1'>im1_title1</string>
     <string name='Q_im10'>im10</string>
-    <string name='Qim10a'>im10a</string>
+    <string name='Qim11a'>im11a</string>
     <string name='Q_im11'>im11</string>
     <string name='Q_im11a'>im11a</string>
     <string name='Q_im12'>im12</string>

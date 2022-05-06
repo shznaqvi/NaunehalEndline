@@ -94,10 +94,14 @@ public class Section01HHActivity extends AppCompatActivity {
             // Check Consent
             if (form.getHh11().equals("1") && Integer.parseInt(form.getHh13()) > 14) {
                 startActivity(new Intent(this, HouseholdScreenActivity.class));
-            } else {
+            } else if(form.getHh11().equals("1") && Integer.parseInt(form.getHh13()) < 15) {
                 Intent endingActivityIntent = new Intent(this, EndingActivity.class);
                 endingActivityIntent.putExtra("complete", false);
-                endingActivityIntent.putExtra("checkToEnable", 3);
+                endingActivityIntent.putExtra("checkToEnable", 4);
+                startActivity(endingActivityIntent);
+            }else if (form.getHh11().equals("2")){
+                Intent endingActivityIntent = new Intent(this, EndingActivity.class);
+                endingActivityIntent.putExtra("complete", false);
                 startActivity(endingActivityIntent);
             }
         } else
