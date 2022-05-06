@@ -71,7 +71,7 @@
                         android:layout_weight="1"
                         android:visibility="gone"
                         app:dateFormat="yyyy-MM-dd"
-                        app:theme="@style/DatePickerEditTextDialogTheme" />
+                        app:theme="@style/DatePickerDialog" />
 
                     <EditText
                         android:id="@+id/clusterFilter"

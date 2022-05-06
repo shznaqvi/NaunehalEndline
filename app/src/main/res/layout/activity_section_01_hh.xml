@@ -89,7 +89,7 @@
                                 app:dateFormat="yyyy-MM-dd"
                                 app:maxDate="CR_DATE"
                                 app:minDate="01/04/2022"
-                                app:theme="@style/DatePickerEditTextDialogTheme" />
+                                app:theme="@style/DatePickerDialog" />
 
                         </LinearLayout>
 
@@ -122,8 +122,9 @@
                                 android:hint="HH:mm"
                                 android:text="@={form.hh02}"
                                 app:is24HourView="true"
-                                app:theme="@style/DatePickerEditTextDialogTheme"
+                                app:theme="@style/TimePickerDialog"
                                 app:timeFormat="HH:mm" />
+
 
                         </LinearLayout>
                     </LinearLayout>
