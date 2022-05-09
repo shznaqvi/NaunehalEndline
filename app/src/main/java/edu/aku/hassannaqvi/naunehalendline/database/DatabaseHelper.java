@@ -94,7 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
         values.put(FormsTable.COLUMN_UID, form.getUid());
-        values.put(FormsTable.COLUMN_CLUSTER_CODE, form.getEbCode());
+        values.put(FormsTable.COLUMN_CLUSTER_CODE, form.getClusterCode());
         values.put(FormsTable.COLUMN_HHID, form.getHhid());
         values.put(FormsTable.COLUMN_SNO, form.getSno());
         values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
@@ -132,7 +132,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(ChildTable.COLUMN_PROJECT_NAME, child.getProjectName());
         values.put(ChildTable.COLUMN_UID, child.getUid());
         values.put(ChildTable.COLUMN_UUID, child.getUuid());
-        values.put(ChildTable.COLUMN_CLUSTER_CODE, child.getEbCode());
+        values.put(ChildTable.COLUMN_CLUSTER_CODE, child.getClusterCode());
         values.put(ChildTable.COLUMN_HHID, child.getHhid());
         values.put(ChildTable.COLUMN_SNO, child.getSno());
         values.put(ChildTable.COLUMN_INDEXED, child.getIndexed());
@@ -169,7 +169,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(EntryLogTable.COLUMN_PROJECT_NAME, entryLog.getProjectName());
         values.put(EntryLogTable.COLUMN_UUID, entryLog.getUuid());
-        values.put(EntryLogTable.COLUMN_CLUSTER_CODE, entryLog.getEbCode());
+        values.put(EntryLogTable.COLUMN_CLUSTER_CODE, entryLog.getClusterCode());
         values.put(EntryLogTable.COLUMN_HHID, entryLog.getHhid());
         values.put(EntryLogTable.COLUMN_USERNAME, entryLog.getUserName());
         values.put(EntryLogTable.COLUMN_SYSDATE, entryLog.getSysDate());
@@ -723,7 +723,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Form getFormByPsuhhid(String ebCode, String hhid) throws JSONException {
+    public Form getFormByPsuhhid(String clusterCode, String hhid) throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
         String[] columns = null;
@@ -732,7 +732,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         whereClause = FormsTable.COLUMN_CLUSTER_CODE + "=? AND " +
                 FormsTable.COLUMN_HHID + " =? ";
 
-        String[] whereArgs = {ebCode, hhid};
+        String[] whereArgs = {clusterCode, hhid};
 
         String groupBy = null;
         String having = null;
@@ -791,7 +791,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
+            fc.setClusterCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
@@ -839,7 +839,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
+            fc.setClusterCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
             fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
@@ -884,7 +884,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
             fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
             fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-            fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
+            fc.setClusterCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE)));
             fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
             fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
             fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
@@ -1038,14 +1038,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Cluster getClusterByEBNum(String ebCode) {
+    public Cluster getClusterByEBNum(String clusterCode) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor c = null;
         String[] columns = null;
 
         String whereClause = ClusterTable.COLUMN_CLUSTER_CODE + " = ? ";
 
-        String[] whereArgs = {ebCode};
+        String[] whereArgs = {clusterCode};
 
         String groupBy = null;
         String having = null;

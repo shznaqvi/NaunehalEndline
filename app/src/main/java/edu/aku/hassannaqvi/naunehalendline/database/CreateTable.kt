@@ -12,6 +12,8 @@ object CreateTable {
             + FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + FormsTable.COLUMN_PROJECT_NAME + " TEXT,"
             + FormsTable.COLUMN_UID + " TEXT,"
+            + FormsTable.COLUMN_LUID + " TEXT,"
+            + FormsTable.COLUMN_RANDOMDT + " TEXT,"
             + FormsTable.COLUMN_CLUSTER_CODE + " TEXT,"
             + FormsTable.COLUMN_HHID + " TEXT,"
             + FormsTable.COLUMN_SNO + " TEXT,"

@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.naunehalendline.models;
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp._EMPTY_;
-import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedHousehold;
 
 import android.database.Cursor;
 import android.util.Log;
@@ -41,15 +40,16 @@ public class Form extends BaseObservable implements Observable {
     }
 
 
-
     // APP VARIABLES
     private String projectName = PROJECT_NAME;
     // APP VARIABLES
     private String id = _EMPTY_;
     private String uid = _EMPTY_;
+    private String luid = _EMPTY_;
+    private String randomDt = _EMPTY_;
     private String userName = _EMPTY_;
     private String sysDate = _EMPTY_;
-    private String ebCode = _EMPTY_;
+    private String clusterCode = _EMPTY_;
     private String hhid = _EMPTY_;
     private String sno = _EMPTY_;
     private String deviceId = _EMPTY_;
@@ -297,11 +297,12 @@ public class Form extends BaseObservable implements Observable {
         setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
         setUserName(MainApp.user.getUserName());
         setDeviceId(MainApp.deviceid);
-        //   setUuid(MainApp.form.getUid());  // not applicable in Form table
         setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
-        setEbCode(MainApp.selectedHousehold.getClusterCode());
+        setClusterCode(MainApp.selectedHousehold.getClusterCode());
         setHhid(MainApp.selectedHousehold.getHhid());
+        setLuid(MainApp.selectedHousehold.getLUID());
+        setRandomDt(MainApp.selectedHousehold.getRandomDT());
         setSno(MainApp.selectedHousehold.getSno());
         // setEntryType(String.valueOf(MainApp.entryType));
 
@@ -340,14 +341,30 @@ public class Form extends BaseObservable implements Observable {
         this.uid = uid;
     }
 
-    @Bindable
-    public String getEbCode() {
-        return ebCode;
+    public String getLuid() {
+        return luid;
     }
 
-    public void setEbCode(String ebCode) {
-        this.ebCode = ebCode;
-        notifyPropertyChanged(BR.ebCode);
+    public void setLuid(String luid) {
+        this.luid = luid;
+    }
+
+    public String getRandomDt() {
+        return randomDt;
+    }
+
+    public void setRandomDt(String randomDt) {
+        this.randomDt = randomDt;
+    }
+
+    @Bindable
+    public String getClusterCode() {
+        return clusterCode;
+    }
+
+    public void setClusterCode(String clusterCode) {
+        this.clusterCode = clusterCode;
+        notifyPropertyChanged(BR.clusterCode);
     }
 
     @Bindable
@@ -2920,8 +2937,10 @@ public class Form extends BaseObservable implements Observable {
     public Form Hydrate(Cursor cursor) throws JSONException {
         this.id = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ID));
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_UID));
+        this.luid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_LUID));
+        this.randomDt = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_RANDOMDT));
         this.projectName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_PROJECT_NAME));
-        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE));
+        this.clusterCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_CLUSTER_CODE));
         this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_HHID));
         this.sno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SNO));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_USERNAME));
@@ -3390,8 +3409,10 @@ public class Form extends BaseObservable implements Observable {
 
         json.put(FormsTable.COLUMN_ID, this.id);
         json.put(FormsTable.COLUMN_UID, this.uid);
+        json.put(FormsTable.COLUMN_LUID, this.luid);
+        json.put(FormsTable.COLUMN_RANDOMDT, this.randomDt);
         json.put(FormsTable.COLUMN_PROJECT_NAME, this.projectName);
-        json.put(FormsTable.COLUMN_CLUSTER_CODE, this.ebCode);
+        json.put(FormsTable.COLUMN_CLUSTER_CODE, this.clusterCode);
         json.put(FormsTable.COLUMN_HHID, this.hhid);
         json.put(FormsTable.COLUMN_SNO, this.sno);
         json.put(FormsTable.COLUMN_USERNAME, this.userName);
@@ -3403,14 +3424,6 @@ public class Form extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_SYNCED, this.synced);
         json.put(FormsTable.COLUMN_SYNC_DATE, this.syncDate);
         json.put(FormsTable.COLUMN_APPVERSION, this.appver);
-
-        json.put(FormsTable.COLUMN_ID, this.id);
-        json.put(FormsTable.COLUMN_UID, this.uid);
-        json.put(FormsTable.COLUMN_USERNAME, this.userName);
-        json.put(FormsTable.COLUMN_SYSDATE, this.sysDate);
-        json.put(FormsTable.COLUMN_DEVICEID, this.deviceId);
-        json.put(FormsTable.COLUMN_DEVICETAGID, this.deviceTag);
-        json.put(FormsTable.COLUMN_SYNCED, this.synced);
 
         json.put(FormsTable.COLUMN_SHH, new JSONObject(sHHtoString()));
         json.put(FormsTable.COLUMN_SSE, new JSONObject(sSEtoString()));

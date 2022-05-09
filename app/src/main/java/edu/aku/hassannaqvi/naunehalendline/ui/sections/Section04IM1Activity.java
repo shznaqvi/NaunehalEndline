@@ -905,7 +905,7 @@ public class Section04IM1Activity extends AppCompatActivity {
 
     public void takePhoto(View view) {
         Intent intent = new Intent(this, TakePhoto.class);
-        intent.putExtra("picID", form.getEbCode() + "_" + form.getHhid() + "_" + MainApp.child.getSno() + "_");
+        intent.putExtra("picID", form.getClusterCode() + "_" + form.getHhid() + "_" + MainApp.child.getSno() + "_");
         intent.putExtra("childName", MainApp.child.getCb02());
         if (view.getId() == R.id.frontPhoto) {
             intent.putExtra("picView", "front".toUpperCase());

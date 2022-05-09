@@ -127,7 +127,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         }
 
         holder.hhid.setText(fc.get(position).getHhid());
-        holder.ebCode.setText(fc.get(position).getEbCode());
+        holder.clusterCode.setText(fc.get(position).getClusterCode());
 
         holder.istatus.setText(iStatus);
         //  holder.fatherName.setText(fc.get(position).getAs1q09());
@@ -170,7 +170,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
     private void editHousehold(int position) {
         MainApp.form = new Form();
         try {
-            MainApp.form = db.getFormByPsuhhid(fc.get(position).getEbCode(), fc.get(position).getHhid());
+            MainApp.form = db.getFormByPsuhhid(fc.get(position).getClusterCode(), fc.get(position).getHhid());
         } catch (JSONException e) {
             Log.d(TAG, c.getString(R.string.hh_exists_form) + e.getMessage());
             Toast.makeText(c, c.getString(R.string.hh_exists_form) + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -183,7 +183,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public RecyclerView rv;
         public TextView sysdate;
-        public TextView ebCode;
+        public TextView clusterCode;
         public TextView hhid;
         public TextView istatus;
         public TextView mwraCount;
@@ -197,7 +197,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
             super(v);
 //            rv = v.findViewById(R.id.FormsList);
             sysdate = v.findViewById(R.id.sysdate);
-            ebCode = v.findViewById(R.id.ebCode);
+            clusterCode = v.findViewById(R.id.clusterCode);
             hhid = v.findViewById(R.id.hhid);
             istatus = v.findViewById(R.id.istatus);
             fatherName = v.findViewById(R.id.fathername);

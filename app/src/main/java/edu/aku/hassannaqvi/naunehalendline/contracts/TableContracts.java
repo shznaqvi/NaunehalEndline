@@ -11,6 +11,8 @@ public class TableContracts {
         public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
+        public static final String COLUMN_LUID = "_luid";
+        public static final String COLUMN_RANDOMDT = "_randomDt";
         public static final String COLUMN_CLUSTER_CODE = "clusterCode";
         public static final String COLUMN_HHID = "hhid";
         public static final String COLUMN_SNO = "sno";

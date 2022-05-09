@@ -30,6 +30,7 @@
             app:menu="@menu/item_menu"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:subtitleTextColor="@color/colorPrimaryLight"
+            android:backgroundTint="@color/colorAccent"
             app:title="@string/app_name"
             app:titleTextColor="@color/colorPrimary" />
 

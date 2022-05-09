@@ -36,7 +36,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ToolbarTheme"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:subtitle="Please enter a ebCode to search forms"
+            app:subtitle="Please enter a clusterCode to search forms"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
             app:title="Forms By Cluster"
             app:titleTextAppearance="@style/Toolbar.TitleText" />

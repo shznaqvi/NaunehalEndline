@@ -35,7 +35,7 @@ public class EntryLog extends BaseObservable implements Observable {
     private String userName = _EMPTY_;
     private String sysDate = _EMPTY_;
     private String entryDate = _EMPTY_;         //
-    private String ebCode = _EMPTY_;
+    private String clusterCode = _EMPTY_;
     private String hhid = _EMPTY_;
     private String appver = _EMPTY_;            //
     private String iStatus = _EMPTY_;
@@ -58,7 +58,7 @@ public class EntryLog extends BaseObservable implements Observable {
         setUserName(MainApp.user.getUserName());
         setSysDate(MainApp.form.getSysDate());
         setEntryDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
-        setEbCode(MainApp.form.getEbCode());
+        setClusterCode(MainApp.form.getClusterCode());
         setHhid(MainApp.form.getHhid());
         setiStatus(MainApp.form.getiStatus());
         setiStatus96x(MainApp.form.getiStatus96x());
@@ -109,12 +109,12 @@ public class EntryLog extends BaseObservable implements Observable {
         this.deviceId = deviceId;
     }
 
-    public String getEbCode() {
-        return ebCode;
+    public String getClusterCode() {
+        return clusterCode;
     }
 
-    public void setEbCode(String ebCode) {
-        this.ebCode = ebCode;
+    public void setClusterCode(String clusterCode) {
+        this.clusterCode = clusterCode;
     }
 
 
@@ -216,7 +216,7 @@ public class EntryLog extends BaseObservable implements Observable {
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_UID));
         this.uuid = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_UUID));
         this.projectName = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_PROJECT_NAME));
-        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_CLUSTER_CODE));
+        this.clusterCode = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_CLUSTER_CODE));
         this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_HHID));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_USERNAME));
         this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(EntryLogTable.COLUMN_SYSDATE));
@@ -240,7 +240,7 @@ public class EntryLog extends BaseObservable implements Observable {
         json.put(EntryLogTable.COLUMN_UID, this.uid);
         json.put(EntryLogTable.COLUMN_UUID, this.uuid);
         json.put(EntryLogTable.COLUMN_PROJECT_NAME, this.projectName);
-        json.put(EntryLogTable.COLUMN_CLUSTER_CODE, this.ebCode);
+        json.put(EntryLogTable.COLUMN_CLUSTER_CODE, this.clusterCode);
         json.put(EntryLogTable.COLUMN_HHID, this.hhid);
         json.put(EntryLogTable.COLUMN_USERNAME, this.userName);
         json.put(EntryLogTable.COLUMN_SYSDATE, this.sysDate);
