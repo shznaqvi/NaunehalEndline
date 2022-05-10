@@ -3273,7 +3273,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVbf19"
                     style="@style/cardView"
-                    android:visibility="@{child.bf18.equals(`2`) ? View.GONE : View.VISIBLE}">
+                    android:visibility="@{child.bf18.equals(`1`) ? View.VISIBLE : View.GONE}">
 
 
                     <LinearLayout

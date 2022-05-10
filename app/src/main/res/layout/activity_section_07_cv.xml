@@ -825,7 +825,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv0898.equals(`98`)}"
-                                android:enabled="@{!child.cv0898.equals(`98`)}"
                                 android:onClick="@{()->child.setCv0898(child.cv0898.equals(`98`)?``:`98`)}"
                                 android:text="@string/cv0898" />
 
@@ -954,7 +953,7 @@
                                 android:id="@+id/cv0908"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{child.cv0908.equals(``)}"
+                                android:checked="@{child.cv0908.equals(`8`)}"
                                 android:enabled="@{!child.cv0998.equals(`98`)}"
                                 android:onClick="@{()->child.setCv0908(child.cv0908.equals(`8`)?``:`8`)}"
                                 android:text="@string/cv0908" />
@@ -964,7 +963,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv0998.equals(`98`)}"
-                                android:enabled="@{!child.cv0998.equals(`98`)}"
+
                                 android:onClick="@{()->child.setCv0998(child.cv0998.equals(`98`)?``:`98`)}"
                                 android:text="@string/cv0998" />
 
@@ -973,6 +972,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv0996.equals(`96`)}"
+                                android:enabled="@{!child.cv0998.equals(`98`)}"
                                 android:onClick="@{()->child.setCv0996(child.cv0996.equals(`96`)?``:`96`)}"
                                 android:text="@string/cv0996" />
 
@@ -1111,7 +1111,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv1098.equals(`98`)}"
-                                android:enabled="@{!child.cv1098.equals(`98`)}"
                                 android:onClick="@{()->child.setCv1098(child.cv1098.equals(`98`)?``:`98`)}"
                                 android:text="@string/cv1098" />
 
@@ -1120,6 +1119,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv1096.equals(`96`)}"
+                                android:enabled="@{!child.cv1098.equals(`98`)}"
                                 android:onClick="@{()->child.setCv1096(child.cv1096.equals(`96`)?``:`96`)}"
                                 android:text="@string/cv1096" />
 
@@ -2010,7 +2010,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv2198.equals(`98`)}"
-                                android:enabled="@{!child.cv2198.equals(`98`)}"
+
                                 android:onClick="@{()->child.setCv2198(child.cv2198.equals(`98`)?``:`98`)}"
                                 android:text="@string/cv2198" />
 
@@ -2019,6 +2019,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv2196.equals(`96`)}"
+                                android:enabled="@{!child.cv2198.equals(`98`)}"
                                 android:onClick="@{()->child.setCv2196(child.cv2196.equals(`96`)?``:`96`)}"
                                 android:text="@string/cv2196" />
 

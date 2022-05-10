@@ -731,12 +731,14 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.pd08a01.equals(`1`)}"
                                 android:onClick="@{()->child.setPd08a01(child.pd08a01.equals(`1`)?``:`1`)}"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:text="@string/pd08a01" />
 
                             <CheckBox
                                 android:id="@+id/pd08a02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a02.equals(`2`)}"
                                 android:onClick="@{()->child.setPd08a02(child.pd08a02.equals(`2`)?``:`2`)}"
                                 android:text="@string/pd08a02" />
@@ -745,6 +747,7 @@
                                 android:id="@+id/pd08a03"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a03.equals(`3`)}"
                                 android:onClick="@{()->child.setPd08a03(child.pd08a03.equals(`3`)?``:`3`)}"
                                 android:text="@string/pd08a03" />
@@ -753,6 +756,7 @@
                                 android:id="@+id/pd08a04"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a04.equals(`4`)}"
                                 android:onClick="@{()->child.setPd08a04(child.pd08a04.equals(`4`)?``:`4`)}"
                                 android:text="@string/pd08a04" />
@@ -761,6 +765,7 @@
                                 android:id="@+id/pd08a05"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a05.equals(`5`)}"
                                 android:onClick="@{()->child.setPd08a05(child.pd08a05.equals(`5`)?``:`5`)}"
                                 android:text="@string/pd08a05" />
@@ -769,6 +774,7 @@
                                 android:id="@+id/pd08a06"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a06.equals(`6`)}"
                                 android:onClick="@{()->child.setPd08a06(child.pd08a06.equals(`6`)?``:`6`)}"
                                 android:text="@string/pd08a06" />
@@ -777,6 +783,7 @@
                                 android:id="@+id/pd08a07"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a07.equals(`7`)}"
                                 android:onClick="@{()->child.setPd08a07(child.pd08a07.equals(`7`)?``:`7`)}"
                                 android:text="@string/pd08a07" />
@@ -785,6 +792,7 @@
                                 android:id="@+id/pd08a08"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a08.equals(`8`)}"
                                 android:onClick="@{()->child.setPd08a08(child.pd08a08.equals(`8`)?``:`8`)}"
                                 android:text="@string/pd08a08" />
@@ -801,6 +809,7 @@
                                 android:id="@+id/pd08a96"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:enabled="@{!child.pd08a09.equals(`9`)}"
                                 android:checked="@{child.pd08a96.equals(`96`)}"
                                 android:onClick="@{()->child.setPd08a96(child.pd08a96.equals(`96`)?``:`96`)}"
                                 android:text="@string/pd08a96" />

@@ -2261,6 +2261,43 @@ public class Form extends BaseObservable implements Observable {
         this.se41 = se41;
         setSe42(se41.equals("1") ? "" : this.se42);
 
+        setSe4301(se41.equals("1") ? this.se4301 : "");
+        setSe4302(se41.equals("1") ? this.se4302 : "");
+        setSe4303(se41.equals("1") ? this.se4303 : "");
+        setSe4304(se41.equals("1") ? this.se4304 : "");
+        setSe4305(se41.equals("1") ? this.se4305 : "");
+        setSe4306(se41.equals("1") ? this.se4306 : "");
+        setSe4307(se41.equals("1") ? this.se4307 : "");
+        setSe4308(se41.equals("1") ? this.se4308 : "");
+        setSe4309(se41.equals("1") ? this.se4309 : "");
+        setSe4310(se41.equals("1") ? this.se4310 : "");
+        setSe4311(se41.equals("1") ? this.se4311 : "");
+        setSe4396(se41.equals("1") ? this.se4396 : "");
+        setSe4401(se41.equals("1") ? this.se4401 : "");
+        setSe4402(se41.equals("1") ? this.se4402 : "");
+        setSe4403(se41.equals("1") ? this.se4403 : "");
+        setSe4404(se41.equals("1") ? this.se4404 : "");
+        setSe4496(se41.equals("1") ? this.se4496 : "");
+        setSe45(se41.equals("1") ? this.se45 : "");
+        setSe4601(se41.equals("1") ? this.se4601 : "");
+        setSe4602(se41.equals("1") ? this.se4602 : "");
+        setSe4603(se41.equals("1") ? this.se4603 : "");
+        setSe4604(se41.equals("1") ? this.se4604 : "");
+        setSe4605(se41.equals("1") ? this.se4605 : "");
+        setSe4606(se41.equals("1") ? this.se4606 : "");
+        setSe4696(se41.equals("1") ? this.se4696 : "");
+        setSe47(se41.equals("1") ? this.se47 : "");
+        setSe52(se41.equals("1") ? this.se52 : "");
+        setSe53(se41.equals("1") ? this.se53 : "");
+        setSe54_01(se41.equals("1") ? this.se54_01 : "");
+        setSe54_02(se41.equals("1") ? this.se54_02 : "");
+        setSe54_03(se41.equals("1") ? this.se54_03 : "");
+        setSe54_04(se41.equals("1") ? this.se54_04 : "");
+        setSe54_05(se41.equals("1") ? this.se54_05 : "");
+        setSe54_06(se41.equals("1") ? this.se54_06 : "");
+        setSe54_96(se41.equals("1") ? this.se54_96 : "");
+        setSe55(se41.equals("1") ? this.se55 : "");
+
         notifyPropertyChanged(BR.se41);
     }
 

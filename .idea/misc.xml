@@ -41,11 +41,14 @@
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/pendingform_layout.xml" value="0.3171875" />
         <entry key="..\:/Android/NaunehalEndline/app/src/main/res/layout/sync_list_adapter.xml" value="0.56328125" />
         <entry key="..\:/Users/Wajahat Karim/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_01_hh.xml" value="0.1" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_06_bf.xml" value="0.16060701865317736" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_07_cv.xml" value="0.13781877373846987" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/NaunehalEndline/app/src/main/res/layout/activity_section_08_se3.xml" value="0.26877470355731226" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="13" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="13" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

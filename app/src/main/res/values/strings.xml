@@ -980,7 +980,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="bf14i02">No</string>
     <string name="bf14i98">Don’t know</string>
     <string name="bf15">Please describe everything that (NAME) ate yesterday during the day or night, whether at home or outside the home.</string>
-    <string name="bf15_title">Check categories A-Q.  If all ‘no’ for BF15*, go BF16 If at least one ‘yes’ or all ‘DK’ go to BF17</string>
+    <string name="bf15_title">Check categories A-Q.\n\nIf all ‘no’ , go to BF16. \n\n If at least one ‘yes’ or all ‘DK’ go to BF17</string>
     <string name="bf15a">Porridge, bread, rice, noodles, or other foods made from grains</string>
     <string name="bf15a01">Yes</string>
     <string name="bf15a02">No</string>
