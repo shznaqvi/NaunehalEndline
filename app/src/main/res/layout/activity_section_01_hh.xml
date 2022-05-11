@@ -632,7 +632,7 @@
                                     android:inputType="number"
                                     android:maxLength="2"
                                     android:text="@={form.hh16}"
-                                    app:maxValue="17"
+                                    app:maxValue="55"
                                     app:minValue="1"
                                     app:type="range" />
                             </LinearLayout>

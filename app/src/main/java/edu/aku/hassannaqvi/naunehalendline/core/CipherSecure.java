@@ -72,7 +72,7 @@ public class CipherSecure {
             Certificate ca;
             try {
                 ca = cf.generateCertificate(caInput);
-                System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+              //  System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
             } finally {
                 caInput.close();
             }
@@ -118,13 +118,13 @@ public class CipherSecure {
 
     public static boolean certIsValid(Certificate[] certs, Certificate ca) {
         for (Certificate cert : certs) {
-            System.out.println("Certificate is: " + cert);
+            //      System.out.println("Certificate is: " + cert);
             if (cert instanceof X509Certificate) {
 
                 try {
                     ((X509Certificate) cert).checkValidity();
 
-                    System.out.println("Certificate is active for current date");
+                    // System.out.println("Certificate is active for current date");
                     if (cert.equals(ca)) {
 
                         return true;

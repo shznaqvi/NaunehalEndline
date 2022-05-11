@@ -167,13 +167,13 @@ public class UserWorker extends Worker {
 
     private boolean certIsValid(Certificate[] certs, Certificate ca) {
         for (Certificate cert : certs) {
-            System.out.println("Certificate is: " + cert);
+          //  System.out.println("Certificate is: " + cert);
             if (cert instanceof X509Certificate) {
 
                 try {
                     ((X509Certificate) cert).checkValidity();
 
-                    System.out.println("Certificate is active for current date");
+                    //      System.out.println("Certificate is active for current date");
                     if (cert.equals(ca)) {
 
                         return true;
@@ -208,7 +208,7 @@ public class UserWorker extends Worker {
 
 
             ca = cf.generateCertificate(caInput);
-            System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+            // System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
         } catch (CertificateException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -1194,6 +1194,12 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/se10info" />
+
                         <RadioGroup
                             android:id="@+id/se10"
                             android:layout_width="match_parent"

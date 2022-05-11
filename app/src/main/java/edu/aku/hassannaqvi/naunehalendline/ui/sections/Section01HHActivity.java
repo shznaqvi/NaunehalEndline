@@ -123,6 +123,12 @@ public class Section01HHActivity extends AppCompatActivity {
             return false;
         }
 
+        // Allowed 55 and 22 in Education
+        int hh16 = Integer.parseInt(MainApp.child.getIm0514dd());
+        if (hh16 > 17 && (hh16 != 22 && hh16 != 55)) {
+            return Validator.emptyCustomTextBox(this, bi.hh16, "Incorrect value for Education.");
+        }
+
         // check permission and age of respondent
         if (bi.hh1101.isChecked() && !bi.hh13.equals("") && Integer.parseInt(bi.hh13.getText().toString()) > 14) {
             if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {

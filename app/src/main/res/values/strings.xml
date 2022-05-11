@@ -913,7 +913,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="bf0801">Yes</string>
     <string name="bf0802">No</string>
     <string name="bf0898">Don’t know</string>
-    <string name="bf09">What was (NAME) given to drink? [Multiple Responses]</string>
+    <string name="bf09">What was (NAME) given to drink?</string>
     <string name="bf0901">Milk (other than breast milk)</string>
     <string name="bf0902">Plain water </string>
     <string name="bf0903">Sugar or glucose water</string>
@@ -930,7 +930,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="bf1001">Yes</string>
     <string name="bf1002">No</string>
     <string name="bf1096">Don’t know</string>
-    <string name="bf11">Sometimes babies are fed breast milk in different ways, for example by spoon, cup, or bottle. This can happen when the mother cannot always be with her baby. Sometimes babies are breastfed by another woman, or given breast milk from another woman by spoon, cup or bottle or some other way. This can happen if a mother cannot breastfeed her own baby.   Did (NAME) consume breast milk in any of these ways yesterday during the day or at night?</string>
+    <string name="bf11info">Sometimes babies are fed breast milk in different ways, for example by spoon, cup, or bottle. This can happen when the mother cannot always be with her baby. Sometimes babies are breastfed by another woman, or given breast milk from another woman by spoon, cup or bottle or some other way. This can happen if a mother cannot breastfeed her own baby.</string>
+    <string name="bf11">Did (NAME) consume breast milk in any of these ways yesterday during the day or at night?</string>
     <string name="bf1101">Yes</string>
     <string name="bf1102">No</string>
     <string name="bf1198">Don’t know</string>
@@ -942,7 +943,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="bf1301">Yes</string>
     <string name="bf1302">No</string>
     <string name="bf1398">Don’t know</string>
-    <string name="bf14">Next I would like to ask you about some liquids that (NAME) may have had yesterday during the day or at night. Did (NAME) have any (ITEM FORM LIST)</string>
+    <string name="bf14info">Next I would like to ask you about some liquids that (NAME) may have had yesterday during the day or at night. Did (NAME) have any (ITEM FORM LIST)</string>
+    <string name="bf14">Did (NAME) have any (ITEM FORM LIST)</string>
     <string name="bf14a">Plain water</string>
     <string name="bf14a01">Yes</string>
     <string name="bf14a02">No</string>
@@ -1090,7 +1092,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0404">Somewhat Deadly</string>
     <string name="cv0405">Extremely Deadly</string>
     <string name="cv0498">Don\'t Know</string>
-    <string name="cv05">Do you know which group of people are most at risk of COVID?[Multiple Responses]</string>
+    <string name="cv05">Do you know which group of people are most at risk of COVID?</string>
     <string name="cv0501">Everyone</string>
     <string name="cv0502">Elderly</string>
     <string name="cv0503">Adults</string>
@@ -1100,6 +1102,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0507">Person With Pre-Existing Conditions</string>
     <string name="cv0596">Others Please Specify</string>
     <string name="cv06">Who do you trust for information around COVID?  </string>
+    <string name="cv06info"> </string>
     <string name="cv0601">Community Leader</string>
     <string name="cv0602">Religious Leader</string>
     <string name="cv0603">Relatives</string>
@@ -1117,7 +1120,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0701">Yes</string>
     <string name="cv0702">No</string>
     <string name="cv0798">Don’t know</string>
-    <string name="cv08">What symptoms are most commonly reported with COVID-19 (check all that apply)[Multiple Responses]</string>
+    <string name="cv08">What symptoms are most commonly reported with COVID-19</string>
+    <string name="cv08info">(check all that apply)</string>
     <string name="cv0801">Fever</string>
     <string name="cv0802">Cough</string>
     <string name="cv0803">Flu</string>
@@ -1127,7 +1131,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0807">Diarrhea</string>
     <string name="cv0898">Don’t know</string>
     <string name="cv0896">Others Please Specify</string>
-    <string name="cv09">What do you think are the different modes of transmission of COVID-19?  (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)[Multiple Responses]</string>
+    <string name="cv09">What do you think are the different modes of transmission of COVID-19? </string>
+    <string name="cv09info"> (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="cv0901">Touching surfaces contaminated with the virus</string>
     <string name="cv0902">Shaking hands</string>
     <string name="cv0903">Directly coming in contact with an infected person’s body fluids such as blood, vomit, or sweat</string>
@@ -1138,7 +1143,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0908">COVID vaccination</string>
     <string name="cv0998">Don’t know</string>
     <string name="cv0996">Others Please Specify</string>
-    <string name="cv10">What according to you are effective methods of preventing infection from COVID-19?  (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)[Multiple Responses]</string>
+    <string name="cv10">What according to you are effective methods of preventing infection from COVID-19?</string>
+    <string name="cv10info">(Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="cv1001">Frequently washing hands using soap and water for 20 seconds</string>
     <string name="cv1002">Cleaning hands with hand sanitizer</string>
     <string name="cv1003">Covering mouth and nose using a tissue or flexed elbow while coughing or sneezing</string>
@@ -1153,7 +1159,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv11">Has COVID-19, the subsequent lockdown &amp; restrictions and fear affected the nutrition and feeding of your child? </string>
     <string name="cv1101">Yes</string>
     <string name="cv1102">No</string>
-    <string name="cv12">How has it affected breastfeeding and/or feeding of the child?  (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
+    <string name="cv12">How has it affected breastfeeding and/or feeding of the child?</string>
+    <string name="cv12info">(Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="cv1201">I have reduced the frequency and amount I feed my child</string>
     <string name="cv1202">I have increased the frequency and amount I feed my child</string>
     <string name="cv1203">I cannot afford same food for child</string>
@@ -1199,7 +1206,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv20">Have  you received COVID vaccination? </string>
     <string name="cv2001">Yes</string>
     <string name="cv2002">No</string>
-    <string name="cv21">Why did you not get the COVID vaccine?  (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
+    <string name="cv21">Why did you not get the COVID vaccine?</string>
+    <string name="cv21info">(Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="cv2101">Place of immunization too far</string>
     <string name="cv2102">Time of immunization not convenient</string>
     <string name="cv2103">Vaccine was not available at facility</string>
@@ -1311,7 +1319,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se0901">Yes</string>
     <string name="se0902">No</string>
     <string name="se0998">Don’t know</string>
-    <string name="se10">What do you usually do to make the water safer to drink?  Anything else?  RECORD ALL MENTIONED</string>
+    <string name="se10">What do you usually do to make the water safer to drink? </string>
+    <string name="se10info"> Anything else?  RECORD ALL MENTIONED</string>
     <string name="se1001">Boil</string>
     <string name="se1002">Add Bleach/Chlorine</string>
     <string name="se1003">Strain Through A Cloth</string>
@@ -1358,13 +1367,14 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se16">Do you have any soap or detergent in your household for hand washing? </string>
     <string name="se1601">Yes</string>
     <string name="se1602">No</string>
-    <string name="se17">If yes, can you please show it to me?  [Multiple responses]</string>
+    <string name="se17">If yes, can you please show it to me?</string>
     <string name="se1701">Bar soap</string>
     <string name="se1702">Detergent (powder/liquid/paste)</string>
     <string name="se1703">Liquid soap</string>
     <string name="se1704">Ash/mud/sand</string>
     <string name="se1705">None</string>
-    <string name="se18">In what situations do you wash your hands with soap? This is an open-ended question. Do not read the answer choices.</string>
+    <string name="se18">In what situations do you wash your hands with soap?</string>
+    <string name="se18info">This is an open-ended question. Do not read the answer choices.</string>
     <string name="se1801">Before preparing food</string>
     <string name="se180101">Yes</string>
     <string name="se180102">No</string>
@@ -1397,7 +1407,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se1911">Animal Dung</string>
     <string name="se1912">No Food Cooked In Household</string>
     <string name="se1996">Others Please Specify </string>
-    <string name="se20">What transport does most of the family members of this HH usually use? (select all that apply)</string>
+    <string name="se20">What transport does most of the family members of this HH usually use?</string>
+    <string name="se20info">(select all that apply)</string>
     <string name="se2001">Private car</string>
     <string name="se2002">Company car</string>
     <string name="se2003">Motorcycle</string>
@@ -1494,7 +1505,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se4101">Yes</string>
     <string name="se4102">No</string>
     <string name="se4198">Don’t know</string>
-    <string name="se42">Why did you or someone from the household not visit the Naunehal health camps? (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
+    <string name="se42">Why did you or someone from the household not visit the Naunehal health camps? </string>
+    <string name="se42info">(Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="se43">From where did you get information about the health camp? </string>
     <string name="se44">For which specific purpose you visited the health camp?</string>
     <string name="se4201">Did not know about them</string>
@@ -1578,7 +1590,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se56_05">Uncle/Aunt</string>
     <string name="se56_06">Sibling</string>
     <string name="se56_96">Other Please specify</string>
-    <string name="se49">Which topics were covered in the health promotion sessions? (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
+    <string name="se49">Which topics were covered in the health promotion sessions?</string>
+    <string name="se49info"> (Choose all that apply. Do not read the answers, let the respondent answer spontaneously)</string>
     <string name="se50">Why did you or someone from the household not attend a health promotion session? </string>
     <string name="se4901">Immunization</string>
     <string name="se5001">Did not know about them</string>
@@ -1601,7 +1614,8 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se58_01">Yes</string>
     <string name="se58_02">No</string>
     <string name="se58_98">Don’t know</string>
-    <string name="se59">Where are you originally from? (If known enter city district, province, country) Please Specify</string>
+    <string name="se59">Please specify where are you originally from?</string>
+    <string name="se59info">(If known enter city district, province, country) </string>
     <string name="se60">Why did you move from there to your current location? </string>
     <string name="se60_01">Work/Job</string>
     <string name="se60_02">Family/Personal reasons</string>
@@ -1619,7 +1633,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="se3601">Yes</string>
     <string name="se3602">No</string>
     <string name="se3698">Don’t know</string>
-    <string name="se37">If yes, then please identify which program they are registered with? [Multiple Responses]</string>
+    <string name="se37">If yes, then please identify which program they are registered with? </string>
     <string name="se3701">Unconditional Cash Transfer</string>
     <string name="se3702">Waseela-e-Haq</string>
     <string name="se3703">Waseela-e-Taleem</string>

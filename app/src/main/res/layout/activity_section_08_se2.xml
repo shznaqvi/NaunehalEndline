@@ -72,6 +72,11 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/se18info" />
                         <!-- se1801  Radio   -->
                         <RadioGroup
                             android:id="@+id/se1801"
@@ -461,6 +466,12 @@
                                 android:text="@string/se20" />
 
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/se20info" />
 
                         <LinearLayout
                             android:id="@+id/se20check"
@@ -1487,14 +1498,33 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
                             android:orientation="horizontal">
 
                             <TextView
-                                style="@style/textView"
+                                style="@style/sub_labels"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/se3301" />
+
+
+                            <TextView
+                                style="@style/sub_labels"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/se3302" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:orientation="horizontal">
+
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/se3301"
@@ -1510,12 +1540,6 @@
                                 app:minValue="0"
                                 app:type="range" />
 
-                            <TextView
-                                style="@style/textView"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/se3302" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/se3302"

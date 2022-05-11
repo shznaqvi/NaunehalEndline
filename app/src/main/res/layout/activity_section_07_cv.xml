@@ -531,6 +531,12 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cv06info" />
+
                         <LinearLayout
                             android:id="@+id/cv06check"
                             android:layout_width="match_parent"
@@ -750,6 +756,12 @@
 
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cv08info" />
+
                         <LinearLayout
                             android:id="@+id/cv08check"
                             android:layout_width="match_parent"
@@ -878,6 +890,12 @@
                                 android:text="@string/cv09" />
 
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cv09info" />
 
                         <LinearLayout
                             android:id="@+id/cv09check"
@@ -1017,6 +1035,12 @@
                                 android:text="@string/cv10" />
 
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/cv10info" />
 
                         <LinearLayout
                             android:id="@+id/cv10check"
@@ -1216,23 +1240,29 @@
                                 android:layout_height="match_parent"
                                 android:text="@string/Q_cv12" />
 
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/cv12" />
+
+                            </LinearLayout>
+
                             <TextView
+                                style="@style/info"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/cv12" />
+                                android:text="@string/cv12info" />
 
-                        </LinearLayout>
-
-                        <RadioGroup
-                            android:id="@+id/cv12"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/cv1201"
+                            <RadioGroup
+                                android:id="@+id/cv12"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{child.cv12.equals(`1`)}"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/cv1201"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="@{child.cv12.equals(`1`)}"
                                 android:onClick="@{()->child.setCv12(`1`)}"
                                 android:text="@string/cv1201" />
 
@@ -1909,22 +1939,28 @@
                                 android:layout_height="match_parent"
                                 android:text="@string/Q_cv21" />
 
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/cv21" />
+
+                            </LinearLayout>
+
                             <TextView
+                                style="@style/info"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/cv21" />
+                                android:text="@string/cv21info" />
 
-                        </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/cv21check"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:tag="0">
 
-                        <LinearLayout
-                            android:id="@+id/cv21check"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:tag="0">
-
-                            <CheckBox
-                                android:id="@+id/cv2101"
+                                <CheckBox
+                                    android:id="@+id/cv2101"
                                 
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
