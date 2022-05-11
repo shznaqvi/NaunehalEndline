@@ -476,6 +476,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return insertCount;
     }
 
+
+    public int syncUnlocked(JSONArray list) throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SYNCED, "");
+        values.put(FormsTable.COLUMN_SYNC_DATE, "");
+        String where = FormsTable.COLUMN_UID + " = ? AND " +
+                FormsTable.COLUMN_SYSDATE + " = ? ";
+        int insertCount = 0;
+
+        for (int i = 0; i < list.length(); i++) {
+
+            JSONObject json = list.getJSONObject(i);
+            String[] whereArgs = {json.getString(FormsTable.COLUMN_UID), json.getString(FormsTable.COLUMN_SYSDATE)};
+            int rowID = db.update(
+                    FormsTable.TABLE_NAME,
+                    values,
+                    where,
+                    whereArgs);
+            if (rowID != -1) insertCount++;
+        }
+
+        db.close();
+        db.close();
+
+        return insertCount;
+    }
+
+
     public int syncRandomised(JSONArray list) throws JSONException {
 //        SQLiteDatabase db = this.getWritableDatabase();
         SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
