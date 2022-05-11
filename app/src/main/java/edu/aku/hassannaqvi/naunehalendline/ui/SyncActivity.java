@@ -54,7 +54,6 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.adapters.SyncListAdapter;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.ClusterTable;
-import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.DistrictsTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.EntryLogTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.FormsTable;
 import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts.RandomHHTable;
@@ -211,14 +210,18 @@ public class SyncActivity extends AppCompatActivity {
                     filter = " enabled = '1' ";
 
                     downloadTables.add(new SyncModel(UsersTable.TABLE_NAME));
-                    downloadTables.add(new SyncModel(DistrictsTable.TABLE_NAME));
+                    //downloadTables.add(new SyncModel(DistrictsTable.TABLE_NAME));
                     downloadTables.add(new SyncModel("versionApp"));
+                    select = " * ";
+                    filter = " deviceid = '" + MainApp.deviceid + "' ";
+                    downloadTables.add(new SyncModel("Unlocked", select, filter));
                 } else {
 
                     select = " * ";
                     filter = " (colflag != '1' or colflag is null) AND dist_id = '" + MainApp.user.getDist_id() + "' ";
                     downloadTables.add(new SyncModel(ClusterTable.TABLE_NAME, select, filter));
                     downloadTables.add(new SyncModel(RandomHHTable.TABLE_NAME, select, filter));
+
                 }
                 MainApp.downloadData = new String[downloadTables.size()];
                 setAdapter(downloadTables);
@@ -565,8 +568,8 @@ public class SyncActivity extends AppCompatActivity {
                                      *      e.g: Forms and updateSyncedForms
                                      *
                                      */
-                                    Log.d(TAG, "onChanged Names: updateSynced" + tableName);
-                                    Log.d(TAG, "onChanged Compare: " + method1.getName().equals("updateSynced" + tableName));
+                                    //Log.d(TAG, "onChanged Names: updateSynced" + tableName);
+                                    //Log.d(TAG, "onChanged Compare: " + method1.getName().equals("updateSynced" + tableName));
                                     if (method1.getName().equals("updateSynced" + tableName)) {
                                         method = method1;
                                         //Toast.makeText(SyncActivity.this, "updateSynced not found: updateSynced" + tableName, Toast.LENGTH_SHORT).show();

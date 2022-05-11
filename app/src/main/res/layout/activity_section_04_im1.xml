@@ -2594,6 +2594,7 @@
                 </LinearLayout>
 
 
+
                 <!--EndButton LinearLayout-->
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -2625,7 +2626,7 @@
                         android:backgroundTintMode="src_atop"
                         android:onClick="btnContinue"
                         android:text="Save"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 

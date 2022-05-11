@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.naunehalendline.ui.lists;
 
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.childCompleted;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.childCount;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedChild;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.totalChildren;
@@ -195,19 +196,25 @@ public class HouseholdScreenActivity extends AppCompatActivity {
         } else {
             bi.familyComplete.setVisibility(View.GONE);
         }
-        // if (childCount >= totalChildren && MainApp.householdChecked) {
-            bi.btnContinue.setEnabled(childCount == MainApp.childCompleted.size());
-            bi.btnContinue.setBackground(childCount == MainApp.childCompleted.size() ? getResources().getDrawable(R.drawable.button_shape_green) : getResources().getDrawable(R.drawable.button_shape_gray));
+        //   if (childCount >= totalChildren && MainApp.householdChecked) {
+        if (childCompleted.size() > 0 && MainApp.householdChecked) {  // atleast one child has been entered
+            bi.btnContinue.setBackgroundTintList(null);
+            bi.btnContinue.setEnabled(true);
+            bi.btnContinue.setBackground(getResources().getDrawable(R.drawable.button_shape_green));
             bi.childCompleteStatus.setVisibility(View.VISIBLE);
-        //  }
+        }
         bi.hhcheck.setVisibility(MainApp.householdChecked ? View.VISIBLE : View.INVISIBLE);
         bi.childCompleteStatus.setText("Children " + MainApp.childCompleted.size() + " of " + childCount + " completed.");
     }
 
 
     public void btnContinue(View view) {
-        finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+        if (childCompleted.size() < childCount) {
+            displayCompletionDialog();
+        } else {
+            completeForm();
+
+        }
     }
 
     public void completeFamily(View view) {
@@ -258,9 +265,52 @@ public class HouseholdScreenActivity extends AppCompatActivity {
 
     }
 
+    private void displayCompletionDialog() {
+        // Specifying a listener allows you to take an action before dismissing the dialog.
+        // The dialog is automatically dismissed when a dialog button is clicked.
+        // Continue with delete operation
+        // A null listener allows the button to dismiss the dialog and take no further action.
+        // Continue with delete operation
+        AlertDialog proceedDialog = new AlertDialog.Builder(this)
+                .setTitle(R.string.title_child_dialog)
+                .setMessage(String.format(getString(R.string.message_child_dialog_proceeed),
+                        childCompleted.size() + "", childCount + ""
+                ))
+
+                // Specifying a listener allows you to take an action before dismissing the dialog.
+                // The dialog is automatically dismissed when a dialog button is clicked.
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Continue with delete operation
+                        completeForm();
+                    }
+                })
+
+                // A null listener allows the button to dismiss the dialog and take no further action.
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        bi.familyComplete.setChecked(false);
+                    }
+
+                    // Continue with delete operation
+                })
+                .setIcon(R.drawable.ic_alert_24)
+                .show();
+        proceedDialog.setCanceledOnTouchOutside(false);
+
+
+    }
+
     private void proceedSelect() {
 
         selectYoungestChild();
+
+    }
+
+    private void completeForm() {
+
+        finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
 
     }
 
