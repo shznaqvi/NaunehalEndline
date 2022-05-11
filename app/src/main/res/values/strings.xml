@@ -1102,7 +1102,7 @@ Complete Section CB for all children in household 59 months and under (if more t
     <string name="cv0507">Person With Pre-Existing Conditions</string>
     <string name="cv0596">Others Please Specify</string>
     <string name="cv06">Who do you trust for information around COVID?  </string>
-    <string name="cv06info"> </string>
+    <string name="cv06info"> Choose all that apply. Do not read the answers, let the respondent answer spontaneously) [Multiple Responses] </string>
     <string name="cv0601">Community Leader</string>
     <string name="cv0602">Religious Leader</string>
     <string name="cv0603">Relatives</string>
