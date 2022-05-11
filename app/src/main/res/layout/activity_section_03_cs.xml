@@ -1016,7 +1016,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs09"
                     style="@style/cardView"
-                    android:visibility="@{child.cs06.equals(`2`) ? View.VISIBLE : View.GONE}" >
+                    android:visibility="@{child.cs06.equals(`2`) || child.cs08a.equals(`2`) ? View.VISIBLE : View.GONE}" >
 
                         <LinearLayout
                         android:layout_width="match_parent"
@@ -2044,7 +2044,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs20"
                     style="@style/cardView"
-                    android:visibility="@{child.trueAgeInMonths &lt; 6 ? View.GONE : View.VISIBLE}">
+                    android:visibility="@{child.ageInMonths &lt; 6 ? View.GONE : View.VISIBLE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -2110,7 +2110,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs21"
                     style="@style/cardView"
-                    android:visibility="@{!child.cs20.equals(`1`) &amp;&amp; child.trueAgeInMonths &lt; 6 ? View.GONE : View.VISIBLE}">
+                    android:visibility="@{child.cs20.equals(`1`) ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"

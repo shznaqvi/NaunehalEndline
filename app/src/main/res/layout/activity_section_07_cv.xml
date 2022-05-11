@@ -1127,7 +1127,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{child.cv1009.equals(``)}"
                                 android:enabled="@{!child.cv1098.equals(`98`)}"
-                                android:onClick="@{()->child.setCv1009(child.cv1009.equals(``)?``:``)}"
+                                android:onClick="@{()->child.setCv1009(child.cv1009.equals(`9`)?``:`9`)}"
                                 android:text="@string/cv1009" />
 
                             <CheckBox
