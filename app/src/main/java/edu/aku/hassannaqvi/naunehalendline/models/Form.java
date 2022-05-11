@@ -246,7 +246,7 @@ public class Form extends BaseObservable implements Observable {
     public String se50 = _EMPTY_;
     public String se5096x = _EMPTY_;
     public String se57 = _EMPTY_;
-    public String se57_01x = _EMPTY_;
+    //public String se57_01x = _EMPTY_;
     public String se3401 = _EMPTY_;
     public String se3402 = _EMPTY_;
     public String se58 = _EMPTY_;
@@ -1382,10 +1382,10 @@ public class Form extends BaseObservable implements Observable {
         return se57;
     }
 
-    @Bindable
+   /* @Bindable
     public String getSe57_01x() {
         return se57_01x;
-    }
+    }*/
 
     @Bindable
     public String getSe3401() {
@@ -2750,15 +2750,15 @@ public class Form extends BaseObservable implements Observable {
 
     public void setSe57(String se57) {
         this.se57 = se57;
-        setSe57_01x(se57.equals("1") ? this.se57_01x : "");
+        //setSe57_01x(se57.equals("1") ? this.se57_01x : "");
         notifyPropertyChanged(BR.se57);
     }
 
-    public void setSe57_01x(String se57_01x) {
+    /*public void setSe57_01x(String se57_01x) {
         this.se57_01x = se57_01x;
         notifyPropertyChanged(BR.se57_01x);
     }
-
+*/
     public void setSe3401(String se3401) {
         this.se3401 = se3401;
         notifyPropertyChanged(BR.se3401);
@@ -3186,7 +3186,7 @@ public class Form extends BaseObservable implements Observable {
             this.se50 = json.getString("se50");
             this.se5096x = json.getString("se5096x");
             this.se57 = json.getString("se57");
-            this.se57_01x = json.getString("se57_01x");
+            //this.se57_01x = json.getString("se57_01x");
             this.se3401 = json.getString("se3401");
             this.se3402 = json.getString("se3402");
             this.se58 = json.getString("se58");
@@ -3406,7 +3406,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("se50", se50)
                 .put("se5096x", se5096x)
                 .put("se57", se57)
-                .put("se57_01x", se57_01x)
+                //.put("se57_01x", se57_01x)
                 .put("se3401", se3401)
                 .put("se3402", se3402)
                 .put("se58", se58)

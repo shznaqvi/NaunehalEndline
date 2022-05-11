@@ -1575,17 +1575,19 @@
                         <RadioGroup
                             android:id="@+id/se57"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/se57_01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:checked="@{form.se57.equals(`1`)}"
                                 android:onClick="@{()->form.setSe57(`1`)}"
                                 android:text="@string/se57_01" />
 
-                            <EditText
+                            <!--<EditText
                                 android:id="@+id/se57_01x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1594,19 +1596,21 @@
                                 android:tag="se57_01"
                                 android:text="@={form.se57_01x}"
                                 android:visibility="@{form.se57.equals(`1`) ? View.VISIBLE : View.GONE}" />
-
+-->
                             <RadioButton
                                 android:id="@+id/se57_02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:checked="@{form.se57.equals(`2`)}"
                                 android:onClick="@{()->form.setSe57(`2`)}"
                                 android:text="@string/se57_02" />
 
                             <RadioButton
                                 android:id="@+id/se57_98"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:checked="@{form.se57.equals(`98`)}"
                                 android:onClick="@{()->form.setSe57(`98`)}"
                                 android:text="@string/se57_98" />
