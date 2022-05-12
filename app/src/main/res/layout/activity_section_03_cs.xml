@@ -1016,7 +1016,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVcs09"
                     style="@style/cardView"
-                    android:visibility="@{child.cs06.equals(`2`) || child.cs08a.equals(`2`) ? View.VISIBLE : View.GONE}" >
+                    android:visibility="@{child.cs06.equals(`2`) ? View.VISIBLE : View.GONE}" >
 
                         <LinearLayout
                         android:layout_width="match_parent"
