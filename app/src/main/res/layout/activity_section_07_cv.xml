@@ -1247,11 +1247,11 @@
 
                             </LinearLayout>
 
-                            <TextView
+                            <!--<TextView
                                 style="@style/info"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/cv12info" />
+                                android:text="@string/cv12info" />-->
 
                             <RadioGroup
                                 android:id="@+id/cv12"
