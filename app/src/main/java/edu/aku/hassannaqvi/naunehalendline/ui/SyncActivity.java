@@ -86,7 +86,6 @@ public class SyncActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_sync);
-        bi.setCallback(this);
         setSupportActionBar(bi.toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -184,6 +183,32 @@ public class SyncActivity extends AppCompatActivity {
                     Toast.makeText(SyncActivity.this, "JSONException(EntryLog)" + e.getMessage(), Toast.LENGTH_LONG).show();
                 }
 
+                // INCLUDE DATA FOR UNLOCKED RECORDS
+                if (bi.uploadUnlocked.isChecked()) {
+                    // Forms - unlocked
+                    uploadTables.add(new SyncModel(FormsTable.TABLE_NAME, true));
+                    try {
+                        MainApp.uploadData.add(db.getUnlockedUnsyncedFormHH());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Log.d(TAG, "ProcessStart: JSONException(Forms): " + e.getMessage());
+                        Toast.makeText(this, "JSONException(Forms): " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+
+                    //Child - unlocked
+                    uploadTables.add(new SyncModel(TableContracts.ChildTable.TABLE_NAME, true));
+                    try {
+                        MainApp.uploadData.add(db.getUnlockedUnsyncedChild());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Log.d(TAG, "ProcessStart: JSONException(Child): " + e.getMessage());
+                        Toast.makeText(SyncActivity.this, "JSONException(Child)" + e.getMessage(), Toast.LENGTH_LONG).show();
+
+                    }
+                }
+
+
                 MainApp.downloadData = new String[uploadData.size()];
 
                 setAdapter(uploadTables);
@@ -213,7 +238,7 @@ public class SyncActivity extends AppCompatActivity {
                     //downloadTables.add(new SyncModel(DistrictsTable.TABLE_NAME));
                     downloadTables.add(new SyncModel("versionApp"));
                     select = " * ";
-                    filter = " deviceid = '" + MainApp.deviceid + "' ";
+                    filter = " deviceid = '" + MainApp.deviceid + "_x' ";
                     downloadTables.add(new SyncModel("Unlocked", select, filter));
                 } else {
 
@@ -433,8 +458,8 @@ public class SyncActivity extends AppCompatActivity {
                 if (workInfo.getState() != null &&
                         workInfo.getState() == WorkInfo.State.FAILED) {
                     String message = workInfo.getOutputData().getString("error");
-                    downloadTables.get(position).setstatus("Process Failed7");
-                    downloadTables.get(position).setstatusID(1);
+                    downloadTables.get(position).setstatus("Process Finished");
+                    downloadTables.get(position).setstatusID(4);
                     downloadTables.get(position).setmessage(message);
                     syncListAdapter.updatesyncList(downloadTables);
                     Log.d(TAG, "BeginDownload: p=" + position + "sT=" + workInfo.getOutputData().getString("serverTime") + " dT=" + workInfo.getOutputData().getString("deviceTime"));
@@ -491,8 +516,10 @@ public class SyncActivity extends AppCompatActivity {
         List<OneTimeWorkRequest> workRequests = new ArrayList<>();
 
         for (int i = 0; i < uploadTables.size(); i++) {
+
+            String tableName = uploadTables.get(i).gettableName();
             Data data = new Data.Builder()
-                    .putString("table", uploadTables.get(i).gettableName())
+                    .putString("table", tableName)
                     .putInt("position", i)
                     //    .putString("data", uploadData.get(i).toString())
 
@@ -882,5 +909,7 @@ public class SyncActivity extends AppCompatActivity {
 
     }*/
 
-
+    public void btnContinue(View view) {
+        finish();
+    }
 }

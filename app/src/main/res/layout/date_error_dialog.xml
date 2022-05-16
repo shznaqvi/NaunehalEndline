@@ -3,6 +3,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/cardView"
     android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal|center_vertical"
     android:layout_height="wrap_content">
 
     <LinearLayout
@@ -17,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Date &amp; Time is inaccurate"
+            android:text="Date &amp; Time is invalid"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -45,7 +46,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="Your device date is inaccurate! Adjust date &amp; time and try again."
+                android:text="Your device date is invalid! Adjust date &amp; time and try again."
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="bold" />

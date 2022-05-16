@@ -88,9 +88,9 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ViewHolder> 
 
 
         if (child.getCb03().equals("1")) {
-            motherRelation = " S/o ";
+            motherRelation = " s/o ";
         } else {
-            motherRelation = " D/o ";
+            motherRelation = " d/o ";
 
         }
         motherName.setText(motherRelation + child.getCb07());

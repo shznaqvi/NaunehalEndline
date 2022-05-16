@@ -154,6 +154,7 @@ public class IdentificationActivity extends AppCompatActivity {
         }
         if (MainApp.form.getSynced().equals("1") && !MainApp.superuser) { // Do not allow synced form to be edited
             Toast.makeText(this, "This form has been locked.", Toast.LENGTH_SHORT).show();
+
         } else {
             finish();
             startActivity(new Intent(this, Section01HHActivity.class));

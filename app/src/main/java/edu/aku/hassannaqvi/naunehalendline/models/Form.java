@@ -2627,6 +2627,7 @@ public class Form extends BaseObservable implements Observable {
         setSe4996(se48.equals("1") ? this.se4996 : "");
 
         setSe50(se48.equals("1") ? "" : this.se50);
+        setSe57(se48.equals("1") ? this.se50 : "");
         notifyPropertyChanged(BR.se48);
     }
 

@@ -393,9 +393,9 @@ public class DataDownWorkerALL extends Worker {
         Log.d(TAG, "doWork(TimeDiff): " + timeDiff);
         int hours = (int) (timeDiff / (1000 * 60 * 60));
 
-        if (hours > 6) {
+        if (hours > 1) {
             Data data = new Data.Builder()
-                    .putString("error", "Your device date is inaccurate! Adjust date and time and try again")
+                    .putString("error", "Your device date is invalid! Adjust date and time and try again")
                     .putString("deviceTime", sdd.format(deviceCalendar.getTime()))
                     .putString("serverTime", sdd.format(serverCalendar.getTime()))
                     .putInt("position", this.position)

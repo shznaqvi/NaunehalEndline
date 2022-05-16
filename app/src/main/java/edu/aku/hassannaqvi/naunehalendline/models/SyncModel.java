@@ -11,6 +11,7 @@ public class SyncModel {
     String message;
     String filter = null;
     String select = null;
+    Boolean isUnlocked = false;
 
     public SyncModel(String tableName) {
 
@@ -31,6 +32,16 @@ public class SyncModel {
         this.statusID = 0;
         this.message = _EMPTY_;
         this.select = select;
+    }
+
+    public SyncModel(String tableName, Boolean isUnlocked) {
+
+        this.tableName = tableName;
+        this.tableTitle = tableName.replaceAll("\\d+", "").replaceAll("(.)([A-Z])", "$1 $2");
+        this.status = _EMPTY_;
+        this.statusID = 0;
+        this.message = _EMPTY_;
+        this.isUnlocked = isUnlocked;
     }
 
     public SyncModel(String tableName, String select, String filter) {
@@ -61,9 +72,18 @@ public class SyncModel {
         this.tableName = tableName;
     }
 
+    public Boolean getUnlocked() {
+        return isUnlocked;
+    }
+
+    public void setUnlocked(Boolean unlocked) {
+        isUnlocked = unlocked;
+    }
+
     public String getstatus() {
         return status;
     }
+
 
     public void setstatus(String status) {
         this.status = status;

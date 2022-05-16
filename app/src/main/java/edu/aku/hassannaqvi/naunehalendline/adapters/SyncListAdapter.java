@@ -75,7 +75,10 @@ public class SyncListAdapter extends RecyclerView.Adapter<edu.aku.hassannaqvi.na
 
         public void bindUser(SyncModel model) {
             binding.statusColor.setBackgroundColor(checkStatus(model.getstatusID()));
-            binding.tvTableName.setText(model.getTableTitle().toUpperCase());
+            String tableName = model.getTableTitle().toUpperCase();
+            if (model.getUnlocked())
+                tableName = tableName + " - (Unlocked)";
+            binding.tvTableName.setText(tableName);
             binding.tvStatus.setText(model.getstatus());
             binding.tvMsg.setText(model.getmessage());
             if (model.getstatusID() == 1 || model.getstatusID() == 3 || model.getstatusID() == 4) {

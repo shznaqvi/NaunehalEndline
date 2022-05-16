@@ -858,11 +858,11 @@
     <string name="bf14a02">نہیں</string>
     <string name="bf14a98">معلوم نہیں</string>
     <string name="bf14b">فارمولا ملک</string>
-    <string name="bf14b01">ہاں، اگر ہاں تو تعداد بتائیں</string>
+    <string name="bf14b01">اگر ہاں تو تعداد بتائیں</string>
     <string name="bf14b02">نہیں</string>
     <string name="bf14b98">معلوم نہیں</string>
     <string name="bf14c">دودھ جیسے کہ ٹن، پاوڈر،یا مویشی کا تازہ دودھ</string>
-    <string name="bf14c01">ہاں، اگر ہاں تو تعداد بتائیں</string>
+    <string name="bf14c01">اگر ہاں تو تعداد بتائیں</string>
     <string name="bf14c02">نہیں</string>
     <string name="bf14c98">معلوم نہیں</string>
     <string name="bf14d">جوس یا جوس کے مشروبات</string>
@@ -874,7 +874,7 @@
     <string name="bf14e02">نہیں</string>
     <string name="bf14e98">معلوم نہیں</string>
     <string name="bf14f">دہی</string>
-    <string name="bf14f01">ہاں، اگر ہاں تو تعداد بتائیں</string>
+    <string name="bf14f01">اگر ہاں تو تعداد بتائیں</string>
     <string name="bf14f02">نہیں</string>
     <string name="bf14f98">معلوم نہیں</string>
     <string name="bf14g">پتلا دلیہ</string>

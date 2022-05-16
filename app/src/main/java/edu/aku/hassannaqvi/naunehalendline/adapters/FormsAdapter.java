@@ -13,12 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONException;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
+import edu.aku.hassannaqvi.naunehalendline.models.Child;
 import edu.aku.hassannaqvi.naunehalendline.models.Form;
 
 /**
@@ -128,17 +132,66 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
         holder.hhid.setText(fc.get(position).getHhid());
         holder.clusterCode.setText(fc.get(position).getClusterCode());
+        String motherChild = "";
+        int childrenCount = 0;
+        try {
+            MainApp.form = fc.get(position);
+            List<Child> children = db.getChildrenBYUID();
+            childrenCount = children.size();
+            for (Child child : children) {
 
+                if (child.getIndexed().equals("1")) {
+
+                    String motherRelation = "";
+                    String respRelation = "";
+                    if (child.getCb03().equals("1")) {
+                        motherRelation = " s/o ";
+                    } else {
+                        motherRelation = " s/o ";
+
+                    }
+                    switch (child.getCb06()) {
+                        case "1":
+                            respRelation = "Mother";
+                            break;
+                        case "2":
+                            respRelation = "Father";
+                            break;
+                        case "3":
+                            respRelation = "Caregiver";
+                            break;
+                        case "4":
+                            respRelation = "Other Family Member";
+                            break;
+                    }
+                    motherChild = child.getCb02() + motherRelation + child.getCb07() + " (" + child.getAgeInMonths() + " months)";
+                }
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(c, "JSONException(Child)" + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        holder.childCount.setText(childrenCount + "");
         holder.istatus.setText(iStatus);
-        //  holder.fatherName.setText(fc.get(position).getAs1q09());
-      /*    holder.mwraCount.setText(anthroStatus == 2 ? "  Done   " : " Pending ");
+        holder.fatherName.setText(motherChild);
+      /*holder.mwraCount.setText(anthroStatus == 2 ? "  Done   " : " Pending ");
         holder.childCount.setText(bloodStatus == 2 ? "  Done   " : " Pending ");
         holder.adolMaleCount.setText(stoolStatus == 2 ? "  Done   " : " Pending ");
         holder.mwraCount.setTextColor(anthroStatus == 2 ? Color.GREEN : Color.RED);
         holder.childCount.setTextColor(bloodStatus == 2 ? Color.GREEN : Color.RED);
         holder.adolMaleCount.setTextColor(stoolStatus == 2 ? Color.GREEN : Color.RED);*/
-
-        holder.sysdate.setText(fc.get(position).getSysDate());
+        try {
+            Calendar cal = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            cal.setTime(sdf.parse(fc.get(position).getSysDate()));
+            sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+            String interviewDateTime = sdf.format(cal.getTime());
+            holder.sysdate.setText(interviewDateTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         holder.istatus.setTextColor(iColor);
 
 
@@ -201,10 +254,10 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
             hhid = v.findViewById(R.id.hhid);
             istatus = v.findViewById(R.id.istatus);
             fatherName = v.findViewById(R.id.fathername);
-            mwraCount = v.findViewById(R.id.mwraCount);
+            //  mwraCount = v.findViewById(R.id.mwraCount);
             childCount = v.findViewById(R.id.childCount);
-            adolMaleCount = v.findViewById(R.id.adolMaleCount);
-            adolFemaleCount = v.findViewById(R.id.adolFemaleCount);
+          /*  adolMaleCount = v.findViewById(R.id.adolMaleCount);
+            adolFemaleCount = v.findViewById(R.id.adolFemaleCount);*/
 
         }
 

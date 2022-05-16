@@ -1546,6 +1546,7 @@
                 <!-- se57  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVse57"
+                    android:visibility="@{form.se48.equals(`1`) ? View.VISIBLE : View.GONE}"
                     style="@style/cardView">
 
                     <LinearLayout

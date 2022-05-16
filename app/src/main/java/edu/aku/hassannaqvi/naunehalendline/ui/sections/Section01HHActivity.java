@@ -123,20 +123,30 @@ public class Section01HHActivity extends AppCompatActivity {
             return false;
         }
 
-        // Allowed 55 and 22 in Education
-        int hh16 = Integer.parseInt(form.getHh16());
-        if (hh16 > 17 && (hh16 != 22 && hh16 != 55)) {
-            return Validator.emptyCustomTextBox(this, bi.hh16, "Incorrect value for Education.");
-        }
+
 
         // check permission and age of respondent
         if (bi.hh1101.isChecked() && !bi.hh13.equals("") && Integer.parseInt(bi.hh13.getText().toString()) > 14) {
-            if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
-                return Validator.emptyCustomTextBox(this, bi.hh24, "HH24 Can't be Greater than HH22");
+
+            // Allowed 55 and 22 in Education
+            int hh16 = Integer.parseInt(form.getHh16());
+            if (hh16 > 17 && (hh16 != 22 && hh16 != 55)) {
+                return Validator.emptyCustomTextBox(this, bi.hh16, "Incorrect value for Education.");
             }
 
+            // Compare Total family members with Male + Female
+            if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
+                return Validator.emptyCustomTextBox(this, bi.hh24, "Male and Female member cannot be more than Total Members");
+            }
+
+            // Compare Boys with Male members
+            if (Integer.parseInt(form.getHh24()) > Integer.parseInt(form.getHh22())) {
+                return Validator.emptyCustomTextBox(this, bi.hh24, "Boys cannot be more than Male Members");
+            }
+
+            // Compare Girls with Female members
             if (Integer.parseInt(form.getHh25()) > Integer.parseInt(form.getHh23())) {
-                return Validator.emptyCustomTextBox(this, bi.hh25, "HH25 Can't be Greater than HH23");
+                return Validator.emptyCustomTextBox(this, bi.hh25, "Girls cannot be more than Female Members");
             }
         }
 

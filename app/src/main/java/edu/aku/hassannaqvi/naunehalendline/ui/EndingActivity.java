@@ -163,6 +163,7 @@ public class EndingActivity extends AppCompatActivity {
         if (MainApp.superuser) return true;
         try {
             db.updatesFormColumn(TableContracts.FormsTable.COLUMN_SHH, form.sHHtoString());
+
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(this, "JSONException(Forms): ", Toast.LENGTH_SHORT).show();

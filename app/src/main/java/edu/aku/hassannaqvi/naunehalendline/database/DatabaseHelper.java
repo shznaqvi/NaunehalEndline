@@ -482,8 +482,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 // New value for one column
         ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_SYNCED, "");
+        values.put(FormsTable.COLUMN_SYNCED, "9");
         values.put(FormsTable.COLUMN_SYNC_DATE, "");
+        values.put(FormsTable.COLUMN_ISTATUS, "");
         String where = FormsTable.COLUMN_UID + " = ? AND " +
                 FormsTable.COLUMN_SYSDATE + " = ? ";
         int insertCount = 0;
@@ -491,9 +492,50 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         for (int i = 0; i < list.length(); i++) {
 
             JSONObject json = list.getJSONObject(i);
-            String[] whereArgs = {json.getString(FormsTable.COLUMN_UID), json.getString(FormsTable.COLUMN_SYSDATE)};
+
+            // Removed '_x' from Unlocked UID
+            String originalUID = json.getString(FormsTable.COLUMN_UID).split("_")[0];
+            String[] whereArgs = {originalUID, json.getString(FormsTable.COLUMN_SYSDATE)};
             int rowID = db.update(
                     FormsTable.TABLE_NAME,
+                    values,
+                    where,
+                    whereArgs);
+            if (rowID != -1) insertCount++;
+        }
+
+        db.close();
+
+        // Open all linked tables using Forms UID received from server
+        syncUnlockedChildren(list);
+
+
+        return insertCount;
+    }
+
+    public int syncUnlockedChildren(JSONArray list) throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(ChildTable.COLUMN_SYNCED, "9");
+        values.put(ChildTable.COLUMN_SYNC_DATE, "");
+        String where = ChildTable.COLUMN_UUID + " = ? AND " +
+                ChildTable.COLUMN_SYSDATE + " = ? AND " +
+                ChildTable.COLUMN_SYNCED + " !='9'";
+        int insertCount = 0;
+
+        for (int i = 0; i < list.length(); i++) {
+
+            JSONObject json = list.getJSONObject(i);
+
+            //Remove '_x' from Unlocked UID
+            //IMPORTANT: Getting "UID" field and "SYSDATE" from FORMS json
+            String originalUID = json.getString(FormsTable.COLUMN_UID).split("_")[0];
+            String[] whereArgs = {originalUID, json.getString(FormsTable.COLUMN_SYSDATE)};
+
+            int rowID = db.update(
+                    ChildTable.TABLE_NAME,
                     values,
                     where,
                     whereArgs);
@@ -592,6 +634,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
+    //get UnSyncedTables
+    public JSONArray getUnlockedUnsyncedFormHH() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+
+        String whereClause;
+        //whereClause = null;
+        whereClause = FormsTable.COLUMN_SYNCED + " = '9' AND " +
+                FormsTable.COLUMN_ISTATUS + "!= ''";
+
+        String[] whereArgs = null;
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = FormsTable.COLUMN_ID + " ASC";
+
+        JSONArray allForms = new JSONArray();
+        c = db.query(
+                FormsTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            /** WorkManager Upload
+             /*Form fc = new Form();
+             allFC.add(fc.Hydrate(c));*/
+            Log.d(TAG, "getUnsyncedFormHH: " + c.getCount());
+            Form form = new Form();
+            allForms.put(form.Hydrate(c).toJSONObject());
+
+
+        }
+
+        c.close();
+        db.close();
+
+        Log.d(TAG, "getUnsyncedFormHH: " + allForms.toString().length());
+        Log.d(TAG, "getUnsyncedFormHH: " + allForms);
+        return allForms;
+    }
 
     public JSONArray getUnsyncedChild() throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -617,8 +705,43 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         );
         while (c.moveToNext()) {
             Log.d(TAG, "getUnsyncedChild: " + c.getCount());
-            Child ch = new Child();
-            allChild.put(ch.Hydrate(c).toJSONObject());
+            Child ch = new Child().Hydrate(c);
+            if (!getFormByUid(ch.getUuid()).getiStatus().equals(""))
+                allChild.put(ch.toJSONObject());
+        }
+
+        Log.d(TAG, "getUnsyncedChild: " + allChild.toString().length());
+        Log.d(TAG, "getUnsyncedChild: " + allChild);
+        return allChild;
+    }
+
+    public JSONArray getUnlockedUnsyncedChild() throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+        String[] columns = null;
+        String whereClause;
+        whereClause = ChildTable.COLUMN_SYNCED + " = '9' ";
+
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = ChildTable.COLUMN_ID + " ASC";
+
+        JSONArray allChild = new JSONArray();
+        c = db.query(
+                ChildTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            Log.d(TAG, "getUnsyncedChild: " + c.getCount());
+            Child ch = new Child().Hydrate(c);
+            if (!getFormByUid(ch.getUuid()).getiStatus().equals(""))
+                allChild.put(ch.toJSONObject());
         }
 
         Log.d(TAG, "getUnsyncedChild: " + allChild.toString().length());
@@ -943,6 +1066,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String whereClause = FormsTable.COLUMN_CLUSTER_CODE + "= ? AND " +
                 FormsTable.COLUMN_HHID + "= ? ";
         String[] whereArgs = {selectedCluster.getClusterCode(), selectedHousehold.getHhid()};
+        String groupBy = null;
+        String having = null;
+        String orderBy = FormsTable.COLUMN_SYSDATE + " ASC";
+        String limitRows = "1";
+
+        c = db.query(
+                distinct,       // Distinct values
+                tableName,      // The table to query
+                columns,        // The columns to return
+                whereClause,    // The columns for the WHERE clause
+                whereArgs,      // The values for the WHERE clause
+                groupBy,        // don't group the rows
+                having,         // don't filter by row groups
+                orderBy,
+                limitRows
+        );
+
+        Form form = new Form();
+        while (c.moveToNext()) {
+            form = (new Form().Hydrate(c));
+        }
+
+        c.close();
+        db.close();
+        return form;
+
+    }
+
+    public Form getFormByUid(String uid) throws JSONException {
+
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Cursor c = null;
+
+        Boolean distinct = false;
+        String tableName = FormsTable.TABLE_NAME;
+        String[] columns = null;
+        String whereClause = FormsTable.COLUMN_UID + "= ? ";
+        String[] whereArgs = {uid};
         String groupBy = null;
         String having = null;
         String orderBy = FormsTable.COLUMN_SYSDATE + " ASC";
