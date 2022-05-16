@@ -1508,7 +1508,7 @@ public class Child extends BaseObservable implements Observable {
     public void setCs08a(String cs08a) {
         this.cs08a = cs08a;
         setCs08b(cs08a.equals("1") ? this.cs08b : "");
-        setCs09(cs08.equals("1") ? "" : this.cs09);
+        //setCs09(cs08.equals("1") ? "" : this.cs09);
         notifyPropertyChanged(BR.cs08a);
     }
 
