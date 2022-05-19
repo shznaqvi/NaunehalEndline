@@ -438,11 +438,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (rowID != -1) insertCount++;
         }
 
-
         db.close();
-
-        db.close();
-
         return insertCount;
     }
 

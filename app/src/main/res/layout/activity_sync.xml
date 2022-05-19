@@ -288,26 +288,27 @@
             <LinearLayout
                 android:id="@+id/syncButtons"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="24dp"
+                android:layout_marginTop="32dp"
                 android:elevation="5dp"
                 android:gravity="center_horizontal|center_vertical"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <View
-                    android:layout_width="24dp"
-                    android:layout_height="wrap_content" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
                     android:layout_weight="1"
                     android:elevation="16dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
 
                     <Button
                         android:id="@+id/btnSync"
@@ -321,29 +322,9 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:backgroundTint="@color/colorAccentLight"
-                        android:includeFontPadding="false"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Also upload unlocked forms"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
-                        android:visibility="invisible" />
-                </LinearLayout>
-
-                <LinearLayout
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-
-                    android:elevation="16dp"
-                    android:orientation="vertical">
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
 
                     <Button
                         android:id="@+id/btnUpload"
@@ -358,24 +339,43 @@
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <CheckBox
-                        android:id="@+id/uploadUnlocked"
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/btnUploadPhotos"
+
+                        style="@style/button"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:background="@color/grayLight"
-                        android:gravity="center"
-                        android:includeFontPadding="false"
-                        android:paddingTop="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Also upload unlocked forms"
-                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/capsule"
+                        android:onClick="UploadPhotos"
+                        android:text="Upload Photos"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="match_parent" />
                 </LinearLayout>
 
-                <View
-                    android:layout_width="24dp"
-                    android:layout_height="wrap_content" />
+                <CheckBox
+                    android:id="@+id/uploadUnlocked"
+                    style="null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_margin="4dp"
+                    android:background="@color/grayLight"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="Also upload unlocked forms"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

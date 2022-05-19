@@ -53,7 +53,7 @@ public class MainApp extends Application {
     public static int URDU = 1;
 
     public static File sdDir;
-    public static String[] downloadData;
+
     public static Form form;
     // public static Pregnancy pregnancy;
     public static Child child;
@@ -66,6 +66,7 @@ public class MainApp extends Application {
     public static Users user;
     public static Boolean admin = false;
     public static List<JSONArray> uploadData;
+    public static String[] downloadData;
     public static SharedPreferences.Editor editor;
     public static SharedPreferences sharedPref;
     public static String deviceid;
