@@ -93,9 +93,13 @@ public class SyncActivity extends AppCompatActivity {
         uploadTables = new ArrayList<>();
         downloadTables = new ArrayList<>();
         MainApp.uploadData = new ArrayList<>();
-        sdDir = new File(this.getExternalFilesDir(
-                Environment.DIRECTORY_PICTURES), PROJECT_NAME);
+      /*  sdDir = new File(this.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES), PROJECT_NAME);*/
 
+
+        sdDir = Environment
+                .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        sdDir = new File(sdDir, PROJECT_NAME);
         //bi.noItem.setVisibility(View.VISIBLE);
         bi.noDataItem.setVisibility(View.VISIBLE);
         listActivityCreated = true;
