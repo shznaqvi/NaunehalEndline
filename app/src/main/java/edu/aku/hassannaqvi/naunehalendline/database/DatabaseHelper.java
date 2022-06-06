@@ -2,7 +2,9 @@ package edu.aku.hassannaqvi.naunehalendline.database;
 
 
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.IBAHC;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PACKAGE_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.appID;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.child;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedCluster;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.selectedHousehold;
@@ -383,17 +385,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public int syncversionApp(JSONArray VersionList) throws JSONException {
         SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
         long count = 0;
+        appID = String.valueOf(VersionList.getJSONObject(0).get("applicationId"));
+        Log.d(TAG, "syncversionApp(appID): " + appID.split("\\.")[3]);
+        if (appID.equals(PACKAGE_NAME)) {
+            JSONObject jsonObjectVersion = ((JSONArray) VersionList.getJSONObject(0).get("elements")).getJSONObject(0);
 
-        JSONObject jsonObjectVersion = ((JSONArray) VersionList.getJSONObject(0).get("elements")).getJSONObject(0);
+            String appPath = jsonObjectVersion.getString("outputFile");
+            String versionCode = jsonObjectVersion.getString("versionCode");
 
-        String appPath = jsonObjectVersion.getString("outputFile");
-        String versionCode = jsonObjectVersion.getString("versionCode");
-
-        MainApp.editor.putString("outputFile", jsonObjectVersion.getString("outputFile"));
-        MainApp.editor.putString("versionCode", jsonObjectVersion.getString("versionCode"));
-        MainApp.editor.putString("versionName", jsonObjectVersion.getString("versionName") + ".");
-        MainApp.editor.apply();
-        count++;
+            MainApp.editor.putString("outputFile", jsonObjectVersion.getString("outputFile"));
+            MainApp.editor.putString("versionCode", jsonObjectVersion.getString("versionCode"));
+            MainApp.editor.putString("versionName", jsonObjectVersion.getString("versionName") + ".");
+            MainApp.editor.apply();
+            count++;
+        } else {
+            count--;
+        }
           /*  VersionApp Vc = new VersionApp();
             Vc.sync(jsonObjectVersion);
 

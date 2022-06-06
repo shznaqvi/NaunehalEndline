@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.sharedPref;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -90,6 +91,17 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (JSONException | ParseException e) {
             e.printStackTrace();
+        }
+
+        String latestVersionName = sharedPref.getString("versionName", "");
+        int latestVersionCode = Integer.parseInt(sharedPref.getString("versionCode", "0"));
+
+        if (MainApp.appInfo.getVersionCode() < latestVersionCode) {
+            bi.newApp.setVisibility(View.VISIBLE);
+            bi.newApp.setText("NOTICE: There is a newer version of this app available on server (" + latestVersionName + latestVersionCode + "). \nPlease download update the app now.");
+        } else {
+            bi.newApp.setVisibility(View.GONE);
+
         }
     }
 

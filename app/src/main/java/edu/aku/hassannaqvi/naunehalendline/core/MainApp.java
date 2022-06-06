@@ -32,6 +32,8 @@ import edu.aku.hassannaqvi.naunehalendline.models.Users;
 public class MainApp extends Application {
 
     public static final String PROJECT_NAME = "naunehalendline";
+    public static final String _APP_FOLDER = "app/survey/";
+
     public static final String DIST_ID = null;
     public static final String SYNC_LOGIN = "sync_login";
     public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
@@ -44,7 +46,7 @@ public class MainApp extends Application {
     public static final String _SERVER_GET_URL = "getDataEnc.php";
     public static final String _PHOTO_UPLOAD_URL = _HOST_URL + "uploads.php";
     public static final String _UPDATE_URL = MainApp._IP + "/naunehal_el/app/";
-    public static final String _APP_FOLDER = "app/survey";
+    public static String PACKAGE_NAME;
     public static final String _EMPTY_ = "";
     private static final String TAG = "MainApp";
     public static String IBAHC = "";
@@ -104,6 +106,7 @@ public class MainApp extends Application {
     public static String[] clusterInfo;
     public static int totalChildren;
     public static Child sibling;
+    public static String appID = "....";
 
 
     public static void hideSystemUI(View decorView) {
@@ -202,6 +205,7 @@ public class MainApp extends Application {
         }*/
         //Initiate DateTime
         //Initializ App info
+        PACKAGE_NAME = getApplicationContext().getPackageName();
         appInfo = new AppInfo(this);
         sharedPref = getSharedPreferences(PROJECT_NAME, MODE_PRIVATE);
         editor = sharedPref.edit();

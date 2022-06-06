@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.adapters;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,8 @@ import edu.aku.hassannaqvi.naunehalendline.R;
 import edu.aku.hassannaqvi.naunehalendline.databinding.SyncListAdapterBinding;
 import edu.aku.hassannaqvi.naunehalendline.models.SyncModel;
 
-public class SyncListAdapter extends RecyclerView.Adapter<edu.aku.hassannaqvi.naunehalendline.adapters.SyncListAdapter.SyncListViewHolder> {
+public class SyncListAdapter extends RecyclerView.Adapter<SyncListAdapter.SyncListViewHolder> {
+    private static final String TAG = "SyncListAdapter";
     List<SyncModel> synclist;
     SyncListViewHolder holder;
 
@@ -79,7 +81,11 @@ public class SyncListAdapter extends RecyclerView.Adapter<edu.aku.hassannaqvi.na
             if (model.getUnlocked())
                 tableName = tableName + " - (Unlocked)";
             binding.tvTableName.setText(tableName);
+            binding.tvInfo.setText(model.getInfo());
             binding.tvStatus.setText(model.getstatus());
+            Log.d(TAG, "bindUser: " + tableName + " - " + model.getmessage());
+            if (tableName.contains("VERSION") && model.getmessage().contains("New"))
+                binding.tvMsg.setTextColor(Color.RED);
             binding.tvMsg.setText(model.getmessage());
             if (model.getstatusID() == 1 || model.getstatusID() == 3 || model.getstatusID() == 4) {
                 binding.pb.setVisibility(View.GONE);
