@@ -197,11 +197,16 @@ public class IdentificationActivity extends AppCompatActivity {
         selectedCluster = db.getClusterByEBNum(bi.hh08.getText().toString());
 
         if (selectedCluster != null) {
-            String[] geoarea = selectedCluster.getGeoarea().split("\\|");
-            bi.hh05.setText(geoarea[1]);    //  District
-            bi.hh06.setText(geoarea[2]);    //  Tehsil
-            bi.hh07.setText(geoarea[3]);    //  Village
-            bi.fldGrpIdentifier.setVisibility(View.VISIBLE);
+            if (selectedCluster.getDistId().equals(MainApp.selectedDistrict)) {
+
+                String[] geoarea = selectedCluster.getGeoarea().split("\\|");
+                bi.hh05.setText(geoarea[1]);    //  District
+                bi.hh06.setText(geoarea[2]);    //  Tehsil
+                bi.hh07.setText(geoarea[3]);    //  Village
+                bi.fldGrpIdentifier.setVisibility(View.VISIBLE);
+            } else {
+                Toast.makeText(this, "Cluster does not match user district.", Toast.LENGTH_SHORT).show();
+            }
         } else {
             Toast.makeText(this, "Enumeration Block not found", Toast.LENGTH_SHORT).show();
         }

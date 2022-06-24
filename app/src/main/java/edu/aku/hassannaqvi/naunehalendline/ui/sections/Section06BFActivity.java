@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.naunehalendline.contracts.TableContracts;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
 import edu.aku.hassannaqvi.naunehalendline.database.DatabaseHelper;
 import edu.aku.hassannaqvi.naunehalendline.databinding.ActivitySection06BfBinding;
+import edu.aku.hassannaqvi.naunehalendline.ui.TakePhoto;
 
 public class Section06BFActivity extends AppCompatActivity {
 
@@ -37,7 +38,7 @@ public class Section06BFActivity extends AppCompatActivity {
         db = MainApp.appInfo.dbHelper;
 
         child.setBf01(child.getCb01());
-        child.setBf02(child.getCb06());
+        child.setBf02(child.getCb07());
 
         child.setBf3y(child.getCb04yy());
         child.setBf03m(child.getCb04mm());
@@ -127,6 +128,26 @@ public class Section06BFActivity extends AppCompatActivity {
         returnIntent.putExtra("requestCode", requestCode);
         setResult(RESULT_CANCELED, returnIntent);
         finish();
+    }
+
+
+    public void takePhoto(View view) {
+
+        Intent intent = new Intent(this, TakePhoto.class);
+
+        intent.putExtra("picID", "000000" + "_" + "A-0000-000" + "_" + "01" + "_");
+        intent.putExtra("childName", "Test ChilD");
+/*
+        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+        intent.putExtra("childName", "Hassan");
+*/
+        if (view.getId() == R.id.frontPhoto) {
+            intent.putExtra("picView", "front".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+        } else {
+            intent.putExtra("picView", "back".toUpperCase());
+            startActivityForResult(intent, 2); // Activity is started with requestCode 2 = Back
+        }
     }
 
 }

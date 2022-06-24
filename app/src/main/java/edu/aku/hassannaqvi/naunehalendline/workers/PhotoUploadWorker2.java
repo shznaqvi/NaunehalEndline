@@ -1,12 +1,15 @@
 package edu.aku.hassannaqvi.naunehalendline.workers;
 
+
 import static edu.aku.hassannaqvi.naunehalendline.core.CipherSecure.buildSslSocketFactory;
+import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp._PHOTO_UPLOAD_URL;
 import static edu.aku.hassannaqvi.naunehalendline.core.MainApp.sdDir;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -32,23 +35,29 @@ import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.Random;
 
 import javax.net.ssl.HttpsURLConnection;
 
 import edu.aku.hassannaqvi.naunehalendline.R;
+import edu.aku.hassannaqvi.naunehalendline.core.CipherSecure;
 import edu.aku.hassannaqvi.naunehalendline.core.MainApp;
+
 
 public class PhotoUploadWorker2 extends Worker {
 
     private final String TAG = "PhotoUploadWorker2()";
     private final Context mContext;
     private final int photoid;
-    private final String nTitle = "Naunehal: Photo Upload";
+    private final String nTitle = PROJECT_NAME + ": Photo Upload";
     public Boolean errMsg = false;
-    HttpsURLConnection urlConnection;
     File fileZero;
     private Data data;
+    private HttpsURLConnection urlConnection;
 
     // private File sdDir;
 
@@ -122,11 +131,11 @@ public class PhotoUploadWorker2 extends Worker {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel(String.valueOf(photoid), nTitle, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel("simplifiedcoding", nTitle, NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), String.valueOf(photoid))
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "simplifiedcoding")
                 .setContentTitle(title)
                 .setContentText(task)
                 .setSmallIcon(R.drawable.app_icon);
@@ -233,10 +242,10 @@ public class PhotoUploadWorker2 extends Worker {
         } catch (JSONException e) {
             e.printStackTrace();
             //syncStatus.setText(syncStatus.getText() + "\r\n" + syncClass + " Sync Failed");
-            displayNotification(fileZero.toString(), "Error: " + e.getMessage(), 100, 0);
+            displayNotification(fileZero.toString(), "Error: " + result, 100, 0);
 
             data = new Data.Builder()
-                    .putString("error", "2 " + e.getMessage()).build();
+                    .putString("error", "2 " + result).build();
             errMsg = true;
         }
     }
@@ -245,7 +254,6 @@ public class PhotoUploadWorker2 extends Worker {
     private String uploadPhoto(String filepath) {
         displayNotification(fileZero.toString(), "Connecting...", 100, 0);
 
-        HttpsURLConnection connection = null;
         DataOutputStream outputStream = null;
         InputStream inputStream = null;
 
@@ -270,6 +278,29 @@ public class PhotoUploadWorker2 extends Worker {
             fileInputStream = new FileInputStream(file);
 
             URL url = null;
+
+            InputStream caInput = null;
+            Certificate ca = null;
+            try {
+                CertificateFactory cf = CertificateFactory.getInstance("X.509");
+                AssetManager assetManager = mContext.getAssets();
+                caInput = assetManager.open("vcoe1_aku_edu.cer");
+
+
+                ca = cf.generateCertificate(caInput);
+                System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+            } catch (CertificateException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    caInput.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
             try {
                 url = new URL(_PHOTO_UPLOAD_URL);
             } catch (MalformedURLException e) {
@@ -278,80 +309,93 @@ public class PhotoUploadWorker2 extends Worker {
             }
             Log.d(TAG, "uploadPhoto: " + file);
 
-            connection = (HttpsURLConnection) url.openConnection();
+            urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
 
-            connection.setDoInput(true);
-            connection.setDoOutput(true);
-            connection.setUseCaches(false);
-            connection.setSSLSocketFactory(buildSslSocketFactory(mContext));
+            urlConnection.setDoInput(true);
+            urlConnection.setDoOutput(true);
+            urlConnection.setUseCaches(false);
 
-            connection.setRequestMethod("POST");
-            connection.setRequestProperty("Connection", "Keep-Alive");
-            connection.setRequestProperty("User-Agent", "Android Multipart HTTP Client 1.0");
-            connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+            urlConnection.setRequestMethod("POST");
+            urlConnection.setRequestProperty("Connection", "Keep-Alive");
+            urlConnection.setRequestProperty("User-Agent", "Android Multipart HTTP Client 1.0");
+            urlConnection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+            urlConnection.connect();
 
-            outputStream = new DataOutputStream(connection.getOutputStream());
-            outputStream.writeBytes(twoHyphens + boundary + lineEnd);
-            outputStream.writeBytes("Content-Disposition: form-data; name=\"" + filefield + "\"; filename=\"" + q[idx] + "\"" + lineEnd);
-            outputStream.writeBytes("Content-Type: image/jpeg" + lineEnd);
-            outputStream.writeBytes("Content-Transfer-Encoding: binary" + lineEnd);
-            outputStream.writeBytes(lineEnd);
+            Certificate[] certs = urlConnection.getServerCertificates();
 
-            bytesAvailable = fileInputStream.available();
-            bufferSize = Math.min(bytesAvailable, maxBufferSize);
-            buffer = new byte[bufferSize];
-            int progress = 0;
-            bytesRead = fileInputStream.read(buffer, 0, bufferSize);
-            while (bytesRead > 0) {
-                Log.d(TAG, "uploadPhoto: " + bytesRead);
-                Log.d(TAG, "uploadPhoto: " + buffer.length);
-                outputStream.write(buffer, 0, bufferSize);
+            if (CipherSecure.certIsValid(certs, ca)) {
+
+                outputStream = new DataOutputStream(urlConnection.getOutputStream());
+                outputStream.writeBytes(twoHyphens + boundary + lineEnd);
+                outputStream.writeBytes("Content-Disposition: form-data; name=\"" + filefield + "\"; filename=\"" + q[idx] + "\"" + lineEnd);
+                outputStream.writeBytes("Content-Type: image/jpeg" + lineEnd);
+                outputStream.writeBytes("Content-Transfer-Encoding: binary" + lineEnd);
+                outputStream.writeBytes(lineEnd);
+
                 bytesAvailable = fileInputStream.available();
                 bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                buffer = new byte[bufferSize];
+                int progress = 0;
                 bytesRead = fileInputStream.read(buffer, 0, bufferSize);
-                progress += bytesRead;
-                // update progress bar
-                // publishProgress(progress);
-                displayNotification(fileZero.toString(), "Connected to server...", 100, Math.round(progress * 100 / file.length()));
+                while (bytesRead > 0) {
+                    Log.d(TAG, "uploadPhoto: " + bytesRead);
+                    Log.d(TAG, "uploadPhoto: " + buffer.length);
+                    outputStream.write(buffer, 0, bufferSize);
+                    bytesAvailable = fileInputStream.available();
+                    bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                    bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+                    progress += bytesRead;
+                    // update progress bar
+                    // publishProgress(progress);
+                    displayNotification(fileZero.toString(), "Connected to server...", 100, Math.round(progress * 100 / file.length()));
 
-            }
-
-            outputStream.writeBytes(lineEnd);
-
-            outputStream.writeBytes(twoHyphens + boundary + lineEnd);
-            outputStream.writeBytes("Content-Disposition: form-data; name=\"tagname\"" + lineEnd);
-            outputStream.writeBytes("Content-Type: text/plain" + lineEnd);
-            outputStream.writeBytes(lineEnd);
-            outputStream.writeBytes(MainApp.appInfo.getTagName() == null ? "" : MainApp.appInfo.getTagName());  // DEVICETAG
-            outputStream.writeBytes(lineEnd);
-            outputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-
-            inputStream = connection.getInputStream();
-
-            int status = connection.getResponseCode();
-            if (status == HttpsURLConnection.HTTP_OK) {
-                displayNotification(fileZero.toString(), "Connected to server...", 100, 0);
-
-                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                String inputLine;
-                StringBuffer response = new StringBuffer();
-
-                while ((inputLine = in.readLine()) != null) {
-
-
-                    response.append(inputLine);
-                    displayNotification(fileZero.toString(), "Uploading...", 100, 0);
                 }
 
-                inputStream.close();
-                connection.disconnect();
-                fileInputStream.close();
-                outputStream.flush();
-                outputStream.close();
+                outputStream.writeBytes(lineEnd);
 
-                return response.toString();
+                outputStream.writeBytes(twoHyphens + boundary + lineEnd);
+                outputStream.writeBytes("Content-Disposition: form-data; name=\"tagname\"" + lineEnd);
+                outputStream.writeBytes("Content-Type: text/plain" + lineEnd);
+                outputStream.writeBytes(lineEnd);
+                outputStream.writeBytes(MainApp.appInfo.getTagName() == null ? "" : MainApp.appInfo.getTagName());  // DEVICETAG
+                outputStream.writeBytes(lineEnd);
+                outputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
+
+                inputStream = urlConnection.getInputStream();
+
+                int status = urlConnection.getResponseCode();
+                if (status == HttpsURLConnection.HTTP_OK) {
+                    displayNotification(fileZero.toString(), "Connected to server...", 100, 0);
+
+                    BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+                    String inputLine;
+                    StringBuffer response = new StringBuffer();
+
+                    while ((inputLine = in.readLine()) != null) {
+
+
+                        response.append(inputLine);
+                        displayNotification(fileZero.toString(), "Uploading...", 100, 0);
+                    }
+
+                    inputStream.close();
+                    urlConnection.disconnect();
+                    fileInputStream.close();
+                    outputStream.flush();
+                    outputStream.close();
+
+                    return response.toString();
+                }
+                return String.valueOf(status);
+
+            } else {
+                data = new Data.Builder()
+                        .putString("error", "Invalid Certificate")
+                        .build();
+
+                return "Invalid Certificate";
             }
-            return String.valueOf(status);
         } catch (FileNotFoundException | ProtocolException e) {
             e.printStackTrace();
             data = new Data.Builder()
@@ -374,5 +418,4 @@ public class PhotoUploadWorker2 extends Worker {
             return e.getMessage();
         }
     }
-
 }

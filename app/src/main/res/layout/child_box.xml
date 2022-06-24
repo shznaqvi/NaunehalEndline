@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="2dp"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
@@ -16,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         android:background="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="12dp"
         android:minHeight="64dp"
         android:padding="2dp">
 
