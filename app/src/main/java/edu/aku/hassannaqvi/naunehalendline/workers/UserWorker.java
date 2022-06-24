@@ -1,5 +1,7 @@
 package edu.aku.hassannaqvi.naunehalendline.workers;
 
+import static edu.aku.hassannaqvi.naunehalendline.core.CipherSecure.certIsValid;
+
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
@@ -29,10 +31,7 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
-import java.security.cert.CertificateExpiredException;
 import java.security.cert.CertificateFactory;
-import java.security.cert.CertificateNotYetValidException;
-import java.security.cert.X509Certificate;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
@@ -165,7 +164,7 @@ public class UserWorker extends Worker {
         notificationManager.notify(1, notification.build());
     }
 
-    private boolean certIsValid(Certificate[] certs, Certificate ca) {
+/*    private boolean certIsValid(Certificate[] certs, Certificate ca) {
         for (Certificate cert : certs) {
           //  System.out.println("Certificate is: " + cert);
             if (cert instanceof X509Certificate) {
@@ -187,7 +186,7 @@ public class UserWorker extends Worker {
 
         }
         return false;
-    }
+    }*/
 
     @NonNull
     @Override
@@ -278,9 +277,9 @@ public class UserWorker extends Worker {
 
 
                 //wr.writeBytes(URLEncoder.encode(jsonParam.toString(), "utf-8"));
-                wr.writeBytes(CipherSecure.encrypt(jsonParam.toString()));
+                wr.writeBytes(CipherSecure.encryptGCM(jsonParam.toString()));
 
-                String writeEnc = CipherSecure.encrypt(jsonParam.toString());
+                String writeEnc = CipherSecure.encryptGCM(jsonParam.toString());
 
                 longInfo("Encrypted: " + writeEnc);
 
@@ -348,7 +347,7 @@ public class UserWorker extends Worker {
 //            urlConnection.disconnect();
         }
         try {
-            result = new StringBuilder(CipherSecure.decrypt(result.toString()));
+            result = new StringBuilder(CipherSecure.decryptGCM(result.toString()));
         } catch (Exception e) {
             e.printStackTrace();
             data = new Data.Builder()

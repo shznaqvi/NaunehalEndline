@@ -26,6 +26,7 @@
     <string name="signin" translatable="false">SIGN IN</string>
     <string name="username" translatable="false">Username</string>
     <string name="password" translatable="false">Password</string>
+    <string name="oldPassword" translatable="false">Old Password</string>
     <string name="newPassword" translatable="false">New Password</string>
     <string name="confirmPassword" translatable="false">Confirm Password</string>
     <string name="country">Language (Click to change)</string>

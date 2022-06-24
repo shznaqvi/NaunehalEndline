@@ -12,6 +12,7 @@ public class SyncModel {
     String filter = null;
     String select = null;
     Boolean isUnlocked = false;
+    String info;
 
     public SyncModel(String tableName) {
 
@@ -120,5 +121,13 @@ public class SyncModel {
 
     public void setSelect(String select) {
         this.select = select;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }
